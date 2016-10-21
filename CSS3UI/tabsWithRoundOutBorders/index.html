@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tabs with Round Out Borders|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    <style type="text/css">
+    .demo {
+        width: 660px;
+        margin: 20px auto;
+    }
+    
+    .nav:after,
+    .nav:before {
+        content: "";
+        display: table;
+    }
+    
+    .nav:after {
+        clear: both;
+        overflow: hidden;
+    }
+    
+    .nav {
+        zoom: 1;
+        margin-left: 20px;
+    }
+    
+    .nav li {
+        list-style: none outside none;
+        float: left;
+        position: relative;
+        /*这个很重要*/
+    }
+    
+    .nav .active {
+        z-index: 3;
+        /*当前项在最顶端*/
+    }
+    
+    .nav li:before,
+    .nav li:after,
+    .nav a:before,
+    .nav a:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+    }
+    
+    .nav li:before,
+    .nav li:after {
+        background: rgb(10, 41, 30);
+        width: 10px;
+        height: 10px;
+    }
+    
+    .nav li:before {
+        left: -10px;
+    }
+    
+    .nav li:after {
+        right: -10px;
+    }
+    
+    .nav a {
+        float: left;
+        padding: 10px 40px;
+        text-decoration: none;
+        color: rgb(220, 225, 233);
+        background: rgb(10, 41, 30);
+        border-radius: 10px 10px 0 0;
+    }
+    
+    .nav .active a {
+        background: rgb(220, 225, 233);
+        color: rgb(10, 41, 30);
+    }
+    
+    .nav a:before,
+    .nav a:after {
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        background: rgb(10, 41, 30);
+        z-index: 2;
+        /*圆形在矩形上面*/
+    }
+    
+    .nav .active a:before,
+    .nav .active a:after {
+        background: rgb(10, 41, 30);
+    }
+    
+    .nav a:before {
+        left: -20px;
+    }
+    
+    .nav a:after {
+        right: -20px;
+    }
+    /*当前项的:after和:before的z-index值为1*/
+    
+    .nav .active:before,
+    .nav .active:after {
+        z-index: 1;
+        /*当前项的矩形在圆形下面*/
+        background: rgb(220, 225, 233);
+    }
+    /*第一个选项卡的:before和最后一个选项卡的:after背景色不一样*/
+    
+    .nav li:first-child a:before,
+    .nav li:last-child a:after {
+        background-color: #fff;
+    }
+    
+    .tab-content {
+        background: rgb(220, 225, 233);
+        color: rgb(10, 41, 30);
+        padding: 20px;
+    }
+    
+    .tab-pane {
+        display: none;
+    }
+    
+    .tab-pane.active {
+        display: block;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <ul class="nav nav-tabs" id="myTab">
+                <li class="active"><a href="#home">Home</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#messages">Messages</a></li>
+                <li><a href="#settings">Settings</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="home">Home Content</div>
+                <div class="tab-pane" id="profile">Profile Content</div>
+                <div class="tab-pane" id="messages">Messages Content</div>
+                <div class="tab-pane" id="settings">Settings Content</div>
+            </div>
+        </section>
+    </div>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="bootstrap-tab.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $('#myTab a').click(function(e) {
+            e.preventDefault();
+            $(this).tab('show');
+        })
+    });
+    </script>
+</body>
+
+</html>

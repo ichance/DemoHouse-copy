@@ -1,0 +1,343 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>css3动画加载2|css3教程,css3实例,css3动画|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <style type="text/css">
+    body {
+        background: #161616;
+    }
+    
+    .container {
+        width: 960px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    
+    .content {
+        width: 800px;
+        margin: 0 auto;
+        padding-top: 50px;
+    }
+    
+    .contentBar {
+        width: 90px;
+        margin: 0 auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    /* STOP ANIMATION */
+    
+    .stop {
+        -webkit-animation-play-state: paused;
+        -moz-animation-play-state: paused;
+    }
+    /* Loading Circle */
+    
+    .ball {
+        background-color: rgba(0, 0, 0, 0);
+        border: 5px solid rgba(0, 183, 229, 0.9);
+        opacity: .9;
+        border-top: 5px solid rgba(0, 0, 0, 0);
+        border-left: 5px solid rgba(0, 0, 0, 0);
+        border-radius: 50px;
+        box-shadow: 0 0 35px #2187e7;
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+        -moz-animation: spin .5s infinite linear;
+        -webkit-animation: spin .5s infinite linear;
+    }
+    
+    .ball1 {
+        background-color: rgba(0, 0, 0, 0);
+        border: 5px solid rgba(0, 183, 229, 0.9);
+        opacity: .9;
+        border-top: 5px solid rgba(0, 0, 0, 0);
+        border-left: 5px solid rgba(0, 0, 0, 0);
+        border-radius: 50px;
+        box-shadow: 0 0 15px #2187e7;
+        width: 30px;
+        height: 30px;
+        margin: 0 auto;
+        position: relative;
+        top: -50px;
+        -moz-animation: spinoff .5s infinite linear;
+        -webkit-animation: spinoff .5s infinite linear;
+    }
+    
+    @-moz-keyframes spin {
+        0% {
+            -moz-transform: rotate(0deg);
+        }
+        100% {
+            -moz-transform: rotate(360deg);
+        }
+    }
+    
+    @-moz-keyframes spinoff {
+        0% {
+            -moz-transform: rotate(0deg);
+        }
+        100% {
+            -moz-transform: rotate(-360deg);
+        }
+    }
+    
+    @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+    
+    @-webkit-keyframes spinoff {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(-360deg);
+        }
+    }
+    /* Second Loadin Circle */
+    
+    .circle {
+        background-color: rgba(0, 0, 0, 0);
+        border: 5px solid rgba(0, 183, 229, 0.9);
+        opacity: .9;
+        border-right: 5px solid rgba(0, 0, 0, 0);
+        border-left: 5px solid rgba(0, 0, 0, 0);
+        border-radius: 50px;
+        box-shadow: 0 0 35px #2187e7;
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+        -moz-animation: spinPulse 1s infinite ease-in-out;
+        -webkit-animation: spinPulse 1s infinite linear;
+    }
+    
+    .circle1 {
+        background-color: rgba(0, 0, 0, 0);
+        border: 5px solid rgba(0, 183, 229, 0.9);
+        opacity: .9;
+        border-left: 5px solid rgba(0, 0, 0, 0);
+        border-right: 5px solid rgba(0, 0, 0, 0);
+        border-radius: 50px;
+        box-shadow: 0 0 15px #2187e7;
+        width: 30px;
+        height: 30px;
+        margin: 0 auto;
+        position: relative;
+        top: -50px;
+        -moz-animation: spinoffPulse 1s infinite linear;
+        -webkit-animation: spinoffPulse 1s infinite linear;
+    }
+    
+    @-moz-keyframes spinPulse {
+        0% {
+            -moz-transform: rotate(160deg);
+            opacity: 0;
+            box-shadow: 0 0 1px #2187e7;
+        }
+        50% {
+            -moz-transform: rotate(145deg);
+            opacity: 1;
+        }
+        100% {
+            -moz-transform: rotate(-320deg);
+            opacity: 0;
+        }
+    }
+    
+    @-moz-keyframes spinoffPulse {
+        0% {
+            -moz-transform: rotate(0deg);
+        }
+        100% {
+            -moz-transform: rotate(360deg);
+        }
+    }
+    
+    @-webkit-keyframes spinPulse {
+        0% {
+            -webkit-transform: rotate(160deg);
+            opacity: 0;
+            box-shadow: 0 0 1px #2187e7;
+        }
+        50% {
+            -webkit-transform: rotate(145deg);
+            opacity: 1;
+        }
+        100% {
+            -webkit-transform: rotate(-320deg);
+            opacity: 0;
+        }
+    }
+    
+    @-webkit-keyframes spinoffPulse {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+    /* LITTLE BAR */
+    
+    .barlittle {
+        background-color: #2187e7;
+        background-image: -moz-linear-gradient(45deg, #2187e7 25%, #a0eaff);
+        background-image: -webkit-linear-gradient(45deg, #2187e7 25%, #a0eaff);
+        border-left: 1px solid #111;
+        border-top: 1px solid #111;
+        border-right: 1px solid #333;
+        border-bottom: 1px solid #333;
+        width: 10px;
+        height: 10px;
+        float: left;
+        margin-left: 5px;
+        opacity: 0.1;
+        -moz-transform: scale(0.7);
+        -webkit-transform: scale(0.7);
+        -moz-animation: move 1s infinite linear;
+        -webkit-animation: move 1s infinite linear;
+    }
+    
+    #block_1 {
+        -moz-animation-delay: .4s;
+        -webkit-animation-delay: .4s;
+    }
+    
+    #block_2 {
+        -moz-animation-delay: .3s;
+        -webkit-animation-delay: .3s;
+    }
+    
+    #block_3 {
+        -moz-animation-delay: .2s;
+        -webkit-animation-delay: .2s;
+    }
+    
+    #block_4 {
+        -moz-animation-delay: .3s;
+        -webkit-animation-delay: .3s;
+    }
+    
+    #block_5 {
+        -moz-animation-delay: .4s;
+        -webkit-animation-delay: .4s;
+    }
+    
+    @-moz-keyframes move {
+        0% {
+            -moz-transform: scale(1.2);
+            opacity: 1;
+        }
+        100% {
+            -moz-transform: scale(0.7);
+            opacity: 0.1;
+        }
+    }
+    
+    @-webkit-keyframes move {
+        0% {
+            -webkit-transform: scale(1.2);
+            opacity: 1;
+        }
+        100% {
+            -webkit-transform: scale(0.7);
+            opacity: 0.1;
+        }
+    }
+    /* Trigger button for javascript */
+    
+    .trigger,
+    .triggerFull,
+    .triggerBar {
+        background: #000000;
+        background: -moz-linear-gradient(top, #161616 0%, #000000 100%);
+        background: -webkit-linear-gradient(top, #161616 0%, #000000 100%);
+        border-left: 1px solid #111;
+        border-top: 1px solid #111;
+        border-right: 1px solid #333;
+        border-bottom: 1px solid #333;
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 0.8em;
+        text-decoration: none;
+        text-transform: lowercase;
+        text-align: center;
+        color: #fff;
+        padding: 10px;
+        border-radius: 3px;
+        display: block;
+        margin: 0 auto;
+        width: 140px;
+    }
+    
+    .trigger:hover,
+    .triggerFull:hover,
+    .triggerBar:hover {
+        background: -moz-linear-gradient(top, #202020 0%, #161616 100%);
+        background: -webkit-linear-gradient(top, #202020 0%, #161616 100%);
+    }
+    </style>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('.ball, .ball1').removeClass('stop');
+        $('.trigger').click(function() {
+            $('.ball, .ball1').toggleClass('stop');
+        });
+        $('.circle, .circle1').removeClass('stop');
+        $('.triggerFull').click(function() {
+            $('.circle, .circle1').toggleClass('stop');
+        });
+        $('.barlittle').removeClass('stop');
+        $('.triggerBar').click(function() {
+            $('.barlittle').toggleClass('stop');
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <div class="page">
+        <section id="demo_zone">
+            <!-- LOOP LOADER -->
+            <div class="container">
+                <div class="content">
+                    <div class="ball"></div>
+                    <div class="ball1"></div>
+                </div>
+            </div>
+            <a class="trigger" href="#">Play/Stop Animation</a>
+            <div class="container">
+                <div class="content">
+                    <div class="circle"></div>
+                    <div class="circle1"></div>
+                </div>
+            </div>
+            <a class="triggerFull" href="#">Play/Stop Animation</a>
+            <div class="container">
+                <div class="contentBar">
+                    <div id="block_1" class="barlittle"></div>
+                    <div id="block_2" class="barlittle"></div>
+                    <div id="block_3" class="barlittle"></div>
+                    <div id="block_4" class="barlittle"></div>
+                    <div id="block_5" class="barlittle"></div>
+                </div>
+            </div>
+            <a class="triggerBar" href="#">Play/Stop Animation</a>
+            <!-- END LOOP LOADER -->
+        </section>
+    </div>
+</body>
+
+</html>

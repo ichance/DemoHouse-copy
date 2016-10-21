@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 Glowing Text Effect |w3cplus | css3|css3教程,css3实例,css3动画</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <script type="text/javascript" charset="UTF-8" src="//www.w3cplus.com/demo/css3/prefixfree.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Concert+One" />
+    <style type="text/css">
+    body {
+        background: #0a0a0a;
+        text-align: center;
+    }
+    
+    .demo {
+        width: 960px;
+        margin: 100px auto;
+        position: relative;
+        height: 500px;
+    }
+    
+    .demo * {
+        box-sizing: border-box;
+    }
+    
+    .textWrap {
+        animation: wobble 5s ease-in-out infinite;
+        transform-origin: center center;
+        transform-style: preserve-3d;
+        width: 500px;
+        margin: 0 auto;
+    }
+    
+    @keyframes wobble {
+        0%,
+        100% {
+            transform: rotate3d(2, 3, 1, 60deg);
+        }
+        25% {
+            transform: rotate3d(-2, 3, 1, 60deg);
+        }
+        50% {
+            transform: rotate3d(-2, -3, 1, 60deg);
+        }
+        75% {
+            transform: rotate3d(2, -3, 1, 60deg);
+        }
+    }
+    
+    .textWrap h1 {
+        display: block;
+        width: 100%;
+        padding: 40px;
+        line-height: 1.5;
+        font: 900 9em 'Concert One', sans-serif;
+        text-transform: uppercase;
+        position: absolute;
+        color: #f6e6e6;
+        animation: glow 10s ease-in-out infinite;
+    }
+    
+    @keyframes glow {
+        0%,
+        100% {
+            text-shadow: 0 0 35px #e22222;
+        }
+        25% {
+            text-shadow: 0 0 35px #10145e;
+        }
+        50% {
+            text-shadow: 0 0 35px #a9e56e;
+        }
+        75% {
+            text-shadow: 0 0 35px #dd16da;
+        }
+    }
+    
+    .textWrap h1:nth-child(2) {
+        transform: translateZ(5px);
+    }
+    
+    .textWrap h1:nth-child(3) {
+        transform: translateZ(10px);
+    }
+    
+    .textWrap h1:nth-child(4) {
+        transform: translateZ(15px);
+    }
+    
+    .textWrap h1:nth-child(5) {
+        transform: translateZ(20px);
+    }
+    
+    .textWrap h1:nth-child(6) {
+        transform: translateZ(25px);
+    }
+    
+    .textWrap h1:nth-child(7) {
+        transform: translateZ(30px);
+    }
+    
+    .textWrap h1:nth-child(8) {
+        transform: translateZ(35px);
+    }
+    
+    .textWrap h1:nth-child(9) {
+        transform: translateZ(40px);
+    }
+    
+    .textWrap h1:nth-child(10) {
+        transform: translateZ(45px);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <div class="textWrap">
+                <h1>W3cplus</h1>
+                <h1>W3cplus</h1>
+                <h1>W3cplus</h1>
+                <h1>W3cplus</h1>
+                <h1>W3cplus</h1>
+                <h1>W3cplus</h1>
+                <h1>W3cplus</h1>
+                <h1>W3cplus</h1>
+                <h1>W3cplus</h1>
+                <h1>W3cplus</h1>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

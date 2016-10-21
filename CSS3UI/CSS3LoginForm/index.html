@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>CSS3 制作登录表单|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <title>CSS3 制作登录表单</title>
+    <style type="text/css">
+    body,
+    ul {
+        margin: 0;
+        padding: 0
+    }
+    
+    a {
+        color: rgb(1, 124, 185);
+        text-decoration: none;
+    }
+    
+    input:focus {
+        outline: none 0;
+    }
+    
+    body {
+        color: #b5b5b5;
+        font: 14px 'Arial';
+    }
+    
+    body,
+    li:first-child:after,
+    li:last-child:after {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAIAAAD91JpzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1M0FFQkYzNUQxMDhFMTExOTE4RkZGQzZFRDFGQzVERiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCQjQwMjc0QzAxOUExMUUyODZDQkIxMEQ5NzkxOTVBMyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCQjQwMjc0QjAxOUExMUUyODZDQkIxMEQ5NzkxOTVBMyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjA2ODAxMTc0MDcyMDY4MTE4MDhFRjlFRDlENzM3MkZGIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjUzQUVCRjM1RDEwOEUxMTE5MThGRkZDNkVEMUZDNURGIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+fQT+8AAAABdJREFUeNpiNDQ0ZGNjYwJiBgYGgAADAAgKALs+1LCNAAAAAElFTkSuQmCC);
+    }
+    
+    .box {
+        position: relative;
+        width: 384px;
+        height: 140px;
+        margin: 50px auto;
+    }
+    
+    .box li {
+        list-style-type: none;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+        height: 42px;
+    }
+    
+    .box li input {
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, .5), -1px 1px 0 rgba(255, 255, 255, .05);
+        border: 0 none;
+        padding: 8px 5px 5px;
+        border-radius: 5px;
+        width: 300px;
+        height: 28px;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        -o-box-sizing: content-box;
+        -ms-box-sizing: content-box;
+        box-sizing: content-box;
+        background: rgba(0, 0, 0, .1);
+        color: #fff;
+    }
+    
+    .box li:first-child:after,
+    .box li:last-child:after {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        content: "";
+        border-radius: 25px;
+        z-index: 2;
+        right: -23px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, .5);
+    }
+    
+    ::-webkit-input-placeholder {
+        color: #fff;
+        font-weight: bold;
+    }
+    
+    .box li:first-child:after {
+        top: 15px;
+    }
+    
+    .box li:last-child:after {
+        bottom: 15px;
+    }
+    
+    .box label {
+        width: 70px;
+        display: inline-block;
+        text-align: right;
+    }
+    
+    .box span {
+        display: block;
+        color: #6296b4;
+        padding-left: 75px;
+    }
+    
+    .button {
+        position: absolute;
+        top: 24px;
+        right: -30px;
+        width: 44px;
+        height: 44px;
+        border-radius: 22px;
+        border: 1px solid #00a1d2;
+        background: -webkit-linear-gradient(top, #029ecd, #0d7796);
+        color: #fff;
+        text-shadow: 1px 1px 0 #666;
+        box-shadow: 0 0 0 5px #2c2c2c;
+        z-index: 3;
+        text-align: center;
+        line-height: 46px;
+        -webkit-transition: all 0.28s ease-in;
+        -moz--transition: all 0.28s ease-in;
+    }
+    
+    .button:hover {
+        -webkit-transform: rotate(90deg);
+    }
+    
+    @font-face {
+        font-family: 'FontAwesome';
+        src: url('font/fontawesome-webfont.eot');
+        src: url('font/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), url('font/fontawesome-webfont.woff') format('woff'), url('font/fontawesome-webfont.ttf') format('truetype'), url('font/fontawesome-webfont.svg#FontAwesome') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    .icon-arrow-right:before {
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-size: 26px;
+        font-style: normal;
+        display: inline-block;
+        text-decoration: inherit;
+        content: "\f061";
+    }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <form action="#" method="get">
+            <ul>
+                <li>
+                    <label for="username">Email:</label>
+                    <input type="text" id="username" class="username" placeholder="john.smith@strategysoft.com" />
+                </li>
+                <li>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" class="password" placeholder="******" />
+                </li>
+            </ul>
+            <a href="javascript:;" class="button" /><i class="icon-arrow-right"></i></a>
+        </form>
+    </div>
+</body>
+
+</html>

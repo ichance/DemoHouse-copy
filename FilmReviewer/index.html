@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='filmReviewer' ng-cloak='true'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Film Reviewer</title>
+    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href='//fonts.googleapis.com/css?family=Mallanna' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class='container'>
+        <div class='card' ng-controller='filmController as vm'>
+            <div class='card_controls'>
+                <i class='material-icons' ng-click='vm.next()'>keyboard_arrow_right</i>
+                <i class='material-icons' ng-click='vm.prev()'>keyboard_arrow_left</i>
+                <div class='rating fade-in' ng-if='vm.id == film.id' ng-repeat='film in vm.films track by $index'>
+                    <p>{{film.rating}}</p>
+                </div>
+            </div>
+            <div class='card_sub_information top-to-bottom' ng-if='vm.id == film.id' ng-repeat='film in vm.films track by $index'>
+                <h1>{{film.title}}</h1>
+                <p>{{film.genre}}</p>
+                <button ng-if='film.booking'>Book {{film.title}}</button>
+                <button ng-if='!film.booking'>Buy {{film.title}}</button>
+            </div>
+            <div class='card_overlay fade-in' ng-if='vm.id == film.id' ng-repeat='film in vm.films track by $index'>
+                <div class="img-container">
+                    <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/217538/{{film.image}}.jpg" />
+                </div>
+                <div class='card_overlay__information fade-in' ng-if='vm.id == film.id' ng-repeat='film in vm.films'>
+                    <h1>{{film.title}}</h1>
+                    <p>{{film.information}}</p>
+                    <i class='material-icons'>query_builder</i>
+                    <span>{{film.length}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular-animate.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

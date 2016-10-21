@@ -1,0 +1,199 @@
+// General Variables
+$bg-color: #D8DBE2;
+$accent-color: #58A4B0;
+$primary-color: #373F51;
+$secondary-color: #FFF;
+$easing: cubic-bezier(0.680, -0.550, 0.265, 1.550) 1s 0s;
+
+// Card Variables
+$c-width: 30em;
+$c-height: $c-width - 10;
+$c-shadow: 10px 10px 20px darken($bg-color, 9%);
+
+* {
+  box-sizing: border-box;
+  margin: 0; padding :0;
+  font-family: 'Mallanna', sans-serif;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  background: $bg-color;
+  transform:translate3d(0,0,0);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5em;
+  margin-left: 5em;
+  height: 100vh;
+}
+.card {
+  background: $secondary-color;
+  width: $c-width;
+  height: $c-height;
+  position: relative;
+  box-shadow: $c-shadow;
+  &_controls {
+    position: absolute;
+    right: 0;
+    i {
+      background: $primary-color;
+      color: #FFF;
+      font-size: 2.4em;
+      width: 2.09em;
+      height: 2.05em;
+      line-height: 2em;
+      text-align: center;
+      display: block;
+      cursor: pointer;
+      font-style: normal;
+    }
+    .rating {
+      background: $accent-color;
+      color: #FFF;
+      font-size: 2.4em;
+      width: 2.09em;
+      height: 2.05em;
+      line-height: 2em;
+      overflow: hidden;
+      position: absolute;
+      text-align: center;
+      cursor: pointer;
+      font-style: normal;
+      cursor: default;
+      p {
+        font-size: 0.7em;
+      }
+    }
+  }
+  &_sub_information {
+    position: absolute;
+    bottom: 0;
+    height: 26.4%;
+    width: 100%;
+    padding: 1em;
+    h1 {
+      color: $primary-color;
+      font-size: 1.2em;
+    }
+    p {
+      margin: -0.8em 0;
+      color: lighten($primary-color, 12%);
+    }
+    button {
+      background: $accent-color;
+      color: #FFF;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.6em;
+      border: none;
+      padding: 1em 1.5em;
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin: 2.5em 1.7em;
+      outline: none;
+    }
+  }
+  &_overlay {
+    background-size: cover;
+    position: absolute;
+    width: $c-width;
+    height: $c-height;
+    transform: translateX($c-width / -6) translateY($c-height / -3.8);
+    .img-container {
+      display: inline-block;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+      height: $c-height;
+    }
+    img {
+      display: block;
+      width: 100%;;
+      height: 100%;
+      object-fit: cover;
+      animation: zoom ease-in 20s forwards;
+    }
+    &__information {
+      background: rgba(0, 0, 0, 0.5);
+      height: 100%;
+      padding: 1em;
+      z-index: 1;
+      h1, p, i, span {
+        color: rgba(255, 255, 255, 1);
+      }
+      i {
+        margin: 0.9em 0;
+        border-radius: 100%;
+        cursor: default;
+        font-size: 1.4em;
+        vertical-align: middle;
+      }
+      span {
+        font-size: 0.9em;
+      }
+    }
+  }
+}
+
+// Animations
+@keyframes rock {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+// Fade In
+.fade-in.ng-enter, .fade-in.ng-leave {
+  transition: opacity $easing;
+}
+
+.fade-in.ng-enter,
+.fade-in.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+.fade-in.ng-leave,
+.fade-in.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+// Top To Bottom
+.top-to-bottom.ng-enter, .top-to-bottom.ng-leave {
+  transition: all $easing;
+}
+
+.top-to-bottom.ng-enter,
+.top-to-bottom.ng-leave.ng-leave-active {
+  opacity: 0;
+  transform: translateY(1em);
+}
+
+.top-to-bottom.ng-leave,
+.top-to-bottom.ng-enter.ng-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}

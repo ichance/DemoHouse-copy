@@ -1,0 +1,310 @@
+a ,a:hover{text-decoration: none;}
+#myAudio {
+	width: 310px;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+/*音频信息模块*/
+.music_info {
+	padding: 10px;
+	border: 1px solid #000;
+	border-bottom: none;
+	width: 310px;
+	border-radius: 4px 4px 0 0;
+	background:-webkit-linear-gradient(top,rgba(0,0,0,0.4),rgba(0,0,0,0.4)) no-repeat left top,
+				url(bg.jpg) no-repeat left top;
+	background:-moz-linear-gradient(top,rgba(0,0,0,0.4),rgba(0,0,0,0.4)) no-repeat left top,
+				url(bg.jpg) no-repeat left top;
+	background:-ms-linear-gradient(top,rgba(0,0,0,0.4),rgba(0,0,0,0.4)) no-repeat left top,
+				url(bg.jpg) no-repeat left top;
+	background:linear-gradient(top,rgba(0,0,0,0.4),rgba(0,0,0,0.4)) no-repeat left top,
+				url(bg.jpg) no-repeat left top;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+/*CD模块*/
+.music_info .cd_holder {
+	height: 126px;
+	width: 126px;
+	border: 1px solid #000;
+	border-radius: 4px;
+	float: left;
+	position: relative;
+}
+.music_info .cd_holder .stick {         /*打碟器*/
+	position: absolute;
+	display: block;
+	width: 2px;
+	height: 60px;
+	background-color: rgb(244,244,244);
+	z-index: 100;
+	-webkit-transition:all 300ms ease-in;
+	-moz-transition:all 300ms ease-in;
+	-ms-transition:all 300ms ease-in;
+	transition:all 300ms ease-in;
+
+	-webkit-transform-origin:left top;
+	-moz-transform-origin:left top;
+	-ms-transform-origin:left top;
+	transform-origin:left top;
+}
+.music_info .cd_holder .stick:before {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 8px;
+	height: 10px;
+	left: -3px;
+	bottom: 0;
+	background-color: rgb(244,244,244);
+	z-index: 101;
+}
+/*点击播放时打碟器旋转-45度到CD上方*/
+.music_info .cd_holder .stick.play {
+	-webkit-transform:rotate(-45deg);
+	-moz-transform:rotate(-45deg);
+	-ms-transform:rotate(-45deg);
+	transform:rotate(-45deg);
+}
+/*使用CSS3径向渐变来绘制界面中的CD光碟和打碟器*/
+.music_info .cd_holder .cd {
+	width: 94%;
+	height: 94%;
+	position: absolute;
+	left: 3%;
+	top: 3%;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	border: 2px solid rgb(210,210,210);
+	border-radius: 50%; 
+	cursor: pointer;
+	z-index: 99;
+	background:-webkit-radial-gradient(center,circle,transparent,transparent 14%,rgba(255,255,255,0.7) 14%,rgba(255,255,255,0.7) 17%,rgba(255,255,255,0.7) 20%,rgb(87,94,104) 20%,rgb(52,62,75) 100%);
+	background:-moz-radial-gradient(center,circle,transparent,transparent 14%,rgba(255,255,255,0.7) 14%,rgba(255,255,255,0.7) 17%,rgba(255,255,255,0.7) 20%,rgb(87,94,104) 20%,rgb(52,62,75) 100%);
+	background:-ms-radial-gradient(center,circle,transparent,transparent 14%,rgba(255,255,255,0.7) 14%,rgba(255,255,255,0.7) 17%,rgba(255,255,255,0.7) 20%,rgb(87,94,104) 20%,rgb(52,62,75) 100%);
+	background:radial-gradient(center,circle,transparent,transparent 14%,rgba(255,255,255,0.7) 14%,rgba(255,255,255,0.7) 17%,rgba(255,255,255,0.7) 20%,rgb(87,94,104) 20%,rgb(52,62,75) 100%);
+
+	-webkit-transition:all 1s linear;
+	-moz-transition:all 1s linear;
+	-ms-transition:all 1s linear;
+	transition:all 1s linear;
+}
+.music_info .cd_holder .cd:hover {
+	background:-webkit-radial-gradient(center,circle,transparent,transparent 14%,rgba(255,255,255,0.7) 14%,rgba(255,255,255,0.7) 17%,rgba(255,255,255,0.7) 20%,rgb(107,114,124) 20%,rgb(72,82,95) 100%);
+	background:-moz-radial-gradient(center,circle,transparent,transparent 14%,rgba(255,255,255,0.7) 14%,rgba(255,255,255,0.7) 17%,rgba(255,255,255,0.7) 20%,rgb(107,114,124) 20%,rgb(72,82,95) 100%);
+	background:-ms-radial-gradient(center,circle,transparent,transparent 14%,rgba(255,255,255,0.7) 14%,rgba(255,255,255,0.7) 17%,rgba(255,255,255,0.7) 20%,rgb(107,114,124) 20%,rgb(72,82,95) 100%);
+	background:radial-gradient(center,circle,transparent,transparent 14%,rgba(255,255,255,0.7) 14%,rgba(255,255,255,0.7) 17%,rgba(255,255,255,0.7) 20%,rgb(107,114,124) 20%,rgb(72,82,95) 100%);
+}
+/*音频的元信息模块*/
+.music_info .meta_data {
+	height: 124px;
+	width: 150px;
+	float: right;
+	color: #fff;
+	margin-left: 10px;
+	overflow: hidden;
+	position: relative;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	-moz-user-select:none;/**ff*/  
+	-webkit-user-select:none;/**chrome、safari、360极速*/  
+}
+.music_info .singer {
+	font:bold 14px/120% Helvetica,Sans-serif;
+	margin-bottom: 10px;
+}
+.music_info .title {
+	font:bold 12px/120% Helvetica,Sans-serif;
+	color: #fff;
+}
+.volume_control {
+	position: absolute;
+	width: 150px;
+	bottom: 10px;
+}
+.volume_control .decrease,.volume_control .increase {
+	font: 12px/100% "icomoon";
+	color: rgb(220,220,220);
+	text-decoration: none;
+	margin-left: 5px;
+	cursor: pointer;
+}
+/*音量条和进度条外层包裹*/
+.base_bar {
+	height: 10px;
+	border-top: 1px solid rgb(18,18,18);
+	border-bottom: none;
+	border-radius: 5px;
+	display: inline-block;
+	box-shadow: 0 1px 0 rgb(60,61,64);
+	position: relative;
+	background: -webkit-linear-gradient(top,rgb(50,50,50),rgb(40,40,40));
+	background: -moz-linear-gradient(top,rgb(50,50,50),rgb(40,40,40));
+	background: -ms-linear-gradient(top,rgb(50,50,50),rgb(40,40,40));
+	background: linear-gradient(top,rgb(50,50,50),rgb(40,40,40));
+}
+/*音量条和进度条*/
+.progress_bar {
+	display: block;
+	height: 100%;
+	border-radius: 5px;
+	background: -webkit-linear-gradient(top,rgb(101,215,251),rgb(23,137,232));
+	background: -moz-linear-gradient(top,rgb(101,215,251),rgb(23,137,232));
+	background: -ms-linear-gradient(top,rgb(101,215,251),rgb(23,137,232));
+	background: linear-gradient(top,rgb(101,215,251),rgb(23,137,232));
+}
+#myAudio .volume_control .base_bar {width: 100px;}
+#myAudio .volume_control .progress_bar {width: 100%;}
+
+/*音量条的滑动器*/
+.volume_control .slider {
+	width: 12px;
+	height: 12px;
+	border-radius: 6px;
+	border:1px solid rgb(0,0,0);
+	position: absolute;
+	left: 93px;
+	top: -2px;
+	background: -webkit-linear-gradient(top,rgb(246,246,246),rgb(190,190,190));
+	background: -moz-linear-gradient(top,rgb(246,246,246),rgb(190,190,190));
+	background: -ms-linear-gradient(top,rgb(246,246,246),rgb(190,190,190));
+	background: linear-gradient(top,rgb(246,246,246),rgb(190,190,190));
+}
+/*播放列表*/
+.music_list {
+	margin: 0;
+	padding-left: 40px;
+	background: rgb(20,20,20);
+	display: none;
+	max-height: 100px;
+	overflow: auto;
+}
+.music_list li {
+	margin: 0;
+	color: #fff;
+	font-size: 12px;
+	cursor: pointer;
+	list-style-type: decimal;
+}
+.music_list li:hover {color: rgb(242,198,65);}
+.music_list .active {color: rgb(226,63,82);}
+/*播放控制模块*/
+#myAudio .controls {
+	width: 310px;
+	height: 32px;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	border: 1px solid #000;
+	border-radius: 0 0 4px 4px;
+	background-color: rgb(34,34,34);
+}
+#myAudio .controls > div {float: left;}
+#myAudio .controls .play_controls {
+	border-right: 1px solid #000;
+	box-shadow: 1px 0 0 rgb(45,45,45);
+	height: 100%;
+	width: 85px;
+	padding: 6px 0;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+/*使用font-face来制作播放按钮的图标*/
+#myAudio .play_controls a {
+	font-family: "icomoon";
+	color: rgb(220,220,220);
+	cursor: pointer;
+	margin-left: 15px;
+	float: left;
+	font-size: 12px;
+	width: 12px;
+}
+#myAudio .play_controls a:first-child {margin-left: 10px;}
+/*进度条的实现*/
+#myAudio .time_line {
+	padding: 6px 8px;
+	height: 100%;
+	width: 220px;
+	overflow: hidden;
+	white-space: nowrap;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+#myAudio .passed_time, #myAudio .total_time {
+	color: #fff;
+	font-size: 10px;
+	font-family: Helvetica,Sans-serif;
+	-webkit-text-size-adjust:none; 
+}
+#myAudio .time_line .base_bar {
+	width: 140px;
+	background: -webkit-linear-gradient(top,rgb(87,87,87),rgb(87,87,87)) left top/0px 100% no-repeat;
+	background: -moz-linear-gradient(top,rgb(87,87,87),rgb(87,87,87)) left top/0px 100% no-repeat;
+	background: -ms-linear-gradient(top,rgb(87,87,87),rgb(87,87,87)) left top/0px 100% no-repeat;
+	background: linear-gradient(top,rgb(87,87,87),rgb(87,87,87)) left top/0px 100% no-repeat;
+}
+#myAudio .time_line .progress_bar {width: 0;}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	clear: both;
+}
+/*歌曲星星评分器的实现*/
+.starbar {
+	width: 100px;
+	height: 20px;
+	margin-top: 5px;
+	background: url("stars.png") 0px 0px repeat-x;
+	position: relative;
+}
+.current-rating {
+	width: 85%;
+	height: 100%;
+	background: url("stars.png") 0px -40px repeat-x;
+	margin: 0;
+	padding: 0;
+}
+.current-rating li {
+	list-style:none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+}
+.current-rating li:hover {background: url("stars.png") 0px -20px repeat-x;}
+.current-rating .star5 {width: 100%;}
+.current-rating .star4 {width: 80%;}
+.current-rating .star3 {width: 60%;}
+.current-rating .star2 {width: 40%;}
+.current-rating .star1 {width: 20%;}
+/*音频播放时CD的旋转动画*/
+.music_info .cd.rotate {
+	-webkit-animation:rotating 1s 0s linear infinite;
+	-moz-animation:rotating 1s 0s linear infinite;
+	-ms-animation:rotating 1s 0s linear infinite;
+}
+@-webkit-keyframes rotating{
+	0%{-webkit-transform:rotate(0deg);}
+	100%{-webkit-transform:rotate(360deg);}
+}
+@-moz-keyframes rotating{
+	form {-moz-transform:rotate(0deg);}
+	to {-moz-transform:rotate(360deg);}
+}
+@-ms-keyframes rotating{
+	0%{-ms-transform:rotate(0deg);}
+	100%{-ms-transform:rotate(360deg);}
+}
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot');
+	src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.woff') format('woff'),
+		url('fonts/icomoon.ttf') format('truetype'),
+		url('fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

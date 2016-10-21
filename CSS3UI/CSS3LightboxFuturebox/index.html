@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3制作Lightbox效果|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    <style type="text/css">
+    body {
+        background: url(black-bg.png) repeat 0 0;
+    }
+    
+    .lightbox {
+        text-align: center;
+        margin: 20px 0;
+    }
+    
+    .lightbox li {
+        display: inline-block;
+        list-style: none;
+        margin: 0 10px 0 0;
+        border: 3px solid #ccc;
+        border-radius: 3px;
+    }
+    
+    .lightbox li:hover {
+        border: 3px solid #1E528C;
+    }
+    
+    ul li img,
+    ul li label {
+        display: block;
+        cursor: pointer;
+    }
+    
+    ul li input {
+        display: none;
+    }
+    
+    ul li input:checked + .overlay {
+        display: table;
+    }
+    
+    .overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        z-index: 999;
+        background: rgba(0, 0, 0, 0.7);
+    }
+    
+    .overlay label {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+    
+    .overlay img {
+        display: inline;
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+        background: #ffffff;
+    }
+    
+    #close {
+        opacity: 0;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <ul class="lightbox">
+                <li>
+                    <label for="lightbox01"><img src="1s.jpg" alt=""></label>
+                    <input type="radio" id="lightbox01" name="gallery">
+                    <div class="overlay">
+                        <label for="close" title="Close lightbox"><img src="1.jpg" alt=""></label>
+                    </div>
+                </li>
+                <li>
+                    <label for="lightbox02"><img src="2s.jpg" alt=""></label>
+                    <input type="radio" id="lightbox02" name="gallery">
+                    <div class="overlay">
+                        <label for="close" title="Close lightbox"><img src="2.jpg" alt=""></label>
+                    </div>
+                </li>
+                <li>
+                    <label for="lightbox03"><img src="3s.jpg" alt=""></label>
+                    <input type="radio" id="lightbox03" name="gallery">
+                    <div class="overlay">
+                        <label for="close" title="Close lightbox"><img src="3.jpg" alt=""></label>
+                    </div>
+                </li>
+                <li>
+                    <label for="lightbox04"><img src="4s.jpg" alt=""></label>
+                    <input type="radio" id="lightbox04" name="gallery">
+                    <div class="overlay">
+                        <label for="close" title="Close lightbox"><img src="4.jpg" alt=""></label>
+                    </div>
+                </li>
+                <li>
+                    <label for="lightbox05"><img src="5s.jpg" alt=""></label>
+                    <input type="radio" id="lightbox05" name="gallery">
+                    <div class="overlay">
+                        <label for="close" title="Close lightbox"><img src="5.jpg" alt=""></label>
+                    </div>
+                </li>
+            </ul>
+            <input type="radio" id="close" name="gallery">
+        </section>
+    </div>
+</body>
+
+</html>

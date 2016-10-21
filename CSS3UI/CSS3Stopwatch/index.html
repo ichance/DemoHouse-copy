@@ -1,0 +1,380 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>纯CSS3制作妙表|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <style type="text/css">
+    body {
+        background: url('wood_pattern.png') repeat;
+    }
+    
+    .container {
+        padding: 50px;
+        text-align: center;
+    }
+    
+    .timer {
+        padding: 10px;
+        background: -webkit-linear-gradient(top, #222, #444);
+        background: -moz-linear-gradient(top, #222, #444);
+        background: -ms-linear-gradient(top, #222, #444);
+        background: -o-linear-gradient(top, #222, #444);
+        background: linear-gradient(top, #222, #444);
+        overflow: hidden;
+        display: inline-block;
+        border: 7px solid #efefef;
+        border-radius: 5px;
+        position: relative;
+        box-shadow: inset 0 -2px 10px 1px rgba(0, 0, 0, 0.75), 0 5px 20px -10px rgba(0, 0, 0, 1);
+    }
+    
+    .cell {
+        /*只显示一位数字. 高度 = 数字的行高，宽度 = 数字的宽度*/
+        width: 0.60em;
+        height: 40px;
+        font-size: 50px;
+        overflow: hidden;
+        position: relative;
+        float: left;
+    }
+    
+    .numbers {
+        width: 0.6em;
+        line-height: 40px;
+        font-family: digital, arial, verdana;
+        text-align: center;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        /*数字发光效果*/
+        text-shadow: 0 0 5px rgba(255, 255, 255, 1);
+    }
+    /*秒表控制器样式*/
+    
+    #timer_controls {
+        margin-top: -5px;
+    }
+    
+    #timer_controls label {
+        cursor: pointer;
+        padding: 5px 10px;
+        background: #efefef;
+        font-family: arial, verdana, tahoma;
+        font-size: 11px;
+        border-radius: 0 0 3px 3px;
+    }
+    
+    input[name="controls"] {
+        display: none;
+    }
+    /*Control code*/
+    /*秒表暂停运转*/
+    
+    #stop:checked~.timer .numbers {
+        -webkit-animation-play-state: paused;
+        -moz-animation-play-state: paused;
+        -o-animation-play-state: paused;
+        -ms-animation-play-state: paused;
+        animation-play-state: paused;
+    }
+    /*秒表开始运转*/
+    
+    #start:checked~.timer .numbers {
+        -webkit-animation-play-state: running;
+        -moz-animation-play-state: running;
+        -o-animation-play-state: running;
+        -ms-animation-play-state: running;
+        animation-play-state: running;
+    }
+    /*重置秒表*/
+    
+    #reset:checked~.timer .numbers {
+        -webkit-animation: none;
+        -moz-animation: none;
+        -o-animation: none;
+        -ms-animation: none;
+        animation: none;
+    }
+    
+    .moveten {
+        /*使用分步骤来移动数字，10个数字等于10步*/
+        -webkit-animation: moveten 1s steps(10, end) infinite;
+        -moz-animation: moveten 1s steps(10, end) infinite;
+        -o-animation: moveten 1s steps(10, end) infinite;
+        -ms-animation: moveten 1s steps(10, end) infinite;
+        animation: moveten 1s steps(10, end) infinite;
+        /*默认情况下动画是停止不动的*/
+        -webkit-animation-play-state: paused;
+        -moz-animation-play-state: paused;
+        -o-animation-play-state: paused;
+        -ms-animation-play-state: paused;
+        animation-play-state: paused;
+    }
+    
+    .movesix {
+        -webkit-animation: movesix 1s steps(6, end) infinite;
+        -moz-animation: movesix 1s steps(6, end) infinite;
+        -o-animation: movesix 1s steps(6, end) infinite;
+        -ms-animation: movesix 1s steps(6, end) infinite;
+        animation: movesix 1s steps(6, end) infinite;
+    }
+    /*同步时间的速率*/
+    /*每秒十个数字，因此也需要十步*/
+    
+    .second {
+        -webkit-animation-duration: 10s;
+        -moz-animation-duration: 10s;
+        -o-animation-duration: 10s;
+        -ms-animation-duration: 10s;
+        animation-duration: 10s;
+    }
+    
+    .tensecond {
+        /*60 times .second*/
+        -webkit-animation-duration: 60s;
+        -moz-animation-duration: 60s;
+        -o-animation-duration: 60s;
+        -ms-animation-duration: 60s;
+        animation-duration: 60s;
+    }
+    
+    .milisecond {
+        /*1/10th of .second*/
+        -webkit-animation-duration: 1s;
+        -moz-animation-duration: 1s;
+        -o-animation-duration: 1s;
+        -ms-animation-duration: 1s;
+        animation-duration: 1s;
+    }
+    
+    .tenmilisecond {
+        -webkit-animation-duration: 0.1s;
+        -moz-animation-duration: 0.1s;
+        -ms-animation-duration: 0.1s;
+        -o-animation-duration: 0.1s;
+        animation-duration: 0.1s;
+    }
+    
+    .hundredmilisecond {
+        -webkit-animation-duration: 0.01s;
+        -moz-animation-duration: 0.01s;
+        -o-animation-duration: 0.01s;
+        -ms-animation-duration: 0.01s;
+        animation-duration: 0.01s;
+    }
+    
+    .minute {
+        /*60 times .second*/
+        -webkit-animation-duration: 600s;
+        -moz-animation-duration: 600s;
+        -o-animation-duration: 600s;
+        -ms-animation-duration: 600s;
+        animation-duration: 600s;
+    }
+    
+    .tenminute {
+        /*60 times .minute*/
+        -webkit-animation-duration: 3600s;
+        -moz-animation-duration: 3600s;
+        -ms-animation-duration: 3600s;
+        -o-animation-duration: 3600s;
+        animation-duration: 3600s;
+    }
+    
+    .hour {
+        /*60 times .minute*/
+        -webkit-animation-duration: 36000s;
+        -moz-animation-duration: 36000s;
+        -ms-animation-duration: 36000s;
+        -o-animation-duration: 36000s;
+        animation-duration: 36000s;
+    }
+    
+    .tenhour {
+        /*10 times .hour*/
+        -webkit-animation-duration: 360000s;
+        -moz-animation-duration: 360000s;
+        -o-animation-duration: 360000s;
+        -ms-animation-duration: 360000s;
+        animation-duration: 360000s;
+    }
+    /*------------------------------------------------------------*\
+1、动画的逻辑就是给数字使用了绝对定位，改变“top”的属性值；
+2、分 和 秒 应该是 '60' 而不是 '100'，因此需要创建两个动画；
+3、十步十个数字
+4、六步六个数字
+\*-------------------------------------------------------------*/
+    
+    @-webkit-keyframes moveten {
+        0% {
+            top: 0;
+        }
+        100% {
+            top: -400px;
+        }
+        /*height = 40. digits = 10. hence -400 to move it completely to the top*/
+    }
+    
+    @-webkit-keyframes movesix {
+        0% {
+            top: 0;
+        }
+        100% {
+            top: -240px;
+        }
+        /*height = 40. digits = 6. hence -240 to move it completely to the top*/
+    }
+    
+    @-moz-keyframes moveten {
+        0% {
+            top: 0;
+        }
+        100% {
+            top: -400px;
+        }
+        /*height = 40. digits = 10. hence -400 to move it completely to the top*/
+    }
+    
+    @-moz-keyframes movesix {
+        0% {
+            top: 0;
+        }
+        100% {
+            top: -240px;
+        }
+        /*height = 40. digits = 6. hence -240 to move it completely to the top*/
+    }
+    
+    @-o-keyframes moveten {
+        0% {
+            top: 0;
+        }
+        100% {
+            top: -400px;
+        }
+        /*height = 40. digits = 10. hence -400 to move it completely to the top*/
+    }
+    
+    @-o-keyframes movesix {
+        0% {
+            top: 0;
+        }
+        100% {
+            top: -240px;
+        }
+        /*height = 40. digits = 6. hence -240 to move it completely to the top*/
+    }
+    
+    @-ms-keyframes moveten {
+        0% {
+            top: 0;
+        }
+        100% {
+            top: -400px;
+        }
+        /*height = 40. digits = 10. hence -400 to move it completely to the top*/
+    }
+    
+    @-ms-keyframes movesix {
+        0% {
+            top: 0;
+        }
+        100% {
+            top: -240px;
+        }
+        /*height = 40. digits = 6. hence -240 to move it completely to the top*/
+    }
+    
+    @keyframes moveten {
+        0% {
+            top: 0;
+        }
+        100% {
+            top: -400px;
+        }
+        /*height = 40. digits = 10. hence -400 to move it completely to the top*/
+    }
+    
+    @keyframes movesix {
+        0% {
+            top: 0;
+        }
+        100% {
+            top: -240px;
+        }
+        /*height = 40. digits = 6. hence -240 to move it completely to the top*/
+    }
+    /*Lets use a better font for the numbers*/
+    
+    @font-face {
+        font-family: 'digital';
+        src: url('http://thecodeplayer.com/uploads/fonts/DS-DIGI.TTF');
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <div class="container">
+                <!-- time to add the controls -->
+                <input id="start" name="controls" type="radio" />
+                <input id="stop" name="controls" type="radio" />
+                <input id="reset" name="controls" type="radio" />
+                <div class="timer">
+                    <div class="cell">
+                        <div class="numbers tenhour moveten">0 1 2 3 4 5 6 7 8 9</div>
+                    </div>
+                    <div class="cell">
+                        <div class="numbers hour moveten">0 1 2 3 4 5 6 7 8 9</div>
+                    </div>
+                    <div class="cell divider">
+                        <div class="numbers">:</div>
+                    </div>
+                    <div class="cell">
+                        <div class="numbers tenminute movesix">0 1 2 3 4 5 6</div>
+                    </div>
+                    <div class="cell">
+                        <div class="numbers minute moveten">0 1 2 3 4 5 6 7 8 9</div>
+                    </div>
+                    <div class="cell divider">
+                        <div class="numbers">:</div>
+                    </div>
+                    <div class="cell">
+                        <div class="numbers tensecond movesix">0 1 2 3 4 5 6</div>
+                    </div>
+                    <div class="cell">
+                        <div class="numbers second moveten">0 1 2 3 4 5 6 7 8 9</div>
+                    </div>
+                    <div class="cell divider">
+                        <div class="numbers">:</div>
+                    </div>
+                    <div class="cell">
+                        <div class="numbers milisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
+                    </div>
+                    <div class="cell">
+                        <div class="numbers tenmilisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
+                    </div>
+                    <div class="cell">
+                        <div class="numbers hundredmilisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
+                    </div>
+                </div>
+                <!-- Lables for the controls -->
+                <div id="timer_controls">
+                    <label for="start">Start</label>
+                    <label for="stop">Stop</label>
+                    <label for="reset">Reset</label>
+                </div>
+            </div>
+            <p style="text-align:center">此案例代码来自于<a href="http://thecodeplayer.com/walkthrough/make-a-stopwatch-using-css3-without-images-or-javascript" target="_blank">thecodeplayer.com</a>，并做过相应的代码处理。</p>
+        </section>
+    </div>
+</body>
+
+</html>

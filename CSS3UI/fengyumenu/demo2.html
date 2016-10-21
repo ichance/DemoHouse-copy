@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>CSS3制作凤凰网导航|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <title>CSS3制作凤凰网导航</title>
+    <link href='//fonts.googleapis.com/css?family=Covered+By+Your+Grace' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+    body,
+    ul,
+    li {
+        padding: 0;
+        margin: 0;
+    }
+    
+    body {
+        margin: 100px
+    }
+    
+    .nav {
+        position: relative;
+        border-top: 10px solid #000;
+        width: 960px;
+        margin: 0 auto;
+    }
+    
+    .nav:after,
+    .nav:before {
+        display: block;
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 10px
+    }
+    
+    .nav:before {
+        background: #8c319c;
+        height: 25px;
+        -webkit-transform: skew(0, 50deg);
+        top: 10px;
+    }
+    
+    .nav:after {
+        background: #cecece;
+        height: 35px;
+        -webkit-transform: skew(0, 50deg);
+        top: 30px
+    }
+    
+    .nav ul {
+        background: #8c319c;
+        height: 30px;
+        list-style-type: none;
+        line-height: 30px;
+        padding: 0 10px
+    }
+    
+    .nav li {
+        display: inline-block;
+        padding: 0 15px;
+        border-right: 1px solid #a552ad
+    }
+    
+    .nav li.active {
+        background: #eff7f7;
+        border-right: 3px solid #b5bdbd;
+        position: relative;
+        top: -5px;
+        height: 35px;
+    }
+    
+    .nav .sNav {
+        background: #eff7f7;
+        line-height: 40px;
+        margin-left: 10px
+    }
+    
+    .nav .sNav a {
+        color: #000;
+        text-decoration: none;
+        margin: 0 10px
+    }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li class="active">娱乐首页</li>
+            <li>明星</li>
+            <li>电视</li>
+            <li>电影</li>
+            <li>音乐</li>
+            <li>图片</li>
+            <li>星座</li>
+            <li>演出</li>
+            <li>凤凰网·非常道</li>
+            <li>官网</li>
+        </ul>
+        <div class="sNav"><a href="#">这是子导航</a></div>
+    </div>
+</body>
+
+</html>

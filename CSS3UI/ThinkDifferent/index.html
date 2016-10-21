@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>|w3cplus | css3|css3教程,css3实例,css3动画</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <script type="text/javascript" charset="UTF-8" src="//www.w3cplus.com/demo/css3/prefixfree.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <style type="text/css">
+    body {
+        background-color: #f5f5f5;
+    }
+    
+    .demo {
+        -webkit-animation: mask-preheat 1s, mask-motion 5s 1s ease-out, demo-motion 2.5s 6s linear infinite;
+        -webkit-animation-fill-mode: none, forwards, none;
+        background: url(images/main.jpg) 0 0 no-repeat;
+        color: #fff;
+        height: 500px;
+        margin: 1em auto;
+        -webkit-mask: center no-repeat;
+        -webkit-mask-image: url(images/apple.png), url(images/apple.png), url(images/apple.png), url(images/apple.png);
+        -webkit-mask-size: 10%;
+        width: 650px;
+    }
+    
+    @-webkit-keyframes mask-preheat {
+        50% {
+            -webkit-mask-size: 20%, 20%, 20%, 20%;
+        }
+    }
+    
+    @-webkit-keyframes mask-motion {
+        5% {
+            -webkit-mask-position: left top, center, center, center;
+            -webkit-mask-size: 20%, 10%, 10%, 10%;
+        }
+        10% {
+            -webkit-mask-position: left top, right top, center, center;
+            -webkit-mask-size: 20%, 20%, 10%, 10%;
+        }
+        15% {
+            -webkit-mask-position: left top, right top, left bottom, center;
+            -webkit-mask-size: 20%, 20%, 20%, 10%;
+        }
+        20% {
+            -webkit-mask-position: left top, right top, left bottom, right bottom;
+            -webkit-mask-size: 20%, 20%, 20%, 20%;
+        }
+        60% {
+            -webkit-mask-position: left bottom, left top, right bottom, right top;
+            -webkit-mask-size: 20%, 20%, 20%, 20%;
+        }
+        80% {
+            -webkit-mask-position: center;
+            -webkit-mask-size: 10%, 10%, 10%, 10%;
+        }
+        90% {
+            -webkit-mask-position: center;
+            -webkit-mask-size: 20%, 20%, 20%, 20%;
+        }
+        100% {
+            -webkit-mask-position: top, right, bottom, left;
+            -webkit-mask-size: 40%, 40%, 40%, 40%;
+        }
+    }
+    
+    @-webkit-keyframes demo-motion {
+        50% {
+            -webkit-filter: contrast(1.5);
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo"></section>
+    </div>
+</body>
+
+</html>

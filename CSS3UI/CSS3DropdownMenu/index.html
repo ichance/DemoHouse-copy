@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 Animated Navigation Menu|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    <!-- Font Awesome Stylesheet -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.css" />
+    <!-- Including Open Sans Condensed from Google Fonts -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic" />
+    <style type="text/css">
+    #colorNav > ul {
+        width: 450px;
+        /* Increase when adding more menu items */
+        margin: 50px auto;
+    }
+    
+    #colorNav > ul > li {
+        /* will style only the top level li */
+        list-style: none;
+        box-shadow: 0 0 10px rgba(100, 100, 100, 0.2) inset, 1px 1px 1px #CCC;
+        display: inline-block;
+        line-height: 1;
+        margin: 1px;
+        border-radius: 3px;
+        position: relative;
+    }
+    
+    #colorNav > ul > li > a {
+        color: inherit;
+        text-decoration: none !important;
+        font-size: 24px;
+        padding: 25px;
+    }
+    
+    #colorNav li ul {
+        position: absolute;
+        list-style: none;
+        text-align: center;
+        width: 180px;
+        left: 50%;
+        margin-left: -90px;
+        top: 70px;
+        font: bold 12px 'Open Sans Condensed', sans-serif;
+        /* This is important for the show/hide CSS animation */
+        max-height: 0px;
+        overflow: hidden;
+        -webkit-transition: max-height 0.4s linear;
+        -moz-transition: max-height 0.4s linear;
+        -o-transition: max-height 0.4s linear;
+        -ms-transition: max-height 0.4s linear;
+        transition: max-height 0.4s linear;
+    }
+    
+    #colorNav li ul li {
+        background-color: #313131;
+    }
+    
+    #colorNav li ul li a {
+        padding: 12px;
+        color: #fff !important;
+        text-decoration: none !important;
+        display: block;
+    }
+    
+    #colorNav li ul li:nth-child(odd) {
+        /* zebra stripes */
+        background-color: #363636;
+    }
+    
+    #colorNav li ul li:hover {
+        background-color: #444;
+    }
+    
+    #colorNav li ul li:first-child {
+        border-radius: 3px 3px 0 0;
+        margin-top: 25px;
+        position: relative;
+    }
+    
+    #colorNav li ul li:first-child:before {
+        /* the pointer tip */
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        border: 5px solid transparent;
+        border-bottom-color: #313131;
+        left: 50%;
+        top: -10px;
+        margin-left: -5px;
+    }
+    
+    #colorNav li ul li:last-child {
+        border-radius: 0 0 3px 3px;
+    }
+    
+    #colorNav li ul li:only-child {
+        border-radius: 3px;
+    }
+    /* This will trigger the CSS */
+    /* transition animation on hover */
+    
+    #colorNav li:hover ul {
+        max-height: 200px;
+        /* Increase when adding more dropdown items */
+    }
+    /*----------------------------
+	Color Themes
+-----------------------------*/
+    
+    #colorNav li.green {
+        /* This is the color of the menu item */
+        background-color: #00c08b;
+        /* This is the color of the icon */
+        color: #127a5d;
+    }
+    
+    #colorNav li.red {
+        background-color: #ea5080;
+        color: #aa2a52;
+    }
+    
+    #colorNav li.blue {
+        background-color: #53bfe2;
+        color: #2884a2;
+    }
+    
+    #colorNav li.yellow {
+        background-color: #f8c54d;
+        color: #ab8426;
+    }
+    
+    #colorNav li.purple {
+        background-color: #df6dc2;
+        color: #9f3c85;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <div id="colorNav">
+                <ul>
+                    <li class="green">
+                        <a href="#" class="icon-home"></a>
+                        <ul>
+                            <li><a href="#">Back to the tutorial</a></li>
+                            <li><a href="#">Get help</a></li>
+                            <li><a href="#">Download this example</a></li>
+                        </ul>
+                    </li>
+                    <li class="red">
+                        <a href="#" class="icon-cogs"></a>
+                        <ul>
+                            <li><a href="#">Payment</a></li>
+                            <li><a href="#">Notifications</a></li>
+                            <li><a href="#">Privacy options</a></li>
+                            <li><a href="#">Account Settings</a></li>
+                        </ul>
+                    </li>
+                    <li class="blue">
+                        <a href="#" class="icon-twitter"></a>
+                        <ul>
+                            <li><a href="#">Follow us on Twitter</a></li>
+                            <li><a href="#">Find us on Facebook</a></li>
+                        </ul>
+                    </li>
+                    <li class="yellow">
+                        <a href="#" class="icon-beaker"></a>
+                        <ul>
+                            <li><a href="#">PHP tutorials</a></li>
+                            <li><a href="#">jQuery techniques</a></li>
+                            <li><a href="#">CSS articles</a></li>
+                            <li><a href="#">Everything else</a></li>
+                        </ul>
+                    </li>
+                    <li class="purple">
+                        <a href="#" class="icon-envelope"></a>
+                        <ul>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <p style="text-align:center;margin:50px;">特别声明：此例代码来自于：<a href="http://demo.tutorialzine.com/2012/10/css3-dropdown-menu/" target="_blank">http://demo.tutorialzine.com/2012/10/css3-dropdown-menu/</a></p>
+        </section>
+    </div>
+</body>
+
+</html>

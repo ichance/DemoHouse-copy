@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>22 CSS3 Text Effect|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <link href="http://fonts.googleapis.com/css?family=Aclonica:regular" rel="stylesheet" type="text/css">
+    <style type="text/css">
+    body {
+        background: url(body_bkg.png);
+    }
+    
+    .text-wrap {
+        width: 600px;
+        min-height: 100px;
+        margin: 20px auto;
+        padding: 30px 0;
+        border: 5px solid white;
+        position: relative;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.80);
+        clear: both;
+        font-family: 'Aclonica', serif;
+        font-size: 50px;
+        text-align: center;
+    }
+    
+    .box1 {
+        color: rgba(0, 174, 239, 0.2);
+        text-shadow: rgba(0, 0, 30, 0.0784314) 0px 5px 2px;
+    }
+    
+    .box2 {
+        color: #FAFAFA;
+        text-shadow: rgba(255, 255, 255, 0.0980392) -1px -1px 1px, rgba(0, 0, 0, 0.498039) 1px 1px 1px;
+    }
+    
+    .box3 {
+        color: #333;
+        text-shadow: rgba(0, 0, 0, 0.298039) -5px 5px 5px;
+    }
+    
+    .box4 {
+        color: #FAFAFA;
+        text-shadow: #999 0px 1px 0px, #888 0px 2px 0px, #777 0px 3px 0px, #666 0px 4px 0px, #555 0px 5px 0px, #444 0px 6px 0px, #333 0px 7px 0px, #001135 0px 8px 7px;
+    }
+    
+    .box5 {
+        color: white;
+        text-shadow: white 0px 0px 5px, white 0px 0px 10px, white 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+        letter-spacing: 5px;
+    }
+    
+    .box6 {
+        color: rgba(0, 168, 255, 0.498039);
+        text-shadow: rgba(255, 0, 180, 0.498039) 3px 3px 0px;
+    }
+    
+    .box7 {
+        color: #990F0A;
+        text-shadow: #EEE 5px 1px 0px, #707070 7px 3px 0px;
+    }
+    
+    .box8 {
+        color: rgb(42, 79, 84);
+        text-shadow: rgb(254, 252, 201) 0px 0px 20px, rgb(254, 236, 133) 10px -10px 30px, rgb(255, 174, 52) -20px -20px 40px, rgb(236, 118, 12) 20px -40px 50px, rgb(205, 70, 6) -20px -60px 60px, rgb(151, 55, 22) 0px -80px 70px, rgb(69, 27, 14) 10px -90px 80px;
+    }
+    
+    .box9 {
+        color: rgb(0, 160, 217);
+        text-shadow: rgb(219, 105, 105) 0px 0px 4px, rgb(219, 105, 105) 0px 0px 0.2em;
+    }
+    
+    .box10 {
+        text-shadow: #91BAD8 0px 0px 1px, white 0px -1px 2px, #7B92A8 0px -3px 2px, rgba(0, 0, 0, 0.8) 0px 15px 25px;
+        color: transparent;
+    }
+    
+    .box11 {
+        color: white;
+        text-shadow: #BF7F00 3px 3px 8px, #BF7F00 -3px -3px 8px;
+    }
+    
+    .box12 {
+        color: #00A0D9;
+        text-shadow: #A4C2D9 3px 3px 0px, #5C5F72 7px 7px 0px;
+    }
+    
+    .box13 {
+        background: #9AC1E1;
+        color: transparent;
+        text-shadow: rgba(255, 255, 255, 0.6) 0px 0px 10px, rgba(255, 255, 255, 0.4) 0px 0px 30px, rgba(255, 255, 255, 0.298039) 0px 0px 50px, rgba(255, 255, 255, 0.298039) 0px 0px 180px;
+    }
+    
+    .box14 {
+        background: #222;
+        color: #333;
+        opacity: 0.4;
+        text-shadow: rgba(255, 255, 255, 0.298039) -1px -1px 0px, rgba(0, 0, 0, 0.8) 1px 1px 0px;
+    }
+    
+    .box15 {
+        color: #00A0D9;
+        text-shadow: #686868 0px 0px 2px, #DDD 0px 1px 1px, #D6D6D6 0px 2px 1px, #CCC 0px 3px 1px, #C5C5C5 0px 4px 1px, #C1C1C1 0px 5px 1px, #BBB 0px 6px 1px, #777 0px 7px 1px, rgba(100, 100, 100, 0.4) 0px 8px 3px, rgba(100, 100, 100, 0.0980392) 0px 9px 5px, rgba(100, 100, 100, 0.14902) 0px 10px 7px, rgba(100, 100, 100, 0.2) 0px 11px 9px, rgba(100, 100, 100, 0.247059) 0px 12px 11px, rgba(100, 100, 100, 0.298039) 0px 13px 15px;
+    }
+    
+    .box16 {
+        color: #00A0D9;
+        text-shadow: #00A0D9 1px 1px 3px, #00A0D9 -1px -1px 3px;
+    }
+    
+    .box17 {
+        color: #00A0D9;
+        text-shadow: #A8C0D8 -0.06em 0px, #7B92A8 0.06em 0px;
+    }
+    
+    .box18 {
+        color: transparent;
+        text-shadow: #91BAD8 0px 0px 5px;
+    }
+    
+    .box19 {
+        background-image: url(low_contrast_linen.png);
+        color: transparent;
+        text-shadow: rgba(245, 245, 255, 0.34902) 0px 0px 0px, rgba(0, 0, 30, 0.0980392) 0px 0.04em 0.02em;
+        z-index: 1;
+        -webkit-text-stroke-width: 6px;
+        -webkit-background-clip: text;
+        -webkit-text-stroke-color: rgba(255, 255, 255, 0.0470588);
+    }
+    
+    .box20 {
+        color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: rgba(0, 0, 0, 0.2);
+        letter-spacing: 0.04em;
+        text-shadow: rgba(255, 255, 255, 0.498039) 0px 5px 6px, rgba(255, 255, 255, 0.2) 1px 3px 3px;
+        -webkit-background-clip: text;
+    }
+    
+    .box21 {
+        color: transparent;
+        -webkit-text-stroke-width: 0px;
+        -webkit-text-stroke-color: initial;
+        letter-spacing: 0.04em;
+        text-shadow: rgba(255, 255, 255, 0.498039) 0px 5px 6px, rgba(255, 255, 255, 0.2) 1px 3px 3px;
+        -webkit-background-clip: text;
+        background-color: rgba(123, 146, 168, 0.901961);
+    }
+    
+    .box22 {
+        color: rgb(160, 174, 193);
+        text-shadow: rgb(125, 146, 168) 1px 1px 0px, rgb(125, 146, 168) 2px 2px 0px, rgb(125, 146, 168) 3px 3px 0px, rgb(125, 146, 168) 4px 4px 0px, rgb(125, 146, 168) 5px 5px 0px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <div class="text-wrap box1">W3cplus | Pure CSS3 Text Shadow Effects</div>
+            <div class="text-wrap box2">W3cplus | Pure CSS3 Text Shadow Effects</div>
+            <div class="text-wrap box3">W3cplus | Pure CSS3 Text Shadow Effects</div>
+            <div class="text-wrap box4">W3cplus | Pure CSS3 Text Shadow Effects</div>
+            <div class="text-wrap box5">W3cplus | Pure CSS3 Text Shadow Effects</div>
+            <div class="text-wrap box6">W3cplus | Pure CSS3 Text Shadow Effects</div>
+            <div class="text-wrap box7">W3cplus | Pure CSS3 Text Shadow Effects</div>
+            <div class="text-wrap box8">W3cplus | Pure CSS3 Text Shadow Effects</div>
+            <div class="text-wrap box9">W3cplus | Pure CSS3 Text Shadow Effects</div>
+            <div class="text-wrap box10">W3cplus | Pure CSS3 Text Shadow Effects</div>
+            <div class="text-wrap box11">W3cplus | Pure CSS3 Text Shadow Effects</div>
+            <div class="text-wrap box12">W3cplus | Pure CSS3 Text Shadow Effects</div>
+            <div class="text-wrap box13">W3cplus | Pure CSS3 Text Shadow Effects</div>
+            <div class="text-wrap box14">W3cplus | Pure CSS3 Text Shadow Effects</div>
+            <div class="text-wrap box15">W3cplus | Pure CSS3 Text Shadow Effects</div>
+            <div class="text-wrap box16">W3cplus | Pure CSS3 Text Shadow Effects</div>
+            <div class="text-wrap box17">W3cplus | Pure CSS3 Text Shadow Effects</div>
+            <div class="text-wrap box18">W3cplus | Pure CSS3 Text Shadow Effects</div>
+            <div class="text-wrap box19">W3cplus | Pure CSS3 Text Shadow Effects</div>
+            <div class="text-wrap box20">W3cplus | Pure CSS3 Text Shadow Effects</div>
+            <div class="text-wrap box21">W3cplus | Pure CSS3 Text Shadow Effects</div>
+            <div class="text-wrap box22">W3cplus | Pure CSS3 Text Shadow Effects</div>
+        </section>
+    </div>
+</body>
+
+</html>

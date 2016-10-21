@@ -1,0 +1,221 @@
+@import '../../shared/mixins',
+        '../../shared/reset',
+        '../../shared/about-light';
+
+/*
+ * Copyright (c) 2012-2013 Thibaut Courouble
+ * http://www.cssflow.com
+ *
+ * Licensed under the MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+
+$mainColor: #dee5f4;
+$sideColor: #59afd2;
+
+body {
+  font: 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+  color: #404040;
+  background: #2e5270;
+}
+
+a {
+  color: #5d79ae;
+  text-decoration: none;
+
+  &:hover { text-decoration: underline; }
+}
+
+.container {
+  margin: 50px auto;
+  width: 640px;
+}
+
+.app {
+  position: relative;
+  margin: 0 auto;
+  width: 320px;
+  overflow: hidden;
+  background: $sideColor;
+  border-radius: 3px;
+  @include box-shadow(0 0 8px 1px rgba(black, .5));
+}
+
+.side {
+  float: left;
+  border-radius: 3px 0 0 3px;
+
+  a {
+    display: block;
+    position: relative;
+    width: 36px;
+    height: 38px;
+    @include hide-text;
+    @include transition(background .15s);
+  }
+
+  i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+  }
+
+  .add {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: darken($sideColor, 15%);
+    border-top: 1px solid darken($sideColor, 20%);
+    border-radius: 0 0 0 4px;
+    @include box-shadow(inset 0 1px rgba(white, .15));
+
+    &:hover {
+      background: darken($sideColor, 11%);
+      border-color: darken($sideColor, 15%);
+    }
+  }
+}
+
+.tabs {
+  border-bottom: 1px solid lighten($sideColor, 8%);
+  border-bottom: 1px solid rgba(white, .15);
+
+  a {
+    border-top: 1px solid lighten($sideColor, 8%);
+    border-top: 1px solid rgba(white, .15);
+    border-bottom: 1px solid darken($sideColor, 11%);
+
+    &:hover { background: lighten($sideColor, 8%); }
+  }
+
+  li:first-child a {
+    border-top: 0;
+    border-radius: 4px 0 0 0;
+  }
+
+  .active a, a:active {
+    z-index: 2;
+    background: $mainColor;
+    cursor: default;
+
+    i { background-image: url('../img/icons_active.png'); }
+  }
+
+  &:active .active a:not(:active) {
+    background: none;
+
+    i { background-image: url('../img/icons.png'); }
+  }
+}
+
+.main {
+  position: relative;
+  margin-left: 35px;
+  background: $mainColor;
+  border-left: 1px solid darken($sideColor, 20%);
+  border-radius: 0 3px 3px 0;
+  @include box-shadow(0 0 4px rgba(black, .3));
+}
+
+.item {
+  position: relative;
+  padding: 12px 15px 12px 70px;
+  line-height: 18px;
+  font-size: 11px;
+  color: #626c80;
+  text-shadow: 0 1px rgba(white, .7);
+  background: $mainColor;
+  border-top: 1px solid lighten($mainColor, 3%);
+  border-bottom: 1px solid darken($mainColor, 5%);
+  @include linear-gradient(bottom left, $mainColor 85%, darken($mainColor, 6%));
+  @include transition(background .15s);
+
+  &:first-child {
+    border-top: 0;
+    border-radius: 0 4px 0 0;
+  }
+
+  &:last-child {
+    border-bottom: 0;
+    border-radius: 0 0 4px 0;
+  }
+
+  footer {
+    margin: 2px 0 0;
+    font-size: 10px;
+  }
+
+  time { color: darken($mainColor, 20%); }
+
+  .avatar {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border: 1px solid rgba(black, .3);
+      border-bottom-color: rgba(black, .4);
+      border-radius: 3px;
+      @include box-shadow(inset 0 1px rgba(white, .3));
+    }
+
+    img {
+      display: block;
+      width: 40px;
+      height: 40px;
+      border-radius: 3px;
+    }
+  }
+
+  &:hover {
+    z-index: 2;
+    background: darken($mainColor, 4%);
+    border-color: darken($mainColor, 8%);
+    cursor: pointer;
+    @include box-shadow(inset 0 1px rgba(white, .25),
+                        0 1px darken($mainColor, 1%),
+                        0 -1px $mainColor);
+  }
+
+  &:active, &.selected {
+    z-index: 3;
+    background: darken($mainColor, 8%);
+    border-color: darken($mainColor, 25%);
+    cursor: auto;
+    @include box-shadow(inset 0 0 6px rgba(black, .3),
+                        0 1px $mainColor,
+                        0 -1px $mainColor);
+  }
+}
+
+.lt-ie8 {
+  .side a { vertical-align: top; }
+  .main { margin: 0 35px 0 0; left: 35px; }
+}
+
+$icons: ('twitter', 0 0),
+        ('rss', -20px 0),
+        ('facebook', -40px 0),
+        ('dribbble', -60px 0),
+        ('plus', -80px 0);
+
+[class*="icon-"] {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url('../img/icons.png');
+  background-repeat: no-repeat;
+  @include hide-text;
+}
+
+@each $pair in $icons {
+  .icon-#{nth($pair, 1)} { background-position: nth($pair, 2); }
+}

@@ -1,0 +1,130 @@
+@charset "utf-8";
+@import url("http://www.w3cplus.com/demo/css3/base.css");
+.demo{
+    width:500px;
+	margin:0 auto;
+}
+/* demo1 */
+.demo1{
+    border:2px solid #ccc;
+	padding:10px;
+	margin-bottom:20px;
+	position:relative;
+	-moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+.demo1:before,.demo1:after{ 
+	content:'';
+	width:0;
+	height:0;
+	position:absolute;
+}
+.demo1:before{
+    left:10px;
+	bottom:-8px;
+	border-top:8px solid #ccc;
+	border-left:8px solid transparent;
+	border-right:8px solid transparent;
+}
+.demo1:after{
+    left:12px;
+	bottom:-6px;
+	border-top:8px solid #fff;
+	border-left:6px solid transparent;
+	border-right:6px solid transparent;
+}
+/* demo2 */
+.demo2{
+    border:2px solid #29B4F0;
+	padding:10px;
+	position:relative;
+	margin-bottom:20px;
+	-moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+.demo2:before{
+	content:'';
+	width:8px;
+	height:8px;
+	position:absolute;
+	left:20px;
+	bottom:-7px;
+	background-color:#fff;
+	border:2px solid #29B4F0;
+	border-width: 0 2px 2px 0;
+	-webkit-transform:rotate(45deg);
+	-moz-transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+	-o-transform:rotate(45deg);
+	transform:rotate(45deg);
+}
+/* demo3 */
+.demo3{
+    background-color:#B6F5FE;
+	padding:10px;
+	position:relative;
+	margin-bottom:20px;
+	-moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+.demo3:before,.demo3:after{ 
+	content:'';
+	width:0;
+	height:0;
+	position:absolute;
+}
+.demo3:before{
+    left:10px;
+	bottom:-18px;
+	border-top:30px solid #B6F5FE;
+	border-left:8px solid transparent;
+	border-right:8px solid transparent;
+	-webkit-transform:rotate(50deg);
+	-moz-transform:rotate(50deg);
+	-ms-transform:rotate(50deg);
+	-o-transform:rotate(50deg);
+	transform:rotate(50deg);
+}
+/* demo4 */
+.demo4{
+    background-color:#82AF11;
+	padding:10px;
+	color:#fff;
+	position:relative;
+	text-shadow:0 -1px 1px rgba(0,0,0,.2);
+	-moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+.demo4:before{
+    content:'';
+	width:100px;
+	height:20px;
+	background-color:#82AF11;
+	position:absolute;
+	bottom:-20px;
+	left:200px;
+}
+.demo4:after{
+    content:'';
+	width:50px;
+	height:20px;
+	background-color:#fff;
+	position:absolute;
+	bottom:-20px;
+	left:200px;
+	border-radius:0 20px 0 0;
+}
+.demo4 > :first-child:before{
+     content:'';
+	width:50px;
+	height:20px;
+	background-color:#fff;
+	position:absolute;
+	bottom:-20px;
+	left:250px;
+	border-radius:20px 0 0 0;   
+}

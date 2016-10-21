@@ -1,0 +1,382 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 Share Tooltip|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <style type="text/css">
+    body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        background: #003961;
+    }
+    
+    .demo {
+        width: 400px;
+        height: 80px;
+        margin: 50px auto;
+    }
+    
+    .demo section {
+        width: 50%;
+        height: 80px;
+        float: left;
+    }
+    
+    .demo section:first-child::before {
+        content: "";
+        background: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        height: 50px;
+        width: 170px;
+        margin-left: 120px;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    }
+    
+    .demo section h1 {
+        margin-top: 12px;
+        overflow: hidden;
+        width: 33px;
+        color: #fff
+    }
+    
+    .demo article {
+        position: absolute;
+        height: 50px;
+        width: 100px;
+        background: #00aeef;
+        /*transition*/
+        -webkit-transition: all 300ms;
+        -moz-transition: all 300ms;
+        -o-transition: all 300ms;
+        -ms-transition: all 300ms;
+        transition: all 300ms;
+        text-align: center;
+    }
+    
+    .demo article a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: url(vIIhi.png) no-repeat;
+        margin: 6px 0 0;
+        padding: 0;
+        overflow: hidden;
+        text-indent: -999em;
+        text-descoration: none;
+    }
+    
+    .demo section:first-child article a:nth-child(2) {
+        background-position: -40px 0;
+    }
+    
+    .demo section:last-child article a:nth-child(1) {
+        background-position: -80px 0;
+    }
+    
+    .demo section:last-child article a:nth-child(2) {
+        background-position: -120px 0;
+    }
+    
+    .demo section:first-child article:first-child {
+        border-radius: 8px 0 0 8px;
+    }
+    
+    .demo section:first-child article:first-child h1 {
+        float: right;
+        font-weight: 400;
+        font-size: 20px;
+    }
+    
+    .demo section:last-child article:first-child {
+        border-radius: 0 8px 8px 0;
+    }
+    
+    .demo section:last-child article:first-child h1 {
+        text-indent: -6px;
+        margin-top: 12px;
+        font-size: 20px;
+        font-weight: 300;
+    }
+    
+    .demo section:first-child article:last-child {
+        background: #0f0;
+        margin-left: 150px;
+        /*transform*/
+        -webkit-transform: rotateY(90deg);
+        -moz-transform: rotateY(90deg);
+        -ms-transform: rotateY(90deg);
+        -o-transform: rotateY(90deg);
+        transform: rotateY(90deg);
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%, #0082c1), color-stop(100%, #003961));
+        background: -webkit-gradient(linear, left top, right top, color-stop(#0082c1, 0), color-stop(#003961, 1));
+        background: -webkit-linear-gradient(left, #0082c1 0%, #003961 100%);
+        background: -moz-linear-gradient(left, #0082c1 0%, #003961 100%);
+        background: -o-linear-gradient(left, #0082c1 0%, #003961 100%);
+        background: linear-gradient(left, #0082c1 0%, #003961 100%);
+    }
+    
+    .demo section:last-child article:last-child {
+        background: #0ff;
+        -webkit-transform: rotateY(-90deg);
+        -moz-transform: rotateY(-90deg);
+        -ms-transform: rotateY(-90deg);
+        -o-transform: rotateY(-90deg);
+        transform: rotateY(-90deg);
+        margin-left: -50px;
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%, #003961), color-stop(100%, #0082c1));
+        background: -webkit-gradient(linear, left top, right top, color-stop(#003961, 0), color-stop(#0082c1, 1));
+        background: -webkit-linear-gradient(left, #003961 0%, #0082c1 100%);
+        background: -moz-linear-gradient(left, #003961 0%, #0082c1 100%);
+        background: -o-linear-gradient(left, #003961 0%, #0082c1 100%);
+        background: linear-gradient(left, #003961 0%, #0082c1 100%);
+    }
+    
+    .demo section:first-child article:first-child {
+        margin-left: 100px;
+    }
+    
+    .demo:hover section:first-child article:first-child {
+        -webkit-transform: rotateY(90deg);
+        -moz-transform: rotateY(90deg);
+        -ms-transform: rotateY(90deg);
+        -o-transform: rotateY(90deg);
+        transform: rotateY(90deg);
+        margin-left: 60px;
+    }
+    
+    .demo:hover section:last-child article:first-child {
+        /*transform*/
+        -webkit-transform: rotateY(-90deg);
+        -moz-transform: rotateY(-90deg);
+        -ms-transform: rotateY(-90deg);
+        -o-transform: rotateY(-90deg);
+        transform: rotateY(-90deg);
+        margin-left: 40px;
+    }
+    
+    .demo:hover section:first-child article:last-child {
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        margin-left: 110px;
+        background: #0082C1;
+        border-radius: 8px 0 0 8px;
+    }
+    
+    .demo:hover section:last-child article:last-child {
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        margin-left: 0;
+        background: #0082C1;
+        border-radius: 0 8px 8px 0;
+    }
+    
+    .demo a:hover:before {
+        content: attr(data-title);
+        background-color: #000;
+        text-align: center;
+        text-indent: 0;
+        width: 90px;
+        padding: 5px;
+        broder: 1px solid #111;
+        border-color: #111 #333 #333 #111;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        color: #666;
+        font-size: 1em;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        margin: -43px -40px;
+        z-index: 9999;
+        -moz-animation: mymove .25s linear;
+        -webkit-animation: mymove .25s linear;
+        -o-animation: mymove .25s linear;
+        -ms-animation: mymove .25s linear;
+        animation: mymove .25s linear;
+    }
+    
+    .demo a:hover:after {
+        border: 7px solid #111;
+        border-color: #000 transparent transparent;
+        border-width: 20px 7px 7px 2px;
+        position: absolute;
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        left: 50%;
+        top: -5px;
+        z-index: 9999;
+        -moz-animation: mymove .25s linear;
+        -webkit-animation: mymove .25s linear;
+        -o-animation: mymove .25s linear;
+        -ms-animation: mymove .25s linear;
+        animation: mymove .25s linear;
+    }
+    
+    .demo section:first-child article:last-child a:nth-child(1):hover:before {
+        margin-left: -65px;
+    }
+    
+    .demo section:first-child article:last-child a:nth-child(1):hover:after {
+        left: 25px;
+    }
+    
+    .demo section:first-child article:last-child a:nth-child(2):hover:before {
+        margin-left: -25px;
+    }
+    
+    .demo section:first-child article:last-child a:nth-child(2):hover:after {
+        left: 65px;
+    }
+    
+    .demo section:last-child article:last-child a:nth-child(1):hover:before {
+        margin-left: -65px;
+    }
+    
+    .demo section:last-child article:last-child a:nth-child(1):hover:after {
+        left: 30px;
+    }
+    
+    .demo section:last-child article:last-child a:nth-child(2):hover:before {
+        margin-left: -25px;
+    }
+    
+    .demo section:last-child article:last-child a:nth-child(2):hover:after {
+        left: 70px;
+    }
+    
+    @-moz-keyframes mymove {
+        0% {
+            -moz-transform: scale(0, 0);
+            opacity: 0;
+        }
+        50% {
+            -moz-transform: scale(1.2, 1.2);
+            opacity: 0.3;
+        }
+        75% {
+            -moz-transform: scale(0.9, 0.9);
+            opacity: 0.7;
+        }
+        100% {
+            -moz-transform: scale(1, 1);
+            opacity: 1;
+        }
+    }
+    
+    @-webkit-keyframes mymove {
+        0% {
+            -webkit-transform: scale(0, 0);
+            opacity: 0;
+        }
+        50% {
+            -webkit-transform: scale(1.2, 1.2);
+            opacity: 0.3;
+        }
+        75% {
+            -webkit-transform: scale(0.9, 0.9);
+            opacity: 0.7;
+        }
+        100% {
+            -webkit-transform: scale(1, 1);
+            opacity: 1;
+        }
+    }
+    
+    @-o-keyframes mymove {
+        0% {
+            -o-transform: scale(0, 0);
+            opacity: 0;
+        }
+        50% {
+            -o-transform: scale(1.2, 1.2);
+            opacity: 0.3;
+        }
+        75% {
+            -o-transform: scale(0.9, 0.9);
+            opacity: 0.7;
+        }
+        100% {
+            -o-transform: scale(1, 1);
+            opacity: 1;
+        }
+    }
+    
+    @-ms-keyframes mymove {
+        0% {
+            -ms-transform: scale(0, 0);
+            opacity: 0;
+        }
+        50% {
+            -ms-transform: scale(1.2, 1.2);
+            opacity: 0.3;
+        }
+        75% {
+            -ms-transform: scale(0.9, 0.9);
+            opacity: 0.7;
+        }
+        100% {
+            -ms-transform: scale(1, 1);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes mymove {
+        0% {
+            transform: scale(0, 0);
+            opacity: 0;
+        }
+        50% {
+            transform: scale(1.2, 1.2);
+            opacity: 0.3;
+        }
+        75% {
+            transform: scale(0.9, 0.9);
+            opacity: 0.7;
+        }
+        100% {
+            transform: scale(1, 1);
+            opacity: 1;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <section>
+                <article>
+                    <h1>SHA</h1>
+                </article>
+                <article>
+                    <a href="#" data-title="FackeBook">Facebook</a>
+                    <a href="#" data-title="Twitter">Twitter</a>
+                </article>
+            </section>
+            <section>
+                <article>
+                    <h1>ARE</h1>
+                </article>
+                <article>
+                    <a href="#" data-title="Stumble">Stumble</a>
+                    <a href="#" data-title="Dribbble">Dribbble</a>
+                </article>
+            </section>
+        </section>
+    </div>
+</body>
+
+</html>

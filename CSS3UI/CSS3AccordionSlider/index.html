@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pure CSS3 Accordion Slider |css3|css3教程,css3实例,css3动画|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <script type="text/javascript" src="//www.w3cplus.com/demo/css3/prefixfree.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <style>
+    body {
+        background-color: #f6f6f6;
+    }
+    
+    .demo {
+        width: 940px;
+        margin: 40px auto 0;
+    }
+    
+    .main_promo {
+        border: 5px solid #3d3d3d;
+        border-radius: 7px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, .2);
+        background-color: #1c1c1c;
+    }
+    
+    .main_promo li {
+        position: relative;
+        float: left;
+        padding: 5px 0 5px 6px;
+        overflow: hidden;
+    }
+    
+    .main_promo div {
+        float: left;
+    }
+    
+    .slide a {
+        position: relative;
+        z-index: 1;
+        display: block;
+        outline: none;
+        width: 50px;
+        height: 300px;
+        border-radius: 5px;
+        background-color: #303030;
+        transition: all 0.3s ease-in;
+    }
+    
+    .slide p {
+        position: absolute;
+        top: 30px;
+        left: -25px;
+        color: #ddd;
+        height: 20px;
+        width: 100px;
+        font-size: 14px;
+        font-weight: bold;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, .8);
+        word-break: break-all;
+        transform: rotate(-90deg);
+    }
+    
+    .slide strong {
+        font-size: 30px;
+        color: #191919;
+        text-shadow: 0 1px 0 #454545;
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+    }
+    
+    .slide_img {
+        overflow: hidden;
+        width: 0;
+        height: 0;
+        transition: width 0.5s ease-in-out;
+    }
+    
+    .slide_img img {
+        width: 692px;
+        height: 300px;
+    }
+    
+    input[type="radio"] {
+        position: absolute;
+        left: 5px;
+        z-index: 99;
+        width: 50px;
+        height: 300px;
+        opacity: 0;
+        cursor: pointer;
+    }
+    
+    input:checked ~ .slide a {
+        text-decoration: none;
+        background: radial-gradient(circle, #434343, #303030);
+    }
+    
+    input:checked ~ .slide_img {
+        overflow: visible;
+        width: 692px;
+        height: 300px;
+        margin-left: 8px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <ul class="main_promo clearfix" id="main_promo">
+                <li>
+                    <input type="radio" name="radio-set" checked="checked" />
+                    <div class="slide">
+                        <a href="#">
+                            <p>Slide One</p><strong>1</strong></a>
+                    </div>
+                    <div class="slide_img">
+                        <img src="img/img_01.jpg" alt="" />
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="radio-set" />
+                    <div class="slide">
+                        <a href="#slide_two">
+                            <p>Slide Two</p><strong>2</strong></a>
+                    </div>
+                    <div class="slide_img">
+                        <img src="img/img_02.jpg" alt="" />
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="radio-set" />
+                    <div class="slide">
+                        <a href="#slide_three">
+                            <p>Slide Three</p><strong>3</strong></a>
+                    </div>
+                    <div class="slide_img">
+                        <img src="img/img_03.jpg" alt="" />
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="radio-set" />
+                    <div class="slide">
+                        <a href="#slide_four">
+                            <p>Slide Four</p><strong>4</strong></a>
+                    </div>
+                    <div class="slide_img">
+                        <img src="img/img_04.jpg" alt="" />
+                    </div>
+                </li>
+            </ul>
+            <!-- / main_promo-->
+        </section>
+    </div>
+</body>
+
+</html>

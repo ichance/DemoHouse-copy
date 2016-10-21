@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>css3 laoding|css3教程,css3实例,css3动画|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <style>
+    #loading {
+        margin: 80px auto;
+        position: relative;
+        width: 100px;
+        height: 100px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
+        background: #ccc;
+        font: 12px "Lucida Grande", Sans-Serif;
+        text-align: center;
+        line-height: 100px;
+        color: white;
+        -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+    
+    #loading:before {
+        content: "";
+        position: absolute;
+        left: -20px;
+        top: -20px;
+        bottom: -20px;
+        right: -20px;
+        -webkit-border-radius: 70px;
+        -moz-border-radius: 70px;
+        border-radius: 70px;
+        background: #eee;
+        z-index: -2;
+        -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    #loading span {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 80px solid rgba(255, 255, 255, 0.7);
+        z-index: -1;
+        top: -28px;
+        left: 0px;
+        -webkit-animation: ticktock 5s linear infinite;
+        -webkit-transform-origin: 50px 80px;
+        -moz-animation: ticktock 5s linear infinite;
+        -moz-transform-origin: 50px 80px;
+    }
+    
+    #loading strong {
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+        -webkit-animation: expand 2.5s linear infinite;
+        -moz-animation: expand 2.5s linear infinite;
+    }
+    
+    @-webkit-keyframes expand {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 60px;
+        }
+    }
+    
+    @-moz-keyframes expand {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 60px;
+        }
+    }
+    
+    @-webkit-keyframes ticktock {
+        0% {
+            -webkit-transform: rotate(0);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+    
+    @-moz-keyframes ticktock {
+        0% {
+            -moz-transform: rotate(0);
+        }
+        100% {
+            -moz-transform: rotate(360deg);
+        }
+    }
+    </style>
+
+    <body>
+        <div class="page">
+            <section id="demo_zone">
+                <div id="loading"><strong>loading...</strong><span></span></div>
+            </section>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,562 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    html,
+    body {
+        font-size: 50%;
+    }
+}
+
+body {
+    background: #7B00FF;
+}
+
+.demo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -18rem;
+    margin-top: -25rem;
+    width: 36rem;
+    height: 50rem;
+    padding-top: 22rem;
+    background: #FFFFFF;
+    box-shadow: 0 0.5rem 5rem rgba(0, 0, 0, 0.4);
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.demo__content {
+    position: relative;
+    height: 100%;
+}
+
+.demo__heading {
+    font-size: 2.2rem;
+    line-height: 7rem;
+    padding-left: 3rem;
+    color: #313131;
+}
+
+.demo__elems {
+    position: relative;
+    height: 21rem;
+}
+
+.demo__elem {
+    position: relative;
+    height: 7rem;
+    font-size: 1.8rem;
+    line-height: 7rem;
+    padding-left: 3rem;
+    border-top: 1px solid #e7e7e7;
+}
+
+.demo__hover {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 7rem;
+    cursor: pointer;
+}
+
+.demo__hover-1 {
+    top: 0;
+}
+
+.demo__hover-1:hover ~ .demo__highlighter {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.demo__hover-1:hover ~ .demo__highlighter .demo__elems {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.demo__hover-2 {
+    top: 7rem;
+}
+
+.demo__hover-2:hover ~ .demo__highlighter {
+    -webkit-transform: translateY(7rem);
+    transform: translateY(7rem);
+}
+
+.demo__hover-2:hover ~ .demo__highlighter .demo__elems {
+    -webkit-transform: translateY(-7rem);
+    transform: translateY(-7rem);
+}
+
+.demo__hover-2:hover ~ .demo__examples .example-adv__top,
+.demo__hover-2:hover ~ .demo__examples .example-adv__mid,
+.demo__hover-2:hover ~ .demo__examples .example-adv__line {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    opacity: 0;
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+    transition: opacity 0.2s, -webkit-transform 0.2s;
+    transition: transform 0.2s, opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s, -webkit-transform 0.2s;
+}
+
+.demo__hover-2:hover ~ .demo__examples .example-web__top,
+.demo__hover-2:hover ~ .demo__examples .example-web__left {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    -webkit-transition: opacity 0.4s 0.2s, -webkit-transform 0.4s 0.2s;
+    transition: opacity 0.4s 0.2s, -webkit-transform 0.4s 0.2s;
+    transition: transform 0.4s 0.2s, opacity 0.4s 0.2s;
+    transition: transform 0.4s 0.2s, opacity 0.4s 0.2s, -webkit-transform 0.4s 0.2s;
+}
+
+.demo__hover-2:hover ~ .demo__examples .example-web__right-line {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.demo__hover-2:hover ~ .demo__examples .example-web__right-line:nth-child(1) {
+    -webkit-transition: -webkit-transform 0.4s 0s;
+    transition: -webkit-transform 0.4s 0s;
+    transition: transform 0.4s 0s;
+    transition: transform 0.4s 0s, -webkit-transform 0.4s 0s;
+}
+
+.demo__hover-2:hover ~ .demo__examples .example-web__right-line:nth-child(2) {
+    -webkit-transition: -webkit-transform 0.4s 0.06s;
+    transition: -webkit-transform 0.4s 0.06s;
+    transition: transform 0.4s 0.06s;
+    transition: transform 0.4s 0.06s, -webkit-transform 0.4s 0.06s;
+}
+
+.demo__hover-2:hover ~ .demo__examples .example-web__right-line:nth-child(3) {
+    -webkit-transition: -webkit-transform 0.4s 0.12s;
+    transition: -webkit-transform 0.4s 0.12s;
+    transition: transform 0.4s 0.12s;
+    transition: transform 0.4s 0.12s, -webkit-transform 0.4s 0.12s;
+}
+
+.demo__hover-2:hover ~ .demo__examples .example-web__right-line:nth-child(4) {
+    -webkit-transition: -webkit-transform 0.4s 0.18s;
+    transition: -webkit-transform 0.4s 0.18s;
+    transition: transform 0.4s 0.18s;
+    transition: transform 0.4s 0.18s, -webkit-transform 0.4s 0.18s;
+}
+
+.demo__hover-2:hover ~ .demo__examples .example-web__right-line:nth-child(5) {
+    -webkit-transition: -webkit-transform 0.4s 0.24s;
+    transition: -webkit-transform 0.4s 0.24s;
+    transition: transform 0.4s 0.24s;
+    transition: transform 0.4s 0.24s, -webkit-transform 0.4s 0.24s;
+}
+
+.demo__hover-2:hover ~ .demo__examples .example-web__right-line:nth-child(6) {
+    -webkit-transition: -webkit-transform 0.4s 0.3s;
+    transition: -webkit-transform 0.4s 0.3s;
+    transition: transform 0.4s 0.3s;
+    transition: transform 0.4s 0.3s, -webkit-transform 0.4s 0.3s;
+}
+
+.demo__hover-3 {
+    top: 14rem;
+}
+
+.demo__hover-3:hover ~ .demo__highlighter {
+    -webkit-transform: translateY(14rem);
+    transform: translateY(14rem);
+}
+
+.demo__hover-3:hover ~ .demo__highlighter .demo__elems {
+    -webkit-transform: translateY(-14rem);
+    transform: translateY(-14rem);
+}
+
+.demo__hover-3:hover ~ .demo__examples .example-adv__top,
+.demo__hover-3:hover ~ .demo__examples .example-adv__mid,
+.demo__hover-3:hover ~ .demo__examples .example-adv__line {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    opacity: 0;
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+    transition: opacity 0.2s, -webkit-transform 0.2s;
+    transition: transform 0.2s, opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s, -webkit-transform 0.2s;
+}
+
+.demo__hover-3:hover ~ .demo__examples .example-both {
+    background: #39A5F7;
+    -webkit-transition: background-color 0.4s 0.2s;
+    transition: background-color 0.4s 0.2s;
+}
+
+.demo__hover-3:hover ~ .demo__examples .example-both__half {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: opacity 0.4s 0.2s, -webkit-transform 0.4s 0.2s;
+    transition: opacity 0.4s 0.2s, -webkit-transform 0.4s 0.2s;
+    transition: transform 0.4s 0.2s, opacity 0.4s 0.2s;
+    transition: transform 0.4s 0.2s, opacity 0.4s 0.2s, -webkit-transform 0.4s 0.2s;
+}
+
+.demo__highlighter {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: -1rem;
+    width: 38rem;
+    height: 7rem;
+    background: #39A5F7;
+    overflow: hidden;
+    box-shadow: 0 0.3rem 0.2rem rgba(0, 0, 0, 0.3);
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.59, 0.04, 0.3, 1.43);
+    transition: -webkit-transform 0.5s cubic-bezier(0.59, 0.04, 0.3, 1.43);
+    transition: transform 0.5s cubic-bezier(0.59, 0.04, 0.3, 1.43);
+    transition: transform 0.5s cubic-bezier(0.59, 0.04, 0.3, 1.43), -webkit-transform 0.5s cubic-bezier(0.59, 0.04, 0.3, 1.43);
+}
+
+.demo__highlighter .demo__elems {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.59, 0.04, 0.3, 1.43);
+    transition: -webkit-transform 0.5s cubic-bezier(0.59, 0.04, 0.3, 1.43);
+    transition: transform 0.5s cubic-bezier(0.59, 0.04, 0.3, 1.43);
+    transition: transform 0.5s cubic-bezier(0.59, 0.04, 0.3, 1.43), -webkit-transform 0.5s cubic-bezier(0.59, 0.04, 0.3, 1.43);
+}
+
+.demo__highlighter .demo__elem {
+    color: #fff;
+    border: none;
+}
+
+.demo__examples {
+    position: absolute;
+    top: -29rem;
+    left: 0;
+    width: 100%;
+    height: 22rem;
+    padding: 5.5rem 7rem 0 7rem;
+}
+
+.demo__examples-nb {
+    position: relative;
+    height: 13.5rem;
+    padding: 0 1.5rem;
+    border-bottom: 1rem solid #424242;
+}
+
+.nb-inner {
+    position: relative;
+    width: 100%;
+    height: 12.5rem;
+    border: 0.7rem solid #424242;
+    overflow: hidden;
+}
+
+.example {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.example-adv__top {
+    height: 2rem;
+    background: #EFEFEF;
+    padding: 0.5rem 2rem;
+    margin-bottom: 2rem;
+    -webkit-transition: opacity 0.4s 0.2s, -webkit-transform 0.4s 0.2s;
+    transition: opacity 0.4s 0.2s, -webkit-transform 0.4s 0.2s;
+    transition: transform 0.4s 0.2s, opacity 0.4s 0.2s;
+    transition: transform 0.4s 0.2s, opacity 0.4s 0.2s, -webkit-transform 0.4s 0.2s;
+}
+
+.example-adv__top-search {
+    position: relative;
+    height: 100%;
+    background: #fff;
+}
+
+.example-adv__top-search:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2.5rem;
+    height: 100%;
+    background: #02ADF6;
+}
+
+.example-adv__mid {
+    position: relative;
+    width: 13.6rem;
+    height: 3.5rem;
+    background: #FFF7BD;
+    margin: 0 auto 0.7rem;
+    -webkit-transition: opacity 0.4s 0.2s, -webkit-transform 0.4s 0.2s;
+    transition: opacity 0.4s 0.2s, -webkit-transform 0.4s 0.2s;
+    transition: transform 0.4s 0.2s, opacity 0.4s 0.2s;
+    transition: transform 0.4s 0.2s, opacity 0.4s 0.2s, -webkit-transform 0.4s 0.2s;
+}
+
+.example-adv__mid:before,
+.example-adv__mid:after {
+    content: "";
+    position: absolute;
+    left: 1rem;
+    height: 0.7rem;
+}
+
+.example-adv__mid:before {
+    top: 0.6rem;
+    width: 9rem;
+    background: #02ADF6;
+}
+
+.example-adv__mid:after {
+    bottom: 0.6rem;
+    width: 11.6rem;
+    background: #fff;
+}
+
+.example-adv__line {
+    height: 0.5rem;
+    background: #EFEFEF;
+    width: 6.8rem;
+    margin-left: 2rem;
+    margin-bottom: 0.7rem;
+    -webkit-transition: opacity 0.4s 0.2s, -webkit-transform 0.4s 0.2s;
+    transition: opacity 0.4s 0.2s, -webkit-transform 0.4s 0.2s;
+    transition: transform 0.4s 0.2s, opacity 0.4s 0.2s;
+    transition: transform 0.4s 0.2s, opacity 0.4s 0.2s, -webkit-transform 0.4s 0.2s;
+}
+
+.example-adv__line.long {
+    width: 13.6rem;
+}
+
+.example-web {
+    padding: 1.5rem 2rem 0;
+    font-size: 0;
+}
+
+.example-web__top {
+    background: #EF4239;
+    width: 100%;
+    height: 1.5rem;
+    margin-bottom: 0.5rem;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+    -webkit-transform: translateY(-5rem);
+    transform: translateY(-5rem);
+}
+
+.example-web__left {
+    display: inline-block;
+    width: 6.5rem;
+    height: 7rem;
+    background: #C6C6C6;
+    margin-right: 0.6rem;
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+    transition: opacity 0.2s, -webkit-transform 0.2s;
+    transition: transform 0.2s, opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s, -webkit-transform 0.2s;
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+    opacity: 0;
+}
+
+.example-web__right {
+    display: inline-block;
+    width: 6.5rem;
+    height: 7rem;
+}
+
+.example-web__right-line {
+    width: 100%;
+    height: 0.8rem;
+    background: #EFEFEF;
+    margin-bottom: 0.4rem;
+    -webkit-transform: translateX(10rem);
+    transform: translateX(10rem);
+}
+
+.example-web__right-line:nth-child(1) {
+    -webkit-transition: -webkit-transform 0s 0s;
+    transition: -webkit-transform 0s 0s;
+    transition: transform 0s 0s;
+    transition: transform 0s 0s, -webkit-transform 0s 0s;
+}
+
+.example-web__right-line:nth-child(2) {
+    -webkit-transition: -webkit-transform 0s 0.04s;
+    transition: -webkit-transform 0s 0.04s;
+    transition: transform 0s 0.04s;
+    transition: transform 0s 0.04s, -webkit-transform 0s 0.04s;
+}
+
+.example-web__right-line:nth-child(3) {
+    -webkit-transition: -webkit-transform 0s 0.08s;
+    transition: -webkit-transform 0s 0.08s;
+    transition: transform 0s 0.08s;
+    transition: transform 0s 0.08s, -webkit-transform 0s 0.08s;
+}
+
+.example-web__right-line:nth-child(4) {
+    -webkit-transition: -webkit-transform 0s 0.12s;
+    transition: -webkit-transform 0s 0.12s;
+    transition: transform 0s 0.12s;
+    transition: transform 0s 0.12s, -webkit-transform 0s 0.12s;
+}
+
+.example-web__right-line:nth-child(5) {
+    -webkit-transition: -webkit-transform 0s 0.16s;
+    transition: -webkit-transform 0s 0.16s;
+    transition: transform 0s 0.16s;
+    transition: transform 0s 0.16s, -webkit-transform 0s 0.16s;
+}
+
+.example-web__right-line:nth-child(6) {
+    -webkit-transition: -webkit-transform 0s 0.2s;
+    transition: -webkit-transform 0s 0.2s;
+    transition: transform 0s 0.2s;
+    transition: transform 0s 0.2s, -webkit-transform 0s 0.2s;
+}
+
+.example-both {
+    padding: 1rem 1rem;
+    font-size: 0;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+}
+
+.example-both__half {
+    position: relative;
+    display: inline-block;
+    width: 7.2rem;
+    height: 100%;
+    padding: 0.5rem;
+    background: #fff;
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+    transition: opacity 0.2s, -webkit-transform 0.2s;
+    transition: transform 0.2s, opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s, -webkit-transform 0.2s;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+.example-both__left {
+    margin-right: 1.2rem;
+    padding-top: 3rem;
+}
+
+.example-both__left-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #EFEFEF;
+    height: 2.4rem;
+    padding: 0.6rem 0.5rem;
+}
+
+.example-both__left-top:before {
+    content: "";
+    display: inline-block;
+    width: 70%;
+    height: 100%;
+    background: #fff;
+}
+
+.example-both__left-top:after {
+    content: "";
+    display: inline-block;
+    width: 30%;
+    height: 100%;
+    background: #02ADF6;
+}
+
+.example-both__left-mid {
+    height: 3.5rem;
+    background: #FFF7BD;
+    margin-bottom: 0.4rem;
+}
+
+.example-both__left:before,
+.example-both__left:after {
+    content: "";
+    display: block;
+    width: 6.2rem;
+    height: 0.7rem;
+    background: #EFEFEF;
+}
+
+.example-both__left:before {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+}
+
+.example-both__left:after {
+    width: 3.6rem;
+}
+
+.example-both__right-top {
+    width: 100%;
+    height: 1.5rem;
+    background: #EF4239;
+    margin-bottom: 0.5rem;
+}
+
+.example-both__right-mid {
+    width: 100%;
+    height: 4rem;
+    background: #C6C6C6;
+    margin-bottom: 0.4rem;
+}
+
+.example-both__right:before,
+.example-both__right:after {
+    content: "";
+    display: block;
+    width: 6.2rem;
+    height: 0.7rem;
+    background: #EFEFEF;
+}
+
+.example-both__right:before {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+}
+
+.check-out {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.5rem;
+    color: #fff;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.check-out a {
+    color: #4DDBFC;
+}

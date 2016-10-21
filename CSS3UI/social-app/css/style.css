@@ -1,0 +1,330 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.about {
+  margin: 70px auto 40px;
+  padding: 8px;
+  width: 260px;
+  font: 10px/18px 'Lucida Grande', Arial, sans-serif;
+  color: #666;
+  text-align: center;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.25);
+  background: #eee;
+  background: rgba(250, 250, 250, 0.8);
+  border-radius: 4px;
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 0 6px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.about a {
+  color: #333;
+  text-decoration: none;
+  border-radius: 2px;
+  -webkit-transition: background 0.1s;
+  -moz-transition: background 0.1s;
+  -o-transition: background 0.1s;
+  transition: background 0.1s;
+}
+.about a:hover {
+  text-decoration: none;
+  background: #fafafa;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.about-links {
+  height: 30px;
+}
+.about-links > a {
+  float: left;
+  width: 50%;
+  line-height: 30px;
+  font-size: 12px;
+}
+
+.about-author {
+  margin-top: 5px;
+}
+.about-author > a {
+  padding: 1px 3px;
+  margin: 0 -1px;
+}
+
+/*
+ * Copyright (c) 2012-2013 Thibaut Courouble
+ * http://www.cssflow.com
+ *
+ * Licensed under the MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+body {
+  font: 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+  color: #404040;
+  background: #2e5270;
+}
+
+a {
+  color: #5d79ae;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  margin: 50px auto;
+  width: 640px;
+}
+
+.app {
+  position: relative;
+  margin: 0 auto;
+  width: 320px;
+  overflow: hidden;
+  background: #59afd2;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.5);
+}
+
+.side {
+  float: left;
+  border-radius: 3px 0 0 3px;
+}
+.side a {
+  display: block;
+  position: relative;
+  width: 36px;
+  height: 38px;
+  font: 0/0 serif;
+  text-shadow: none;
+  color: transparent;
+  -webkit-transition: background 0.15s;
+  -moz-transition: background 0.15s;
+  -o-transition: background 0.15s;
+  transition: background 0.15s;
+}
+.side i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -10px 0 0 -10px;
+}
+.side .add {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #2f8aaf;
+  border-top: 1px solid #2a7a9b;
+  border-radius: 0 0 0 4px;
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.15);
+}
+.side .add:hover {
+  background: #3497bf;
+  border-color: #2f8aaf;
+}
+
+.tabs {
+  border-bottom: 1px solid #79bedb;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+.tabs a {
+  border-top: 1px solid #79bedb;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid #3497bf;
+}
+.tabs a:hover {
+  background: #79bedb;
+}
+.tabs li:first-child a {
+  border-top: 0;
+  border-radius: 4px 0 0 0;
+}
+.tabs .active a, .tabs a:active {
+  z-index: 2;
+  background: #dee5f4;
+  cursor: default;
+}
+.tabs .active a i, .tabs a:active i {
+  background-image: url("../img/icons_active.png");
+}
+.tabs:active .active a:not(:active) {
+  background: none;
+}
+.tabs:active .active a:not(:active) i {
+  background-image: url("../img/icons.png");
+}
+
+.main {
+  position: relative;
+  margin-left: 35px;
+  background: #dee5f4;
+  border-left: 1px solid #2a7a9b;
+  border-radius: 0 3px 3px 0;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.item {
+  position: relative;
+  padding: 12px 15px 12px 70px;
+  line-height: 18px;
+  font-size: 11px;
+  color: #626c80;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.7);
+  background: #dee5f4;
+  border-top: 1px solid #e9eef8;
+  border-bottom: 1px solid #cbd6ee;
+  background-image: -webkit-linear-gradient(bottom left, #dee5f4 85%, #c7d3ec);
+  background-image: -moz-linear-gradient(bottom left, #dee5f4 85%, #c7d3ec);
+  background-image: -o-linear-gradient(bottom left, #dee5f4 85%, #c7d3ec);
+  background-image: linear-gradient(to top right, #dee5f4 85%, #c7d3ec);
+  -webkit-transition: background 0.15s;
+  -moz-transition: background 0.15s;
+  -o-transition: background 0.15s;
+  transition: background 0.15s;
+}
+.item:first-child {
+  border-top: 0;
+  border-radius: 0 4px 0 0;
+}
+.item:last-child {
+  border-bottom: 0;
+  border-radius: 0 0 4px 0;
+}
+.item footer {
+  margin: 2px 0 0;
+  font-size: 10px;
+}
+.item time {
+  color: #92a9db;
+}
+.item .avatar {
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+.item .avatar:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom-color: rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.3);
+}
+.item .avatar img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
+}
+.item:hover {
+  z-index: 2;
+  background: #cfd9ef;
+  border-color: #bfcdea;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px #dae2f3, 0 -1px #dee5f4;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px #dae2f3, 0 -1px #dee5f4;
+}
+.item:active, .item.selected {
+  z-index: 3;
+  background: #bfcdea;
+  border-color: #7e9ad4;
+  cursor: auto;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3), 0 1px #dee5f4, 0 -1px #dee5f4;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3), 0 1px #dee5f4, 0 -1px #dee5f4;
+}
+
+.lt-ie8 .side a {
+  vertical-align: top;
+}
+.lt-ie8 .main {
+  margin: 0 35px 0 0;
+  left: 35px;
+}
+
+[class*="icon-"] {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/icons.png");
+  background-repeat: no-repeat;
+  font: 0/0 serif;
+  text-shadow: none;
+  color: transparent;
+}
+
+.icon-twitter {
+  background-position: 0 0;
+}
+
+.icon-rss {
+  background-position: -20px 0;
+}
+
+.icon-facebook {
+  background-position: -40px 0;
+}
+
+.icon-dribbble {
+  background-position: -60px 0;
+}
+
+.icon-plus {
+  background-position: -80px 0;
+}

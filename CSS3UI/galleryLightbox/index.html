@@ -1,0 +1,324 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 Gallery Lightbox|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    <style type="text/css">
+    body {
+        background: url(black-bg.png) repeat 0 0;
+    }
+    
+    .clickbox,
+    .clickbox:visited,
+    .clickbox:hover {
+        text-decoration: none;
+        font: bold 20px/40px georgia, sans-serif;
+        color: #00c;
+    }
+    
+    .clickbox:hover {
+        text-decoration: underline;
+    }
+    
+    .clickbox img {
+        display: block;
+        border: 0;
+    }
+    
+    .clickbox + b {
+        display: block;
+    }
+    
+    .clickbox {
+        border: 5px solid #fff;
+        border-radius: 5px;
+        margin: 50px auto;
+        background: #fff;
+        display: block;
+        width: 360px;
+    }
+    
+    .clickbox img,
+    .clickbox span {
+        display: block;
+        text-align: center;
+    }
+    
+    .clickbox + .lightbox {
+        position: absolute;
+        left: -99999px;
+        top: 0;
+        cursor: default;
+        z-index: 500;
+    }
+    
+    .clickbox + .lightbox .light {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    
+    .clickbox + .lightbox .box {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        height: 300px;
+        top: 20px;
+    }
+    
+    .clickbox:active,
+    .clickbox:focus {
+        color: red
+    }
+    
+    .clickbox:active + .lightbox {
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .clickbox + .lightbox:hover,
+    .clickbox:focus + .lightbox {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .clickbox + .lightbox:hover .light,
+    .clickbox:active + .lightbox .light,
+    .clickbox:focus + .lightbox .light {
+        background: #000;
+        width: 100%;
+        height: 100%;
+        filter: alpha(opacity=75);
+        filter: progid: DXImageTransform.Microsoft.Alpha(opacity=75);
+        opacity: 0.75;
+    }
+    
+    .clickbox + .lightbox i {
+        display: block;
+        width: 100px;
+        height: 20px;
+        position: fixed;
+        right: -100px;
+        top: 0;
+        z-index: 500;
+        color: #000;
+        font: normal normal 14px/20px arial, sans-serif;
+        text-align: center;
+        background: #fff;
+        border-radius: 6px;
+    }
+    
+    .clickbox + .lightbox:hover i,
+    .clickbox:active + .lightbox i,
+    .clickbox:focus + .lightbox i {
+        right: 50%;
+        margin-right: -50px;
+        top: 5px;
+    }
+    
+    .clickbox + .lightbox + #close {
+        display: block;
+        position: fixed;
+        width: 100px;
+        height: 20px;
+        overflow: hidden;
+        right: -100px;
+        top: 10px;
+        z-index: 1000;
+        background: url(trans.gif);
+        cursor: pointer;
+    }
+    
+    .clickbox + .lightbox:hover + #close,
+    .clickbox:active + .lightbox + #close,
+    .clickbox:focus + .lightbox + #close {
+        right: 50%;
+        margin-right: -50px;
+        top: 5px;
+    }
+    
+    #gallery {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    #gallery #fullsize {
+        width: 480px;
+        height: 480px;
+        overflow: scroll;
+        overflow-y: hidden;
+        margin-bottom: -18px;
+    }
+    
+    #gallery #fullsize div {
+        width: 480px;
+        height: 480px;
+        position: relative;
+    }
+    
+    #gallery #fullsize div img {
+        display: block;
+        margin: 0 auto;
+        border: 0;
+        padding: 10px 10px 0 10px;
+        background: #fff;
+        border: 1px solid #000;
+        border-width: 1px 1px 0 1px;
+    }
+    
+    #gallery #fullsize div a {
+        display: block;
+        top: 20px;
+        position: absolute;
+        outline: 0;
+        z-index: 500;
+        background: url(trans.gif);
+    }
+    
+    #gallery #fullsize div.vt a.left {
+        height: 360px;
+        width: 135px;
+        position: absolute;
+        left: 105px;
+    }
+    
+    #gallery #fullsize div.vt a.right {
+        height: 360px;
+        width: 135px;
+        position: absolute;
+        left: 240px;
+    }
+    
+    #gallery #fullsize div.hz a.left {
+        height: 270px;
+        width: 180px;
+        position: absolute;
+        left: 60px;
+    }
+    
+    #gallery #fullsize div.hz a.right {
+        height: 270px;
+        width: 180px;
+        position: absolute;
+        left: 240px;
+    }
+    
+    #gallery #fullsize div a.left:hover {
+        background: url(prev.png) no-repeat left 20px;
+    }
+    
+    #gallery #fullsize div a.right:hover {
+        background: url(next.png) no-repeat right 20px;
+    }
+    
+    #gallery #fullsize div p {
+        background: #fff;
+        margin: 0 auto;
+        padding: 10px;
+        border: 1px solid #000;
+        border-width: 0 1px 1px 1px;
+        font-weight: normal;
+        color: #444;
+    }
+    
+    #gallery #fullsize div.vt p {
+        width: 270px;
+    }
+    
+    #gallery #fullsize div.hz p {
+        width: 360px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <a href="#url" class="clickbox"><img src="1.jpg" alt="pic1"><span>Click Here</span></a>
+            <b class="lightbox">
+			<b class="light"></b>
+            <b class="box">
+				<div id="gallery">
+					<div id="fullsize">
+						<div id="pic1" class="hz">
+							<a class="left" href="#pic10"></a>
+							<img src="1.jpg" alt="pic1">
+							<a class="right" href="#pic2"></a>
+							<p>Some descriptive text</p>
+						</div>
+						<div id="pic2" class="vt">
+							<a class="left" href="#pic1"></a>
+							<img src="2.jpg" alt="pic2">
+							<a class="right" href="#pic3"></a>
+							<p>Some more descriptive text</p>
+						</div>
+						<div id="pic3" class="vt">
+							<a class="left" href="#pic2"></a>
+							<img src="3.jpg" alt="pic3">
+							<a class="right" href="#pic4"></a>
+							<p>Another line of descriptive text</p>
+						</div>
+						<div id="pic4" class="hz">
+							<a class="left" href="#pic3"></a>
+							<img src="4.jpg" alt="pic4">
+							<a class="right" href="#pic5"></a>
+							<p>Some more descriptive text</p>
+						</div>
+						<div id="pic5" class="vt">
+							<a class="left" href="#pic4"></a>
+							<img src="5.jpg" alt="pic5">
+							<a class="right" href="#pic6"></a>
+							<p>This can be any text and as long as you like. It will wrap onto a second and third line if it is too long.</p>
+						</div>
+						<div id="pic6" class="vt">
+							<a class="left" href="#pic5"></a>
+							<img src="6.jpg" alt="pic7">
+							<a class="right" href="#pic7"></a>
+							<p>Further descriptive text</p>
+						</div>
+						<div id="pic7" class="hz">
+							<a class="left" href="#pic6"></a>
+							<img src="7.jpg" alt="pic7">
+							<a class="right" href="#pic8"></a>
+							<p>Some more descriptive text</p>
+						</div>
+						<div id="pic8" class="hz">
+							<a class="left" href="#pic7"></a>
+							<img src="8.jpg" alt="pic8">
+							<a class="right" href="#pic9"></a>
+							<p>Yet more descriptive text</p>
+						</div>
+						<div id="pic9" class="hz">
+							<a class="left" href="#pic8"></a>
+							<img src="9.jpg" alt="pic9">
+							<a class="right" href="#pic10"></a>
+							<p>Some more descriptive text</p>
+						</div>
+						<div id="pic10" class="vt">
+							<a class="left" href="#pic9"></a>
+							<img src="10.jpg" alt="pic10">
+							<a class="right" href="#pic1"></a>
+							<p>Some more descriptive text</p>
+						</div>
+					</div>
+				</div>
+				<i>CLOSE</i>
+			</b>
+            </b>
+        </section>
+    </div>
+</body>
+
+</html>

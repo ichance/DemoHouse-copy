@@ -1,0 +1,1163 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>23 Box-Shadow Effects|w3cplus</title>
+	<meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+	<meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+	<link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+	<link href="http://fonts.googleapis.com/css?family=Jim+Nightshade&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<style type="text/css">
+.box {
+  width: 300px;
+  min-height: 300px;
+  margin: 30px;
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #ccc;
+  position:relative;
+  text-align:center;
+}
+.box p {
+  margin: 30px;
+  outline: none;
+	font-family: 'Jim Nightshade', cursive;
+	font-size:60px;
+	font-weight:bold;
+	color:rgb(41, 180, 240);
+	text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+}
+/*=========Box1===========*/
+.box1{  
+  background: -webkit-gradient(linear, 0% 20%, 0% 100%, from(#fff), to(#fff), color-stop(.1,#f3f3f3));
+  background: -webkit-linear-gradient(0% 0%, #fff, #f3f3f3 10%, #fff);
+  background: -moz-linear-gradient(0% 0%, #fff, #f3f3f3 10%, #fff);
+  background: -o-linear-gradient(0% 0%, #fff, #f3f3f3 10%, #fff);
+  /*设置Box的阴影效果*/
+  box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.1) inset;
+  /*制作右下脚折边效果*/
+  border-radius: 0 0 6px 0 / 0 0 50px 0;
+}
+/*使用:before来制作底部阴影，并对阴影进行旋转的扭曲和位移设置*/
+.box1:before{
+  content: '';
+  width: 50px;
+  height: 100px;
+  position:absolute;
+  bottom:0; right:0;
+  box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.1);
+  z-index:-1;
+  -webkit-transform: translate(-35px,-40px)    skew(0deg,30deg) rotate(-25deg);
+  -moz-transform: translate(-35px,-40px) skew(0deg,32deg)    rotate(-25deg);
+  -o-transform: translate(-35px,-40px) skew(0deg,32deg)    rotate(-25deg);    
+  transform: translate(-35px,-40px) skew(0deg,32deg)    rotate(-25deg);    
+}
+/*使用:after来制作顶部的阴影，并对阴影进行旋转的扭曲和位移设置*/
+.box1:after{
+  content: '';
+  width: 100px;
+  height: 100px;
+  top:0; left:0;
+  position:absolute;
+  display: inline-block;
+  z-index:-1;
+  box-shadow: -10px -10px 15px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(2deg)    translate(20px,25px) skew(20deg);
+  -moz-transform: rotate(7deg) translate(20px,25px) skew(20deg);
+  -o-transform: rotate(7deg) translate(20px,25px) skew(20deg);    
+  transform: rotate(7deg) translate(20px,25px) skew(20deg);      
+}
+/*==========Box2============*/
+.box2{
+  padding: 0 0 1px 0;
+  background: #f3f3f3;
+  background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#f3f3f3), to(#fff), color-stop(.1,#f3f3f3));
+  background: -webkit-linear-gradient(0 0 270deg, #f3f3f3, #f3f3f3 10%, #fff);
+  background: -moz-linear-gradient(0 0 270deg, #f3f3f3, #f3f3f3 10%, #fff);
+  background: -o-linear-gradient(0 0 270deg, #f3f3f3, #f3f3f3 10%, #fff);
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-radius: 0 0 60px 0 / 0 0 60px 0;
+  box-shadow: -1px 2px 2px rgba(0, 0, 0, 0.2);  
+}
+.box2:before{
+  content:'';    
+  width: 25px;
+  height: 20px;
+  position: absolute;
+  bottom:0;
+  right:0;
+  border-radius: 0 0 30px 0;
+  box-shadow:-2px -2px 5px rgba(0, 0, 0, 0.3);
+  -webkit-transform:    rotate(-20deg) skew(-40deg,-3deg) translate(-13px,-13px);
+  -moz-transform:    rotate(-20deg) skew(-40deg,-3deg) translate(-13px,-13px);
+  -o-transform:    rotate(-20deg) skew(-40deg,-3deg) translate(-13px,-13px);
+  transform: rotate(-20deg) skew(-40deg,-3deg) translate(-13px,-13px);
+}
+/*这里，我们做出的褶皱阴影*/
+.box2:after{
+  content: '';
+  z-index: -1;
+  width: 100px;
+  height: 100px;
+  position:absolute;
+  bottom:0;
+  right:0;
+  background: rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  box-shadow: 20px 20px 8px rgba()0,0,0,0.2;
+  -webkit-transform: rotate(0deg) translate(-45px,-20px) skew(20deg);
+  -moz-transform: rotate(0deg) translate(-45px,-20px) skew(20deg);
+  -o-transform: rotate(0deg) translate(-45px,-20px) skew(20deg);    
+  transform: rotate(0deg) translate(-45px,-20px) skew(20deg);       
+}
+/*==========Box3=========*/
+.box3{
+  padding: 5px 0 ;
+  background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#fff), to(#f3f3f3), color-stop(.1,#fff));
+  background: -webkit-linear-gradient(0 0 270deg, #f3f3f3, #f3f3f3 10%, #fff);
+  background: -moz-linear-gradient(0 0 270deg, #f3f3f3, #f3f3f3 10%, #fff);
+  background: -o-linear-gradient(0 0 270deg, #f3f3f3, #f3f3f3 10%, #fff);
+  border-radius:60px / 5px;
+  box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1) inset;
+}
+.box3:before{
+  content: '';
+  width: 50px;
+  height: 50px;
+  top:0; right:0;
+  position:absolute;
+  display: inline-block;
+  z-index:-1;
+  box-shadow: 10px -10px 8px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(2deg) translate(-14px,20px) skew(-20deg);
+  -moz-transform: rotate(2deg) translate(-14px,20px) skew(-20deg);
+  -o-transform: rotate(2deg) translate(-14px,20px) skew(-20deg);    
+  transform: rotate(2deg) translate(-14px,20px) skew(-20deg);      
+}
+.box3:after{
+  content: '';
+  width: 100px;
+  height: 100px;
+  top:0; left:0;
+  position:absolute;
+  z-index:-1;
+  display: inline-block;
+  box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(2deg) translate(20px,25px) skew(20deg);
+  -moz-transform: rotate(2deg) translate(20px,25px) skew(20deg);    
+  -o-transform: rotate(2deg) translate(20px,25px) skew(20deg);    
+  transform: rotate(2deg) translate(20px,25px) skew(20deg);  
+}
+/*============Box4==============*/
+.box4{
+  padding: 5px 0 ;
+  background: #fff;
+  background: -webkit-gradient(linear, 0% 20%, 0% 100%, from(#fff), to(#fff), color-stop(.2, #f2f2f2));
+  background: -webkit-linear-gradient(0% 0% 360deg, #fff, #f2f2f2 20%, #fff );
+  background: -moz-linear-gradient(0% 0% 360deg, #fff, #f2f2f2 20%, #fff );
+  background: -o-linear-gradient(0% 0% 360deg, #fff, #f2f2f2 20%, #fff );
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+.box4:before{
+  content: '';
+  width: 50px;
+  height: 50px;
+  top:0; right:0;
+  position:absolute;
+  z-index: -1;
+  box-shadow: 10px -10px 8px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(2deg) translate(-14px,20px) skew(-20deg);
+  -moz-transform: rotate(2deg) translate(-14px,20px) skew(-20deg);    
+  -o-transform: rotate(2deg) translate(-14px,20px) skew(-20deg);
+  transform: rotate(2deg) translate(-14px,20px) skew(-20deg);
+}
+.box4:after{
+  content: '';
+  width: 50px;
+  height: 50px;
+  top:0; left:0;
+  position:absolute;
+  z-index:-1;
+  display: inline-block;
+  box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(2deg) translate(12px,25px) skew(20deg);
+  -moz-transform: rotate(2deg) translate(12px,25px) skew(20deg);    
+  -o-transform: rotate(2deg) translate(12px,25px) skew(20deg);
+  transform: rotate(2deg) translate(12px,25px) skew(20deg);
+}
+/*盒子右下角阴影效果*/
+.box4 .shBr{
+  width: 100px;
+  height: 100px;
+  bottom:0; right:0;
+  position:absolute;
+  z-index: -1;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(0deg) translate(-20px,-15px) skew(20deg);
+  -moz-transform: rotate(0deg) translate(-20px,-15px) skew(20deg);
+  -o-transform: rotate(0deg) translate(-20px,-15px) skew(20deg);    
+  transform: rotate(0deg) translate(-20px,-15px) skew(20deg); 
+}
+/*盒子左下角阴影效果*/
+.box4 .shBl{
+  width: 100px;
+  height: 100px;
+  bottom:0; left:0;
+  position:absolute;
+  z-index: -1;
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.2);
+ -webkit-transform: rotate(0deg) translate(20px,-15px) skew(-20deg);
+  -moz-transform: rotate(0deg) translate(20px,-15px) skew(-20deg);
+  -o-transform: rotate(0deg) translate(20px,-15px) skew(-20deg);
+  transform: rotate(0deg) translate(20px,-15px) skew(-20deg);     
+}
+/*==========Box5==========*/
+.box5{
+  padding: 0 0 1px 0;
+  background: #f3f3f3;
+  background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#f3f3f3), to(#fff), color-stop(.1,#f3f3f3));
+  background: -webkit-linear-gradient(0 0 270deg, #f3f3f3, #f3f3f3 10%, #fff);
+  background: -o-linear-gradient(0 0 270deg, #f3f3f3, #f3f3f3 10%, #fff);
+  background: -moz-linear-gradient(0 0 270deg, #f3f3f3, #f3f3f3 10%, #fff);
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-radius: 0 0 60px 60px / 0 0 60px 60px;
+  box-shadow: -1px 2px 2px rgba(0, 0, 0, 0.2);
+}
+/*右折效果*/
+.box5:before{
+  content:'';    
+  width: 25px;
+  height: 20px;
+  background: white;
+  position: absolute;
+  bottom:0; right:0;
+  background: -webkit-gradient(linear, 0% 20%, 50% 40%, from(#fff), to( #eee), color-stop(.1,#fff));
+  background: -webkit-linear-gradient(0 50% 90deg, #fff, #fff 10%, #eee);
+  background: -moz-linear-gradient(0 50% 90deg, #fff, #fff 10%, #eee);
+  background: -o-linear-gradient(0 50% 90deg, #fff, #fff 10%, #eee);
+  border-radius: 0 0 30px 0;
+  box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+  -webkit-transform: rotate(-20deg) skew(-40deg,-3deg) translate(-13px,-13px);
+  -moz-transform: rotate(-20deg) skew(-40deg,-3deg)translate(-13px,-13px);
+  -o-transform: rotate(-20deg)skew(-40deg,-3deg) translate(-13px,-13px);    
+  transform: rotate(-20deg) skew(-40deg,-3deg) translate(-13px,-13px);
+}
+/*右折的阴影*/
+.box5:after{
+  content: '';
+  z-index: -10;
+  width: 100px;
+  height: 100px;
+  position:absolute;
+  bottom:0;
+  right:0;
+ background: rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  box-shadow: 20px 20px 8px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(0deg) translate(-45px,-20px) skew(20deg);
+  -moz-transform: rotate(0deg) translate(-45px,-20px) skew(20deg);
+  -o-transform: rotate(0deg) translate(-45px,-20px) skew(20deg);
+  transform: rotate(0deg) translate(-45px,-20px) skew(20deg);      
+}
+/*左下角折角*/
+.box5 .shBlFlod{
+  z-index: -10;
+  width: 50px;
+  height: 50px;
+  position:absolute;
+  bottom:0; left:0;
+  box-shadow: -20px 20px 8px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(0deg) translate(40px,-20px) skew(-20deg);
+  -moz-transform: rotate(0deg) translate(40px,-20px) skew(-20deg);
+  -o-transform: rotate(0deg) translate(40px,-20px) skew(-20deg);
+  transform: rotate(0deg) translate(40px,-20px) skew(-20deg);
+}
+/*左下角阴影*/
+.box5 .shBl{
+  content:'';    
+  width: 25px;
+  height: 20px;
+  background: white;
+  position: absolute;
+  bottom:0; left:0;
+  background: #fff;
+  background: -webkit-gradient(linear, 0% 20%, 50% 80%, from(#fff), to( #eee), color-stop(.1,#fff));
+  background: -webkit-linear-gradient(0 50%, #fff, #fff 10%, #eee);
+  background: -moz-linear-gradient(0 50%, #fff, #fff 10%, #eee);
+  background: -o-linear-gradient(0 50%, #fff, #fff 10%, #eee);
+  border-border-radius:0 0 30px 0;
+  box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+  -webkit-transform: rotate(103deg) skew(-3deg,-40deg) translate(-13px,-15px);
+  -moz-transform: rotate(103deg) skew(-3deg,-40deg) translate(-13px,-15px);    
+  -o-transform: rotate(103deg) skew(-3deg,-40deg) translate(-13px,-15px);
+  transform: rotate(103deg) skew(-3deg,-40deg) translate(-13px,-15px);    
+}
+/*=========Box6========*/
+.box6{
+  padding: 0 0 1px 0;
+  background:#fff;
+  background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#fff), to(#f3f3f3), color-stop(.1,#fff));
+  background: -webkit-linear-gradient(0 0 270deg, #fff, #fff 10%, #f3f3f3);
+  background: -moz-linear-gradient(0 0 270deg, #fff, #fff 10%, #f3f3f3);
+  background: -o-linear-gradient(0 0 270deg, #fff, #fff 10%, #f3f3f3);
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-radius: 60px 60px 60px 0 / 5px 5px 60px 0;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3) ;
+}
+.box6:before{
+  content:'';    
+  width: 25px;
+  height: 20px;
+  position: absolute;
+  bottom:0;
+  right:0;
+  border-radius: 0 0 30px 0;
+  box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+  -webkit-transform:    rotate(-20deg) skew(-40deg,-3deg) translate(-13px,-13px);
+  -moz-transform:    rotate(-20deg) skew(-40deg,-3deg) translate(-13px,-13px);    
+  -o-transform:    rotate(-20deg) skew(-40deg,-3deg) translate(-13px,-13px);    
+  transform:    rotate(-20deg) skew(-40deg,-3deg) translate(-13px,-13px);    
+}
+.box6:after{
+  content: '';
+  z-index: -10;
+  width: 100px;
+  height: 100px;
+  position:absolute;
+  bottom:0;
+  right:0;
+  background: rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  box-shadow: 20px 20px 8px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(0deg) translate(-45px,-20px) skew(20deg);
+  -moz-transform: rotate(0deg) translate(-45px,-20px) skew(20deg);
+  -o-transform: rotate(0deg) translate(-45px,-20px) skew(20deg);
+  transform: rotate(0deg) translate(-45px,-20px) skew(20deg);    
+}
+.box6 .cornerLf{
+  width: 100px;
+  height: 100px;
+  top:0; left:0;
+  position:absolute;
+  z-index:-6;
+  display: inline-block;
+  box-shadow: -10px -10px 20px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(2deg) translate(20px,25px) skew(20deg);
+  -moz-transform: rotate(2deg) translate(20px,20px) skew(20deg);
+  -o-transform: rotate(2deg) translate(20px,20px) skew(20deg);
+  transform: rotate(2deg) translate(20px,20px) skew(20deg);    
+}
+.box6 .cornerRt{
+  content: '';
+  width: 50px;
+  height: 50px;
+  top:0; right:0;
+  position:absolute;
+  display: inline-block;
+  z-index:-6;
+  box-shadow: 10px -10px 8px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(2deg) translate(-14px,20px) skew(-20deg);
+  -moz-transform: rotate(2deg) translate(-14px,15px) skew(-20deg);
+  -o-transform: rotate(2deg) translate(-14px,15px) skew(-20deg);
+  transform: rotate(2deg) translate(-14px,15px) skew(-20deg);    
+}
+/*==========Box7=========*/
+.box7{
+  padding: 0 0 1px 0;
+  background: #fff;
+  background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#fff), to(#f3f3f3), color-stop(.1,#fff));
+  background: -webkit-linear-gradient(0 0 270deg, #fff, #fff 10%, #f3f3f3);
+  background: -o-linear-gradient(0 0 270deg, #fff, #fff 10%, #f3f3f3);
+  background: -moz-linear-gradient(0 0 270deg, #fff, #fff 10%, #f3f3f3);
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+}
+.box7:before{
+  content: '';
+  position:absolute;
+  width: 130px;
+  height: 30px;
+  border-left: 1px dashed rgba(0, 0, 0, 0.1);
+  border-right: 1px dashed rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.1);
+  background: -webkit-gradient(linear, 555% 20%, 0% 92%, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.0)), color-stop(.1,rgba(0, 0, 0, 0.2)));
+  background: -webkit-linear-gradient(555% 0 180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.0));
+  background: -o-linear-gradient(555% 0 180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.0));
+  background: -moz-linear-gradient(555% 0 180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.0));
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+  -webkit-transform:translate(-50px,10px) skew(10deg,10deg) rotate(-50deg);
+  -moz-transform:translate(-50px,10px) skew(10deg,10deg) rotate(-50deg);    
+  -o-transform:translate(-50px,10px) skew(10deg,10deg) rotate(-50deg);    
+  transform:translate(-50px,10px) skew(10deg,10deg) rotate(-50deg);    
+}
+.box7:after{
+  content: '';
+  position:absolute;
+  right:0;
+  bottom:0;
+  width: 130px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.1);
+  background: -webkit-gradient(linear, 555% 20%, 0% 92%, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.0)), color-stop(.1,rgba(0, 0, 0, 0.2)));
+  background: -webkit-linear-gradient(555% 0 180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.0));
+  background: -o-linear-gradient(555% 0 180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.0));
+  background: -moz-linear-gradient(555% 0 180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.0));
+  border-left: 1px dashed rgba(0, 0, 0, 0.1);
+  border-right: 1px dashed rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translate(50px,-20px) skew(10deg,10deg) rotate(-50deg);
+  -moz-transform: translate(50px,-20px) skew(10deg,10deg) rotate(-50deg);
+  -o-transform: translate(50px,-20px) skew(10deg,10deg) rotate(-50deg);
+  transform: translate(50px,-20px) skew(10deg,10deg) rotate(-50deg)
+}
+/*==========Box8=========*/
+.box8{
+  border: 2px solid #ccc;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.1);
+}
+.box8:before{
+  content: '';
+  width: 110%;
+  left: 0; 
+  height: 110%;
+  z-index:-1;
+  position:absolute;
+  border: 1px solid #ccc;
+  background: #f3f3f3;
+  background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#f3f3f3), to(#fff), color-stop(.1,#f3f3f3));
+  background: -webkit-linear-gradient(0 0 90deg, #f3f3f3, #f3f3f3 10%, #fff);
+  background: -o-linear-gradient(0 0 90deg, #f3f3f3, #f3f3f3 10%, #fff);
+  background: -moz-linear-gradient(0 0 90deg, #f3f3f3, #f3f3f3 10%, #fff);
+  box-shadow: 0px 0px 12px rgba(0,0,0,0.1);
+  -webkit-transform: translate(-5%,-5%);
+  -moz-transform: translate(-5%, -5%);
+  -o-transform: translate(-5%, -5%);
+  transform: translate(-5%, -5%);
+}
+.box8:after{
+  content: '';
+  width: 100%;
+  left: 0; 
+  height: 55%;
+  z-index:-2;
+  background: none;
+  position:absolute;
+  border-radius: 20px;
+  box-shadow: 15px 0px 30px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translate(0,0);
+  -moz-transform: translate(0,0);
+  -o-transform: translate(0,0);
+  transform: translate(0,0);
+}
+/*=========Box9=======*/
+.box9{
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius:20px;
+  background: white;
+  box-shadow:0px 0px 5px rgba(0,0,0,0.3);
+}
+ /*底部的透明框效果*/
+.box9:before{
+  content: '';
+  width: 110%;
+  left: 0; 
+  height: 111%;
+  z-index:-1;
+  position:absolute;
+  border-radius:20px;
+  border: 1px solid rgba(0,0,0, 0.1);
+  background: rgba(0, 0, 0, 0.0);
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+  -webkit-transform:     translate(-5%,-5%);
+  -moz-transform: translate(-5%, -5%);
+  -o-transform: translate(-5%, -5%);
+  transform: translate(-5%, -5%);
+}
+/*这是框的顶部部分的粘带效果*/
+.box9:after{
+  content: '';
+  position:absolute;
+  top:-25px; left: 30%;
+  width: 130px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.1);
+  background: -webkit-gradient(linear, 555% 20%, 0% 92%, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.0)), color-stop(.1,rgba(0, 0, 0, 0.2)));
+  background: -webkit-linear-gradient(555% 0 180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.0));
+  background: -o-linear-gradient(555% 0 180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.0));
+  background: -moz-linear-gradient(555% 0 180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.0));
+  border-left: 1px dashed rgba(0, 0, 0, 0.1);
+  border-right: 1px dashed rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 12px rgba(0,0,0,0.2);
+}
+/*=========Box10=====*/
+.box10{
+  padding: 0 0 1px 0;
+  background: #fff;
+  background: -webkit-gradient(linear, 100% 100%, 50% 10%, from(#fff), to(#f3f3f3), color-stop(.1,#fff));
+  background: -webkit-linear-gradient(100% 50%, #fff, #fff 10%, #f3f3f3);
+  background: -o-linear-gradient(100% 50%, #fff, #fff 10%, #f3f3f3);
+  background: -moz-linear-gradient(100% 50%, #fff, #fff 10%, #f3f3f3);
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 4px rgba(0,0,0, 0.1);
+  border-radius: 0 0 60px 0 / 0 0 5px 0;
+}
+.box10:before{
+  content: '';
+  width: 98%;
+  z-index:-1;
+  height: 100%;
+  padding: 0 0 1px 0;
+  position: absolute;
+  bottom:0; right:0;
+  background: #fff;
+  background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#fff), to(#f9f9f9), color-stop(.1,#fff));
+  background: -webkit-linear-gradient(0 0 270deg, #fff, #fff 10%, #f9f9f9);
+  background: -o-linear-gradient(0 0 270deg, #fff, #fff 10%, #f9f9f9);
+  background: -moz-linear-gradient(0 0 270deg, #fff, #fff 10%, #f9f9f9);
+  border: 1px solid #ccc;
+   box-shadow: 1px 1px 8px rgba(0,0,0,0.1);
+  border-radius: 0 0 60px 0 / 0 0 5px 0;
+  -webkit-transform: skew(2deg,2deg) translate(3px,8px);
+  -moz-transform: skew(2deg,2deg) translate(3px,8px);
+  -o-transform: skew(2deg,2deg) translate(3px,8px);
+  transform: skew(2deg,2deg) translate(3px,8px);    
+}
+.box10:after{
+  content: '';
+  width: 98%;
+  z-index:-1;
+  height: 98%;
+  padding: 0 0 1px 0;
+  position: absolute;
+  bottom:0; right:0;
+  background: #fff;
+  background: -webkit-gradient(linear, 0% 20%, 0% 100%, from(#f3f3f3), to(#f6f6f6), color-stop(.1,#fff));
+  background: -webkit-linear-gradient(0 0 360deg, #f3f3f3, #fff 10%, #f6f6f6);
+  background: -o-linear-gradient(0 0 360deg, #f3f3f3, #fff 10%, #f6f6f6);
+  background: -moz-linear-gradient(0 0 360deg, #f3f3f3, #fff 10%, #f6f6f6);
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 8px rgba(0,0,0, 0.1);
+  -webkit-transform: skew(2deg,2deg) translate(-1px,2px);
+  -moz-transform: skew(2deg,2deg) translate(-1px,2px)    ;
+  -o-transform: skew(2deg,2deg) translate(-1px,2px)    ;
+  transform: skew(2deg,2deg) translate(-1px,2px)    ;
+}
+/*==========Box11========*/
+.box11{
+  padding: 0 0 1px 0;
+  background: #f3f3f3;
+  background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#f3f3f3), to(#fff), color-stop(.1,#f3f3f3));
+  background: -webkit-linear-gradient(0 0 270deg, #f3f3f3, #f3f3f3 10%, #fff);
+  background: -o-linear-gradient(0 0 270deg, #f3f3f3, #f3f3f3 10%, #fff);
+  background: -moz-linear-gradient(0 0 270deg, #f3f3f3, #f3f3f3 10%, #fff);
+  border-top: 1px solid white;
+  border-right: 1px solid #ccc;
+  border-radius: 0 0 60px 0;
+  box-shadow: -1px 2px 2px rgba(0,0,0,0.2);
+}
+.box11:before{
+  content:'';    
+  width: 25px;
+  height: 20px;
+  background: white;
+  position: absolute;
+  bottom:0; right:0;
+  background:#fff;
+  background: -webkit-gradient(linear, 0% 20%, 50% 40%, from(#fff), to( #eee), color-stop(.1,#fff));
+  background: -webkit-linear-gradient(0 50%, #fff, #fff 10%, #eee);
+  background: -o-linear-gradient(0 50%, #fff, #fff 10%, #eee);
+  background: -moz-linear-gradient(0 50%, #fff, #fff 10%, #eee);
+  border-radius: 0 0 30px 0;
+  box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+  -webkit-transform: rotate(-20deg) skew(-40deg,-3deg) translate(-13px,-13px);
+  -moz-transform: rotate(-20deg) skew(-40deg,-3deg) translate(-13px,-13px);
+  -o-transform: rotate(-20deg) skew(-40deg,-3deg) translate(-13px,-13px);
+  transform: rotate(-20deg) skew(-40deg,-3deg) translate(-13px,-13px);
+}
+.box11:after{
+  content: '';
+  z-index: -1;
+  width: 100px;
+  height: 100px;
+  position:absolute;
+  bottom:0;
+  right:0;
+  background: rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  box-shadow: 20px 20px 17px rgba(0,0,0,0.2);
+  -webkit-transform: rotate(0deg) translate(-45px,-20px) skew(20deg);
+  -moz-transform: rotate(0deg) translate(-40px,-17px) skew(20deg);
+  -o-transform: rotate(0deg) translate(-40px,-17px) skew(20deg);
+  transform: rotate(0deg) translate(-40px,-17px) skew(20deg);    
+}
+.box11 .ribbon{
+  position:absolute;
+  top:-25px; left: 30%;
+  width: 130px;
+  height: 40px;
+  background:#ccc;
+  background: -webkit-gradient(linear, 555% 20%, 0% 92%, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.0)), color-stop(.1,rgba(0, 0, 0, 0.2)));
+  background: -webkit-linear-gradient(555% 0 180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.0));
+  background: -o-linear-gradient(555% 0 180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.0));
+  background: -moz-linear-gradient(555% 0 180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.0));
+  border-left: 1px dashed rgba(0, 0, 0, 0.1);
+  border-right: 1px dashed rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+}
+/*========Box 12========*/
+.box12{
+  padding: 0 0 1px 0;
+  background:#f3f3f3;
+  background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#f3f3f3), to(#fff), color-stop(.1,#f3f3f3));
+  background: -webkit-linear-gradient(0 0 270deg, #f3f3f3, #f3f3f3 10%, #fff);
+  background: -o-linear-gradient(0 0 270deg, #f3f3f3, #f3f3f3 10%, #fff);
+  background: -moz-linear-gradient(0 0 270deg, #f3f3f3, #f3f3f3 10%, #fff);
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-radius: 0  0 60px 60px;
+  box-shadow: -1px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.box12:before{
+  content:'';    
+  width: 25px;
+  height: 20px;
+  background: white;
+  position: absolute;
+  bottom:0; right:0;
+  background: -webkit-gradient(linear, 0% 20%, 50% 40%, from(#fff), to( #eee), color-stop(.1,#fff));
+  background: -webkit-linear-gradient(0 50%, #fff, #fff 10%, #eee);
+  background: -o-linear-gradient(0 50%, #fff, #fff 10%, #eee);
+  background: -moz-linear-gradient(0 50%, #fff, #fff 10%, #eee);
+  border-radius: 0 0 30px 0;    
+  box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+  -webkit-transform: rotate(-20deg) skew(-40deg,-3deg) translate(-13px,-13px);
+  -moz-transform: rotate(-20deg) skew(-40deg,-3deg) translate(-13px,-13px);    
+  -o-transform: rotate(-20deg) skew(-40deg,-3deg) translate(-13px,-13px);
+  transform: rotate(-20deg) skew(-40deg,-3deg) translate(-13px,-13px);
+}
+.box12:after{
+  content: '';
+  z-index: -10;
+  width: 100px;
+  height: 100px;
+  position:absolute;
+  bottom:0;
+  right:0;
+  background: rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  box-shadow: 20px 20px 8px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(0deg) translate(-45px,-20px) skew(20deg);
+  -moz-transform: rotate(0deg) translate(-40px,-17px) skew(20deg);
+  -o-transform: rotate(0deg) translate(-40px,-17px) skew(20deg);    
+  transform: rotate(0deg) translate(-45px,-20px) skew(20deg);
+}
+.box12 .shBlFlod{
+  z-index: -10;
+  width: 50px;
+  height: 50px;
+  position:absolute;
+  bottom:0; left:0;
+  box-shadow: -20px 20px 8px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(0deg) translate(40px,-20px) skew(-20deg);
+  -moz-transform: rotate(0deg) translate(40px,-17px) skew(-20deg);
+  -o-transform: rotate(0deg) translate(40px,-17px) skew(-20deg);    
+  transform: rotate(0deg) translate(40px,-20px) skew(-20deg);
+}
+.box12 .shBl{
+  width: 25px;
+  height: 20px;
+  z-index:20;
+  background: white;
+  position: absolute;
+  bottom:0; left:0;
+  background: -webkit-gradient(linear, 0% 20%, 50% 80%, from(#fff), to( #eee), color-stop(.1,#fff));
+  background: -webkit-linear-gradient(0 50%, #fff, #fff 10%, #eee);
+  background: -o-linear-gradient(0 50%, #fff, #fff 10%, #eee);
+  background: -moz-linear-gradient(0 50%, #fff, #fff 10%, #eee);
+  border-radius: 0 0 30px 0;
+  box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+  -webkit-transform: rotate(103deg) skew(-3deg,-40deg) translate(-13px,-15px);
+  -moz-transform: rotate(103deg) skew(-3deg,-40deg) translate(-13px,-15px);    
+  -o-transform: rotate(103deg) skew(-3deg,-40deg) translate(-13px,-15px);
+  transform: rotate(103deg) skew(-3deg,-40deg) translate(-13px,-15px);
+}
+.box12 .ribbon{
+  content: '';
+  position:absolute;
+  top:-25px; left: 30%;
+  width: 130px;
+  height: 40px;
+  background: #ccc;
+  background: -webkit-gradient(linear, 555% 20%, 0% 92%, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.0)), color-stop(.1,rgba(0, 0, 0, 0.2)));
+  background: -webkit-linear-gradient(555% 0% 180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.0));
+  background: -o-linear-gradient(555% 0% 180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.0));
+  background: -moz-linear-gradient(555% 0% 180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.0));
+  border-left: 1px dashed rgba(0, 0, 0, 0.1);
+  border-right: 1px dashed rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+}
+/*=======Box 13=====*/
+.box13{
+  padding: 0 0 1px 0;
+  background:#fff;
+  background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#fff), to(#f3f3f3), color-stop(.1,#fff));
+  background: -webkit-linear-gradient(0% 0% 270deg, #fff, #fff 10%, #f3f3f3);
+  background: -o-linear-gradient(0% 0% 270deg, #fff, #fff 10%, #f3f3f3);
+  background: -moz-linear-gradient(0% 0% 270deg, #fff, #fff 10%, #f3f3f3);
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-radius: 60px 60px 60px 0 / 5px 5px 60px 0;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3) ;
+}
+.box13:before{
+  content:'';    
+  width: 25px;
+  height: 20px;
+  position: absolute;
+  bottom:0;
+  right:0;
+  border-radius: 0 0 30px 0;
+  box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+  -webkit-transform: rotate(-20deg) skew(-40deg,-3deg) translate(-13px,-13px);
+  -moz-transform:    rotate(-20deg) skew(-40deg,-3deg) translate(-13px,-13px);
+  -o-transform:    rotate(-20deg) skew(-40deg,-3deg) translate(-13px,-13px);
+  transform:    rotate(-20deg) skew(-40deg,-3deg) translate(-13px,-13px);      
+}
+.box13:after{
+  content: '';
+  z-index: -10;
+  width: 100px;
+  height: 100px;
+  position:absolute;
+  bottom:0;
+  right:0;
+  background: rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  box-shadow: 20px 20px 8px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(0deg) translate(-45px,-20px) skew(20deg);
+  -moz-transform: rotate(0deg) translate(-45px,-20px) skew(20deg);
+  -o-transform: rotate(0deg) translate(-45px,-20px) skew(20deg);    
+  transform: rotate(0deg) translate(-45px,-20px) skew(20deg);
+}
+.box13 .cornerLf{
+  width: 100px;
+  height: 100px;
+  top:0; left:0;
+  position:absolute;
+  z-index:-6;
+  display: inline-block;
+  box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(2deg) translate(20px,25px) skew(20deg);
+  -moz-transform: rotate(2deg) translate(20px,25px) skew(20deg);
+  -o-transform: rotate(2deg) translate(20px,25px) skew(20deg);    
+  transform: rotate(2deg) translate(20px,25px) skew(20deg);      
+}
+.box13 .cornerRt{
+  content: '';
+  width: 50px;
+  height: 50px;
+  top:0; right:0;
+  position:absolute;
+  display: inline-block;
+  z-index:-6;
+  box-shadow: 10px -10px 8px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(2deg) translate(-14px,20px) skew(-20deg);
+  -moz-transform: rotate(2deg) translate(-14px,20px) skew(-20deg);
+  -o-transform: rotate(2deg) translate(-14px,20px) skew(-20deg);
+  transform: rotate(2deg) translate(-14px,20px) skew(-20deg);
+}
+.box13 .ribbon:before{
+  content: '';
+  position:absolute;
+  top:0; left: 0;
+  width: 130px;
+  height: 40px;
+  background:rgba(0,0,0,0.2);
+  background: -webkit-gradient(linear, 555% 20%, 0% 92%, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.0)), color-stop(.1,rgba(0, 0, 0, 0.2)));
+  background: -webkit-linear-gradient(555% 0% 180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.0));
+  background: -o-linear-gradient(555% 0% 180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.0));
+  background: -moz-linear-gradient(555% 0% 180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.0));
+  border-left: 1px dashed rgba(0, 0, 0, 0.1);
+  border-right: 1px dashed rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(90deg) skew(0,0) translate(100px,65px);
+  -moz-transform: rotate(90deg) skew(0,0) translate(100px,65px);
+  -o-transform: rotate(90deg) skew(0,0) translate(100px,65px);    
+  transform: rotate(90deg) skew(0,0) translate(100px,65px);
+}
+.box13 .ribbon:after{
+  content: '';
+  position:absolute;
+  top:0; right: 0;
+  width: 130px;
+  height: 40px;
+  background:rgba(0, 0, 0, 0.1);
+  background: -webkit-gradient(linear, 555% 20%, 0% 92%, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.0)), color-stop(.1,rgba(0, 0, 0, 0.2)));
+  background: -webkit-linear-gradient(555% 0% 180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.0));
+  background: -o-linear-gradient(555% 0% 180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.0));
+  background: -moz-linear-gradient(555% 0% 180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.0));
+  border-left: 1px dashed rgba(0, 0, 0, 0.1);
+  border-right: 1px dashed rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(90deg) skew(0,0) translate(100px,-65px);
+  -moz-transform: rotate(90deg) skew(0,0) translate(100px,-65px);
+  -o-transform: rotate(90deg) skew(0,0) translate(100px,-65px);
+  transform: rotate(90deg) skew(0,0) translate(100px,-65px);
+}
+ /*==========Box14=========*/
+.box14{
+  padding: 5px 0 ;
+  background:#fff;
+  background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#fff), to(#f3f3f3), color-stop(.1,#fff));
+  background: -wbkit-linear-gradient(0% 0% 270deg, #fff, #fff 10%, #f3f3f3);
+  background: -o-linear-gradient(0% 0% 270deg, #fff, #fff 10%, #f3f3f3);
+  background: -moz-linear-gradient(0% 0% 270deg, #fff, #fff 10%, #f3f3f3);
+  border: 1px solid #ccc;
+  border-radius: 60px/5px;
+  box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1) inset;
+}
+.box14:before{
+  content: '';
+  width: 50px;
+  height: 50px;
+  top:0; right:0;
+  position:absolute;
+  display: inline-block;
+  z-index:-1;
+  box-shadow: 10px -10px 8px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(2deg) translate(-14px,20px) skew(-20deg);
+  -moz-transform: rotate(2deg) translate(-14px,20px) skew(-20deg);
+  -o-transform: rotate(2deg) translate(-14px,20px) skew(-20deg);    
+  transform: rotate(2deg) translate(-14px,20px) skew(-20deg);
+}
+.box14:after{
+  content: '';
+  width: 100px;
+  height: 100px;
+  top:0; left:0;
+  position:absolute;
+  z-index:-1;
+  display: inline-block;
+  box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.2);    
+  -webkit-transform: rotate(2deg) translate(20px,25px) skew(20deg);
+  -moz-transform:  rotate(2deg) translate(20px,25px) skew(20deg);
+  -o-transform:  rotate(2deg) translate(20px,25px) skew(20deg);    
+  transform:  rotate(2deg) translate(20px,25px) skew(20deg);
+}
+.box14 .ribbon{
+  position:absolute;
+  top:0; right: 0;
+  width: 130px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.1);
+  background: -webkit-gradient(linear, 555% 20%, 0% 92%, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.0)), color-stop(.1,rgba(0, 0, 0, 0.2)));
+  background: -moz-linear-gradient(555% 0% 180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.0));
+  border-left: 1px dashed rgba(0, 0, 0, 0.1);
+  border-right: 1px dashed rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 12px rgba(0,0,0,0.2);
+  -webkit-transform: rotate(6deg) skew(0,0) translate(-60%,-5px);
+  -moz-transform: rotate(6deg) skew(0,0) translate(-60%,-5px);
+  -o-transform: rotate(6deg) skew(0,0) translate(-60%,-5px);
+  transform: rotate(6deg) skew(0,0) translate(-60%,-5px);
+}
+
+/*=========BOX15======*/
+.box15{
+  padding: 0 0 1px 0;
+  background:#fff;
+  background: -webkit-gradient(linear, 100% 100%, 50% 10%, from(#fff), to(#f3f3f3), color-stop(.1,#fff));
+  background: -webkit-linear-gradient(100% 50% 90deg, #fff, #fff 10%, #f3f3f3);
+  background: -o-linear-gradient(100% 50% 90deg, #fff, #fff 10%, #f3f3f3);
+  background: -moz-linear-gradient(100% 50% 90deg, #fff, #fff 10%, #f3f3f3);
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+  border-radius: 0 0 60px 0 / 0 0 5px 0;    
+}
+
+.box15:before{
+  content: '';
+  width: 98%;
+  z-index:-1;
+  height: 100%;
+  padding: 0 0 1px 0;
+  position: absolute;
+  bottom:0; right:0;
+  background: #fff;
+  background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#fff), to(#f9f9f9), color-stop(.1,#fff));
+  background: -webkit-linear-gradient(0 0 270deg, #fff, #fff 10%, #f9f9f9);
+  background: -o-linear-gradient(0 0 270deg, #fff, #fff 10%, #f9f9f9);
+  background: -moz-linear-gradient(0 0 270deg, #fff, #fff 10%, #f9f9f9);
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 8px rgba(0,0,0,0.1);
+  border-radius: 0 0 60px 0 / 0 0 5px 0;
+  -webkit-transform: skew(2deg,2deg) translate(3px,8px);
+  -moz-transform: skew(2deg,2deg) translate(3px,8px);
+  -o-transform: skew(2deg,2deg) translate(3px,8px);    
+  transform: skew(2deg,2deg) translate(3px,8px);
+}
+.box15:after{
+  content: '';
+  width: 98%;
+  z-index:-1;
+  height: 98%;
+  padding: 0 0 1px 0;
+  position: absolute;
+  bottom:0; right:0;
+  background: #f3f3f3;
+  background: -webkit-gradient(linear, 0% 20%, 0% 100%, from(#f3f3f3), to(#f6f6f6), color-stop(.1,#fff));
+  background: -webkit-linear-gradient(0% 0% 360deg, #f3f3f3, #fff, #f6f6f6);
+  background: -o-linear-gradient(0% 0% 360deg, #f3f3f3, #fff, #f6f6f6);
+  background: -moz-linear-gradient(0% 0% 360deg, #f3f3f3, #fff, #f6f6f6);
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+  -webkit-transform: skew(2deg,2deg) translate(-1px,2px);
+  -moz-transform: skew(2deg,2deg) translate(-1px,2px);
+  -o-transform: skew(2deg,2deg) translate(-1px,2px);    
+  transform: skew(2deg,2deg) translate(-1px,2px);
+}
+
+.box15 .ribbon{
+  position:absolute;
+  top:0; left: 0;
+  width: 130px;
+  height: 40px;
+  background:rgba(0, 0, 0, 0.1);
+  background: -webkit-gradient(linear, 555% 20%, 0% 92%, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.0)), color-stop(.1,rgba(0, 0, 0, 0.2)));
+  background: -webkit-linear-gradient(555% 0 180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.0));
+  background: -o-linear-gradient(555% 0 180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.0));
+  background: -moz-linear-gradient(555% 0 180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.0));
+  border-left: 1px dashed rgba(0, 0, 0, 0.1);
+  border-right: 1px dashed rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 12px rgba(0,0,0,0.2);
+  -webkit-transform: rotate(-30deg) skew(0,0) translate(-30px,-20px);
+  -moz-transform: rotate(-30deg) skew(0,0) translate(-30px,-20px);
+  -o-transform: rotate(-30deg) skew(0,0) translate(-30px,-20px);
+  transform: rotate(-30deg) skew(0,0) translate(-30px,-20px);
+}
+/*============box16==========*/
+.box16{
+	box-shadow: 0 10px 6px -6px #777;
+}
+
+/*========box17================*/
+.box17:before, 
+.box17:after{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.box17:after
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+
+/*==========box18=======================*/
+.box18:before{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+
+/*========box19===================*/
+.box19:after{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  right: 10px;
+  left: auto;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+}  
+
+/*=============box20=====================*/
+.box20:before, 
+.box20:after{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 25px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777; 
+  box-shadow: 0 35px 20px #777;
+  -webkit-transform: rotate(-8deg);
+  -moz-transform: rotate(-8deg);
+  -o-transform: rotate(-8deg);
+  -ms-transform: rotate(-8deg);
+  transform: rotate(-8deg);
+}
+.box20:after{
+  -webkit-transform: rotate(8deg);
+  -moz-transform: rotate(8deg);
+  -o-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  transform: rotate(8deg);
+  right: 10px;
+  left: auto;
+}
+
+/*=============box21===============*/
+.box21{
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.box21:before, 
+.box21:after{
+	content:"";
+  position:absolute; 
+  z-index:-1;
+  box-shadow:0 0 20px rgba(0,0,0,0.8);
+  top:50%;
+  bottom:0;
+  left:10px;
+  right:10px;
+  border-radius:100px / 10px;
+} 
+.box21:after{
+	right:10px; 
+  left:auto;
+  -webkit-transform:skew(8deg) rotate(3deg); 
+  -moz-transform:skew(8deg) rotate(3deg);     
+  -ms-transform:skew(8deg) rotate(3deg);     
+  -o-transform:skew(8deg) rotate(3deg); 
+  transform:skew(8deg) rotate(3deg);
+}
+
+/*=============box22===================*/
+.box22{
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.box22:before, 
+.box22:after{
+	content:"";
+  position:absolute; 
+  z-index:-1;
+  box-shadow:0 0 20px rgba(0,0,0,0.8);
+  top:0;
+  bottom:0;
+  left:10px;
+  right:10px;
+  border-radius:100px / 10px;
+} 
+.box22:after{
+	right:10px; 
+  left:auto;
+  -webkit-transform:skew(8deg) rotate(3deg); 
+  -moz-transform:skew(8deg) rotate(3deg);     
+  -ms-transform:skew(8deg) rotate(3deg);     
+  -o-transform:skew(8deg) rotate(3deg); 
+  transform:skew(8deg) rotate(3deg);
+}
+
+/*===============box23=================*/
+.box23{
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.box23:before, 
+.box23:after{
+	content:"";
+  position:absolute; 
+  z-index:-1;
+  box-shadow:0 0 20px rgba(0,0,0,0.8);
+  top:10px;
+  bottom:10px;
+  left:0;
+  right:0;
+  border-radius:100px / 10px;
+} 
+.box23:after{
+	right:10px; 
+  left:auto;
+  -webkit-transform:skew(8deg) rotate(3deg); 
+  -moz-transform:skew(8deg) rotate(3deg);     
+  -ms-transform:skew(8deg) rotate(3deg);     
+   -o-transform:skew(8deg) rotate(3deg); 
+  transform:skew(8deg) rotate(3deg);
+}  
+</style>
+
+</head>
+<body>
+
+<div class="page">
+	
+	<section class="demo">
+		<div class="box box1"><p>Effect 1</p></div>
+    <div class="box box2"><p>Effect 2</p></div>
+    <div class="box box3"><p>Effect 3</p></div>
+    <div class="box box4"><p>Effect 4</p><div class="shBl"></div><div class="shBr"></div></div>
+    <div class="box box5"><p>Effect 5</p><div class="shBl"></div><div class="shBlFlod"></div></div>
+    <div class="box box6"><p>Effect 6</p><div class="cornerLf"></div><div class="cornerRt"></div></div>
+    <div class="box box7"><p>Effect 7</p></div>
+    <div class="box box8"><p>Effect 8</p></div>
+    <div class="box box9"><p>Effect 9</p></div>
+    <div class="box box10"><p>Effect 10</p></div>
+    <div class="box box11"><p>Effect 11</p><div class="ribbon"></div></div>
+    <div class="box box12"><p>Effect 12</p><div class="shBl"></div><div class="shBlFlod"></div><div class="ribbon"></div></div>
+    <div class="box box13"><p>Effect 13</p><div class="cornerLf"></div><div class="cornerRt"></div><div class="ribbon"></div></div>
+    <div class="box box14"><p>Effect 14</p><div class="ribbon"></div></div>
+    <div class="box box15"><p>Effect 15</p><div class="ribbon"></div></div>
+		<div class="box box16"><p>Effect 16</p></div>
+		<div class="box box17"><p>Effect 17</p></div>
+		<div class="box box18"><p>Effect 18</p></div>
+		<div class="box box19"><p>Effect 19</p></div>
+		<div class="box box20"><p>Effect 20</p></div>
+		<div class="box box21"><p>Effect 21</p></div>
+		<div class="box box22"><p>Effect 22</p></div>
+		<div class="box box23"><p>Effect 23</p></div>
+	</section>
+	
+</div>
+</body>
+</html>

@@ -1,0 +1,213 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 Dropdown Menu|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <style>
+    body {
+        background-color: #323232;
+    }
+    
+    .demo {
+        width: 180px;
+        margin: 40px auto 0;
+    }
+    
+    .demo > ul > li {
+        float: left;
+        width: 60px;
+        text-align: center;
+        position: relative;
+    }
+    
+    .demo > ul > li a {
+        display: block;
+        color: #fff;
+    }
+    
+    .demo > ul > li a:after {
+        display: inline-block;
+        font-family: 'icomoon';
+        font-style: normal;
+        speak: none;
+        font-weight: normal;
+        -webkit-font-smoothing: antialiased;
+        font-size: 30px;
+        color: #a1a1a1;
+    }
+    
+    .demo > ul > li:nth-child(1) > a:after {
+        content: "\2c";
+    }
+    
+    .demo > ul > li:nth-child(2) > a:after {
+        content: "\21";
+    }
+    
+    .demo > ul > li:nth-child(3) > a:after {
+        content: "\2f";
+    }
+    
+    .demo > ul > li div {
+        position: relative;
+        margin-left: -40px;
+        width: 180px;
+        height: 0px;
+        overflow: hidden;
+        -webkit-transition: height 0.4s linear;
+        -moz-transition: height 0.4s linear;
+        transition: height 0.4s linear;
+    }
+    
+    .demo > ul > li:hover div {
+        height: 180px;
+        z-index: 2;
+    }
+    
+    .demo > ul > li ul {
+        position: absolute;
+        margin-top: 10px;
+        font-size: 16px;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
+        text-align: left;
+        width: 140px;
+        line-height: 30px;
+        padding: 10px 0;
+        border-radius: 3px;
+    }
+    
+    .demo > ul > li:nth-child(1) ul {
+        box-shadow: 0 1px 0 #db7777 inset, 0 0 1px #c70000;
+        background: -webkit-linear-gradient(top, #d80000 10%, #8b0000);
+        background: -moz-linear-gradient(top, #d80000 10%, #8b0000);
+        background: linear-gradient(top, #d80000 10%, #8b0000);
+    }
+    
+    .demo > ul > li:nth-child(2) ul {
+        box-shadow: 0 1px 0 #85ff7c inset, 0 0 1px #4bd940 inset;
+        background: -webkit-linear-gradient(top, #31db17 10%, #0b9200);
+        background: -moz-linear-gradient(top, #31db17 10%, #0b9200);
+        background: linear-gradient(top, #31db17 10%, #0b9200);
+    }
+    
+    .demo > ul > li:nth-child(3) ul {
+        box-shadow: 0 1px 0 #77d4da inset, 0 0 1px #0077b0 inset;
+        background: -webkit-linear-gradient(top, #00c3db 10%, #005e91);
+        background: -moz-linear-gradient(top, #00c3db 10%, #005e91);
+        background: linear-gradient(top, #00c3db 10%, #005e91);
+    }
+    
+    .demo > ul > li ul li a {
+        position: relative;
+        padding: 0 20px;
+    }
+    
+    .demo > ul > li:nth-child(1) ul li a:hover {
+        text-decoration: none;
+        background-color: #800000;
+    }
+    
+    .demo > ul > li:nth-child(2) ul li a:hover {
+        text-decoration: none;
+        background-color: #0a6602;
+    }
+    
+    .demo > ul > li:nth-child(3) ul li a:hover {
+        text-decoration: none;
+        background-color: #0a5278;
+    }
+    
+    .demo > ul > li:nth-child(1) ul li a {
+        border-bottom: 1px solid #d33030;
+    }
+    
+    .demo > ul > li:nth-child(2) ul li a {
+        border-bottom: 1px solid #60dd57;
+    }
+    
+    .demo > ul > li:nth-child(3) ul li a {
+        border-bottom: 1px solid #30bcd6;
+    }
+    
+    .demo > ul > li ul li:first-child a:first-child:before {
+        position: absolute;
+        content: '';
+        width: 1px;
+        height: 1px;
+        border: 5px solid transparent;
+        left: 50%;
+        top: -20px;
+        margin-left: -5px;
+        z-index: 99;
+    }
+    
+    .demo > ul > li:nth-child(1) ul li a:first-child:before {
+        border-bottom-color: #d80000;
+    }
+    
+    .demo > ul > li:nth-child(2) ul li a:first-child:before {
+        border-bottom-color: #25ec17;
+    }
+    
+    .demo > ul > li:nth-child(3) ul li a:first-child:before {
+        border-bottom-color: #00c3db;
+    }
+    
+    @font-face {
+        font-family: 'icomoon';
+        src: url('fonts/icomoon.eot');
+        src: url('fonts/icomoon.eot?#iefix') format('embedded-opentype'), url('fonts/icomoon.svg#icomoon') format('svg'), url('fonts/icomoon.woff') format('woff'), url('fonts/icomoon.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo clearfix">
+            <ul class="clearfix">
+                <li>
+                    <a href="#" class="icon-user"></a>
+                    <div>
+                        <ul>
+                            <li><a href="#">messages</a></li>
+                            <li><a href="#">friends</a></li>
+                            <li><a href="#">comments</a></li>
+                            <li><a href="#">logout</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="icon-clock"></a>
+                    <div>
+                        <ul>
+                            <li><a href="#">messages</a></li>
+                            <li><a href="#">friends</a></li>
+                            <li><a href="#">comments</a></li>
+                            <li><a href="#">logout</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="icon-setup"></a>
+                    <div>
+                        <ul>
+                            <li><a href="#">messages</a></li>
+                            <li><a href="#">friends</a></li>
+                            <li><a href="#">comments</a></li>
+                            <li><a href="#">logout</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+
+</html>

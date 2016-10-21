@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3 Animation Menu|css3|css3教程,css3实例,css3动画|w3cplus</title>
+	<meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+	<meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+	<link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+	<style>
+body {
+	background-color: #f2f2f2;
+}		
+.box {
+	margin-top: 40px;
+	margin-bottom:250px;
+	height: 85px;
+	border-bottom: 5px solid #fff;
+	background-color: #0dc2e3;
+	background-image: -webkit-linear-gradient(180deg, transparent 55%, #00bfe1 45%);
+	background-image: -o-linear-gradient(180deg, transparent 50%, #00bfe1 50%);
+	background-image: -ms-linear-gradient(180deg, transparent 50%, #00bfe1 50%);
+	background-image: linear-gradient(90deg, transparent 50%, #00bfe1 50%);
+	background-size: 30px 30px;
+}
+.menu {
+	width: 750px;
+	margin: 0 auto;
+	-webkit-perspective: 50px;
+	-moz-perspective: 50px;
+	-ms-perspective: 50px;
+	perspective: 50px;
+	
+}
+.menu > li {
+	display: inline-block;
+	padding-top: 48px;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+.menu > li > a {
+	position: relative;
+	display: block;
+	line-height: 36px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 20px;
+	padding: 0 20px;
+}
+.menu > li:first-child > a:before {
+	position: absolute;
+	left: 0;
+	top: 36px;
+	content: '';
+	width: 1px;
+	height: 1px;
+	border-width: 15px 30px;
+	border-style: solid;
+	border-color: transparent;
+	border-top-color: #4bb100;
+}
+.menu > li:first-child > a:after {
+	font-family: 'iconminia';
+	font-style: normal;
+	speak: none;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	font-size: 22px;
+	content: "\21";
+}
+.menu > li:first-child a,
+	.menu > li:first-child:hover > a,
+	.menu > li:first-child:hover a:hover {
+	color: #fff;
+	top: 2px;
+	height: 36px;
+	margin-right: 10px;
+	text-shadow: 0 1px 0 #3c8f00;
+	border-radius: 5px 5px 0 0;
+	box-shadow: 0 1px 0 #a6d980 inset;	
+	background-color: #4bb100;
+}
+.menu > li:hover > a {
+	color: #1a89c8;
+	text-decoration: none;
+	border-radius: 5px 5px 0 0;
+	background-color: #fff;
+} 
+.menu ul {
+	position: absolute;
+	text-align: left;
+	line-height: 40px;
+	font-size: 14px;
+	width: 200px;
+	background-color: #fff;
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-ms-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
+	-webkit-transform-origin: 0px 0px;
+ 	-moz-transform-origin: 0px 0px;
+ 	transform-origin: 0px 0px;
+ 	-webkit-transform: rotateX(-90deg);
+ 	-moz-transform: rotateX(-80deg);
+	transform: rotateX(-90deg);
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.menu ul a {
+	display: block;
+	padding: 0 15px 0 10px;
+	color: #1a89c8;
+}
+.menu > li:hover ul {
+	display: block;
+	-webkit-transform: rotateX(0deg);
+	-moz-transform: rotateX(0deg);
+	-ms-transform: rotateX(0deg);
+	transform: rotateX(0deg);
+}
+.menu ul a:hover {
+	color: #fff;
+	text-shadow: 0 1px 0 #1c71a1;
+	text-decoration: none;
+	background-color: #218bc7;
+} 
+@font-face {
+	font-family: 'iconminia';
+	src:url('fonts/iconminia.eot');
+	src:url('fonts/iconminia.eot?#iefix') format('embedded-opentype'),
+		url('fonts/iconminia.svg#iconminia') format('svg'),
+		url('fonts/iconminia.woff') format('woff'),
+		url('fonts/iconminia.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+	</style>
+
+</head>
+<body>
+
+<div class="page">
+	
+	<section class="demo">
+		<div class="box">
+			<ul class="menu">
+				<li><a href="#"></a></li>
+				<li><a href="#">About Me</a>
+					<ul>
+						<li><a href="#">Lorem ipsum dolor</a></li>
+						<li><a href="#">Maecenas lacinia sem</a></li>
+						<li><a href="#">Suspendisse fringilla</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Portfolio</a>
+					<ul>
+						<li><a href="#">Lorem ipsum dolor</a></li>
+						<li><a href="#">Maecenas dignissim ..</a></li>
+						<li><a href="#">Suspendisse fringilla</a></li>
+						<li><a href="#">Lorem ipsum dolor</a></li>
+						<li><a href="#">Maecenas lacinia sem</a></li>
+						<li><a href="#">Suspendisse fringilla</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Clients</a>
+					<ul>
+						<li><a href="#">Lorem ipsum dolor</a></li>
+						<li><a href="#">Maecenas lacinia sem</a></li>
+						<li><a href="#">Suspendisse fringilla</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Contact Me</a>
+					<ul>
+						<li><a href="#">Lorem ipsum dolor</a></li>
+						<li><a href="#">Maecenas dignissim ..</a></li>
+						<li><a href="#">Suspendisse fringilla</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Support</a></li>
+			</ul>
+		</div>
+	</section><!-- /demo -->
+	
+</div>
+</body>
+</html>

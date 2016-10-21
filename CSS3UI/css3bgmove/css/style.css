@@ -1,0 +1,81 @@
+@charset "utf-8";
+@import url("http://www.w3cplus.com/demo/css3/base.css");
+.demo1{
+    background:url('../images/header_bg.png') repeat-x 0 0;
+	-moz-animation-name:bgscroll;
+	-moz-animation-duration:15s;
+	-moz-animation-timing-function:linear;
+	-moz-animation-iteration-count:infinite;
+		
+	-webkit-animation-name:bgscroll;
+	-webkit-animation-duration:15s;
+	-webkit-animation-timing-function:linear;
+	-webkit-animation-iteration-count:infinite;
+		
+	animation-name:bgscroll;
+	animation-duration:15s;
+	animation-timing-function:linear;
+	animation-iteration-count:infinite;
+
+	padding-top:100px;
+}
+@-moz-keyframes bgscroll{
+    0%{
+		background-position: 0 -60px;
+	}
+	100%{
+		background-position: -940px -60px;
+	}
+}
+@-webkit-keyframes bgscroll{
+    0%{
+		background-position: 0 -60px;
+	}
+	100%{
+		background-position: -940px -60px;
+	}
+}
+
+.demo2{
+	position:relative;
+}
+.demo2:after{
+	content:"";
+	width:100%;
+	height:3px;
+	position:absolute;
+	left:0;
+	bottom:-20px;
+	background: -moz-linear-gradient(left,  #09ba5e 0%, #00c7ce 15%, #3472cf 26%, #00c7ce 48%, #0ccf91 91%, #09ba5e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, top left, top right, color-stop(0%,#09ba5e), color-stop(15%,#00c7ce), color-stop(26%,#3472cf), color-stop(48%,#00c7ce), color-stop(91%,#0ccf91), color-stop(100%,#09ba5e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #09ba5e 0%,#00c7ce 15%,#3472cf 26%,#00c7ce 48%,#0ccf91 91%,#09ba5e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #09ba5e 0%,#00c7ce 15%,#3472cf 26%,#00c7ce 48%,#0ccf91 91%,#09ba5e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #09ba5e 0%,#00c7ce 15%,#3472cf 26%,#00c7ce 48%,#0ccf91 91%,#09ba5e 100%); /* IE10+ */
+	background: linear-gradient(left,  #09ba5e 0%,#00c7ce 15%,#3472cf 26%,#00c7ce 48%,#0ccf91 91%,#09ba5e 100%); /* W3C */
+	
+	-webkit-animation-direction: normal;
+	-webkit-animation-duration: 20s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-name: bgchange;
+	-webkit-animation-timing-function: ease;
+
+	-moz-animation-direction: normal;
+	-moz-animation-duration: 20s;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-name: bgchange;
+	-moz-animation-timing-function: ease;
+
+	animation-direction: normal;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+	animation-name: bgchange;
+	animation-timing-function: ease;
+}
+@-webkit-keyframes bgchange {
+	0% {background-position: 0 0, 0 0, 0 0, 0 0;}
+	100% {background-position: -5400px 0,-4600px 0 ,-3800px 0,-3000px 0;}
+}
+@-moz-keyframes bgchange {
+	0% {background-position: 0 0, 0 0, 0 0, 0 0;}
+	100% {background-position: -5400px 0,-4600px 0 ,-3800px 0,-3000px 0;}
+}

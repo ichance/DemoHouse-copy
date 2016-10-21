@@ -1,0 +1,609 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Pure CSS3 Checkbox|w3cplus</title>
+	<meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+	<meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+	<link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+	<style>
+body {
+	background-color: #272425;
+}	
+.demo {
+	margin: 40px auto 0;
+	width: 100px;
+}	
+.demo div {
+	margin-top: 60px;	
+}
+.demo .white_form {
+	margin-top: 120px;
+}
+.demo div span {
+	position: relative;
+	display: block;
+}
+.demo div span label ,
+	input[type="checkbox"] + label em {
+	position: absolute;
+	display: block;
+	cursor: pointer;
+}
+input[type="checkbox"] {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	margin:0;
+	cursor: pointer;
+}
+input[type="checkbox"] + label:after,
+	input[type="checkbox"] + label:before {
+	position: absolute;
+    display: block;
+    content: "";
+}
+span.check input[type="checkbox"] + label em {
+    top: -2px;
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    box-shadow: 0 1px 2px #97999b inset,
+    				0 3px 3px #0f0f0f;
+    background-image: -webkit-linear-gradient(top,#424549,#1c1e20);
+    background-image: -moz-linear-gradient(top,#424549,#1c1e20);
+    background-image: -ms-linear-gradient(top,#424549,#1c1e20);
+    background-image: -o-linear-gradient(top,#424549,#1c1e20);
+    background-image: linear-gradient(top,#424549,#1c1e20);   
+	margin-left:37px;
+	z-index: 2;
+	-webkit-transition: .85s;
+	   -moz-transition: .85s;
+	    -ms-transition: .85s;
+	   	 -o-transition: .85s;
+	   		transition: .85s;
+}
+span.check input[type=checkbox]:checked + label em {
+	margin-left:0;
+}
+span.check input[type="checkbox"] + label {
+	width: 60px;
+	height: 22px;
+	border-radius: 11px;
+	box-shadow: 0 0 5px rgba(0,0,0,.8) inset,
+					0 0 12px rgba(0,0,0,.9) inset,
+					3px 4px 4px rgba(255,255,255,.055),
+					-3px 4px 4px rgba(255,255,255,.055),
+					-4px 3px 4px rgba(255,255,255,.055),
+					4px 3px 4px rgba(255,255,255,.055),
+					0 5px 0 rgba(255,255,255,.045),
+					0 0 0 5px #0e0e0e;
+	background-image: -webkit-linear-gradient(left, rgba(0,0,0,.1),rgba(0,0,0,.1)),
+						-webkit-linear-gradient(left, #2e9c0c 50%, #e71300 50%);
+	background-image: -moz-linear-gradient(left, rgba(0,0,0,.1),rgba(0,0,0,.1)),
+						-moz-linear-gradient(left, #2e9c0c 50%, #e71300 50%);
+	background-image: -ms-linear-gradient(left, rgba(0,0,0,.1),rgba(0,0,0,.1)),
+						-ms-linear-gradient(left, #2e9c0c 50%, #e71300 50%);
+	background-image: -o-linear-gradient(left, rgba(0,0,0,.1),rgba(0,0,0,.1)),
+						-o-linear-gradient(left, #2e9c0c 50%, #e71300 50%);
+	background-image: linear-gradient(left, rgba(0,0,0,.1),rgba(0,0,0,.1)),
+						linear-gradient(left, #2e9c0c 50%, #e71300 50%);					
+	background-size: 100% 100%, 200% 100%;
+    background-position: 0 0, 60px 0;
+    -webkit-transition: .85s;
+       -moz-transition: .85s;
+        -ms-transition: .85s;
+       	 -o-transition: .85s;
+       		transition: .85s;
+}					
+span.check input[type="checkbox"]:checked + label{
+	background-position: 0 0, 0 0;
+}
+span.check input[type="checkbox"] + label:after {
+	content: attr(data-off);
+	top:0;
+	left: 0;
+	color: #590000;
+	font-size: 12px;
+	font-weight: bold;
+	text-shadow: 0 1px 0 #d44949;
+	width: 24px;
+    height: 24px;
+	line-height: 22px;
+	padding-left: 7px;
+}
+span.check input[type="checkbox"]:checked + label:after {
+	content: attr(data-on);
+	color: #0c1c00;
+	text-shadow: 0 1px 0 #60ad32;
+	padding-left: 33px;
+}
+
+span.rec_swith {
+	width: 80px;
+	height: 22px;
+	border-radius: 15px;
+	border: 2px solid #101010;
+	box-shadow: 0 0 0 5px #1a1a1a,
+					-1px -1px 0 #111111,
+					1px 1px 0 #2e2c2d;
+	background-image: -webkit-linear-gradient(top,#1d1d1d,#747474 48%,#1d1d1d);
+	background-image: -moz-linear-gradient(top,#1d1d1d,#747474 48%,#1d1d1d);
+	background-image: -ms-linear-gradient(top,#1d1d1d,#747474 48%,#1d1d1d);
+	background-image: -o-linear-gradient(top,#1d1d1d,#747474 48%,#1d1d1d);
+	background-image: linear-gradient(top,#1d1d1d,#747474 48%,#1d1d1d);
+}
+span.rec_swith input[type="checkbox"] + label {
+	top: 0;
+	left: -1px;
+    width: 64px;
+    height: 22px;
+    color: #575757;
+    text-shadow:-1px -1px 0 #7a7a7a,
+    				1px 1px 0 #7a7a7a;
+    text-align: right;
+    border-radius: 11px;
+    border-left: 1px solid #414141;
+    border-right: 2px solid #b9b9b9;
+    background-image: -webkit-linear-gradient(left,#393939,#939393);
+    background-image: -moz-linear-gradient(left,#393939,#939393);
+    background-image: -ms-linear-gradient(left,#393939,#939393);
+    background-image: -o-linear-gradient(left,#393939,#939393);
+    background-image: linear-gradient(left,#393939,#939393);
+    -webkit-transition: left .05s ease-in-out;
+       -moz-transition: left .05s ease-in-out;
+        -ms-transition: left .05s ease-in-out;
+         -o-transition: left .05s ease-in-out;
+ 			transition: left .05s ease-in-out;
+}
+span.rec_swith input[type="checkbox"] + label:after {
+	top: 8px;
+	right: 5px;
+    width: 10px;
+    height: 3px;
+    border-radius: 3px;
+    border: 1px solid #575757;
+    box-shadow: 0 0 1px 1px #767676;
+    background-color: #878787;
+}
+span.rec_swith input[type="checkbox"]:checked + label {
+	left: 10px;
+}
+span.rec_swith input[type="checkbox"]:checked + label:after {
+    border: 1px solid #264104;
+    box-shadow: 0 0 1px 1px #afba90;
+    background-color: #008c01;
+}
+
+span.round_swith {
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	border: 1px solid #636363;
+	box-shadow: 0 5px 8px rgba(0,0,0,.26),
+					0 0 0 5px #ebebeb,
+					0 0 2px 7px rgba(0,0,0,.23),
+					0 6px 9px rgba(0,0,0,1);
+	background-image: -webkit-linear-gradient(left,#767676,#eaeaea 48%,#767676);
+	background-image: -moz-linear-gradient(left,#767676,#eaeaea 48%,#767676);
+	background-image: -ms-linear-gradient(left,#767676,#eaeaea 48%,#767676);
+	background-image: -o-linear-gradient(left,#767676,#eaeaea 48%,#767676);
+	background-image: linear-gradient(left,#767676,#eaeaea 48%,#767676);
+}
+span.round_swith input[type="checkbox"] + label {
+	top:1px;
+	left: 0;
+	width: 50px;
+	height: 44px;
+	border-radius: 22px;
+	background-image:-webkit-linear-gradient(top,#a5a5a5,#ebebeb);
+	background-image:-moz-linear-gradient(top,#a5a5a5,#ebebeb);
+	background-image:-ms-linear-gradient(top,#a5a5a5,#ebebeb);
+	background-image:-o-linear-gradient(top,#a5a5a5,#ebebeb);
+	background-image:linear-gradient(top,#a5a5a5,#ebebeb);
+	-webkit-transition: top .05s ease-in-out;
+	   -moz-transition: top .05s ease-in-out;
+		-ms-transition: top .05s ease-in-out;
+		 -o-transition: top .05s ease-in-out;
+			transition: top .05s ease-in-out;
+}
+span.round_swith input[type="checkbox"] + label:after {
+	bottom: 2px;
+	left: 20px;
+	width: 10px;
+	height: 8px;
+	border-radius: 4px;
+	border: 1px solid #470100;
+	box-shadow: 0 -1px 3px rgba(0,0,0,.9) inset;
+	background-image: -webkit-linear-gradient(top,#cd0000,#ff1a00);
+	background-image: -moz-linear-gradient(top,#cd0000,#ff1a00);
+	background-image: -ms-linear-gradient(top,#cd0000,#ff1a00);
+	background-image: -o-linear-gradient(top,#cd0000,#ff1a00);
+	background-image: linear-gradient(top,#cd0000,#ff1a00);
+
+}
+span.round_swith input[type="checkbox"]:checked + label {
+	top:6px;
+}
+span.round_swith input[type="checkbox"]:checked + label:after {
+	border:1px solid #1e4a07;
+	box-shadow: 0 -1px 3px rgba(0,0,0,.9) inset;
+	background-image: -webkit-linear-gradient(top,#8ac000,#91cb00);
+	background-image: -moz-linear-gradient(top,#8ac000,#91cb00);
+	background-image: -ms-linear-gradient(top,#8ac000,#91cb00);
+	background-image: -o-linear-gradient(top,#8ac000,#91cb00);
+	background-image: linear-gradient(top,#8ac000,#91cb00);
+}
+
+
+span.rocker_swith input[type="checkbox"] + label {
+	width: 60px;
+	height: 26px;
+	text-align: center;
+	border-radius: 13px;	
+	box-shadow: 0 1px 1px rgba(0,0,0,.4) inset,
+					0 -2px 3px rgba(0,0,0,.6) inset,
+					3px 4px 4px rgba(255,255,255,.055), 
+					-3px 4px 4px rgba(255,255,255,.055), 
+					-4px 3px 4px rgba(255,255,255,.055), 
+					4px 3px 4px rgba(255,255,255,.055), 
+					0 5px 0 rgba(255,255,255,.045), 
+					0 0 0 5px #0e0e0e;
+	background-image: -webkit-linear-gradient(top,#505050,#1d1d1d);
+	background-image: -moz-linear-gradient(top,#505050,#1d1d1d);
+	background-image: -ms-linear-gradient(top,#505050,#1d1d1d);
+	background-image: -o-linear-gradient(top,#505050,#1d1d1d);
+	background-image: linear-gradient(top,#505050,#1d1d1d);
+	
+}
+span.rocker_swith input[type="checkbox"] + label:before,
+	span.rocker_swith input[type="checkbox"] + label:after {
+	top: 8px;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	border: 1px solid #121112;
+	background: -webkit-radial-gradient(#494949,#0f0f0e);
+	background: -moz-radial-gradient(#494949,#0f0f0e);
+	background: -ms-radial-gradient(#494949,#0f0f0e);
+	background: -o-radial-gradient(#494949,#0f0f0e);
+	background: radial-gradient(#494949,#0f0f0e);
+}
+span.rocker_swith input[type="checkbox"] + label:before {
+	left: -30px;
+	border: 1px solid #380801;
+	box-shadow: 0 0 9px #ff7059;
+	background: -webkit-radial-gradient(#ec3d02,#8a040e);
+	background: -moz-radial-gradient(#ec3d02,#8a040e);
+	background: -ms-radial-gradient(#ec3d02,#8a040e);
+	background: -o-radial-gradient(#ec3d02,#8a040e);
+	background: radial-gradient(#ec3d02,#8a040e);
+}
+span.rocker_swith input[type="checkbox"] + label:after {
+	right: -30px;
+}
+
+span.rocker_swith input[type="checkbox"]:checked + label:before {
+	box-shadow: none;
+	border-radius: 5px;
+	border: 1px solid #121112;
+	background: -webkit-radial-gradient(#494949,#0f0f0e);
+	background: -moz-radial-gradient(#494949,#0f0f0e);
+	background: -ms-radial-gradient(#494949,#0f0f0e);
+	background: -o-radial-gradient(#494949,#0f0f0e);
+	background: radial-gradient(#494949,#0f0f0e);
+}
+span.rocker_swith input[type="checkbox"]:checked + label:after {
+	right: -30px;
+	border: 1px solid #1c3600;
+	box-shadow: 0 0 9px #abff59;
+	background: -webkit-radial-gradient(#c9ff30,#488704);
+	background: -moz-radial-gradient(#c9ff30,#488704);
+	background: -ms-radial-gradient(#c9ff30,#488704);
+	background: -o-radial-gradient(#c9ff30,#488704);
+	background: radial-gradient(#c9ff30,#488704);
+}
+input[type="checkbox"][class="rocker_swith"] + label em {
+	position: relative;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	margin-top: 4px;
+	border-radius: 9px;
+	box-shadow: 0 1px 0 #3e3e3e,
+					0 -1px 0 #101010;
+	background: #292b2e;
+}
+input[type="checkbox"][class="rocker_swith"] + label em:after,
+	input[type="checkbox"][class="rocker_swith"] + label em:before {
+	position: absolute;
+	display: inline-block;
+	content: "";
+}
+input[type="checkbox"][class="rocker_swith"] + label em:before {
+	top: -3px;
+	left: -20px;
+	width: 34px;
+	height: 24px;
+	border-radius:5px 300px 300px 0 / 0 100px 100px 0;
+	background: -webkit-linear-gradient(top,#060606,#2b2a2a 20%,#6b6868 50%,#2b2a2a 80%,#060606);
+	background: -moz-linear-gradient(top,#060606,#2b2a2a 20%,#6b6868 50%,#2b2a2a 80%,#060606);
+	background: -ms-linear-gradient(top,#060606,#2b2a2a 20%,#6b6868 50%,#2b2a2a 80%,#060606);
+	background: -o-linear-gradient(top,#060606,#2b2a2a 20%,#6b6868 50%,#2b2a2a 80%,#060606);
+	background: linear-gradient(top,#060606,#2b2a2a 20%,#6b6868 50%,#2b2a2a 80%,#060606);
+}
+input[type="checkbox"][class="rocker_swith"] + label em:after {
+	top: -2px;
+	left: -30px;
+	width: 24px;
+	height: 24px;
+	border-radius: 12px;
+	box-shadow: 0 -1px 0 #6b6b6b,
+					0 1px 2px #000;
+	background: -webkit-linear-gradient(left,#484c4f,#757778);
+	background: -moz-linear-gradient(left,#484c4f,#757778);
+	background: -ms-linear-gradient(left,#484c4f,#757778);
+	background: -o-linear-gradient(left,#484c4f,#757778);
+	background: linear-gradient(left,#484c4f,#757778);
+}
+
+input[type="checkbox"][class="rocker_swith"]:checked + label em {
+	-webkit-transform:rotate(180deg);
+	   -moz-transform:rotate(180deg);
+	    -ms-transform:rotate(180deg);
+	     -o-transform:rotate(180deg);
+			transform:rotate(180deg);
+}
+span.wheels_check input[type="checkbox"] + label {
+	width: 60px;
+	height: 22px;
+	border-radius:11px;
+	border:1px solid #922010;
+	box-shadow: 0 1px 5px #922010 inset;
+	background-image: -webkit-linear-gradient(left, rgba(0,0,0,.1),rgba(0,0,0,.1)),
+						-webkit-linear-gradient(left, #7ce292 50%, #da8d83 50%);
+	background-image: -moz-linear-gradient(left, rgba(0,0,0,.1),rgba(0,0,0,.1)),
+						-moz-linear-gradient(left, #7ce292 50%, #da8d83 50%);
+	background-image: -ms-linear-gradient(left, rgba(0,0,0,.1),rgba(0,0,0,.1)),
+						-ms-linear-gradient(left, #7ce292 50%, #da8d83 50%);
+	background-image: -o-linear-gradient(left, rgba(0,0,0,.1),rgba(0,0,0,.1)),
+						-o-linear-gradient(left, #7ce292 50%, #da8d83 50%);
+	background-image: linear-gradient(left, rgba(0,0,0,.1),rgba(0,0,0,.1)),
+						linear-gradient(left, #7ce292 50%, #da8d83 50%);					
+	background-size: 100% 100%, 200% 100%;
+    background-position: 0 0, 60px 0;
+    -webkit-transition: .85s;
+       -moz-transition: .85s;
+        -ms-transition: .85s;
+       	 -o-transition: .85s;
+       		transition: .85s;
+}
+span.wheels_check input[type="checkbox"]:checked + label {
+	border:1px solid #055917;
+	box-shadow: 0 1px 5px #055917 inset;
+	background-position: 0 0, 0 0;
+}
+span.wheels_check input[type="checkbox"] + label em {
+	width: 24px;
+	height: 24px;
+	top:-1px;
+	z-index: 2;
+	border-radius: 12px;
+	box-shadow: -1px 0 0 #b6786f,1px 0 0 #999;
+	background:  -webkit-linear-gradient(25deg, #fff 55%, rgba(140,140,140,.85)),
+					-webkit-linear-gradient(-50deg, rgba(140,140,140,.85) ,#fff 50%,rgba(140,140,140,.85) ),
+					-webkit-linear-gradient(50deg, #fff 35%, rgba(140,140,140,.85) 85%),
+					-webkit-linear-gradient(-25deg,#fff 55%,rgba(140,140,140,.35) 65% , #fff 75%),
+					-webkit-radial-gradient(#fff,#f8f8f8);
+	background:  -moz-linear-gradient(25deg, #fff 55%, rgba(140,140,140,.85)),
+					-moz-linear-gradient(-50deg, rgba(140,140,140,.85) ,#fff 50%,rgba(140,140,140,.85) ),
+					-moz-linear-gradient(50deg, #fff 35%, rgba(140,140,140,.85) 85%),
+					-moz-linear-gradient(-25deg,#fff 55%,rgba(140,140,140,.35) 65% , #fff 75%),
+					-moz-radial-gradient(#fff,#f8f8f8);					
+	background:  -ms-linear-gradient(25deg, #fff 55%, rgba(140,140,140,.85)),
+					-ms-linear-gradient(-50deg, rgba(140,140,140,.85) ,#fff 50%,rgba(140,140,140,.85) ),
+					-ms-linear-gradient(50deg, #fff 35%, rgba(140,140,140,.85) 85%),
+					-ms-linear-gradient(-25deg,#fff 55%,rgba(140,140,140,.35) 65% , #fff 75%),
+					-ms-radial-gradient(#fff,#f8f8f8);						
+	background:  -o-linear-gradient(25deg, #fff 55%, rgba(140,140,140,.85)),
+					-o-linear-gradient(-50deg, rgba(140,140,140,.85) ,#fff 50%,rgba(140,140,140,.85) ),
+					-o-linear-gradient(50deg, #fff 35%, rgba(140,140,140,.85) 85%),
+					-o-linear-gradient(-25deg,#fff 55%,rgba(140,140,140,.35) 65% , #fff 75%),
+					-o-radial-gradient(#fff,#f8f8f8);					
+	background:  linear-gradient(25deg, #fff 55%, rgba(140,140,140,.85)),
+					linear-gradient(-50deg, rgba(140,140,140,.85) ,#fff 50%,rgba(140,140,140,.85) ),
+					linear-gradient(50deg, #fff 35%, rgba(140,140,140,.85) 85%),
+					linear-gradient(-25deg,#fff 55%,rgba(140,140,140,.35) 65% , #fff 75%),
+					radial-gradient(#fff,#f8f8f8);					
+	background-size: 12px 12px,12px 17px,12px 8px,12px 12px,100% 100%; 
+	background-position: 0 0,-1px 7px,12px 12px,9px 0, 0 0;
+	background-repeat: no-repeat;
+	-webkit-transform: rotate(180deg) translateX(-38px);
+	   -moz-transform: rotate(180deg) translateX(-38px);
+		-ms-transform: rotate(180deg) translateX(-38px);
+	 	 -o-transform: rotate(180deg) translateX(-38px);
+			transform: rotate(180deg) translateX(-38px);
+	-webkit-transition: .85s;
+       -moz-transition: .85s;
+        -ms-transition: .85s;
+       	 -o-transition: .85s;
+       		transition: .85s;
+}
+span.wheels_check input[type="checkbox"]:checked + label em {
+	-webkit-transform:translateX(0);
+	   -moz-transform:translateX(0);
+		-ms-transform:translateX(0);
+	     -o-transform:translateX(0);
+			transform:translateX(0);
+	box-shadow: -1px 0 0 #999,1px 0 0 #1d7f32;	
+}
+span.inner_check input[type="checkbox"] + label em {
+	width: 20px;
+	height: 20px;
+	top: 1px;
+	-webkit-transform: rotate(180deg) translateX(-39px);
+	   -moz-transform: rotate(180deg) translateX(-39px);
+		-ms-transform: rotate(180deg) translateX(-39px);
+		 -o-transform: rotate(180deg) translateX(-39px);
+			transform: rotate(180deg) translateX(-39px);
+	-webkit-transition: .75s;
+       -moz-transition: .75s;
+        -ms-transition: .75s;
+       	 -o-transition: .75s;
+       		transition: .75s;
+}
+span.inner_check input[type="checkbox"]:checked + label em {
+	-webkit-transform:translateX(2px);
+	   -moz-transform:translateX(2px);
+		-ms-transform:translateX(2px);
+	     -o-transform:translateX(2px);
+			transform:translateX(2px);
+}
+span.rectangle_check input[type="checkbox"] + label,
+	span.rectangle_inner_check input[type="checkbox"] + label {
+	width: 76px;
+	height: 24px;
+	border-radius: 3px;
+}
+.white_form span.rectangle_check input[type="checkbox"] + label em {
+	width: 38px;
+	height: 24px;
+	top:-2px;
+	left: -2px;
+	border-radius: 3px;
+	border:1px solid #e4e4e4;
+	background-image: -webkit-linear-gradient(top,#fff,#c7c5c5);
+	background-image: -moz-linear-gradient(top,#fff,#c7c5c5);
+	background-image: -ms-linear-gradient(top,#fff,#c7c5c5);
+	background-image: -o-linear-gradient(top,#fff,#c7c5c5);
+	background-image: linear-gradient(top,#fff,#c7c5c5);
+	background-size: 100%,100%;
+	-webkit-transform:translateX(40px);
+	   -moz-transform:translateX(40px);
+		-ms-transform:translateX(40px);
+	     -o-transform:translateX(40px);
+			transform:translateX(40px);
+}
+.white_form span.rectangle_check input[type="checkbox"]:checked + label em,
+	.white_form span.rectangle_inner_check input[type="checkbox"]:checked + label em {
+	-webkit-transform:translateX(0);
+	   -moz-transform:translateX(0);
+		-ms-transform:translateX(0);
+	     -o-transform:translateX(0);
+			transform:translateX(0);
+}
+.white_form span.rectangle_inner_check input[type="checkbox"] + label em {
+	width: 38px;
+	height: 20px;
+	top:1px;
+	left: 1px;
+	border-radius: 3px;
+	border:1px solid #e4e4e4;
+	background-image: -webkit-linear-gradient(top,#fff,#c7c5c5);
+	background-image: -moz-linear-gradient(top,#fff,#c7c5c5);
+	background-image: -ms-linear-gradient(top,#fff,#c7c5c5);
+	background-image: -o-linear-gradient(top,#fff,#c7c5c5);
+	background-image: linear-gradient(top,#fff,#c7c5c5);
+	background-size: 100%,100%;
+	-webkit-transform:translateX(34px);
+	   -moz-transform:translateX(34px);
+		-ms-transform:translateX(34px);
+	     -o-transform:translateX(34px);
+			transform:translateX(34px);
+}
+.white_form input[type="checkbox"] + label:after {
+	content: attr(data-off);
+	top:0;
+	left: 0;
+	color: #a54234;
+	font-size: 12px;
+	font-weight: bold;
+	text-shadow: 0 1px 0 #eebab3;
+	width: 24px;
+    height: 24px;
+	line-height: 24px;
+	padding-left: 7px;
+}
+.white_form input[type="checkbox"]:checked + label:after {
+	content: attr(data-on);
+	color: #0b8425;
+	text-shadow: 0 1px 0 #fff;
+	padding-left: 33px;
+}
+.white_form  .rectangle_check input[type="checkbox"]:checked + label:after,
+	.white_form  .rectangle_inner_check input[type="checkbox"]:checked + label:after {
+	padding-left: 53px;
+}
+	</style>
+
+</head>
+<body>
+
+<div class="page">
+	<section class="demo">
+		<div class="black_form">
+<form action="">
+	 <div class="clearfix">
+	 	<span class="check">
+			<input type="checkbox" id="check" name="check" class="check" checked="checked" />
+			<label for="check" data-off="OFF" data-on="ON"><em></em></label>
+		</span> 
+	</div>
+	<div class="clearfix">
+		<span class="rec_swith">
+			<input type="checkbox" id="rec_swith" name="rec_swith" class="rec_swith" checked="checked" />
+			<label for="rec_swith"></label>
+		</span>
+	</div>
+	<div class="clearfix">
+		<span class="round_swith">
+			<input type="checkbox" id="round_swith" name="round_swith" class="round_swith" checked="checked" />
+			<label for="round_swith"></label>
+		</span>
+	</div>
+	<div class="clearfix">
+		<span class="rocker_swith">
+			<input type="checkbox" id="rocker_swith" name="rocker_swith" class="rocker_swith" checked="checked" />
+			<label for="rocker_swith"><em></em></label>
+		</span>	
+	</div>
+</form>
+	</div><!--/black_form-->
+	<div class="white_form">
+<form action="">
+	<div class="clearfix">
+	 	<span class="wheels_check">
+			<input type="checkbox" id="wheels_check" name="wheels_check" class="wheels_check" checked="checked" />
+			<label for="wheels_check" data-off="OFF" data-on="ON"><em></em></label>
+		</span> 
+	</div>
+	<div class="clearfix">
+	 	<span class="wheels_check inner_check">
+			<input type="checkbox" id="inner_check" name="inner_check" class="inner_check" checked="checked" />
+			<label for="inner_check" data-off="OFF" data-on="ON"><em></em></label>
+		</span> 
+	</div>
+	<div class="clearfix">
+	 	<span class="wheels_check rectangle_check">
+			<input type="checkbox" id="rectangle_check" name="rectangle_check" class="rectangle_check" checked="checked" />
+			<label for="rectangle_check" data-off="OFF" data-on="ON"><em></em></label>
+		</span> 
+	</div>
+	<div class="clearfix">
+	 	<span class="wheels_check rectangle_inner_check">
+			<input type="checkbox" id="rectangle_inner_check" name="rectangle_inner_check" class="rectangle_inner_check" checked="checked" />
+			<label for="rectangle_inner_check" data-off="OFF" data-on="ON"><em></em></label>
+		</span> 
+	</div>
+</form>
+	</div><!--/white_form-->
+	</section>
+	
+</div>
+</body>
+</html>

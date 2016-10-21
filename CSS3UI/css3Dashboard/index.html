@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pure CSS3 Dashboard|css3教程,css3实例,css3动画|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <style type="text/css">
+    body {
+        background-color: #004f5e;
+        background-image: -webkit-linear-gradient(180deg, transparent 55%, #004c5a 45%);
+        background-image: -o-linear-gradient(180deg, transparent 50%, #004c5a 50%);
+        background-image: -ms-linear-gradient(180deg, transparent 50%, #004c5a 50%);
+        background-image: linear-gradient(90deg, transparent 50%, #004c5a 50%);
+        background-size: 30px 30px;
+        letter-spacing: 0.09em;
+    }
+    
+    .demo {
+        color: #fff;
+        line-height: 30px;
+        width: 370px;
+        height: 220px;
+        margin: 40px auto;
+    }
+    
+    .quick_menu > li {
+        display: inline-block;
+        position: relative;
+        -webkit-perspective: 1000px;
+        -moz-perspective: 1000px;
+        -ms-perspective: 1000px;
+        perspective: 1000px;
+    }
+    
+    .quick_menu a,
+    .quick_menu a:hover {
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
+    .quick_menu > li:hover .user_fun_sub {
+        opacity: 1;
+        -webkit-animation: turn 2s ease-in-out;
+        -moz-animation: turn 2s ease-in-out;
+        -ms-animation: turn 2s ease-in-out;
+        animation: turn 2s ease-in-out;
+        visibility: visible;
+    }
+    
+    .user_icon img {
+        width: 30px;
+        height: 30px;
+        border: 1px solid #fff;
+        border-radius: 3px;
+        vertical-align: middle;
+    }
+    
+    .user_icon b {
+        position: absolute;
+        top: -8px;
+        left: -8px;
+        display: inline-block;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+        padding: 2px 5px;
+        line-height: 12px;
+        border-radius: 2px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+        background-color: #ff8400;
+    }
+    
+    .user_fun b {
+        position: absolute;
+        top: 8px;
+        padding-left: 2px;
+        font-weight: normal;
+        font-size: 22px;
+    }
+    
+    .user_fun_sub {
+        position: absolute;
+        text-align: left;
+        line-height: 30px;
+        width: 125px;
+        padding: 5px 0;
+        border-radius: 5px;
+        background-color: #001013;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transform-origin: 50% 0%;
+        -moz-transform-origin: 50% 0%;
+        -ms-transform-origin: 50% 0%;
+        transform-origin: 50% 0%;
+    }
+    
+    .user_fun_sub a {
+        display: block;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+        margin: 2px 5px 2px 5px;
+        padding-left: 5px;
+    }
+    
+    .user_fun_sub a:hover {
+        border-radius: 3px;
+        box-shadow: 0 1px 0 #82c64f inset;
+        background-color: #4daf04;
+    }
+    
+    .log_out a {
+        display: block;
+        line-height: 15px;
+        padding: 5px 20px;
+        margin-left: 40px;
+        border: 1px solid #33707b;
+        border-radius: 3px;
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        transition: all 1s ease;
+    }
+    
+    .log_out a:hover {
+        text-shadow: 0 0 20px rgba(255, 255, 255, .9);
+    }
+    
+    @-webkit-keyframes turn {
+        0% {
+            -webkit-transform: rotateX(90deg);
+        }
+        20% {
+            -webkit-transform: rotateX(-30deg) rotateY(10deg);
+        }
+        35% {
+            -webkit-transform: rotateX(20deg) rotateY(-3deg);
+        }
+        55% {
+            -webkit-transform: rotateX(-15deg) rotateY(8deg);
+        }
+        85% {
+            -webkit-transform: rotateX(20deg) rotateY(-2deg);
+        }
+        100% {
+            -webkit-transform: rotateX(0);
+        }
+    }
+    
+    @-moz-keyframes turn {
+        0% {
+            -moz-transform: rotateX(90deg);
+        }
+        20% {
+            -moz-transform: rotateX(-30deg) rotateY(10deg);
+        }
+        35% {
+            -moz-transform: rotateX(20deg) rotateY(-3deg);
+        }
+        55% {
+            -moz-transform: rotateX(-15deg) rotateY(8deg);
+        }
+        85% {
+            -moz-transform: rotateX(20deg) rotateY(-2deg);
+        }
+        100% {
+            -moz-transform: rotateX(0);
+        }
+    }
+    
+    @-ms-keyframes turn {
+        0% {
+            -ms-transform: rotateX(90deg);
+        }
+        20% {
+            -ms-transform: rotateX(-30deg) rotateY(10deg);
+        }
+        35% {
+            -ms-transform: rotateX(20deg) rotateY(-3deg);
+        }
+        55% {
+            -ms-transform: rotateX(-15deg) rotateY(8deg);
+        }
+        85% {
+            -ms-transform: rotateX(20deg) rotateY(-2deg);
+        }
+        100% {
+            -ms-transform: rotateX(0);
+        }
+    }
+    
+    @keyframes turn {
+        0% {
+            transform: rotateX(90deg);
+        }
+        20% {
+            transform: rotateX(-30deg) rotateY(10deg);
+        }
+        35% {
+            transform: rotateX(20deg) rotateY(-3deg);
+        }
+        55% {
+            transform: rotateX(-15deg) rotateY(8deg);
+        }
+        85% {
+            transform: rotateX(20deg) rotateY(-2deg);
+        }
+        100% {
+            transform: rotateX(0);
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <ul class="quick_menu">
+                <li>Welcome,</li>
+                <li class="user_icon">
+                    <a href="#"><img src="x.jpg" alt="Tina"><b>5</b></a>
+                </li>
+                <li class="user_fun">
+                    <a href="#" title="PandaThemes">PandaThemes<b>ˇ</b></a>
+                    <ul class="user_fun_sub">
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Posts</a></li>
+                        <li><a href="#">Items</a></li>
+                        <li><a href="#">Media</a></li>
+                        <li><a href="#">Pages</a></li>
+                        <li><a href="#">Network Admin</a></li>
+                        <li><a href="#">My Sites</a></li>
+                    </ul>
+                </li>
+                <li class="log_out"><a href="#" title="Log Out">Log Out</a></li>
+                <ul>
+        </section>
+    </div>
+</body>
+
+</html>

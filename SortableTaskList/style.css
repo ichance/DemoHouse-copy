@@ -1,0 +1,159 @@
+body {
+    background: #1abc9c;
+    font-family: sans-serif;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 100;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.steps {
+    width: 300px;
+    height: 405px;
+    position: absolute;
+    top: 15%;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+.ui-sortable-placeholder {
+    border: 1px dotted #fff;
+    padding: 30px 20px;
+    position: relative;
+}
+
+.ui-sortable-placeholder:after {
+    content: "Place me here. Pretty Please  :3";
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: #fff;
+    text-align: center;
+}
+
+label {
+    background: #34495E;
+    height: 69px;
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #2C3E50;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 900;
+    font-size: 11px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.7s ease;
+    position: relative;
+    padding: 5px 5px 5px 70px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+label h2 span {
+    display: block;
+    font-size: 12px;
+    text-transform: capitalize;
+    font-weight: normal;
+    color: #bdc3c7;
+}
+
+label:before {
+    content: "";
+    width: 19px;
+    height: 19px;
+    border: 1px solid #416282;
+    display: block;
+    position: absolute;
+    border-radius: 100%;
+    left: 20px;
+    top: 30%;
+    transition: border 0.7s ease;
+    z-index: 9999;
+}
+
+label:after {
+    content: "";
+    width: 60px;
+    height: 68px;
+    background: #2C3E50;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#label-1:checked ~ label[for=label-1],
+#label-2:checked ~ label[for=label-2],
+#label-3:checked ~ label[for=label-3],
+#label-4:checked ~ label[for=label-4],
+#label-5:checked ~ label[for=label-5] {
+    background: #2C3E50;
+    border-bottom: 1px solid #34495E;
+    color: #1ABC9C;
+}
+
+#label-1:checked ~ label[for=label-1] h2 span,
+#label-2:checked ~ label[for=label-2] h2 span,
+#label-3:checked ~ label[for=label-3] h2 span,
+#label-4:checked ~ label[for=label-4] h2 span,
+#label-5:checked ~ label[for=label-5] h2 span {
+    color: #1ABC9C;
+}
+
+#label-1:checked ~ label[for=label-1]:before,
+#label-2:checked ~ label[for=label-2]:before,
+#label-3:checked ~ label[for=label-3]:before,
+#label-4:checked ~ label[for=label-4]:before,
+#label-5:checked ~ label[for=label-5]:before {
+    background: url("http://designmodo.github.io/Flat-UI/images/todo/done.png") no-repeat center center;
+    border: 1px solid #1abc9d;
+}
+
+li:first-child label {
+    height: 150px;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-right: 8px solid #f87c85;
+    padding-top: 10%;
+}
+
+li:first-child label:before {
+    top: 40%;
+}
+
+li:first-child label:after {
+    height: 149px;
+}
+
+li:nth-child(2) label {
+    border-right: 8px solid #feb47f;
+}
+
+li:nth-child(3) label {
+    border-right: 8px solid #3498db;
+}
+
+li:nth-child(4) label {
+    border-right: 8px solid #b985ea;
+}
+
+li:last-child label {
+    border-right: 8px solid #43d6b0;
+}

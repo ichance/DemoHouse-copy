@@ -1,0 +1,38 @@
+@charset "utf-8";
+@import url("http://www.w3cplus.com/demo/css3/base.css");
+#demo_zone{
+    width:400px;
+	margin:0 auto;
+}
+.inner_dashed{
+    text-align:left;
+	margin:20px auto;
+	width:300px;
+	padding:10px;
+	background-color:#F1F1F1;
+	border-radius:5px;
+}
+.demo1{
+    border:1px dashed #f00;
+	box-shadow:0 0 0 3px #F1F1F1;
+}
+.demo2{
+    position:relative;
+}
+.demo2:before{
+    position:absolute;
+	content:'';
+	top:3px;
+	right:3px;
+	left:3px;
+	bottom:3px;
+	border:1px dashed #f00;
+	border-radius:5px;
+}
+.demo2 p{
+    position:relative;
+}
+.demo3{
+    border:1px dashed #f00;
+	outline:3px solid #F1F1F1;
+}

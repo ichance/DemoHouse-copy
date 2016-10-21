@@ -1,0 +1,390 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pure CSS3 3D Buttons|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    <style>
+    body {
+        background: -webkit-radial-gradient(#fdfdfd, #e5e5e5);
+        background: -moz-radial-gradient(#fdfdfd, #e5e5e5);
+        background: -ms-radial-gradient(#fdfdfd, #e5e5e5);
+        background: -o-radial-gradient(#fdfdfd, #e5e5e5);
+        background: radial-gradient(#fdfdfd, #e5e5e5);
+    }
+    
+    .demo {
+        width: 250px;
+        margin: 80px auto 0;
+    }
+    
+    .demo div {
+        margin-bottom: 20px;
+    }
+    
+    .onload,
+    .search {
+        position: relative;
+        display: inline-block;
+        line-height: 25px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        color: #fff;
+        font-weight: bold;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, .4);
+    }
+    
+    .onload {
+        width: 130px;
+        font-size: 14px;
+    }
+    
+    .search {
+        width: 30px;
+        margin-left: 20px;
+    }
+    
+    .onload:after,
+    .search:after {
+        display: inline-block;
+        font-family: 'icomoon';
+        font-style: normal;
+        speak: none;
+        font-weight: normal;
+        -webkit-font-smoothing: antialiased;
+        content: "\21";
+        font-size: 20px;
+        padding-left: 5px;
+    }
+    
+    .onload:after {
+        content: "\22";
+        padding-left: 14px;
+        margin-left: 14px;
+    }
+    
+    .onload:before,
+    .search:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: inline-block;
+        content: "";
+        width: 90px;
+        height: 59px;
+        background: -webkit-radial-gradient(right, rgba(255, 255, 255, .3), rgba(255, 255, 255, 0) 70%);
+        background: -moz-radial-gradient(right, rgba(255, 255, 255, .3), rgba(255, 255, 255, 0) 70%);
+        background: -ms-radial-gradient(right, rgba(255, 255, 255, .3), rgba(255, 255, 255, 0) 70%);
+        background: -o-radial-gradient(right, rgba(255, 255, 255, .3), rgba(255, 255, 255, 0) 70%);
+        background: radial-gradient(right, rgba(255, 255, 255, .3), rgba(255, 255, 255, 0) 70%);
+    }
+    
+    .onload:hover,
+    .search:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .onload:active,
+    .search:active {
+        top: 8px;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, .2) inset;
+    }
+    
+    .pink {
+        border: 1px solid #de73bd;
+        box-shadow: 0 0 0 1px #883b73, 1px 5px 0 #883b73, -1px 5px 0 #883b73, 0 6px 8px rgba(0, 0, 0, .8);
+        background: -webkit-linear-gradient(top, #d745a4, #bd368d);
+        background: -moz-linear-gradient(top, #d745a4, #bd368d);
+        background: -ms-linear-gradient(top, #d745a4, #bd368d);
+        background: -o-linear-gradient(top, #d745a4, #bd368d);
+        background: linear-gradient(top, #d745a4, #bd368d);
+    }
+    
+    .onload.pink:after {
+        box-shadow: -1px 0 0 #8f3879, -2px 0 0 #e691cd;
+    }
+    
+    .pink:hover {
+        background: -webkit-linear-gradient(top, #ea6abd, #bd368d);
+        background: -moz-linear-gradient(top, #ea6abd, #bd368d);
+        background: -ms-linear-gradient(top, #ea6abd, #bd368d);
+        background: -o-linear-gradient(top, #ea6abd, #bd368d);
+        background: linear-gradient(top, #ea6abd, #bd368d);
+    }
+    
+    .pink:active {
+        background: -webkit-linear-gradient(top, #bd368d, #bd368d);
+        background: -moz-linear-gradient(top, #bd368d, #bd368d);
+        background: -ms-linear-gradient(top, #bd368d, #bd368d);
+        background: -o-linear-gradient(top, #bd368d, #bd368d);
+        background: linear-gradient(top, #bd368d, #bd368d);
+    }
+    
+    .purple {
+        border: 1px solid #b271e5;
+        box-shadow: 0 0 0 1px #883b73, 1px 5px 0 #883b73, -1px 5px 0 #883b73, 0 6px 8px rgba(0, 0, 0, .8);
+        background: -webkit-linear-gradient(top, #9246d7, #8339c2);
+        background: -moz-linear-gradient(top, #9246d7, #8339c2);
+        background: -ms-linear-gradient(top, #9246d7, #8339c2);
+        background: -o-linear-gradient(top, #9246d7, #8339c2);
+        background: linear-gradient(top, #9246d7, #8339c2);
+    }
+    
+    .onload.purple:after {
+        box-shadow: -1px 0 0 #5d297b, -2px 0 0 #c998e7;
+    }
+    
+    .purple:hover {
+        background: -webkit-linear-gradient(top, #a35de6, #7733be);
+        background: -moz-linear-gradient(top, #a35de6, #7733be);
+        background: -ms-linear-gradient(top, #a35de6, #7733be);
+        background: -o-linear-gradient(top, #a35de6, #7733be);
+        background: linear-gradient(top, #a35de6, #7733be);
+    }
+    
+    .purple:active {
+        background: -webkit-linear-gradient(top, #8339c2, #8339c2);
+        background: -moz-linear-gradient(top, #8339c2, #8339c2);
+        background: -ms-linear-gradient(top, #8339c2, #8339c2);
+        background: -o-linear-gradient(top, #8339c2, #8339c2);
+        background: linear-gradient(top, #8339c2, #8339c2);
+    }
+    
+    .sky_blue {
+        border: 1px solid #7cccff;
+        box-shadow: 0 0 0 1px #007ac7, 1px 5px 0 #007ac7, -1px 5px 0 #007ac7, 0 6px 8px rgba(0, 0, 0, .8);
+        background: -webkit-linear-gradient(top, #4db5fe, #3c9be2);
+        background: -moz-linear-gradient(top, #4db5fe, #3c9be2);
+        background: -ms-linear-gradient(top, #4db5fe, #3c9be2);
+        background: -o-linear-gradient(top, #4db5fe, #3c9be2);
+        background: linear-gradient(top, #4db5fe, #3c9be2);
+    }
+    
+    .onload.sky_blue:after {
+        box-shadow: -1px 0 0 #2c6c7f, -2px 0 0 #99d5fa;
+    }
+    
+    .sky_blue:hover {
+        background: -webkit-linear-gradient(top, #76c6ff, #3c9ce4);
+        background: -moz-linear-gradient(top, #76c6ff, #3c9ce4);
+        background: -ms-linear-gradient(top, #76c6ff, #3c9ce4);
+        background: -o-linear-gradient(top, #76c6ff, #3c9ce4);
+        background: linear-gradient(top, #76c6ff, #3c9ce4);
+    }
+    
+    .sky_blue:active {
+        background: -webkit-linear-gradient(top, #3c9be2, #3c9be2);
+        background: -moz-linear-gradient(top, #3c9be2, #3c9be2);
+        background: -ms-linear-gradient(top, #3c9be2, #3c9be2);
+        background: -o-linear-gradient(top, #3c9be2, #3c9be2);
+        background: linear-gradient(top, #3c9be2, #3c9be2);
+    }
+    
+    .green {
+        border: 1px solid #9bcf60;
+        box-shadow: 0 0 0 1px #469a44, 1px 5px 0 #469a44, -1px 5px 0 #469a44, 0 6px 8px rgba(0, 0, 0, .8);
+        background: -webkit-linear-gradient(top, #8dd845, #6fbb31);
+        background: -moz-linear-gradient(top, #8dd845, #6fbb31);
+        background: -ms-linear-gradient(top, #8dd845, #6fbb31);
+        background: -o-linear-gradient(top, #8dd845, #6fbb31);
+        background: linear-gradient(top, #8dd845, #6fbb31);
+    }
+    
+    .onload.green:after {
+        box-shadow: -1px 0 0 #597b2d, -2px 0 0 #c6e897;
+    }
+    
+    .green:hover {
+        background: -webkit-linear-gradient(top, #9de15d, #74bf37);
+        background: -moz-linear-gradient(top, #9de15d, #74bf37);
+        background: -ms-linear-gradient(top, #9de15d, #74bf37);
+        background: -o-linear-gradient(top, #9de15d, #74bf37);
+        background: linear-gradient(top, #9de15d, #74bf37);
+    }
+    
+    .green:active {
+        background: -webkit-linear-gradient(top, #6fbb31, #6fbb31);
+        background: -moz-linear-gradient(top, #6fbb31, #6fbb31);
+        background: -ms-linear-gradient(top, #6fbb31, #6fbb31);
+        background: -o-linear-gradient(top, #6fbb31, #6fbb31);
+        background: linear-gradient(top, #6fbb31, #6fbb31);
+    }
+    
+    .yellow {
+        border: 1px solid #e0e571;
+        box-shadow: 0 0 0 1px #87883b, 1px 5px 0 #87883b, -1px 5px 0 #87883b, 0 6px 8px rgba(0, 0, 0, .8);
+        background: -webkit-linear-gradient(top, #d1d744, #bbbf39);
+        background: -moz-linear-gradient(top, #d1d744, #bbbf39);
+        background: -ms-linear-gradient(top, #d1d744, #bbbf39);
+        background: -o-linear-gradient(top, #d1d744, #bbbf39);
+        background: linear-gradient(top, #d1d744, #bbbf39);
+    }
+    
+    .onload.yellow:after {
+        box-shadow: -1px 0 0 #597b2d, -2px 0 0 #c6e897;
+    }
+    
+    .yellow:hover {
+        background: -webkit-linear-gradient(top, #dadd50, #c0c442);
+        background: -moz-linear-gradient(top, #dadd50, #c0c442);
+        background: -ms-linear-gradient(top, #dadd50, #c0c442);
+        background: -o-linear-gradient(top, #dadd50, #c0c442);
+        background: linear-gradient(top, #dadd50, #c0c442);
+    }
+    
+    .yellow:active {
+        background: -webkit-linear-gradient(top, #bbbf39, #bbbf39);
+        background: -moz-linear-gradient(top, #bbbf39, #bbbf39);
+        background: -ms-linear-gradient(top, #bbbf39, #bbbf39);
+        background: -o-linear-gradient(top, #bbbf39, #bbbf39);
+        background: linear-gradient(top, #bbbf39, #bbbf39);
+    }
+    
+    .orange {
+        border: 1px solid #e5bf76;
+        box-shadow: 0 0 0 1px #88683b, 1px 5px 0 #88683b, -1px 5px 0 #88683b, 0 6px 8px rgba(0, 0, 0, .8);
+        background: -webkit-linear-gradient(top, #e0b956, #bb8231);
+        background: -moz-linear-gradient(top, #e0b956, #bb8231);
+        background: -ms-linear-gradient(top, #e0b956, #bb8231);
+        background: -o-linear-gradient(top, #e0b956, #bb8231);
+        background: linear-gradient(top, #e0b956, #bb8231);
+    }
+    
+    .onload.orange:after {
+        box-shadow: -1px 0 0 #7e6a33, -2px 0 0 #e8ce98;
+    }
+    
+    .orange:hover {
+        background: -webkit-linear-gradient(top, #e7c369, #c18838);
+        background: -moz-linear-gradient(top, #e7c369, #c18838);
+        background: -ms-linear-gradient(top, #e7c369, #c18838);
+        background: -o-linear-gradient(top, #e7c369, #c18838);
+        background: linear-gradient(top, #e7c369, #c18838);
+    }
+    
+    .orange:active {
+        background: -webkit-linear-gradient(top, #bb8231, #bb8231);
+        background: -moz-linear-gradient(top, #bb8231, #bb8231);
+        background: -ms-linear-gradient(top, #bb8231, #bb8231);
+        background: -o-linear-gradient(top, #bb8231, #bb8231);
+        background: linear-gradient(top, #bb8231, #bb8231);
+    }
+    
+    .red {
+        border: 1px solid #e57171;
+        box-shadow: 0 0 0 1px #883b3b, 1px 5px 0 #883b3b, -1px 5px 0 #883b3b, 0 6px 8px rgba(0, 0, 0, .8);
+        background: -webkit-linear-gradient(top, #d74444, #c43a3a);
+        background: -moz-linear-gradient(top, #d74444, #c43a3a);
+        background: -ms-linear-gradient(top, #d74444, #c43a3a);
+        background: -o-linear-gradient(top, #d74444, #c43a3a);
+        background: linear-gradient(top, #d74444, #c43a3a);
+    }
+    
+    .onload.red:after {
+        box-shadow: -1px 0 0 #8b3737, -2px 0 0 #e69090;
+    }
+    
+    .red:hover {
+        background: -webkit-linear-gradient(top, #e25c5c, #cc4646);
+        background: -moz-linear-gradient(top, #e25c5c, #cc4646);
+        background: -ms-linear-gradient(top, #e25c5c, #cc4646);
+        background: -o-linear-gradient(top, #e25c5c, #cc4646);
+        background: linear-gradient(top, #e25c5c, #cc4646);
+    }
+    
+    .orange:active {
+        background: -webkit-linear-gradient(top, #c43a3a, #c43a3a);
+        background: -moz-linear-gradient(top, #c43a3a, #c43a3a);
+        background: -ms-linear-gradient(top, #c43a3a, #c43a3a);
+        background: -o-linear-gradient(top, #c43a3a, #c43a3a);
+        background: linear-gradient(top, #c43a3a, #c43a3a);
+    }
+    
+    .gray {
+        border: 1px solid #d6d6d7;
+        box-shadow: 0 0 0 1px #919191, 1px 5px 0 #919191, -1px 5px 0 #919191, 0 6px 8px rgba(0, 0, 0, .8);
+        background: -webkit-linear-gradient(top, #bdbebf, #ababac);
+        background: -moz-linear-gradient(top, #bdbebf, #ababac);
+        background: -ms-linear-gradient(top, #bdbebf, #ababac);
+        background: -o-linear-gradient(top, #bdbebf, #ababac);
+        background: linear-gradient(top, #bdbebf, #ababac);
+    }
+    
+    .onload.gray:after {
+        box-shadow: -1px 0 0 #7b7a7a, -2px 0 0 #dbdbdc;
+    }
+    
+    .gray:hover {
+        background: -webkit-linear-gradient(top, #cbcccd, #9e9fa0);
+        background: -moz-linear-gradient(top, #cbcccd, #9e9fa0);
+        background: -ms-linear-gradient(top, #cbcccd, #9e9fa0);
+        background: -o-linear-gradient(top, #cbcccd, #9e9fa0);
+        background: linear-gradient(top, #cbcccd, #9e9fa0);
+    }
+    
+    .gray:active {
+        background: -webkit-linear-gradient(top, #ababac, #ababac);
+        background: -moz-linear-gradient(top, #ababac, #ababac);
+        background: -ms-linear-gradient(top, #ababac, #ababac);
+        background: -o-linear-gradient(top, #ababac, #ababac);
+        background: linear-gradient(top, #ababac, #ababac);
+    }
+    
+    @font-face {
+        font-family: 'icomoon';
+        src: url('fonts/icomoon.eot');
+        src: url('fonts/icomoon.eot?#iefix') format('embedded-opentype'), url('fonts/icomoon.svg#icomoon') format('svg'), url('fonts/icomoon.woff') format('woff'), url('fonts/icomoon.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <form action="">
+                <div class="clearfix">
+                    <a href="#" class="onload pink">DOWNLOAD</a>
+                    <a href="#" class="search pink"></a>
+                </div>
+                <div class="clearfix">
+                    <a href="#" class="onload purple">DOWNLOAD</a>
+                    <a href="#" class="search purple"></a>
+                </div>
+                <div class="clearfix">
+                    <a href="#" class="onload sky_blue">DOWNLOAD</a>
+                    <a href="#" class="search sky_blue"></a>
+                </div>
+                <div class="clearfix">
+                    <a href="#" class="onload green">DOWNLOAD</a>
+                    <a href="#" class="search green"></a>
+                </div>
+                <div class="clearfix">
+                    <a href="#" class="onload yellow">DOWNLOAD</a>
+                    <a href="#" class="search yellow"></a>
+                </div>
+                <div class="clearfix">
+                    <a href="#" class="onload orange">DOWNLOAD</a>
+                    <a href="#" class="search orange"></a>
+                </div>
+                <div class="clearfix">
+                    <a href="#" class="onload red">DOWNLOAD</a>
+                    <a href="#" class="search red"></a>
+                </div>
+                <div class="clearfix">
+                    <a href="#" class="onload gray">DOWNLOAD</a>
+                    <a href="#" class="search gray"></a>
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>

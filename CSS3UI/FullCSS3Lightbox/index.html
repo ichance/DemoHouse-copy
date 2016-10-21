@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Full CSS3 Lightbox|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    <style type="text/css">
+    @-webkit-keyframes supersize {
+        from {
+            -webkit-transform: scale(0.9);
+        }
+        to {
+            -webkit-transform: scale(1);
+        }
+    }
+    
+    @-moz-keyframes supersize {
+        from {
+            -moz-transform: scale(0.9);
+        }
+        to {
+            -moz-transform: scale(1);
+        }
+    }
+    
+    @-o-keyframes supersize {
+        from {
+            -o-transform: scale(0.9);
+        }
+        to {
+            -o-transform: scale(1);
+        }
+    }
+    
+    @-ms-keyframes supersize {
+        from {
+            -ms-transform: scale(0.9);
+        }
+        to {
+            -ms-transform: scale(1);
+        }
+    }
+    
+    @keyframes supersize {
+        from {
+            transform: scale(0.9);
+        }
+        to {
+            transform: scale(1);
+        }
+    }
+    
+    body {
+        background: url(http://www.w3cplus.com/demo/css3/CSS3HoverEffects/black-bg.png) repeat;
+    }
+    
+    .link-img,
+    .full-img {
+        margin: 0;
+        padding: 0;
+        list-style: none outside none;
+    }
+    
+    .link-img {
+        width: 930px;
+        margin: 20px auto;
+    }
+    
+    .link-img li {
+        float: left;
+        display: inline;
+    }
+    
+    .link-img a {
+        display: block;
+        float: left;
+        border-radius: 5px;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        border: 5px solid white;
+        margin: 10px;
+    }
+    
+    .link-img img {
+        vertical-align: top;
+        -webkit-transition: opacity .2s linear;
+        -moz-transition: opacity .2s linear;
+        -o-transition: opacity .2s linear;
+        transition: opacity .2s linear;
+    }
+    
+    .link-img a:hover img {
+        opacity: 0.75;
+    }
+    
+    .link-img a:active img {
+        margin-top: 1px;
+    }
+    
+    li[id] {
+        overflow: hidden;
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        background: rgba(0, 0, 0, .8);
+        -webkit-transition: opacity 1.2s cubic-bezier(0, 0, 0, 1);
+        -moz-transition: opacity 1.2s cubic-bezier(0, 0, 0, 1);
+        -o-transition: opacity 1.2s cubic-bezier(0, 0, 0, 1);
+        transition: opacity 1.2s cubic-bezier(0, 0, 0, 1);
+    }
+    
+    li[id] a:before {
+        content: url(close.png);
+        position: absolute;
+        margin-top: -15px;
+        margin-left: -15px;
+        z-index: 9999;
+        opacity: 0;
+    }
+    
+    li[id] a:hover:before {
+        opacity: 1;
+    }
+    
+    li[id]:target {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        display: table;
+        text-align: center;
+    }
+    
+    li[id]:target a {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+    
+    li[id]:target a img {
+        border: 15px solid #fff;
+        box-shadow: 0 1px 8px #000;
+        -webkit-animation: supersize .8s cubic-bezier(0, 0, 0, 1);
+        -moz-animation: supersize .8s cubic-bezier(0, 0, 0, 1);
+        -o-animation: supersize .8s cubic-bezier(0, 0, 0, 1);
+        -ms-animation: supersize .8s cubic-bezier(0, 0, 0, 1);
+        animation: supersize .8s cubic-bezier(0, 0, 0, 1);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <ul class="link-img clearfix">
+                <li>
+                    <a href="#pic1"><img src="//www.w3cplus.com/demo/css3/pureCSS3Lightbox/8s.jpg" alt="Picture 1"></a>
+                </li>
+                <li>
+                    <a href="#pic2"><img src="//www.w3cplus.com/demo/css3/pureCSS3Lightbox/6s.jpg" alt="Picture 2"></a>
+                </li>
+                <li>
+                    <a href="#pic3"><img src="//www.w3cplus.com/demo/css3/pureCSS3Lightbox/4s.jpg" alt="Picture 3"></a>
+                </li>
+                <li>
+                    <a href="#pic4"><img src="//www.w3cplus.com/demo/css3/pureCSS3Lightbox/2s.jpg" alt="Picture 4"></a>
+                </li>
+                <li>
+                    <a href="#pic5"><img src="//www.w3cplus.com/demo/css3/pureCSS3Lightbox/1s.jpg" alt="Picture 5"></a>
+                </li>
+                <li>
+                    <a href="#pic6"><img src="//www.w3cplus.com/demo/css3/pureCSS3Lightbox/3s.jpg" alt="Picture 3"></a>
+                </li>
+                <li>
+                    <a href="#pic7"><img src="//www.w3cplus.com/demo/css3/pureCSS3Lightbox/5s.jpg" alt="Picture 4"></a>
+                </li>
+                <li>
+                    <a href="#pic8"><img src="//www.w3cplus.com/demo/css3/pureCSS3Lightbox/7s.jpg" alt="Picture 5"></a>
+                </li>
+            </ul>
+            <ul class="full-img">
+                <li id="pic1">
+                    <a href="#home"><img src="//www.w3cplus.com/demo/css3/pureCSS3Lightbox/8.jpg" alt=""></a>
+                </li>
+                <li id="pic2">
+                    <a href="#home"><img src="//www.w3cplus.com/demo/css3/pureCSS3Lightbox/6.jpg" alt=""></a>
+                </li>
+                <li id="pic3">
+                    <a href="#home"><img src="//www.w3cplus.com/demo/css3/pureCSS3Lightbox/4.jpg" alt=""></a>
+                </li>
+                <li id="pic4">
+                    <a href="#home"><img src="//www.w3cplus.com/demo/css3/pureCSS3Lightbox/2.jpg" alt=""></a>
+                </li>
+                <li id="pic5">
+                    <a href="#home"><img src="//www.w3cplus.com/demo/css3/pureCSS3Lightbox/1.jpg" alt=""></a>
+                </li>
+                <li id="pic6">
+                    <a href="#home"><img src="//www.w3cplus.com/demo/css3/pureCSS3Lightbox/3.jpg" alt=""></a>
+                </li>
+                <li id="pic7">
+                    <a href="#home"><img src="//www.w3cplus.com/demo/css3/pureCSS3Lightbox/5.jpg" alt=""></a>
+                </li>
+                <li id="pic8">
+                    <a href="#home"><img src="//www.w3cplus.com/demo/css3/pureCSS3Lightbox/7.jpg" alt=""></a>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+
+</html>

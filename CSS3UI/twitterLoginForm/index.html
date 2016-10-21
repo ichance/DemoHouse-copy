@@ -1,0 +1,238 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Twitter Login Form|w3cplus</title>
+	<meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+	<meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+	<link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+	<link rel="stylesheet" href="font-awesome.css" />
+<style type="text/css">
+*, ::after, ::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: #E1C192 url(wood_pattern.jpg);
+}
+.form {
+  width: 340px;
+  margin: 60px auto 30px;
+  padding: 15px;
+  position: relative;
+  background: #fffaf6;
+  border-radius: 4px;
+  color: #7e7975;
+  box-shadow:0 2px 2px rgba(0,0,0,0.2),0 1px 5px rgba(0,0,0,0.2), 0 0 0 12px rgba(255,255,255,0.4); 
+}
+
+.form h1 {
+  font-size: 15px;
+  line-height:1;
+  font-weight: bold;
+  color: #bdb5aa;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #EBE6E2;
+  text-shadow: 0 2px 0 rgba(255,255,255,0.8);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.8);
+}
+
+.form h1 .log-in,
+.form h1 .sign-up {
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.form h1 .log-in {
+  color: #6c6763;
+  padding-right: 2px;
+}
+
+.form h1 .sign-up {
+  color: #ffb347;
+  padding-left: 2px;
+}
+
+.form .float {
+  width: 50%;
+  float: left;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,1);
+}
+
+.form .float:first-of-type {
+  padding-right: 5px;
+}
+
+.form .float:last-of-type {
+  padding-left: 5px;
+}
+
+.form label {
+  display: block;
+  padding: 0 0 5px 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+  font-size: 11px;
+}
+
+.form label i {
+  margin-right: 5px; /* Gap between icon and text */
+  display: inline-block;
+  width: 10px;
+}
+
+.form input[type=text],
+.form input[type=password] {
+  font: 400 13px 'Lato', Calibri, Arial, sans-serif;
+  display: block;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 5px;
+  border: 3px solid #ebe6e2;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.form input[type=text]:hover,
+.form input[type=password]:hover {
+  border-color: #CCC;
+}
+
+.form label:hover ~ input {
+  border-color: #CCC;
+}
+
+.form input[type=text]:focus,
+.form input[type=password]:focus {
+  border-color: #BBB;
+  outline: none; /* Remove Chrome's outline */
+}
+
+.form input[type=submit],
+.form .log-twitter {
+  width: 49%;
+  height: 38px;
+  float: left;
+  position: relative;
+  box-shadow: inset 0 1px rgba(255,255,255,0.3);
+  border-radius: 3px;
+  cursor: pointer;
+  font:bold 14px/38px 'Lato', Calibri, Arial, sans-serif ;
+  text-align: center;
+}
+
+.form input[type=submit] {
+  margin-left: 1%;
+  background: #fbd568; /* Fallback */
+  background: -moz-linear-gradient(#fbd568, #ffb347);
+  background: -ms-linear-gradient(#fbd568, #ffb347);
+  background: -o-linear-gradient(#fbd568, #ffb347);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#fbd568), to(#ffb347));
+  background: -webkit-linear-gradient(#fbd568, #ffb347);
+  background: linear-gradient(#fbd568, #ffb347);
+  border: 1px solid #f4ab4c;
+  color: #996319;
+  text-shadow: 0 1px rgba(255,255,255,0.3);
+}
+
+.form .log-twitter {
+  margin-right: 1%;
+  background: #34a5cf; /* Fallback */
+  background: -moz-linear-gradient(#34a5cf, #2a8ac4);
+  background: -ms-linear-gradient(#34a5cf, #2a8ac4);
+  background: -o-linear-gradient(#34a5cf, #2a8ac4);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#34a5cf), to(#2a8ac4));
+  background: -webkit-linear-gradient(#34a5cf, #2a8ac4);
+  background: linear-gradient(#34a5cf, #2a8ac4);
+  border: 1px solid #2b8bc7;
+  color: #ffffff;
+  text-shadow: 0 -1px rgba(0,0,0,0.3);
+  text-decoration: none;
+}
+
+.form input[type=submit]:hover,
+.form .log-twitter:hover {
+  box-shadow:inset 0 1px rgba(255,255,255,0.3), inset 0 20px 40px rgba(255,255,255,0.15);
+}
+
+.form input[type=submit]:active,
+.form .log-twitter:active{
+  top: 1px;
+}
+
+/* Fallback fro broswers that don't support box shadows */
+.no-boxshadow .form input[type=submit]:hover {
+  background: #ffb347;
+}
+
+.no-boxshadow .form .log-twitter:hover {
+  background: #2a8ac4;
+}
+
+.form p:last-of-type {
+  clear: both;    
+}
+
+.form .opt {
+  text-align: right;
+  margin-right: 3px;
+}
+
+.form label[for=showPassword] {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.form input[type=checkbox] {
+  vertical-align: middle;
+  margin: -1px 5px 0 1px;
+}
+
+</style>	
+
+</head>
+<body>
+
+<div class="page">
+	<section class="demo">
+		<form class="form">
+			<h1><span class="log-in">Log in</span> or <span class="sign-up">sign up</span></h1>
+			<p class="float">
+				<label for="login"><i class="icon-user"></i>Username</label>
+				<input type="text" name="login" placeholder="Username or email">
+			</p>
+			<p class="float">
+				<label for="password"><i class="icon-lock"></i>Password</label>
+				<input type="password" name="password" placeholder="Password" class="showpassword">
+			</p>
+			<p class="opt">
+				<input type="checkbox" class="showpasswordcheckbox" id="showPassword">
+				<label for="showPassword">Show password</label>
+			</p>
+			<p class="clearfix"> 
+				<a href="#" class="log-twitter">Log in with Twitter</a>    
+				<input type="submit" name="submit" value="Log in">
+			</p>
+		</form>​​
+	</section>
+
+</div>
+</body>
+</html>

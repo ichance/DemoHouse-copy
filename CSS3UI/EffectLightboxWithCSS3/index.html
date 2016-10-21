@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lightbox effect with Tabindex and CSS3|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    <style type="text/css">
+    body {
+        background: url(http://www.w3cplus.com/demo/css3/CSS3HoverEffects/black-bg.png) repeat;
+    }
+    
+    #slideshow {
+        text-align: center;
+        width: 886px;
+        margin: 50px auto;
+    }
+    
+    #slideshow figure {
+        position: relative;
+        float: left;
+        margin: 20px 37px;
+        z-index: 100;
+        width: 200px;
+        background: #fff;
+        border: 10px solid #fff;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px #ccc;
+        -webkit-transition: all 0.7s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        transition: all 1s ease;
+    }
+    
+    #slideshow figure img {
+        width: 100%;
+    }
+    
+    #slideshow figcaption {
+        font-family: verdana, arial, sans-serif;
+        font-size: 1.1em;
+        text-align: center;
+        color: #5d7885;
+        background: #fff;
+    }
+    
+    #slideshow figure:focus {
+        outline: none;
+        z-index: 200;
+        -webkit-transform: scale(2.8) translateY(50px);
+        -moz-transform: scale(2.8) translateY(50px);
+        -o-transform: scale(2.8) translateY(50px);
+        -ms-transform: scale(2.8) translateY(50px);
+        transform: scale(2.8) translateY(50px);
+        box-shadow: 0 3px 10px #333;
+    }
+    
+    #slideshow figure:focus+span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 150;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <section id="slideshow" class="clearfix">
+                <figure tabindex="0">
+                    <img src="//www.w3cplus.com/demo/css3/CSS3HoverEffects/5.jpg" alt="Lightbox effect with Tabindex and CSS3" />
+                    <figcaption>W3cplus Demo</figcaption>
+                </figure>
+                <span></span>
+                <figure tabindex="0">
+                    <img src="//www.w3cplus.com/demo/css3/CSS3HoverEffects/6.jpg" alt="Lightbox effect with Tabindex and CSS3" />
+                    <figcaption>Lightbox Effect</figcaption>
+                </figure>
+                <span></span>
+                <figure tabindex="0">
+                    <img src="//www.w3cplus.com/demo/css3/CSS3HoverEffects/3.jpg" alt="Lightbox effect with Tabindex and CSS3" />
+                    <figcaption>A simple idea...</figcaption>
+                </figure>
+                <span></span>
+            </section>
+        </section>
+    </div>
+</body>
+
+</html>

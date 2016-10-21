@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 Hover Effects |w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    <style type="text/css">
+    body {
+        background: url(black-bg.png) repeat 0 0;
+    }
+    
+    .thumb-wrap {
+        width: 60%;
+        min-width: 300px;
+        margin: 0 auto;
+        font-size: 100%;
+        text-align: center;
+    }
+    
+    .thumb-wrap:after {
+        content: "";
+        display: block;
+        clear: both;
+        height: 50px;
+    }
+    
+    .thumb {
+        width: 100%;
+        list-style: none;
+        float: left;
+        padding: 0 0 2.5% 0;
+        margin-top: 5px;
+    }
+    
+    .thumb li {
+        width: 30%;
+        float: left;
+        margin: 2.5% 0 0 2.5%;
+        position: relative;
+    }
+    
+    .thumb li img {
+        max-width: 100%;
+        float: left;
+        border: 8px solid #fff;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    .thumb li {
+        -moz-transition: all 1s ease;
+        -webkit-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        transition: all 1s ease;
+    }
+    
+    .thumb li:hover {
+        -moz-transform: scale(2.6) translate(100px, 38px);
+        -webkit-transform: scale(2.6) translate(100px, 38px);
+        -o-transform: scale(2.6) translate(100px, 38px);
+        -ms-transform: scale(2.6) translate(100px, 38px);
+        transform: scale(2.6) translate(100px, 38px);
+        z-index: 2;
+    }
+    
+    .thumb li:nth-of-type(2):hover {
+        -moz-transform: scale(2.6) translate(0, 38px);
+        -webkit-transform: scale(2.6) translate(0, 38px);
+        -o-transform: scale(2.6) translate(0, 38px);
+        -ms-transform: scale(2.6) translate(0, 38px);
+        transform: scale(2.6) translate(0, 38px);
+    }
+    
+    .thumb li:nth-of-type(3):hover {
+        -moz-transform: scale(2.6) translate(-100px, 38px);
+        -webkit-transform: scale(2.6) translate(-100px, 38px);
+        -o-transform: scale(2.6) translate(-100px, 38px);
+        -ms-transform: scale(2.6) translate(-100px, 38px);
+        transform: scale(2.6) translate(-100px, 38px);
+    }
+    
+    .thumb li:nth-of-type(4):hover {
+        -moz-transform: scale(2.6) translate(100px, -38px);
+        -webkit-transform: scale(2.6) translate(100px, -38px);
+        -o-transform: scale(2.6) translate(100px, -38px);
+        -ms-transform: scale(2.6) translate(100px, -38px);
+        transform: scale(2.6) translate(100px, -38px);
+    }
+    
+    .thumb li:nth-of-type(5):hover {
+        -moz-transform: scale(2.6) translate(0, -38px);
+        -webkit-transform: scale(2.6) translate(0, -38px);
+        -o-transform: scale(2.6) translate(0, -22px);
+        -ms-transform: scale(2.6) translate(0, -38px);
+        transform: scale(2.6) translate(0, -38px);
+    }
+    
+    .thumb li:nth-of-type(6):hover {
+        -moz-transform: scale(2.6) translate(-100px, -38px);
+        -webkit-transform: scale(2.6) translate(-100px, -38px);
+        -o-transform: scale(2.6) translate(-100px, -38px);
+        -ms-transform: scale(2.6) translate(-100px, -38px);
+        transform: scale(2.6) translate(-100px, -38px);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <div class="thumb-wrap">
+                <ul class="thumb">
+                    <li><img src="1.jpg" alt="beautiful-thumbnail-hover-effect-01"></li>
+                    <li><img src="2.jpg" alt="beautiful-thumbnail-hover-effect-02"></li>
+                    <li><img src="3.jpg" alt="beautiful-thumbnail-hover-effect-03"></li>
+                    <li><img src="4.jpg" alt="beautiful-thumbnail-hover-effect-04"></li>
+                    <li><img src="5.jpg" alt="beautiful-thumbnail-hover-effect-05"></li>
+                    <li><img src="6.jpg" alt="beautiful-thumbnail-hover-effect-06"></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

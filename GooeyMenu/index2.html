@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gooey Menu</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <style type="text/css" media="screen">
+    h1 {
+        text-align: center;
+        color: #fff;
+    }
+    
+    .nav {
+        text-align: center;
+    }
+    
+    .nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+    
+    .nav .active {
+        text-decoration: none;
+    }
+    </style>
+</head>
+
+<body>
+    <h1>Gooey Menu</h1>
+    <div class="nav">
+        <a href="index.html" target="_blank">Demo1</a>
+        <a href="index2.html" target="_blank" class="active">Demo2</a>
+        <a href="index3.html" target="_blank">Demo3</a>
+        <a href="index4.html" target="_blank">Demo4</a>
+    </div>
+    <nav class="menu">
+        <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+        <label class="menu-open-button" for="menu-open">
+            <span class="hamburger hamburger-1"></span>
+            <span class="hamburger hamburger-2"></span>
+            <span class="hamburger hamburger-3"></span>
+        </label>
+        <a href="#" class="menu-item"> <i class="fa fa-bar-chart"></i> </a>
+        <a href="#" class="menu-item"> <i class="fa fa-plus"></i> </a>
+        <a href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
+        <a href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
+        <a href="#" class="menu-item"> <i class="fa fa-cog"></i> </a>
+        <a href="#" class="menu-item"> <i class="fa fa-ellipsis-h"></i> </a>
+    </nav>
+    <!-- filters -->
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+            <filter id="shadowed-goo">
+                <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+                <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+                <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+                <feComposite in2="shadow" in="goo" result="goo" />
+                <feComposite in2="goo" in="SourceGraphic" result="mix" />
+            </filter>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                <feComposite in2="goo" in="SourceGraphic" result="mix" />
+            </filter>
+        </defs>
+    </svg>
+</body>
+
+</html>

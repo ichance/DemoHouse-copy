@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3 Animation Dropdown Menu With Metrostyle Web UI|w3cplus | css3|css3教程,css3实例,css3动画</title>
+	<meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+	<meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+	<link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+	<script type="text/javascript" charset="UTF-8" src="//www.w3cplus.com/demo/css3/prefixfree.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+<style type="text/css">
+	@font-face {
+    font-family: 'sansationregular';
+    src: url('sansation_regular-webfont.eot');
+    src: url('sansation_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('sansation_regular-webfont.woff') format('woff'),
+         url('sansation_regular-webfont.ttf') format('truetype'),
+         url('sansation_regular-webfont.svg#sansationregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+	body {
+	background-color:#edecec;
+}
+
+		/* basic menu styles */
+		.nav-menu {
+			display: block;
+			background: #74adaa;
+			width:950px;
+			margin: 50px auto 150px;
+		}
+
+		.nav-menu > li {
+			display: inline;
+			float:left;			
+			border-right:1px solid #94c0be;
+		}
+		.nav-menu > li:last-child {
+			border-right: none;
+		}
+		.nav-menu li a {
+			color: #fff;
+			display: block;
+			text-decoration: none;
+			font-family: 'sansationregular';
+			-webkit-font-smoothing: antialiased;
+			-moz-font-smoothing: antialiased;
+			font-smoothing: antialiased;
+			text-transform: capitalize;
+			overflow: visible;
+			line-height: 20px;
+			font-size: 20px;
+			padding: 15px 30px 15px 31px;			
+		}
+
+		/* animation domination */
+		.three-d {
+			perspective: 200px;
+			transition: all .07s linear;
+			position: relative;
+		}
+
+			.three-d:not(.active):hover {
+				cursor: pointer;
+			}
+
+			.three-d:not(.active):hover .three-d-box, 
+			.three-d:not(.active):focus .three-d-box {
+				transform: translateZ(-25px) rotateX(90deg);
+			}
+
+		.three-d-box {
+			transition: all .3s ease-out;
+			transform: translatez(-25px);
+			transform-style: preserve-3d;
+			pointer-events: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+
+		.front {
+			transform: rotatex(0deg) translatez(25px);
+		}
+
+		.back {
+			transform: rotatex(-90deg) translatez(25px);
+			color: #FFE7C4;
+		}
+
+		.front, .back {
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: #74adaa;
+			padding: 15px 30px 15px 31px;	
+			color: white;
+			pointer-events: none;
+			box-sizing: border-box;
+
+		}
+		.nav-menu li .active .front,
+		.nav-menu li .active .back,
+		.nav-menu li a:hover .front,
+		.nav-menu li a:hover .back {
+				background-color: #51938f;
+    background-size: 5px 5px;
+    background-position: 0 0, 30px 30px;
+    background-image: -*-linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480), linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480);
+	
+		}
+		.nav-menu ul {
+			position: absolute;
+			text-align: left;
+			line-height: 40px;
+			font-size: 14px;
+			width: 200px;
+			transition: all 0.3s ease-in;
+			transform-origin: 0px 0px;
+			transform: rotateX(-90deg);
+			backface-visibility: hidden;
+		}
+		.nav-menu > li:hover ul {
+			 display: block;
+			transform: rotateX(0deg);
+		}
+	</style>	
+
+</head>
+<body>
+
+<div class="page">
+	
+	<section class="demo">
+		<div id="nav">
+			<ul class="nav-menu clearfix unstyled">
+				<li><a href="#" class="three-d active">
+					Home
+					<span class="three-d-box"><span class="front">Home</span><span class="back">Home</span></span>
+				</a></li>
+				<li><a href="#" class="three-d">
+					Services
+					<span class="three-d-box"><span class="front">Services</span><span class="back">Services</span></span>
+				</a></li>
+				<li><a href="#" class="three-d">
+					Products
+					<span class="three-d-box"><span class="front">Products</span><span class="back">Products</span></span>
+				</a></li>
+				<li><a href="#" class="three-d">
+					About
+					<span class="three-d-box"><span class="front">About</span><span class="back">About</span></span>
+				</a></li>
+				<li><a href="#" class="three-d">
+					Contact
+					<span class="three-d-box"><span class="front">Contact</span><span class="back">Contact</span></span>
+				</a></li>
+				<li><a href="#" class="three-d">
+					Blog
+					<span class="three-d-box"><span class="front">Blog</span><span class="back">Blog</span></span>
+				</a>
+					<ul class="clearfix unstyled drop-menu">
+						<li><a href="#" class="three-d">
+								Html5
+								<span class="three-d-box"><span class="front">Html5</span><span class="back">Html5</span></span>
+							</a></li>
+							<li><a href="#" class="three-d">
+								Css3
+								<span class="three-d-box"><span class="front">Css3</span><span class="back">Css3</span></span>
+							</a></li>
+							<li><a href="#" class="three-d">
+								JavaScript
+								<span class="three-d-box"><span class="front">JavaScript</span><span class="back">JavaScript</span></span>
+							</a></li>
+							<li><a href="#" class="three-d">
+								Videogames
+								<span class="three-d-box"><span class="front">Videogames</span><span class="back">Videogames</span></span>
+							</a></li>
+					</ul>
+				</li>
+				<li><a href="#" class="three-d">
+					Shop On-line
+					<span class="three-d-box"><span class="front">Shop On-line</span><span class="back">Shop On-line</span></span>
+				</a></li>
+			</ul>
+		</div>
+	</section>
+	
+</div>
+</body>
+</html>

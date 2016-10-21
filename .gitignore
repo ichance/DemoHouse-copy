@@ -1,0 +1,24 @@
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE
+.idea
+.project
+*.sublime-workspace
+.sublime-grunt.cache
+*.sw?
+*.swp
+*.swo
+*.iml
+
+# develop
+npm-debug.log
+.svn/
+.sass-cache/
+node_modules/
+bower_components/
+
+# temporary
+tmp/

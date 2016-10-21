@@ -1,0 +1,107 @@
+@charset "utf-8";
+.demo{
+    width:500px;
+	margin:0 auto;
+}
+.tag{
+    text-align:right;
+	margin-bottom:10px;
+}
+.tag a{
+    margin:0 10px;
+	padding:0 8px;
+	display:inline-block;*display:inline;*zoom:1;
+	line-height:24px;
+}
+article{
+    padding:10px;
+	margin-bottom:20px;
+	border-radius:10px;
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,.3);
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+	-webkit-transition:all 0.3s ease;
+	-moz-transition:all 0.3s ease;
+	-ms-transition:all 0.3s ease;
+	-o-transition:all 0.3s ease;
+	transition:all 0.3s ease;
+}
+article:hover{
+    -webkit-box-shadow: 0 0 5px rgba(82,168,236,.8);
+	-moz-box-shadow: 0 0 5px rgba(82,168,236,.8);
+	box-shadow: 0 0 5px rgba(82,168,236,.8);
+}
+/* demo1 */
+.demo1 .tag a{
+    background-color:#93BD17;
+	color:#fff;
+	border-radius:8px 5px 8px 5px;
+	text-shadow:0 -1px 0 rgba(0,0,0,.2);
+	-webkit-transition:all 0.3s ease;
+	-moz-transition:all 0.3s ease;
+	-ms-transition:all 0.3s ease;
+	-o-transition:all 0.3s ease;
+	transition:all 0.3s ease;
+}
+.demo1 .tag a:hover{
+    border-radius:15px 6px 15px 6px;
+}
+/* demo2 */
+.demo2{
+    position:relative;
+}
+.demo2 .tag{
+    position:absolute;
+	left:-67px;
+	top:10px;
+}
+.demo2 .tag a{
+    background-color:#03AEC7;
+	color:#fff;
+	text-shadow:0 -1px 0 rgba(0,0,0,.2);
+	position:relative;
+	display:block;
+	margin:0 0 10px;
+	-webkit-box-shadow:-5px 0 5px -5px rgba(0, 0, 0, 0.3) inset;
+	-moz-box-shadow:-5px 0 5px -5px rgba(0, 0, 0, 0.3) inset;
+	box-shadow:-5px 0 5px -5px rgba(0, 0, 0, 0.3) inset;
+}
+.demo2 .tag a:before{
+    content:'';
+	width:0;
+	height:0;
+	position:absolute;
+	left:-10px;
+	top:0;
+	border-left:10px solid transparent;
+	border-top:12px solid #03AEC7;
+	border-bottom:12px solid #03AEC7;
+}
+/* demo3 */
+.demo3 .tag a{
+    background-color:#F89406;
+	color:#fff;
+	text-shadow:0 -1px 0 rgba(0,0,0,.2);
+	position:relative;
+}
+.demo3 .tag a:before{
+	content:'';
+	width:0;
+	height:0;
+	position:absolute;
+	left:-10px;
+	top:0;
+	border-right:10px solid #F89406;
+	border-top:12px solid transparent;
+	border-bottom:12px solid transparent;    
+}
+.demo3 .tag a:after{
+    content:'';
+	width:4px;
+	height:4px;
+	position:absolute;
+	left:-4px;
+	top:10px;
+	background-color:#fff;
+	border-radius:4px;
+}

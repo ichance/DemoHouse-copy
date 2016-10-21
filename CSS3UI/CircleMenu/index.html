@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pure CSS3 Circle Menu|css3教程,css3实例,css3动画|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <script type="text/javascript" charset="UTF-8" src="//www.w3cplus.com/demo/css3/prefixfree.min.js"></script>
+    <style type="text/css" media="screen">
+    body {
+        background: -*-radial-gradient(#fff 10%, #fefefe 20%, #d7d7d7);
+    }
+    
+    .demo {
+        text-align: left;
+    }
+    
+    .demo ul {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 40px auto 0;
+    }
+    
+    .pie {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        background-color: blue;
+        clip: rect(0px, 100px, 200px, 0px);
+        transform: rotate(18deg) translateZ(0);
+        box-shadow: 0 0 10px 3px rgba(255, 255, 255, .85) inset;
+    }
+    
+    .demo li {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        clip: rect(100px, 200px, 200px, 0px);
+    }
+    
+    .deg_1 {
+        transform: rotate(162deg);
+    }
+    
+    .deg_2 {
+        transform: rotate(234deg);
+    }
+    
+    .deg_3 {
+        transform: rotate(306deg);
+    }
+    
+    .deg_4 {
+        transform: rotate(378deg);
+    }
+    
+    .deg_5 {
+        transform: rotate(450deg);
+    }
+    
+    .deg_1 .pie {
+        background-image: -*-linear-gradient(top, #f16d4b, #e15f3d);
+    }
+    
+    .deg_2 .pie {
+        background-image: -*-linear-gradient(top, #a2be5f, #98b454);
+    }
+    
+    .deg_3 .pie {
+        background-image: -*-linear-gradient(top, #f7b71b, #fec332);
+    }
+    
+    .deg_4 .pie {
+        background-image: -*-linear-gradient(top, #edeeef, #e7ecef);
+    }
+    
+    .deg_5 .pie {
+        background-image: -*-linear-gradient(top, #a1d5dd, #77bcc7);
+    }
+    
+    .pie:after {
+        position: absolute;
+        top: 120px;
+        left: 45px;
+        font-family: 'brankic1979';
+        font-style: normal;
+        speak: none;
+        font-weight: normal;
+        -webkit-font-smoothing: antialiased;
+        font-size: 36px;
+        color: rgba(0, 0, 0, .25);
+    }
+    
+    .deg_1 .pie:after {
+        content: "\e041";
+        transform: rotate(180deg);
+    }
+    
+    .deg_2 .pie:after {
+        content: "\e04b";
+        transform: rotate(180deg);
+    }
+    
+    .deg_3 .pie:after {
+        content: "\e09b";
+        transform: rotate(34deg);
+    }
+    
+    .deg_4 .pie:after {
+        content: "\e098";
+        transform: rotate(322deg);
+    }
+    
+    .deg_5 .pie:after {
+        content: "\e081";
+        transform: rotate(250deg);
+    }
+    
+    .dot {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 30px;
+        height: 30px;
+        margin: -15px 0 0 -15px;
+        border-radius: 15px 15px 15px 0;
+        border: 1px solid #eee;
+        box-shadow: 0 0 8px rgba(0, 0, 0, .37);
+        background-image: -*-linear-gradient(top, #fcfcfd, #e1e6e9);
+        transform: rotate(28deg);
+    }
+    
+    .dot:after {
+        position: absolute;
+        top: 18px;
+        left: 5px;
+        color: #fff;
+        content: "";
+        width: 0;
+        height: 10px;
+        border-left: 1px solid #adadad;
+        box-shadow: 1px 0 0 rgba(255, 255, 255, .5);
+        transform: rotate(45deg);
+    }
+    
+    @font-face {
+        font-family: 'brankic1979';
+        src: url('fonts/brankic1979.eot');
+        src: url('fonts/brankic1979.eot?#iefix') format('embedded-opentype'), url('fonts/brankic1979.svg#brankic1979') format('svg'), url('fonts/brankic1979.woff') format('woff'), url('fonts/brankic1979.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <ul>
+                <li class="deg_1">
+                    <a href="#" title="" class="pie"></a>
+                </li>
+                <li class="deg_2">
+                    <a href="#" title="" class="pie"></a>
+                </li>
+                <li class="deg_3">
+                    <a href="#" title="" class="pie"></a>
+                </li>
+                <li class="deg_4">
+                    <a href="#" title="" class="pie"></a>
+                </li>
+                <li class="deg_5">
+                    <a href="#" title="" class="pie"></a>
+                </li>
+                <a href="#" title="" class="dot"></a>
+            </ul>
+        </section>
+    </div>
+</body>
+
+</html>

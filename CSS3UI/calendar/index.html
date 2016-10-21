@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>CSS3 制作日历备忘录|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <title>CSS3 制作日历备忘录</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        background: url(data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAA8AAD/4QNvaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjMtYzAxMSA2Ni4xNDU2NjEsIDIwMTIvMDIvMDYtMTQ6NTY6MjcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6MDE4MDExNzQwNzIwNjgxMThGNjJBQjFBMTZFRDMxQUEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ODg0NTMxNThGRkFEMTFFMUJFODBCNDA3MzA5MkNCMTUiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ODg0NTMxNTdGRkFEMTFFMUJFODBCNDA3MzA5MkNCMTUiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowODgwMTE3NDA3MjA2ODExQUE5NkI0MTkyQzIwQTY2OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowMTgwMTE3NDA3MjA2ODExOEY2MkFCMUExNkVEMzFBQSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv/uAA5BZG9iZQBkwAAAAAH/2wCEAAYEBAQFBAYFBQYJBgUGCQsIBgYICwwKCgsKCgwQDAwMDAwMEAwODxAPDgwTExQUExMcGxsbHB8fHx8fHx8fHx8BBwcHDQwNGBAQGBoVERUaHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fH//AABEIACgAKAMBEQACEQEDEQH/xABrAAEBAQEBAQAAAAAAAAAAAAAAAgEDBAcBAQEBAAAAAAAAAAAAAAAAAAABAhABAAEDAgMFBwUAAAAAAAAAAQIAESFBAzFRYXGB0RJSkaGxwfEiMkJyohMzEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwD6fCEprEQsXV83qAtYXWsorc2N3bzKKj+q0gz+4KIhbnVoFruaBfrdoOmxuG3ujLAsReQTjK/8aK6S/rhtR80MoH2kB/ziuWK5ZUHnUuoIaHSiD9KB79CgzhbPHWgplK3l0G4HW3hQSvjQDPLHOQfFoNlBilyy5LI620oF+7toMKDQL2WxqhfwoO0ZnkSClhD8i32yfU+mio3ZEpLoLZ7ZMvnREHDlegN3GvsoHBoF0EeC57vrQM5x1tQf/9k=);
+        font: 12px 'Courgette', cursive;
+        color: #000;
+        line-height: 32px;
+        font-weight: bold;
+        padding: 50px;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    h2 {
+        font-size: 14px;
+    }
+    
+    a {
+        color: #fff;
+        text-decoration: none;
+        letter-spacing: -3px;
+    }
+    
+    .left {
+        float: left;
+    }
+    
+    .right {
+        float: right;
+    }
+    
+    .box {
+        width: 211px;
+        padding: 4px;
+        box-shadow: 0 1px 1px #ebedea;
+        margin: 50px auto;
+        background: #a2a4a1;
+        border-radius: 5px;
+    }
+    
+    .box > h2 {
+        margin: 0 -1px 0 0;
+        border: 1px solid #41531d;
+        box-shadow: inset 0 1px 1px #a5ce55;
+        border-radius: 3px 3px 0 0;
+        padding: 0 8px;
+        text-align: center;
+        color: #fff;
+        text-shadow: 0 -1px 0px #999;
+        height: 32px;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(146, 183, 74, 1)), color-stop(100%, rgba(100, 134, 34, 1)));
+        background-image: -webkit-linear-gradient(top, rgba(146, 183, 74, 1) 0%, rgba(100, 134, 34, 1) 100%);
+        background-image: -moz-linear-gradient(top, rgba(146, 183, 74, 1) 0%, rgba(100, 134, 34, 1) 100%);
+        background-image: -o-linear-gradient(top, rgba(146, 183, 74, 1) 0%, rgba(100, 134, 34, 1) 100%);
+        background-image: -ms-linear-gradient(top, rgba(146, 183, 74, 1) 0%, rgba(100, 134, 34, 1) 100%);
+        background-image: linear-gradient(top, rgba(146, 183, 74, 1) 0%, rgba(100, 134, 34, 1) 100%);
+    }
+    
+    .box .cal:after,
+    .box .cal:before {
+        content: "";
+        display: table;
+    }
+    
+    .box .cal:after {
+        clear: both;
+        overflow: hidden;
+    }
+    
+    .box .cal {
+        border-radius: 0 0 5px 5px;
+        border: 1px solid #818380;
+        font-size: 0;
+        background: #fff;
+        box-shadow: 0 1px 1px #d9d9d9, 0 2px 1px #555;
+        margin-right: -1px;
+        zoom: 1;
+    }
+    
+    .box .cal > li {
+        float: left;
+        width: 29px;
+        border-right: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        text-align: center;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    
+    .box .cal > li:nth-of-type(7n) {
+        border-right: none;
+    }
+    
+    .fgray {
+        color: #ccc;
+    }
+    
+    .tip {
+        position: relative;
+        color: orange;
+    }
+    
+    .tip:after {
+        display: block;
+        content: "";
+        position: absolute;
+        border: 4px solid orange;
+        border-color: orange orange transparent transparent;
+        top: 0;
+        right: 0;
+    }
+    
+    .gray,
+    .pink {
+        position: relative;
+    }
+    
+    .pink {
+        color: #a55353;
+        background: #fff6f6;
+    }
+    
+    .gray {
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(216, 216, 216, 1)), color-stop(100%, rgba(255, 255, 255, 1)));
+        background-image: -webkit-linear-gradient(top, rgba(216, 216, 216, 1) 0%, rgba(255, 255, 255, 1) 100%);
+        background-image: -moz-linear-gradient(top, rgba(216, 216, 216, 1) 0%, rgba(255, 255, 255, 1) 100%);
+        background-image: -o-linear-gradient(top, rgba(216, 216, 216, 1) 0%, rgba(255, 255, 255, 1) 100%);
+        background-image: -ms-linear-gradient(top, rgba(216, 216, 216, 1) 0%, rgba(255, 255, 255, 1) 100%);
+        background-image: linear-gradient(top, rgba(216, 216, 216, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    }
+    
+    .gray:before,
+    .pink:before {
+        content: "·";
+        position: absolute;
+        display: block;
+        font-size: 16px;
+        top: 10px;
+        left: 50%;
+        margin-left: -3px;
+        font-family: "Microsoft YaHei";
+    }
+    
+    .gray:before {
+        color: #d8d8d8;
+    }
+    
+    .pink:before {
+        color: #e5a9a9;
+    }
+    
+    .tooltipBox {
+        position: absolute;
+        top: 32px;
+        left: -15px;
+        z-index: 99;
+        display: none;
+        width: 215px;
+        background: #eaeff5;
+        border: 1px solid #64777e;
+        border-radius: 5px;
+        box-shadow: 0 1px 0 #cdd5d8, 0 2px 0 #64777e, 0 3px 0 #cdd5d8, 0 4px 0 #64777e;
+    }
+    
+    .box .cal > li:hover .tooltipBox {
+        display: block;
+    }
+    
+    .tooltipBox:after,
+    .tooltipBox:before {
+        position: absolute;
+        display: block;
+        content: "";
+        border-style: solid;
+    }
+    
+    .tooltipBox:after {
+        border-width: 10px;
+        border-color: transparent transparent #64777e;
+        top: -20px;
+        left: 20px;
+        z-index: 2;
+    }
+    
+    .tooltipBox:before {
+        border-width: 8px;
+        border-color: transparent transparent #717f8a;
+        top: -16px;
+        left: 22px;
+        z-index: 3;
+    }
+    
+    .tooltipBox > h2 {
+        background: #717f8a;
+        line-height: 40px;
+        color: #fff;
+        border-radius: 4px 4px 0 0;
+        text-indent: 1em;
+    }
+    
+    .tooltip li {
+        min-height: 36px;
+        padding: 5px;
+        border-bottom: 1px solid #a8adb1;
+        box-shadow: 0 1px 1px #fff;
+        color: #232323;
+    }
+    
+    .tooltip li:last-child {
+        border-bottom: none;
+        box-shadow: none;
+    }
+    
+    .timg {
+        width: 36px;
+        height: 36px;
+        float: left;
+        margin-right: 10px;
+        background: #232323;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    
+    .timg img {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .ttext {
+        overflow: hidden;
+        zoom: 1;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="box">
+        <h2>
+		<a href="#" class="left">&lt;&lt;</a>
+		<a href="#" class="right">&gt;&gt;</a>
+		June
+	</h2>
+        <ul class="cal">
+            <li class="fgray">29</li>
+            <li class="fgray">30</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li class="pink">10</li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li class="gray">15</li>
+            <li>16</li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+            <li>21</li>
+            <li>22</li>
+            <li>23</li>
+            <li>24</li>
+            <li class="tip">25
+                <div class="tooltipBox">
+                    <h2>Your Journey(2 items)</h2>
+                    <ul class="tooltip">
+                        <li>
+                            <div class="timg">
+                                <img src="//www.w3cplus.com/sites/all/themes/marvin/logo.png" alt="大漠 前端攻城师">
+                            </div>
+                            <div class="ttext">
+                                http://www.w3cplus.com
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timg">
+                                <img src="//www.w3cplus.com/sites/all/themes/marvin/logo.png" alt="大漠 前端攻城师">
+                            </div>
+                            <div class="ttext">
+                                http://www.w3cplus.com
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>26</li>
+            <li>27</li>
+            <li>28</li>
+            <li class="tip">29
+                <div class="tooltipBox">
+                    <h2>Your Journey(2 items)</h2>
+                    <ul class="tooltip">
+                        <li>
+                            <div class="timg"><img src="//www.w3cplus.com/sites/all/themes/marvin/logo.png" alt="大漠 前端攻城师"></div>
+                            <div class="ttext">http://www.w3cplus.com</div>
+                        </li>
+                        <li>
+                            <div class="timg"><img src="//www.w3cplus.com/sites/all/themes/marvin/logo.png" alt="大漠 前端攻城师"></div>
+                            <div class="ttext">http://www.w3cplus.com</div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>30</li>
+            <li>31</li>
+            <li class="fgray">1</li>
+            <li class="fgray">2</li>
+        </ul>
+    </div>
+</body>
+
+</html>

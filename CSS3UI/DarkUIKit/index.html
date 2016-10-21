@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>|w3cplus | css3|css3教程,css3实例,css3动画</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <script type="text/javascript" charset="UTF-8" src="//www.w3cplus.com/demo/css3/prefixfree.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="darkUI.css" media="all">
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <div class="container clearfix">
+                <!-- The navigation -->
+                <div class="navbar">
+                    <ul class="nav clearfix">
+                        <li><a href="">Menu</a></li>
+                        <li><a href="">Menu</a></li>
+                        <li><a href="">Menu</a></li>
+                        <li><a href="">Menu</a></li>
+                    </ul>
+                    <form class="navbar-search">
+                        <div class="input-append">
+                            <input type="text" placeholder="Search..." />
+                            <a class="icon-search">x</a>
+                        </div>
+                    </form>
+                </div>
+                <!-- The form -->
+                <div>
+                    <div class="row">
+                        <input type="text" placeholder="Name..." />
+                        <input type="text" placeholder="Email..." />
+                        <input type="text" class="input-query" placeholder="Password..." />
+                    </div>
+                    <div class="row">
+                        <div class="span4">
+                            <div class="row">
+                                <span class="checkbox">
+								<input type="checkbox" id="checkbox1" name="ckeckbox" />
+								<label for="checkbox1" data-on="a"></label>
+							</span><span class="checkbox">
+								<input type="checkbox" id="checkbox2" name="ckeckbox" />
+								<label for="checkbox2" data-on="a"></label>
+							</span><span class="checkbox">
+								<input type="checkbox" id="checkbox3" name="ckeckbox" checked="checked" />
+								<label for="checkbox3" data-on="a"></label>
+							</span>
+                                <span class="radio">
+								<input type="radio" id="radio1" name="radio" />
+								<label for="radio1"></label>
+							</span><span class="radio">
+								<input type="radio" id="radio2" name="radio" />
+								<label for="radio2"></label>
+							</span><span class="radio">
+								<input type="radio" id="radio3" name="radio" checked="checked" />
+								<label for="radio3"></label>
+							</span>
+                            </div>
+                            <div class="row">
+                                <div class="sliderbar sliderbar-bothway show-value" data-type="bothway">
+                                    <div class="slider-range"></div>
+                                    <a class="slider-handle left-handle">|||</a>
+                                    <a class="slider-handle right-handle">|||</a>
+                                </div>
+                                <div class="sliderbar sliderbar-oneway" data-type="oneway">
+                                    <div class="slider-range"></div>
+                                    <a class="slider-handle"></a>
+                                </div>
+                                <div class="sliderbar sliderbar-bothway " data-type="bothway">
+                                    <div class="slider-range"></div>
+                                    <a class="slider-handle left-handle"></a>
+                                    <a class="slider-handle right-handle"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span4">
+                            <div class="select">
+                                <span class="value">select</span>
+                                <ul>
+                                    <li class="option o1">Volvo</li>
+                                    <li class="option o2">Saab</li>
+                                    <li class="option o3">Opel</li>
+                                    <li class="option o4">Audi</li>
+                                </ul>
+                                <select>
+                                    <option value="volvo">Volvo</option>
+                                    <option value="saab">Saab</option>
+                                    <option value="opel">Opel</option>
+                                    <option value="audi">Audi</option>
+                                </select>
+                            </div>
+                            <div class="row" style="margin-top:100px;">
+                                <span class="switcher" style="margin-right:30px;">
+								<input type="checkbox" id="switcher1" checked="checked" />
+								<label for="switcher1" data-off="OFF" data-on="ON"></label>
+							</span><span class="switcher">
+								<input type="checkbox" id="switcher2" />
+								<label for="switcher2" data-off="OFF" data-on="ON"></label>
+							</span>
+                            </div>
+                        </div>
+                        <div class="span4">
+                            <form action class="login-form">
+                                <h4 class="title">Login</h4>
+                                <input type="text" class="e-mail" name="e-mail" placeholder="E-mail..." />
+                                <input type="text" class="password" name="password" placeholder="Password..." />
+                                <input type="submit" class="sign-in" name="sign-in" value="sign-in" />
+                                <div class="remember-me">
+                                    <input type="checkbox" id="remember-me" name="remember-me" />
+                                    <label for="remember-me" data-on="a">
+                                    </label>
+                                    <label class="info" for="remember-me">Remember me</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- The buttons -->
+                <div style="margin-top:20px;">
+                    <div class="row">
+                        <div class="span10">
+                            <div class="row">
+                                <button class="btn">Button</button>
+                                <button class="btn light-green">Button</button>
+                                <button class="btn blue">Button</button>
+                                <button class="btn gray">Button</button>
+                                <button class="btn red">Button</button>
+                            </div>
+                            <div class="row">
+                                <button class="btn btn-icon-like" data-icon="b">like</button>
+                                <button class="btn btn-icon-next" data-icon="d">next</button>
+                                <button class="btn btn-icon-prev" data-icon="e">prev</button>
+                                <button class="btn btn-icon-cancel" data-icon="g">cancel</button>
+                                <button class="btn btn-icon-bookmark" data-icon="h">bookmark</button>
+                            </div>
+                            <div class="row">
+                                <button class="btn btn-icon-comment" data-icon="i">comment</button>
+                                <button class="btn btn-icon-add-new" data-icon="j">add new</button>
+                                <button class="btn btn-icon-messages" data-icon="k">messages</button>
+                                <button class="btn btn-icon-download" data-icon="l">download</button>
+                                <button class="btn btn-icon-share" data-icon="m">share</button>
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="row">
+                                <div class="row"><span class="tooltip red">Tooltip</span></div>
+                                <div class="row"><span class="tooltip light-green">Tooltip</span></div>
+                                <div class="row"><span class="tooltip blue">Tooltip</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <a class="btn-share-twitter">n<span class="counter">230</span></a>
+                        <a class="btn-share-stumbleupon">o<span class="counter">365</span></a>
+                        <a class="btn-share-fb">p<span class="counter">42</span></a>
+                        <a class="btn-share-rss">q<span class="counter">9</span></a>
+                    </div>
+                </div>
+                <!-- The Comment block -->
+                <div style="margin-top:40px;">
+                    <div class="comment-block clearfix">
+                        <div class="main-block">
+                            <a href="" class="avatar"></a>
+                            <div class="content">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et.</p>
+                                <div class="interation">
+                                    <a href="" class="like">b<span class="counter">81</span></a>
+                                    <a href="" class="comment-bubble">i<span class="counter">25</span></a>
+                                    <button class="reply">Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reply-block">
+                            <a href="" class="avatar"></a>
+                            <div class="content">
+                                <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et.</p>
+                                <div class="interation">
+                                    <a href="" class="like">b<span class="counter">75</span></a>
+                                    <a href="" class="comment-bubble">i<span class="counter">5</span></a>
+                                    <span class="reply-info">in reoly to xxxx</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- The Carousel -->
+			<div style="margin-top:80px;">
+				<div id="myCarousel">
+					<ol class="carousel-indicators">
+						<li data-reference="1" class="active"></li>
+						<li data-reference="2"></li>
+						<li data-reference="3"></li>
+						<li data-reference="4"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="item active"><img src="//www.w3cplus.com/sites/default/files/baiyaimages/p1.jpg"><p class="description">Carousel in Dark UI Carousel in Dark UI</p></div>
+						<div class="item"><img src="//www.w3cplus.com/sites/default/files/baiyaimages/p2.jpg"><p class="description">Carousel in Dark UI Carousel in Dark UI</p></div>
+						<div class="item"><img src="//www.w3cplus.com/sites/default/files/baiyaimages/p3.jpg"><p class="description">Carousel in Dark UI Carousel in Dark UI</p></div>
+						<div class="item"><img src="//www.w3cplus.com/sites/default/files/baiyaimages/p4.jpg"><p class="description">Carousel in Dark UI Carousel in Dark UI</p></div>
+					</div>
+					<div class="left carousel-control"></div>
+					<div class="right carousel-control"></div>
+				</div>
+			</div>
+			<!-- The Video -->
+			<div style="margin-top:80px;">
+				<div id="myVideo" style="width:464px;margin:0 auto;">
+					<div class="topbar clearfix">
+						<span class="title">video title</span>
+                                    <a href="" class="like">b<span class="counter">75</span></a>
+                                    <div class="share" data-icon="m">
+                                        <a>Share</a>
+                                        <div class="dropdown">
+                                            <ul class="wrapper ">
+                                                <li class="twitter">n</li>
+                                                <li class="facebook">p</li>
+                                                <li class="stumbleupon">o</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <video width="464px" preload="" poster="poster.jpg">
+                                    <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm" />
+                                    <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/webm" />
+                                    <p>Your browser does not support the video tag.</p>
+                                </video>
+                                <div class="control">
+                                    <button class="btn-play">t</button>
+                                    <div class="progress">
+                                        <div class="base-bar">
+                                            <div class="progress-bar"></div>
+                                        </div>
+                                    </div>
+                                    <div class="volum">
+                                        <a class="volume-decrease">r</a>
+                                        <div class="base-bar">
+                                            <div class="progress-bar"></div>
+                                        </div>
+                                        <a class="volume-increase">s</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript" src="script.js"></script>
+        </section>
+        </div>
+</body>
+
+</html>

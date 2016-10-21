@@ -1,0 +1,109 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: #111;
+}
+
+.dial {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    display: block;
+    top: 50%;
+    margin-top: -175px;
+    left: 50%;
+    margin-left: -175px;
+    cursor: pointer;
+}
+
+.dial .wrapper {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+    border-radius: 300px;
+    cursor: pointer;
+    background: linear-gradient(-45deg, #171717 0%, #272727 100%);
+    box-shadow: inset 0px 1px 1px 0px #999, 0px 0px 0px 4px black;
+}
+
+.dial .knob {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+    border-radius: 300px;
+    cursor: pointer;
+    -webkit-user-select: none;
+}
+
+.dial .center {
+    position: absolute;
+    background: #c5c8b3;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    top: 50%;
+    border: 6px solid #1b1c1a;
+    margin-left: -56px;
+    margin-top: -56px;
+    border-radius: 300px;
+    color: white;
+    z-index: 1;
+    -webkit-user-select: none;
+    box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.08), inset 0px 0px 10px 4px #6a6c60;
+}
+
+.dial .center span {
+    position: relative;
+    display: block;
+    top: 40px;
+    width: 100px;
+    text-align: center;
+    font-size: 24px;
+    color: #454541;
+    font-weight: bold;
+    text-shadow: 0px 1px 0px #eee;
+}
+
+.dial .handle {
+    position: absolute;
+    background: #171717;
+    width: 46px;
+    height: 46px;
+    left: 50%;
+    top: 50%;
+    margin-left: -23px;
+    margin-top: -112px;
+    border-radius: 46px;
+    box-shadow: inset 0px 0px 6px 4px #1a1a1a, 1px 1px 2px 0px rgba(255, 255, 255, 0.2), inset 1px 2px 4px 2px rgba(0, 0, 0, 0.4), inset -8px -8px 6px 1px #222222;
+}
+
+.dial .indicator {
+    position: absolute;
+    background: #eeeadc;
+    width: 10px;
+    height: 10px;
+    top: 12px;
+    left: 50%;
+    margin-left: -6px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 1px white;
+}
+
+.dial .progress {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+}

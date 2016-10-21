@@ -1,0 +1,195 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.about {
+  margin: 70px auto 40px;
+  padding: 8px;
+  width: 260px;
+  font: 10px/18px 'Lucida Grande', Arial, sans-serif;
+  color: #bbb;
+  text-align: center;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+  background: #383838;
+  background: rgba(34, 34, 34, 0.8);
+  border-radius: 4px;
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0 0 6px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0 0 6px rgba(0, 0, 0, 0.4);
+}
+.about a {
+  color: #eee;
+  text-decoration: none;
+  border-radius: 2px;
+  -webkit-transition: background 0.1s;
+  -moz-transition: background 0.1s;
+  -o-transition: background 0.1s;
+  transition: background 0.1s;
+}
+.about a:hover {
+  text-decoration: none;
+  background: #555;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.about-links {
+  height: 30px;
+}
+.about-links > a {
+  float: left;
+  width: 50%;
+  line-height: 30px;
+  font-size: 12px;
+}
+
+.about-author {
+  margin-top: 5px;
+}
+.about-author > a {
+  padding: 1px 3px;
+  margin: 0 -1px;
+}
+
+/*
+ * Copyright (c) 2012-2013 Thibaut Courouble
+ * http://www.cssflow.com
+ *
+ * Licensed under the MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+body {
+  font: 12px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+  color: #404040;
+  background: #dce1e1;
+}
+
+.notepaper {
+  position: relative;
+  margin: 80px auto;
+  padding: 29px 20px 20px 45px;
+  width: 280px;
+  line-height: 30px;
+  color: #6a5f49;
+  text-shadow: 0 1px 1px white;
+  background-color: #f2f6c1;
+  background-image: -webkit-radial-gradient(center, cover, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1) 90%), -webkit-repeating-linear-gradient(top, transparent, transparent 29px, rgba(239, 207, 173, 0.7) 29px, rgba(239, 207, 173, 0.7) 30px);
+  background-image: -moz-radial-gradient(center, cover, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1) 90%), -moz-repeating-linear-gradient(top, transparent, transparent 29px, rgba(239, 207, 173, 0.7) 29px, rgba(239, 207, 173, 0.7) 30px);
+  background-image: -o-radial-gradient(center, cover, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1) 90%), -o-repeating-linear-gradient(top, transparent, transparent 29px, rgba(239, 207, 173, 0.7) 29px, rgba(239, 207, 173, 0.7) 30px);
+  border: 1px solid #c3baaa;
+  border-color: rgba(195, 186, 170, 0.9);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), inset 0 0 5px #d8e071, 0 0 1px rgba(0, 0, 0, 0.1), 0 2px rgba(0, 0, 0, 0.02);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), inset 0 0 5px #d8e071, 0 0 1px rgba(0, 0, 0, 0.1), 0 2px rgba(0, 0, 0, 0.02);
+}
+.notepaper:before, .notepaper:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.notepaper:before {
+  left: 28px;
+  width: 2px;
+  border: solid #efcfad;
+  border-color: rgba(239, 207, 173, 0.9);
+  border-width: 0 1px;
+}
+.notepaper:after {
+  z-index: -1;
+  left: 0;
+  right: 0;
+  background: rgba(242, 246, 193, 0.9);
+  border: 1px solid rgba(170, 157, 134, 0.7);
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+
+.quote {
+  font-family: Georgia, serif;
+  font-size: 14px;
+}
+
+.curly-quotes:before, .curly-quotes:after {
+  display: inline-block;
+  vertical-align: top;
+  height: 30px;
+  line-height: 48px;
+  font-size: 50px;
+  opacity: .2;
+}
+.curly-quotes:before {
+  content: '\201C';
+  margin-right: 4px;
+  margin-left: -8px;
+}
+.curly-quotes:after {
+  content: '\201D';
+  margin-left: 4px;
+  margin-right: -8px;
+}
+
+.quote-by {
+  display: block;
+  padding-right: 10px;
+  text-align: right;
+  font-size: 13px;
+  font-style: italic;
+  color: #84775c;
+}
+
+.lt-ie8 .notepaper {
+  padding: 15px 25px;
+}

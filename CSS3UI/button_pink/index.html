@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 Button Pink|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <style type="text/css">
+    body {
+        background-color: #d97398;
+    }
+    
+    .controls_button {
+        width: 400px;
+        margin: 40px auto;
+    }
+    
+    .button {
+        width: 70px;
+        height: 70px;
+        margin-right: 90px;
+        border-radius: 35px;
+        border: none;
+        box-shadow: 0 1px 5px rgba(255, 255, 255, .5) inset, 0 -2px 5px rgba(0, 0, 0, .3) inset, 0 3px 8px rgba(0, 0, 0, .8);
+        background: -webkit-radial-gradient(top center, circle, #f28fb8, #e982ad, #ec568c);
+        background: -moz-radial-gradient(top center, circle, #f28fb8, #e982ad, #ec568c);
+        background: -ms-radial-gradient(top center, circle, #f28fb8, #e982ad, #ec568c);
+        background: -o-radial-gradient(top center, circle, #f28fb8, #e982ad, #ec568c);
+        background: radial-gradient(top center, circle, #f28fb8, #e982ad, #ec568c);
+    }
+    
+    .button:nth-child(3) {
+        margin-right: 0;
+    }
+    
+    .button:after {
+        font-family: 'icomoon';
+        speak: none;
+        font-weight: normal;
+        -webkit-font-smoothing: antialiased;
+        font-size: 36px;
+        content: "\21";
+        color: #dd5183;
+        text-shadow: 0 3px 10px #f1a2c1, 0 -3px 10px #f1a2c1;
+    }
+    
+    .button:nth-child(2):after {
+        content: "\22";
+    }
+    
+    .button:nth-child(3):after {
+        content: "\23";
+    }
+    
+    .button:hover:after {
+        color: #fff;
+        text-shadow: 0 1px 20px #fccdda, 1px 0 14px #fccdda;
+    }
+    
+    .button:active {
+        box-shadow: 0 2px 7px rgba(0, 0, 0, .5) inset, 0 -3px 10px rgba(0, 0, 0, .1) inset, 0 1px 3px rgba(255, 255, 255, .5);
+        background: -webkit-radial-gradient(top center, circle, #f28fb8, #e982ad, #ec568c);
+        background: -moz-radial-gradient(top center, circle, #f28fb8, #e982ad, #ec568c);
+        background: -ms-radial-gradient(top center, circle, #f28fb8, #e982ad, #ec568c);
+        background: -o-radial-gradient(top center, circle, #f28fb8, #e982ad, #ec568c);
+        background: radial-gradient(top center, circle, #f28fb8, #e982ad, #ec568c);
+    }
+    
+    @font-face {
+        font-family: 'icomoon';
+        src: url('fonts/icomoon.eot');
+        src: url('fonts/icomoon.eot?#iefix') format('embedded-opentype'), url('fonts/icomoon.svg#icomoon') format('svg'), url('fonts/icomoon.woff') format('woff'), url('fonts/icomoon.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <div class="controls_button">
+                <button type="button" class="button"></button>
+                <button type="button" class="button"></button>
+                <button type="button" class="button"></button>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

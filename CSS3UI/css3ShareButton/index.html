@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>CSS3 Share Button|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <title>CSS3 Share Button</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font: 15px/1.8em "Microsoft YaHei";
+        padding: 100px;
+        line-height: 40px;
+        background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAZABkAAD/7AARRHVja3kAAQAEAAAAUQAA/+4ADkFkb2JlAGTAAAAAAf/bAIQAAgICAgICAgICAgMCAgIDBAMCAgMEBAQEBAQEBAYEBQUFBQQGBgcHBwcHBgkJCgoJCQwMDAwMDAwMDAwMDAwMDAECAwMFBAUJBgYJDQoICg0PDg4ODg8PDAwMDAwPDwwMDAwMDA8MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwM/8AAEQgAIAAgAwERAAIRAQMRAf/EAGYAAAMBAQAAAAAAAAAAAAAAAAABAgMJAQEBAQAAAAAAAAAAAAAAAAAAAQQQAAICAQQABAUFAAAAAAAAAAECEQMSITEiE0FRoeHwYYEjQ3GR8UJiEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDslWRjUuWRIQAq289cGWsPnMyZHnPLWworsR2qbu2QK2LyBl0kflO86b7+M8yrVyvS1ZDK5Rcsg3jUP7WySQTHvDBNTFhXDyjhCLc8lIis6fdO/wATPIGGUCoC9YbEdhchWk0qIysO523+s8iLraBmGUo5Q5ZSoP2gNDYfP18zyBVs4SpsmORQK2TSC/UNSbTJ+NZ5FMFWxPdAdkjm0ETVOnZqTIifWeQCkKlSdhZ7ArFcgdusH8p1131+s8gEsVoUkMzMrABgCI6ziYsPifD9NZ5A1dlwTOcsYsL6EHr2mz/XzP78gVbMwULaIVlbUyJittjYdwfXxnkBXLdbhmE4MhNhM8aogdh9/nPIEs2EObAzKUAAs0Aio642wd/5nkGgcFqwz4zDYlpnWsmfuGdxrr68gK2IbDsV4gGCI1WsajsPnPueQf/Z);
+    }
+    
+    .container {
+        width: 960px;
+        margin: 20px auto;
+    }
+    
+    h1,
+    h1 a,
+    p {
+        clear: both;
+        margin: 30px;
+        text-decoration: none;
+        color: #000;
+        text-align: center;
+    }
+    /*share button*/
+    
+    @font-face {
+        font-family: 'fontello';
+        src: url("font/fontello.eot");
+        src: url("font/fontello.eot?#iefix") format('embedded-opentype'), url("font/fontello.woff") format('woff'), url("font/fontello.ttf") format('truetype'), url("font/fontello.svg#fontello") format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    .box {
+        width: 960px;
+        margin: 20px auto;
+        text-align: center;
+    }
+    
+    .box a {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        background: #dfe7ea;
+        border-radius: 10px;
+        border: 1px solid #b5babe;
+        text-align: center;
+        margin-right: 20px;
+        font-weight: bold;
+        position: relative;
+        box-shadow: 0 1px 0 rgb(85, 156, 184), 0 2px 0 rgb(85, 156, 184), 0 3px 0 rgb(85, 156, 184), 0 4px 0 rgb(85, 156, 184), 0 6px 0 rgb(85, 156, 184), 0 7px 0 rgba(0, 0, 0, 0.5);
+        text-decoration: none;
+    }
+    
+    .box a:nth-of-type(2) {
+        box-shadow: 0 1px 0 rgb(45, 65, 126), 0 2px 0 rgb(45, 65, 126), 0 3px 0 rgb(45, 65, 126), 0 4px 0 rgb(45, 65, 126), 0 6px 0 rgb(45, 65, 126), 0 7px 0 rgba(0, 0, 0, 0.5);
+    }
+    
+    .box a:nth-of-type(3) {
+        box-shadow: 0 1px 0 rgb(58, 59, 61), 0 2px 0 rgb(58, 59, 61), 0 3px 0 rgb(58, 59, 61), 0 4px 0 rgb(58, 59, 61), 0 6px 0 rgb(58, 59, 61), 0 7px 0 rgba(0, 0, 0, 0.5);
+    }
+    
+    .box a span {
+        height: 40px;
+        display: block;
+        width: 80px;
+        margin-left: -1px;
+        color: #000;
+    }
+    
+    .box a span:first-child {
+        position: relative;
+    }
+    
+    .box a span:first-child:after,
+    .box a span:first-child:before {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 50%;
+        border-style: solid;
+        z-index: 9;
+    }
+    
+    .box a span:first-child:before {
+        border-color: #63a9b5 transparent transparent transparent;
+        border-width: 8px;
+        bottom: -16px;
+        margin-left: -8px;
+    }
+    
+    .box a span:first-child:after {
+        border-color: #dfe7ea transparent transparent transparent;
+        border-width: 6px;
+        bottom: -11px;
+        margin-left: -6px;
+    }
+    
+    .box a:nth-of-type(2) span:first-child:before {
+        border-color: #354267 transparent transparent transparent;
+    }
+    
+    .box a:nth-of-type(3) span:first-child:before {
+        border-color: #252629 transparent transparent transparent;
+    }
+    
+    .box a span:last-child {
+        color: #fff;
+        box-shadow: inset 0 -2px 4px rgba(255, 255, 255, .3);
+        border-radius: 0 0 10px 10px;
+        background: #6dc2df;
+        border: 1px solid #64aab6;
+        text-shadow: 1px 2px 1px rgba(0, 0, 0, .2);
+        position: relative;
+        z-index: 0;
+    }
+    
+    .box a:nth-of-type(2) span:last-child {
+        background: #556eb0;
+        border: 1px solid #354267;
+    }
+    
+    .box a:nth-of-type(3) span:last-child {
+        background: #5a5c5b;
+        border: 1px solid #252629;
+    }
+    
+    .box a span:last-child:before {
+        font-family: 'fontello';
+        font-style: normal;
+        font-weight: normal;
+        speak: none;
+        display: inline-block;
+        text-decoration: inherit;
+        width: 1em;
+        margin-right: 0.4em;
+        text-align: center;
+        vertical-align: 1px;
+    }
+    
+    .box a:nth-of-type(1) span:last-child:before {
+        content: '\f310';
+    }
+    /* '' */
+    
+    .box a:nth-of-type(2) span:last-child:before {
+        content: '\f301';
+    }
+    /* '' */
+    
+    .box a:nth-of-type(3) span:last-child:before {
+        content: '\f309';
+    }
+    /* '' */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <a href="#">
+                <span>12</span>
+                <span>Tweet</span>
+            </a>
+            <a href="#">
+                <span>32</span>
+                <span>Like</span>
+            </a>
+            <a href="#">
+                <span>12</span>
+                <span>109</span>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

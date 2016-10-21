@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>CSS3制作时钟|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <title>CSS3制作时钟</title>
+    <style type="text/css">
+    body,
+    ul,
+    li {
+        padding: 0;
+        margin: 0;
+    }
+    
+    a {
+        color: rgb(1, 124, 185);
+        text-decoration: none;
+    }
+    
+    body {
+        font-size: 16px;
+        color: #5a5d63;
+        background: #d6d7d9;
+        background: -webkit-radial-gradient(#eeefef, #d6d7d9);
+        background: -moz-radial-gradient(#eeefef, #d6d7d9);
+        background: -o-radial-gradient(#eeefef, #d6d7d9);
+        background: -ms-radial-gradient(#eeefef, #d6d7d9);
+        background: radial-gradient(#eeefef, #d6d7d9);
+    }
+    
+    .box {
+        width: 360px;
+        height: 200px;
+        margin: 50px auto;
+    }
+    
+    .box li {
+        position: relative;
+        text-align: center;
+        list-style-type: none;
+        display: inline-block;
+        width: 150px;
+        height: 160px;
+        text-shadow: 0 2px 1px #f4f4f4;
+        border: 1px solid #9fa2ad;
+        border-radius: 5px;
+        margin-right: 10px;
+        background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.2, rgba(248, 248, 248, .3)), color-stop(.5, rgba(168, 173, 190, .5)), color-stop(.51, rgba(168, 173, 190, .3)), color-stop(.9, rgba(248, 248, 248, .2)));
+        background: -webkit-linear-gradient(top, rgba(248, 248, 248, .3) 20%, rgba(168, 173, 190, .5) 50%, rgba(168, 173, 190, .3) 51%, rgba(248, 248, 248, .2) 90%);
+        background: -moz-linear-gradient(top, rgba(248, 248, 248, .3) 20%, rgba(168, 173, 190, .5) 50%, rgba(168, 173, 190, .3) 51%, rgba(248, 248, 248, .2) 90%);
+        background: -o-linear-gradient(top, rgba(248, 248, 248, .3) 20%, rgba(168, 173, 190, .5) 50%, rgba(168, 173, 190, .3) 51%, rgba(248, 248, 248, .2) 90%);
+        background: -ms-linear-gradient(top, rgba(248, 248, 248, .3) 20%, rgba(168, 173, 190, .5) 50%, rgba(168, 173, 190, .3) 51%, rgba(248, 248, 248, .2) 90%);
+        background: linear-gradient(top, rgba(248, 248, 248, .3) 20%, rgba(168, 173, 190, .5) 50%, rgba(168, 173, 190, .3) 51%, rgba(248, 248, 248, .2) 90%);
+        box-shadow: inset 0 -2px 0 #f1f1f1, 0 1px 0 #f1f1f1, 0 2px 0 #9fa2ad, 0 3px 0 #f1f1f1, 0 4px 0 #9fa2ad;
+    }
+    
+    .box li:before,
+    .box li:after {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 150px;
+    }
+    
+    .box li:before {
+        top: 50%;
+        height: 1px;
+        box-shadow: 0 1px 0 #868995, 0 2px 1px #fff;
+    }
+    
+    .box li:after {
+        bottom: -65px;
+        height: 60px;
+        border-radius: 0 0 5px 5px;
+        background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, .1)), to(rgba(0, 0, 0, 0)));
+        background: -webkit-linear-gradient(top, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+        background: -moz-linear-gradient(top, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+        background: -o-linear-gradient(top, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+        background: -ms-linear-gradient(top, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+        background: linear-gradient(top, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+        z-index: 1
+    }
+    
+    .box li span:first-child {
+        font: 120px "Impact";
+        color: #52555a;
+        display: block;
+        height: 130px;
+        line-height: 150px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li><span id="minute">12</span><span>Minutes</span></li>
+            <li><span id="second">47</span><span>Seconds</span></li>
+        </ul>
+    </div>
+</body>
+
+</html>

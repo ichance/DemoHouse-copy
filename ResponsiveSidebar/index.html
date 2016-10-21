@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive sidebar revealed on click and key press</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="nav-right visible-xs">
+        <div class="button" id="btn">
+            <div class="bar top"></div>
+            <div class="bar middle"></div>
+            <div class="bar bottom"></div>
+        </div>
+    </div>
+    <!-- nav-right -->
+    <main>
+        <nav>
+            <div class="nav-right hidden-xs">
+                <div class="button" id="btn">
+                    <div class="bar top"></div>
+                    <div class="bar middle"></div>
+                    <div class="bar bottom"></div>
+                </div>
+            </div>
+            <!-- nav-right -->
+        </nav>
+        <a href="//codepen.io/tonkec/" class="ua" target="_blank">
+            <i class="fa fa-user"></i>
+        </a>
+    </main>
+    <div class="sidebar">
+        <ul class="sidebar-list">
+            <li class="sidebar-item"><a href="#" class="sidebar-anchor">Item 1</a></li>
+            <li class="sidebar-item"><a href="#" class="sidebar-anchor">Item 2</a></li>
+            <li class="sidebar-item"><a href="#" class="sidebar-anchor">Item 3</a></li>
+            <li class="sidebar-item"><a href="#" class="sidebar-anchor">Item 4</a></li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

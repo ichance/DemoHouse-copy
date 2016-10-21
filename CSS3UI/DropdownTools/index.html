@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3制作下拉工具条 |w3cplus | css3|css3教程,css3实例,css3动画</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <script type="text/javascript" charset="UTF-8" src="//www.w3cplus.com/demo/css3/prefixfree.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <style>
+    body {
+        background: url("bg.jpg") center center no-repeat fixed #333;
+        background-size: 100% 100%;
+    }
+    
+    .demo {
+        text-align: center;
+        min-height: 200px;
+    }
+    
+    .dropdownlist {
+        display: inline-block;
+        margin: 50px;
+    }
+    
+    .dropdownlist li {
+        list-style-type: none;
+        position: relative;
+    }
+    
+    .dropdownlist li a {
+        font-size: 20px;
+        font-family: "signal-icon";
+        text-align: center;
+        line-height: 48px;
+        color: #fff;
+        display: block;
+        width: 58px;
+        height: 48px;
+        background-image: -*-linear-gradient(top, rgb(105, 96, 106), rgb(80, 73, 80));
+        transition: all 500ms linear;
+        text-decoration: none;
+    }
+    
+    .list-wrapper {
+        border-radius: 4px;
+        border: 3px solid rgba(243, 233, 229, 0.2);
+        box-shadow: 0 0 0 1px rgba(243, 233, 229, 0.6);
+        position: relative;
+    }
+    
+    .dropdownlist li[class^="list-"] {
+        padding-bottom: 20px;
+    }
+    
+    .dropdownlist li[class^="list-"] .list-wrapper > a {
+        font-size: 30px;
+        border: 1px solid rgb(63, 57, 66);
+        border-radius: 3px;
+        box-shadow: inset 0 1px 0 rgb(132, 127, 137), inset 0 -1px 0 rgb(73, 66, 71), inset 0 0 0 1px rgb(106, 98, 111), 0 1px 0 rgb(137, 121, 118), 0 2px 0 rgb(163, 144, 141), 0 0 0 1px rgb(175, 155, 151);
+    }
+    
+    .dropdownlist li:nth-child(1)[class^="item-"] a {
+        box-shadow: inset 0 1px 0 rgb(132, 127, 137), inset 0 -1px 0 rgb(73, 66, 71), inset 0 0 0 1px rgb(106, 98, 111), -1px 0 0 rgba(110, 93, 101, 0.2), 1px 0 0 rgba(110, 93, 101, 0.2), 0 -1px 0 rgba(110, 93, 101, 0.2);
+    }
+    
+    .dropdownlist li:nth-child(2)[class^="item-"] a {
+        box-shadow: inset 0 1px 0 rgb(132, 127, 137), inset 0 -1px 0 rgb(73, 66, 71), inset 0 0 0 1px rgb(106, 98, 111), -1px 0 0 rgba(110, 93, 101, 0.4), 1px 0 0 rgba(110, 93, 101, 0.4);
+    }
+    
+    .dropdownlist li:nth-child(3)[class^="item-"] a {
+        box-shadow: inset 0 1px 0 rgb(132, 127, 137), inset 0 -1px 0 rgb(73, 66, 71), inset 0 0 0 1px rgb(106, 98, 111), -1px 0 0 rgba(110, 93, 101, 0.6), 1px 0 0 rgba(110, 93, 101, 0.6), 0 1px 0 rgba(89, 75, 84, 0.8), 0 2px 0 rgba(89, 75, 84, 0.6), 0 3px 0 rgba(89, 75, 84, 0.4);
+    }
+    
+    .dropdownlist li[class^="item-"] > a {
+        border: 1px solid rgb(64, 57, 66);
+        border-bottom: none;
+    }
+    
+    .dropdownlist li:last-child[class^="item-"] > a {
+        border: 1px solid rgb(64, 57, 66);
+    }
+    
+    .dropdownlist li:first-child[class^="item-"] > a {
+        border-radius: 3px 3px 0 0;
+    }
+    
+    .dropdownlist li:last-child[class^="item-"] > a {
+        border-radius: 0 0 3px 3px;
+    }
+    
+    .dropdownlist li[class^="item-"] > a:visited {
+        color: #033e6b;
+    }
+    
+    .dropdownlist li a:hover {
+        background-image: -*-linear-gradient(top, rgb(90, 80, 80), rgb(65, 68, 65));
+        cursor: pointer;
+    }
+    
+    .dropdownlist li[class^="list-"] ul {
+        position: absolute;
+        left: -3px;
+        top: 130%;
+        border-radius: 4px;
+        padding: 0;
+        border: none;
+        transition: all 500ms ease-in;
+        border: 3px solid rgba(243, 233, 229, 0.2);
+        box-shadow: 0 0 0 1px rgba(243, 233, 229, 0.6);
+        display: none;
+    }
+    
+    .dropdownlist li[class^="list-"] ul:before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        border: 5px solid transparent;
+        border-bottom-color: rgba(243, 233, 229, 0.4);
+        left: 50%;
+        top: -15px;
+        margin-left: -5px;
+    }
+    
+    .dropdownlist li[class^="list-"]:hover ul {
+        display: block;
+    }
+    
+    @font-face {
+        font-family: 'signal-icon';
+        src: url('fonts/signal-icon.eot');
+        src: url('fonts/signal-icon.eot?#iefix') format('embedded-opentype'), url('fonts/signal-icon.svg#signal-icon') format('svg'), url('fonts/signal-icon.woff') format('woff'), url('fonts/signal-icon.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <ul class="dropdownlist">
+                <li class="list-1">
+                    <div class="list-wrapper">
+                        <a href="#">#</a>
+                        <ul>
+                            <li class="item-1"><a href="#1">"</a></li>
+                            <li class="item-2"><a href="#2">$</a></li>
+                            <li class="item-3"><a href="#3">!</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+
+</html>

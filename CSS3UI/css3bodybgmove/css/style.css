@@ -1,0 +1,48 @@
+@charset "utf-8";
+@import url("http://www.w3cplus.com/demo/css3/base.css");
+body{
+	background:url('../images/foreground.png') 5px 5px,url("../images/midground.png") 1050px 750px,url("../images/background.png") 1000px -50px;
+
+	-moz-animation-name:bgmove;
+	-moz-animation-duration:30s;
+	-moz-animation-timing-function:linear;
+	-moz-animation-delay:0;
+	-moz-animation-iteration-count:infinite;
+		
+	-webkit-animation-name:bgmove;
+	-webkit-animation-duration:30s;
+	-webkit-animation-timing-function:linear;
+	-webkit-animation-delay:0;
+	-webkit-animation-iteration-count:infinite;
+		
+	animation-name:bgmove;
+	animation-duration:30s;
+	animation-timing-function:linear;
+	animation-delay:0;
+	animation-iteration-count:infinite;
+}
+@-moz-keyframes bgmove{
+    0%{
+        background:url('../images/foreground.png') 5px 5px,url("../images/midground.png") 1050px 750px,url("../images/background.png") 1000px -50px;
+    }
+    100%{
+        background:url('../images/foreground.png') 2005px 1005px,url("../images/midground.png") 50px -250px,url("../images/background.png") 0 950px;
+
+    }
+}
+@-webkit-keyframes bgmove{
+    0%{
+        background:url('../images/foreground.png') 5px 5px,url("../images/midground.png") 1050px 750px,url("../images/background.png") 1000px -50px;
+    }
+    100%{
+        background:url('../images/foreground.png') 2005px 1005px,url("../images/midground.png") 50px -250px,url("../images/background.png") 0 950px;
+    }
+}
+#header{
+    background-color:rgba(255,255,255,0.8);
+	width:400px;
+	text-align:center;
+	border-radius:10px;
+	padding:20px 0;
+	margin:0 auto;
+}

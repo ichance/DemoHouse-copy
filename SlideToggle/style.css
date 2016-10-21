@@ -1,0 +1,146 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo|fontawesome);
+
+/* entypo */
+
+[class*="entypo-"]:before {
+    font-family: 'entypo', sans-serif;
+}
+
+
+/* fontawesome */
+
+[class*="fontawesome-"]:before {
+    font-family: 'FontAwesome', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #d3d4d6;
+}
+
+a {
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+span {
+    font-size: 20px;
+    font-weight: normal;
+    padding-right: 16px;
+}
+
+#main-container {
+    width: 310px;
+    height: 330px;
+    margin: 3em auto;
+    border-radius: 3px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.tab {
+    width: 310px;
+    height: 55px;
+    -webkit-transition: background .1s ease-out;
+    transition: background .1s ease-out;
+}
+
+.tab h3 {
+    margin: 0 0 0 20px;
+    line-height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: sans-serif;
+    display: inline-block;
+    float: left;
+    -webkit-transition: color .1s ease-out;
+    transition: color .1s ease-out;
+}
+
+.notification {
+    display: inline-block;
+    width: 39px;
+    line-height: 24px;
+    float: right;
+    margin: 15px 15px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 11px;
+    border-radius: 25px;
+    -webkit-transition: background .1s ease-out;
+    transition: background .1s ease-out;
+}
+
+.tabSelected {
+    background: #df4f37;
+}
+
+.tabSelected h3 {
+    color: #ffffff;
+}
+
+.tabSelected .notification {
+    background: #c9412b;
+}
+
+.tabSelected .notification:hover {
+    background: #B33923;
+}
+
+.tabNoSelected {
+    background: #ffffff;
+    border-bottom: solid 1px #e6e6e6;
+}
+
+.tabNoSelected:hover {
+    border: solid 1px #F2F2F2;
+}
+
+.tabNoSelected h3 {
+    color: #363a3d;
+}
+
+.tabNoSelected .notification {
+    background: #dcdddf;
+}
+
+.tabNoSelected .notification:hover {
+    background: #2eb398;
+}
+
+.tabBody {
+    background: #e7604a;
+    width: 310px;
+    height: 110px;
+    display: none;
+    border-top: solid 1px #eb806c;
+}
+
+.tabBodyOptions {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tabBodyOptions a {
+    display: block;
+    color: #fce7e4;
+    font-size: 13px;
+    line-height: 32px;
+    width: 310px;
+    padding-left: 20px;
+    -webkit-transition: background .3s ease-out;
+    transition: background .3s ease-out;
+}
+
+.tabBodyOptions a:hover {
+    background: #df4f37;
+    color: #ffffff;
+}
+
+.tabBodyOptions span {
+    font-size: 18px;
+}

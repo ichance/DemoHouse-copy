@@ -1,0 +1,36 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>
+Created by FontForge 20100429 at Thu Mar  7 03:40:05 2013
+ By root
+Copyright (C) 2012 by original authors @ fontello.com
+</metadata>
+<defs>
+<font id="icon-search" horiz-adv-x="959" >
+  <font-face 
+    font-family="icon-search"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1000"
+    panose-1="2 0 6 9 0 0 0 0 0 0"
+    ascent="850"
+    descent="-150"
+    bbox="15 -150 944 779"
+    underline-thickness="50"
+    underline-position="-100"
+    unicode-range="U+0073-0073"
+  />
+<missing-glyph 
+d="M33 0v666h265v-666h-265zM66 33h199v600h-199v-600z" />
+    <glyph glyph-name=".notdef" 
+d="M33 0v666h265v-666h-265zM66 33h199v600h-199v-600z" />
+    <glyph glyph-name=".null" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="nonmarkingreturn" 
+ />
+    <glyph glyph-name="s" unicode="s" 
+d="M944 -79q0 -28 -21.5 -49.5t-50.5 -21.5q-30 0 -50 21l-191 191q-101 -69 -223 -69q-83 0 -155 32t-123 83t-83 123t-32 155t32 155t83 123t123 83t155 32t155 -32t123 -83t83 -123t32 -155q0 -122 -69 -223l191 -191q21 -21 21 -51zM158 386q0 -104 73 -177t177 -73
+q103 0 176 73q74 74 74 177q0 102 -74 176t-176 74q-103 0 -177 -74q-73 -73 -73 -176z" />
+  </font>
+</defs></svg>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Sign Up Form</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link href='//fonts.googleapis.com/css?family=Roboto:400,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="back"></div>
+    <div class="registration-form">
+        <header>
+            <h1>Sign Up</h1>
+            <p>Fill in all informations</p>
+        </header>
+        <form>
+            <div class="input-section email-section">
+                <input type="email" placeholder="ENTER YOUR E-MAIL HERE" autocomplete="off" class="email" />
+                <div class="animated-button"><span class="icon-paper-plane"><i class="fa fa-envelope-o"></i></span><span class="next-button email"><i class="fa fa-arrow-up"></i></span></div>
+            </div>
+            <div class="input-section password-section folded">
+                <input type="password" placeholder="ENTER YOUR PASSWORD HERE" class="password" />
+                <div class="animated-button"><span class="icon-lock"><i class="fa fa-lock"></i></span><span class="next-button password"><i class="fa fa-arrow-up"></i></span></div>
+            </div>
+            <div class="input-section repeat-password-section folded">
+                <input type="password" placeholder="REPEAT YOUR PASSWORD HERE" class="repeat-password" />
+                <div class="animated-button"><span class="icon-repeat-lock"><i class="fa fa-lock"></i></span><span class="next-button repeat-password"><i class="fa fa-paper-plane"></i></span></div>
+            </div>
+            <div class="success">
+                <p>ACCOUNT CREATED</p>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

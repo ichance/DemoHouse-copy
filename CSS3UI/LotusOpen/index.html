@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3制作莲花开放| W3cplus | css3|css3教程,css3实例,css3动画|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <script type="text/javascript" charset="UTF-8" src="//www.w3cplus.com/demo/css3/prefixfree.min.js"></script>
+    <style type="text/css" media="screen">
+    body {
+        background-color: #d4d4d4;
+    }
+    
+    .demo {
+        margin: 40px auto;
+        width: 500px;
+    }
+    
+    .box {
+        position: relative;
+        height: 400px;
+    }
+    
+    .box .leaf {
+        position: absolute;
+    }
+    
+    .leaf {
+        margin-top: 400px;
+        width: 300px;
+        height: 300px;
+        border-radius: 300px 0px;
+        background: -*-linear-gradient(45deg, rgba(188, 190, 192, 1) 8%, rgba(158, 31, 99, 1) 30%, rgba(158, 31, 99, 1) 100%);
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+        transform: rotate(45deg);
+        transform-origin: top right;
+    }
+    
+    .leaf:nth-child(2) {
+        animation: show-2 5s ease-in-out infinite;
+    }
+    
+    .leaf:nth-child(3) {
+        animation: show-3 5s ease-in-out infinite;
+    }
+    
+    .leaf:nth-child(4) {
+        animation: show-4 5s ease-in-out infinite;
+    }
+    
+    .leaf:nth-child(5) {
+        animation: show-5 5s ease-in-out infinite;
+    }
+    
+    .leaf:nth-child(6) {
+        animation: show-6 5s ease-in-out infinite;
+    }
+    
+    .leaf:nth-child(7) {
+        animation: show-7 5s ease-in-out infinite;
+    }
+    
+    .leaf:nth-child(8) {
+        animation: show-8 5s ease-in-out infinite;
+    }
+    
+    @keyframes show-2 {
+        0% {
+            transform: rotate(45deg);
+        }
+        100% {
+            transform: rotate(71deg);
+        }
+    }
+    
+    @keyframes show-3 {
+        0% {
+            transform: rotate(45deg);
+        }
+        100% {
+            transform: rotate(96deg);
+        }
+    }
+    
+    @keyframes show-4 {
+        0% {
+            transform: rotate(45deg);
+        }
+        100% {
+            transform: rotate(123deg);
+        }
+    }
+    
+    @keyframes show-5 {
+        0% {
+            transform: rotate(45deg);
+        }
+        100% {
+            transform: rotate(149deg);
+        }
+    }
+    
+    @keyframes show-6 {
+        0% {
+            transform: rotate(45deg);
+        }
+        100% {
+            transform: rotate(175deg);
+        }
+    }
+    
+    @keyframes show-7 {
+        0% {
+            transform: rotate(45deg);
+        }
+        100% {
+            transform: rotate(200deg);
+        }
+    }
+    
+    @keyframes show-8 {
+        0% {
+            transform: rotate(45deg);
+        }
+        100% {
+            transform: rotate(225deg);
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <div class="box">
+                <div class="leaf"></div>
+                <div class="leaf"></div>
+                <div class="leaf"></div>
+                <div class="leaf"></div>
+                <div class="leaf"></div>
+                <div class="leaf"></div>
+                <div class="leaf"></div>
+                <div class="leaf"></div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>
+Created by FontForge 20100429 at Fri Sep 14 09:21:02 2012
+ By root
+Copyright (C) 2012 by original authors @ fontello.com
+</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="978" >
+  <font-face 
+    font-family="fontello"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1000"
+    panose-1="2 0 6 9 0 0 0 0 0 0"
+    ascent="800"
+    descent="-200"
+    bbox="14 -150 964 800"
+    underline-thickness="50"
+    underline-position="-100"
+    unicode-range="U+F301-F310"
+  />
+<missing-glyph 
+d="M33 0v666h265v-666h-265zM66 33h199v600h-199v-600z" />
+    <glyph glyph-name=".notdef" 
+d="M33 0v666h265v-666h-265zM66 33h199v600h-199v-600z" />
+    <glyph glyph-name=".null" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="nonmarkingreturn" 
+ />
+    <glyph glyph-name="uniF301" unicode="&#xf301;" 
+d="M188 800h602q73 0 123.5 -51t50.5 -123v-602q0 -72 -50.5 -123t-123.5 -51h-602q-72 0 -123 51t-51 123v602q0 72 51 123t123 51zM515 -150h141v371h139l6 134h-145v97q0 32 10.5 46t45.5 14l85 -1l4 126q-41 4 -95 4q-95 0 -143 -49t-48 -123v-114h-99v-134h99v-371z
+" />
+    <glyph glyph-name="uniF309" unicode="&#xf309;" 
+d="M876 800h-774q-39 0 -63.5 -21.5t-24.5 -65.5v-787q0 -35 25 -55t63 -20h774q38 0 62.5 20t24.5 55v787q0 44 -24 65.5t-63 21.5zM713 725h75v-175h176v-73h-176v-177h-75v177h-174v73h174v175zM236 300q61 0 92 34q36 42 36 90q0 53 -18.5 110t-59.5 100.5t-94 43.5
+q-28 0 -54.5 -12t-42.5 -33q-27 -33 -27 -103q0 -37 10 -75.5t29 -74t53 -58t76 -22.5zM411 125q70 -59 92 -85q48 -58 48 -122q0 -44 -10 -67h-81q6 20 6 25q0 17 -7.5 33t-16 28t-29.5 29l-34 28q-13 10 -45 32l-49 34q-11 1 -32 1q-78 0 -145 -22q-65 -25 -94 -64v80
+q22 17 56 27.5t58 12.5t63 3t47 2q-15 18 -21 27t-13 28t-7 39t13 54q-2 0 -18.5 -1.5t-25.5 -1.5q-85 0 -152 55v338q88 85 248 87h292l-77 -63h-85q85 -73 85 -175q0 -69 -28.5 -111t-83.5 -85q-39 -39 -39 -68.5t36 -58.5z" />
+    <glyph glyph-name="uniF310" unicode="&#xf310;" 
+d="M198 800h583q76 0 129.5 -53.5t53.5 -129.5v-584q0 -76 -53.5 -129.5t-129.5 -53.5h-583q-76 0 -130 53.5t-54 129.5v584q0 76 54 129.5t130 53.5zM522 666h-94q-18 -140 -135 -178v-94h73v-232q0 -46 9 -69.5t34 -44.5q50 -44 140 -44q77 0 152 36v104q-49 -33 -101 -33
+q-24 0 -44.5 10.5t-27 28.5t-6.5 74v170h156v104h-156v168z" />
+  </font>
+</defs></svg>

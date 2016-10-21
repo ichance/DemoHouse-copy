@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Add To Car Button| w3cplus | css3|css3教程,css3实例,css3动画</title>
+	<meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+	<meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+	<link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+	<script type="text/javascript" charset="UTF-8" src="//www.w3cplus.com/demo/css3/prefixfree.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+<style>
+body {
+    background-color:rgb(230,230,230);
+}
+.demo {
+	width: 235px;
+	margin: 50px auto;
+}
+button {
+    line-height:48px;
+    padding:0 25px 0 85px;
+    position:relative;
+    color:#fff;
+    border:none;
+    border-radius:3px;
+    font-size:15px;
+    font-weight:bold;
+    text-transform:uppercase;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.8);
+    margin:10px;
+}
+button:before {
+    content:"b";
+    font-family:'cart-icon';
+    font-size:30px;
+    text-transform:none;
+    text-shadow: 0 1px 0 rgba(0,0,0,1);
+    position:absolute;
+    left:-1px;
+    top:-1px;
+    background-color:rgb(80,82,78);
+    height:48px;
+    width:60px;
+    color:#fff;
+    border-radius:3px 0 0 3px;
+    border:1px solid rgb(75,75,75);
+    border-right:none;
+    box-shadow:inset 1px 1px 0 rgb(120,120,120);
+    z-index: 3;
+}
+.blue {
+    background-image:-*-linear-gradient(top,rgb(120,170,210),rgb(104,157,193));
+    border:1px solid rgb(81,132,171);
+    box-shadow: inset -1px 1px 0 rgb(154,194,221),0 1px 0 rgb(182,182,180),0 2px 0 rgb(197,195,197),0 3px 0 rgb(211,213,210);
+}
+.green {
+    background-image:-*-linear-gradient(top,rgb(80,188,98),rgb(65,172,86));
+    border:1px solid rgb(64,152,80);
+    box-shadow: inset -1px 1px 0 rgb(137,207,152),0 1px 0 rgb(182,182,180),0 2px 0 rgb(197,195,197),0 3px 0 rgb(211,213,210);
+}
+.yellow {
+    background-image:-*-linear-gradient(top,rgb(150,130,72),rgb(108,94,53));
+    border:1px solid rgb(147,129,75);
+    box-shadow: inset -1px 1px 0 rgb(170,163,123),0 1px 0 rgb(182,182,180),0 2px 0 rgb(197,195,197),0 3px 0 rgb(211,213,210);
+}
+.purple {
+    background-image:-*-linear-gradient(top,rgb(140,90,164),rgb(130,73,149));
+    border:1px solid rgb(155,90,175);
+    box-shadow: inset -1px 1px 0 rgb(160,120,180),0 1px 0 rgb(182,182,180),0 2px 0 rgb(197,195,197),0 3px 0 rgb(211,213,210);
+}
+.blueness {
+    background-image:-*-linear-gradient(top,rgb(82,180,181),rgb(65,162,163));
+    border:1px solid rgb(73,163,167);
+    box-shadow: inset -1px 1px 0 rgb(128,199,199),0 1px 0 rgb(182,182,180),0 2px 0 rgb(197,195,197),0 3px 0 rgb(211,213,210);
+}
+@font-face {
+  font-family: 'cart-icon';
+  src: url('font/cart-icon.eot');
+  src: url('font/cart-icon.eot?#iefix') format('embedded-opentype'),
+    url('font/cart-icon.svg#cart-icon') format('svg'),
+    url('font/cart-icon.woff') format('woff'), 
+    url('font/cart-icon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}	
+</style>	
+
+</head>
+<body>
+
+<div class="page">
+	
+	<section class="demo">
+		<button name="add to card" type="button" class="blue">add to cart</button>
+	    <button name="add to card" type="button" class="green">add to cart</button>
+	    <button name="add to card" type="button" class="purple">add to cart</button>
+	    <button name="add to card" type="button" class="yellow">add to cart</button>
+	    <button name="add to card" type="button" class="blueness">add to cart</button>
+	</section>
+	
+</div>
+</body>
+</html>

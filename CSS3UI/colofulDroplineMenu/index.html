@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3制作下拉菜单 | css3|css3教程,css3实例,css3动画|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <script type="text/javascript" charset="UTF-8" src="//www.w3cplus.com/demo/css3/prefixfree.min.js"></script>
+    <style type="text/css" media="screen">
+    .demo {
+        width: 700px;
+        margin: 40px auto 0;
+    }
+    
+    .nav_block {
+        position: relative;
+        margin-top: 80px;
+    }
+    
+    .nav_block:before {
+        position: absolute;
+        top: 20px;
+        left: -20px;
+        content: "";
+        border: 10px solid #1a1d1e;
+        border-color: #1a1d1e #1a1d1e transparent transparent;
+    }
+    
+    .nav_block li {
+        float: left;
+        text-align: center;
+        line-height: 40px;
+    }
+    
+    .nav_block > li {
+        width: 100px;
+    }
+    
+    .nav_block li a {
+        position: relative;
+        z-index: 3;
+        display: block;
+        color: #fff;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+    }
+    
+    .nav_block li a:hover {
+        text-decoration: none;
+    }
+    
+    .nav_block li:nth-child(1):hover ~ .item_selected {
+        left: 15px;
+    }
+    
+    .nav_block li:nth-child(2):hover ~ .item_selected {
+        left: 115px;
+    }
+    
+    .nav_block li:nth-child(3):hover ~ .item_selected {
+        left: 215px;
+    }
+    
+    .nav_block li:nth-child(4):hover ~ .item_selected {
+        left: 315px;
+    }
+    
+    .nav_block li:nth-child(5):hover ~ .item_selected {
+        left: 415px;
+    }
+    
+    .nav_block li:nth-child(6):hover ~ .item_selected {
+        left: 515px;
+    }
+    
+    .nav_block li:nth-child(7):hover ~ .item_selected {
+        left: 615px;
+    }
+    
+    .item1 {
+        position: relative;
+        background-image: -*-linear-gradient(top, #e50000, #8c0000);
+    }
+    
+    .item2 {
+        position: relative;
+        background-image: -*-linear-gradient(top, #01e851, #07880e);
+    }
+    
+    .item3 {
+        position: relative;
+        background-image: -*-linear-gradient(top, #474fe7, #212989);
+    }
+    
+    .item_selected {
+        position: absolute;
+        top: -8px;
+        left: 215px;
+        z-index: 2;
+        background-image: -*-linear-gradient(top, #f3b743, #a06211);
+        height: 43px;
+        width: 70px;
+        transition: all .3s ease-out;
+    }
+    
+    .item_selected:before,
+    .item_selected:after,
+    .item_selected i:before,
+    .item_selected i:after {
+        position: absolute;
+        content: "";
+        z-index: -2;
+        border: 3px solid #1a1d1e;
+        border-color: transparent #1a1d1e #1a1d1e transparent;
+    }
+    
+    .item_selected:before {
+        top: 0px;
+        left: -8px;
+        border: 4px solid #f0b441;
+        border-color: transparent #f0b441 #f0b441 transparent;
+    }
+    
+    .item_selected:after {
+        top: 2px;
+        left: -6px;
+    }
+    
+    .item_selected i:before {
+        top: 0px;
+        right: -8px;
+        border: 4px solid #f0b441;
+        border-color: transparent transparent #f0b441 #f0b441;
+    }
+    
+    .item_selected i:after {
+        top: 2px;
+        right: -6px;
+        border-color: transparent transparent #1a1d1e #1a1d1e;
+    }
+    
+    .item_sub {
+        position: absolute;
+        left: 0;
+        width: 700px;
+        background-image: -*-linear-gradient(top, #f8e1e2, rgba(255, 255, 255, 0));
+    }
+    
+    .item_sub li {
+        border-right: 1px solid #333;
+        margin: 10px 5px;
+        padding-right: 10px;
+        line-height: 15px;
+    }
+    
+    .item_sub li:last-child {
+        border-right: none;
+    }
+    
+    .item_sub li a {
+        display: block;
+        color: #333;
+        text-shadow: none;
+        border-bottom: 5px solid rgba(255, 255, 255, 0);
+        transition: border .2s linear;
+    }
+    
+    .item_sub li a:hover,
+    .item_sub li .active {
+        text-decoration: none;
+        border-bottom: 2px solid #d50000;
+    }
+    
+    .item1 .item_sub li a:hover,
+    .item1 .item_sub li .active {
+        border-color: #d50000;
+    }
+    
+    .item2 .item_sub li a:hover,
+    .item2 .item_sub li .active {
+        border-color: #05a321;
+    }
+    
+    .item3 .item_sub li a:hover,
+    .item3 .item_sub li .active {
+        border-color: #3b43b5;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <ul class="nav_block clearfix item1">
+                <li><a href="" title="">Home</a></li>
+                <li><a href="" title="">About Us</a></li>
+                <li>
+                    <a href="" title="">Services</a>
+                    <ul class="item_sub">
+                        <li><a href="" title="" class="active">Design Integration</a></li>
+                        <li><a href="" title="">Web Templates</a></li>
+                        <li><a href="" title="">Design creations</a></li>
+                        <li><a href="" title="">Design Integration</a></li>
+                        <li><a href="" title="">Web</a></li>
+                    </ul>
+                    <!-- / item_sub-->
+                </li>
+                <li><a href="" title="">Solutions</a></li>
+                <li><a href="" title="">Clients</a></li>
+                <li><a href="" title="">Portfolio</a></li>
+                <li><a href="" title="">Contact Us</a></li>
+                <div class="item_selected"><i></i></div>
+            </ul>
+            <ul class="nav_block clearfix item2">
+                <li><a href="" title="">Home</a></li>
+                <li><a href="" title="">About Us</a></li>
+                <li><a href="" title="">Services</a></li>
+                <li><a href="" title="">Solutions</a></li>
+                <li>
+                    <a href="" title="">Clients</a>
+                    <ul class="item_sub">
+                        <li><a href="" title="">Design Integration</a></li>
+                        <li><a href="" title="">Web Templates</a></li>
+                        <li><a href="" title="" class="active">Design creations</a></li>
+                        <li><a href="" title="">Design Integration</a></li>
+                        <li><a href="" title="">Web</a></li>
+                    </ul>
+                    <!-- /item_sub -->
+                </li>
+                <li><a href="" title="">Portfolio</a></li>
+                <li><a href="" title="">Contact Us</a></li>
+                <div class="item_selected"><i></i></div>
+            </ul>
+            <ul class="nav_block clearfix item3">
+                <li><a href="" title="">Home</a></li>
+                <li><a href="" title="">About Us</a></li>
+                <li><a href="" title="">Services</a></li>
+                <li>
+                    <a href="" title="">Solutions</a>
+                    <ul class="item_sub">
+                        <li><a href="" title="">Design Integration</a></li>
+                        <li><a href="" title="">Web Templates</a></li>
+                        <li><a href="" title="">Design creations</a></li>
+                        <li><a href="" title="" class="active">Design Integration</a></li>
+                        <li><a href="" title="">Web</a></li>
+                    </ul>
+                    <!-- /item_sub -->
+                </li>
+                <li><a href="" title="">Clients</a></li>
+                <li><a href="" title="">Portfolio</a></li>
+                <li><a href="" title="">Contact Us</a></li>
+                <div class="item_selected"><i></i></div>
+            </ul>
+        </section>
+    </div>
+</body>
+
+</html>

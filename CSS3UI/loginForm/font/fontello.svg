@@ -1,0 +1,40 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>
+Created by FontForge 20100429 at Thu Sep 20 04:17:47 2012
+ By root
+Copyright (C) 2012 by original authors @ fontello.com
+</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="364" >
+  <font-face 
+    font-family="fontello"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1000"
+    panose-1="2 0 6 3 0 0 0 0 0 0"
+    ascent="800"
+    descent="-200"
+    bbox="0 -66 947 724"
+    underline-thickness="50"
+    underline-position="-100"
+    unicode-range="U+1F464-1F512"
+  />
+<missing-glyph 
+d="M33 0v666h265v-666h-265zM66 33h199v600h-199v-600z" />
+    <glyph glyph-name=".notdef" 
+d="M33 0v666h265v-666h-265zM66 33h199v600h-199v-600z" />
+    <glyph glyph-name=".null" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="nonmarkingreturn" horiz-adv-x="333" 
+ />
+    <glyph glyph-name="u1F464" unicode="&#x1f464;" horiz-adv-x="947" 
+d="M0 -30v7q12 20 20.5 42.5t18 44.5t21 42t26.5 36q8 7 17 14t20.5 11t24.5 5t27 3q39 7 81.5 13.5t82.5 13.5q4 17 7 35.5t9 35.5l-17 23q-9 11 -16.5 24t-14 30t-9.5 39l-6 35l-6 46l-6 42q-2 20 -2 24q0 27 11 59.5t34.5 61t61 48t89 19.5t89 -19.5t61 -48t34.5 -61
+t11 -59.5q0 -4 -3 -24l-5 -42l-6 -46q-3 -23 -6 -35q-3 -22 -9 -39t-14 -30t-17 -24t-16 -23q5 -17 8 -35.5t7 -35.5q40 -7 83 -13.5t82 -13.5q13 -2 26.5 -3t25 -5t20.5 -11t16 -14q16 -16 27 -36t20 -42l19 -44q9 -23 20 -43v-7q-14 -8 -27.5 -19.5t-32.5 -16.5h-827
+q-19 5 -32 16.5t-28 19.5z" />
+    <glyph glyph-name="u1F512" unicode="&#x1f512;" horiz-adv-x="789" 
+d="M0 -7v316q0 24 17.5 42t41.5 18h60v89q0 55 21.5 103.5t59 84.5t88 57t107.5 21t107.5 -21t88 -57t59.5 -84.5t22 -103.5v-89h59q24 0 41 -18t17 -42v-316q0 -24 -17 -41.5t-41 -17.5h-672q-24 0 -41.5 17.5t-17.5 41.5zM237 369h316v89q0 31 -13 58t-34 47t-50 31.5
+t-61.5 11.5t-61.5 -11.5t-50 -31.5t-33.5 -47t-12.5 -58v-89z" />
+  </font>
+</defs></svg>

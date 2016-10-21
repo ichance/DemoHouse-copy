@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pure CSS3 Create Pagination |css3|css3教程,css3实例,css3动画|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <script type="text/javascript" charset="UTF-8" src="//www.w3cplus.com/demo/css3/prefixfree.min.js"></script>
+    <style>
+    body {
+        background-color: #262626;
+    }
+    
+    .demo {
+        width: 400px;
+        margin: 40px auto 0;
+    }
+    
+    .pager li {
+        display: inline-block;
+        line-height: 25px;
+    }
+    
+    .pager a {
+        display: block;
+        color: #f2f2f2;
+        text-shadow: 1px 0 0 #101011;
+        padding: 0 10px;
+        border-radius: 2px;
+        box-shadow: 0 1px 0 #5a5b5c inset, 0 1px 0 #080808;
+        background: -*-linear-gradient(top, #434345, #2f3032);
+    }
+    
+    .pager a:hover {
+        text-decoration: none;
+        box-shadow: 0 1px 0 #f9bd71 inset, 0 1px 0 #0a0a0a;
+        background: -*-linear-gradient(top, #f48b03, #c87100);
+    }
+    
+    .pager li:target a {
+        box-shadow: 1px 0 5px #1a1a1b inset, 1px 0 0 #2d2d2d, 0 1px 0 #2d2d2d;
+        background: -*-linear-gradient(top, #252627, #1c1c1e);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <ul class="pager">
+                <li id="first"><a href="#first">« First</a></li>
+                <li id="page_up"><a href="#page_up">«</a></li>
+                <li id="one"><a href="#one">1</a></li>
+                <li id="two"><a href="#two">2</a></li>
+                <li id="three"><a href="#three">3</a></li>
+                <li id="four"><a href="#four">4</a></li>
+                <li id="five"><a href="#five">5</a></li>
+                <li id="six"><a href="#six">6</a></li>
+                <li id="seven"><a href="#seven">7</a></li>
+                <li id="next_page"><a href="#next_page">»</a></li>
+                <li id="last"><a href="#last">Last »</a></li>
+            </ul>
+        </section>
+    </div>
+</body>
+
+</html>

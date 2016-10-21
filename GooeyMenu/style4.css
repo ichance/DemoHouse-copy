@@ -1,0 +1,193 @@
+body {
+    background: #009688;
+    color: white;
+    text-align: center;
+}
+
+a {
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.menu {
+    -webkit-filter: url("#shadowed-goo");
+    filter: url("#shadowed-goo");
+}
+
+.menu-item,
+.menu-open-button {
+    background: #ffc107;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    margin-left: -40px;
+    position: absolute;
+    top: 60px;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform ease-out 200ms;
+    transition: -webkit-transform ease-out 200ms;
+    transition: transform ease-out 200ms;
+    transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
+}
+
+.menu-open {
+    display: none;
+}
+
+.hamburger {
+    width: 25px;
+    height: 3px;
+    background: white;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -12.5px;
+    margin-top: -1.5px;
+    -webkit-transition: -webkit-transform 200ms;
+    transition: -webkit-transform 200ms;
+    transition: transform 200ms;
+    transition: transform 200ms, -webkit-transform 200ms;
+}
+
+.hamburger-1 {
+    -webkit-transform: translate3d(0, -8px, 0);
+    transform: translate3d(0, -8px, 0);
+}
+
+.hamburger-2 {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.hamburger-3 {
+    -webkit-transform: translate3d(0, 8px, 0);
+    transform: translate3d(0, 8px, 0);
+}
+
+.menu-open:checked + .menu-open-button .hamburger-1 {
+    -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+    transform: translate3d(0, 0, 0) rotate(45deg);
+}
+
+.menu-open:checked + .menu-open-button .hamburger-2 {
+    -webkit-transform: translate3d(0, 0, 0) scale(0.1, 1);
+    transform: translate3d(0, 0, 0) scale(0.1, 1);
+}
+
+.menu-open:checked + .menu-open-button .hamburger-3 {
+    -webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
+    transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+
+.menu {
+    position: absolute;
+    left: 50%;
+    margin-left: -80px;
+    padding-top: 20px;
+    padding-left: 80px;
+    width: 650px;
+    height: 150px;
+    box-sizing: border-box;
+    font-size: 20px;
+    text-align: left;
+}
+
+.menu-item:hover {
+    background: white;
+    color: #ffc107;
+}
+
+.menu-item:nth-child(3) {
+    -webkit-transition-duration: 180ms;
+    transition-duration: 180ms;
+}
+
+.menu-item:nth-child(4) {
+    -webkit-transition-duration: 180ms;
+    transition-duration: 180ms;
+}
+
+.menu-item:nth-child(5) {
+    -webkit-transition-duration: 180ms;
+    transition-duration: 180ms;
+}
+
+.menu-item:nth-child(6) {
+    -webkit-transition-duration: 180ms;
+    transition-duration: 180ms;
+}
+
+.menu-open-button {
+    z-index: 2;
+    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transition-duration: 400ms;
+    transition-duration: 400ms;
+    -webkit-transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+    transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+    cursor: pointer;
+}
+
+.menu-open-button:hover {
+    -webkit-transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+    transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+}
+
+.menu-open:checked + .menu-open-button {
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+    -webkit-transition-duration: 200ms;
+    transition-duration: 200ms;
+    -webkit-transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+    transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+}
+
+.menu-open:checked ~ .menu-item {
+    -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.menu-open:checked ~ .menu-item:nth-child(3) {
+    -webkit-transition-duration: 170ms;
+    transition-duration: 170ms;
+    -webkit-transform: translate3d(80px, 0, 0);
+    transform: translate3d(80px, 0, 0);
+}
+
+.menu-open:checked ~ .menu-item:nth-child(4) {
+    -webkit-transition-duration: 250ms;
+    transition-duration: 250ms;
+    -webkit-transform: translate3d(160px, 0, 0);
+    transform: translate3d(160px, 0, 0);
+}
+
+.menu-open:checked ~ .menu-item:nth-child(5) {
+    -webkit-transition-duration: 330ms;
+    transition-duration: 330ms;
+    -webkit-transform: translate3d(240px, 0, 0);
+    transform: translate3d(240px, 0, 0);
+}
+
+.menu-open:checked ~ .menu-item:nth-child(6) {
+    -webkit-transition-duration: 410ms;
+    transition-duration: 410ms;
+    -webkit-transform: translate3d(320px, 0, 0);
+    transform: translate3d(320px, 0, 0);
+}

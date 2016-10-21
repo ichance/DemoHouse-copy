@@ -1,0 +1,1915 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>163 Entypo Icon UI|w3cplus | css3|css3教程,css3实例,css3动画</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <style>
+    body {
+        background-color: #f7f7f7;
+    }
+    
+    .demo {
+        width: 900px;
+        text-align: left;
+        margin: 40px auto 0;
+    }
+    
+    .control_buttons li {
+        display: inline-block;
+        margin-right: 6px;
+    }
+    
+    .icon {
+        position: relative;
+        display: inline-block;
+        color: #6b864b;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        margin-bottom: 20px;
+        border-radius: 3px;
+        background-color: #fff;
+    }
+    
+    .icon:hover {
+        color: #7d9a5b;
+        box-shadow: 0 0 2px 1px #7d9a5b;
+        text-decoration: none;
+    }
+    
+    .icon:hover span {
+        max-height: 50px;
+    }
+    
+    .icon span {
+        position: absolute;
+        left: -42px;
+        top: 50px;
+        padding: 0 10px;
+        display: block;
+        overflow: hidden;
+        max-height: 0;
+        text-align: center;
+        -webkit-transition: max-height .3s linear;
+        -moz-transition: max-height .3s linear;
+        -o-transition: max-height .3s linear;
+        transition: max-height .3s linear;
+        z-index: 2;
+    }
+    
+    .icon span em {
+        position: relative;
+        display: inline-block;
+        width: 110px;
+        height: 30px;
+        line-height: 30px;
+        font-style: normal;
+        color: #fff;
+        text-shadow: 0 0 0 #fff;
+        margin-top: 10px;
+        border-radius: 2px 2px 0 0;
+        box-shadow: 0 0 2px #7d9a5b;
+        background-color: #7d9a5b;
+        z-index: 3;
+    }
+    
+    .icon span em:after {
+        position: absolute;
+        left: 50%;
+        top: -10px;
+        content: '';
+        width: 1px;
+        height: 1px;
+        border: 5px solid transparent;
+        border-bottom-color: #7d9a5b;
+        margin-left: -6px;
+    }
+    
+    .icon:before {
+        font-family: 'entypo';
+        font-style: normal;
+        speak: none;
+        font-weight: normal;
+        -webkit-font-smoothing: antialiased;
+        font-size: 22px;
+    }
+    
+    .icon-phone:before {
+        content: "\21";
+    }
+    
+    .icon-share:before {
+        content: "\22";
+    }
+    
+    .icon-leaf:before {
+        content: "\23";
+    }
+    
+    .icon-minus:before {
+        content: "\24";
+    }
+    
+    .icon-landscape:before {
+        content: "\25";
+    }
+    
+    .icon-full-screen:before {
+        content: "\26";
+    }
+    
+    .icon-arrow:before {
+        content: "\27";
+    }
+    
+    .icon-browser:before {
+        content: "\28";
+    }
+    
+    .icon-cd:before {
+        content: "\29";
+    }
+    
+    .icon-suitcase:before {
+        content: "\2a";
+    }
+    
+    .icon-publish:before {
+        content: "\2b";
+    }
+    
+    .icon-arrow-2:before {
+        content: "\2c";
+    }
+    
+    .icon-collapse:before {
+        content: "\2d";
+    }
+    
+    .icon-images:before {
+        content: "\2e";
+    }
+    
+    .icon-plus:before {
+        content: "\2f";
+    }
+    
+    .icon-music:before {
+        content: "\30";
+    }
+    
+    .icon-heart:before {
+        content: "\31";
+    }
+    
+    .icon-mobile:before {
+        content: "\32";
+    }
+    
+    .icon-mouse:before {
+        content: "\33";
+    }
+    
+    .icon-address:before {
+        content: "\34";
+    }
+    
+    .icon-email:before {
+        content: "\35";
+    }
+    
+    .icon-star:before {
+        content: "\36";
+    }
+    
+    .icon-star-2:before {
+        content: "\37";
+    }
+    
+    .icon-heart-2:before {
+        content: "\38";
+    }
+    
+    .icon-shopping:before {
+        content: "\39";
+    }
+    
+    .icon-flight:before {
+        content: "\3a";
+    }
+    
+    .icon-support:before {
+        content: "\3b";
+    }
+    
+    .icon-info-circle:before {
+        content: "\3c";
+    }
+    
+    .icon-info:before {
+        content: "\3d";
+    }
+    
+    .icon-blocked:before {
+        content: "\3e";
+    }
+    
+    .icon-movie:before {
+        content: "\3f";
+    }
+    
+    .icon-song:before {
+        content: "\40";
+    }
+    
+    .icon-folder:before {
+        content: "\41";
+    }
+    
+    .icon-mute:before {
+        content: "\42";
+    }
+    
+    .icon-sound:before {
+        content: "\43";
+    }
+    
+    .icon-volume:before {
+        content: "\44";
+    }
+    
+    .icon-arrow-3:before {
+        content: "\45";
+    }
+    
+    .icon-arrow-4:before {
+        content: "\46";
+    }
+    
+    .icon-arrow-5:before {
+        content: "\47";
+    }
+    
+    .icon-broadcast:before {
+        content: "\48";
+    }
+    
+    .icon-arrow-6:before {
+        content: "\49";
+    }
+    
+    .icon-screen:before {
+        content: "\4a";
+    }
+    
+    .icon-suitcase-2:before {
+        content: "\4b";
+    }
+    
+    .icon-globe:before {
+        content: "\4c";
+    }
+    
+    .icon-square:before {
+        content: "\4d";
+    }
+    
+    .icon-triangle:before {
+        content: "\4e";
+    }
+    
+    .icon-triangle-2:before {
+        content: "\4f";
+    }
+    
+    .icon-triangle-3:before {
+        content: "\50";
+    }
+    
+    .icon-inbox:before {
+        content: "\51";
+    }
+    
+    .icon-network:before {
+        content: "\52";
+    }
+    
+    .icon-triangle-4:before {
+        content: "\53";
+    }
+    
+    .icon-arrow-7:before {
+        content: "\54";
+    }
+    
+    .icon-arrow-8:before {
+        content: "\55";
+    }
+    
+    .icon-arrow-9:before {
+        content: "\56";
+    }
+    
+    .icon-arrow-10:before {
+        content: "\57";
+    }
+    
+    .icon-archive:before {
+        content: "\58";
+    }
+    
+    .icon-trashcan:before {
+        content: "\59";
+    }
+    
+    .icon-upload:before {
+        content: "\5a";
+    }
+    
+    .icon-download:before {
+        content: "\5b";
+    }
+    
+    .icon-reload-CW:before {
+        content: "\5c";
+    }
+    
+    .icon-warning:before {
+        content: "\5d";
+    }
+    
+    .icon-help:before {
+        content: "\5e";
+    }
+    
+    .icon-help-2:before {
+        content: "\5f";
+    }
+    
+    .icon-google-circles:before {
+        content: "\60";
+    }
+    
+    .icon-eye:before {
+        content: "\61";
+    }
+    
+    .icon-clock:before {
+        content: "\62";
+    }
+    
+    .icon-microphone:before {
+        content: "\63";
+    }
+    
+    .icon-quote:before {
+        content: "\64";
+    }
+    
+    .icon-chat:before {
+        content: "\65";
+    }
+    
+    .icon-comment:before {
+        content: "\66";
+    }
+    
+    .icon-thumbs-up:before {
+        content: "\67";
+    }
+    
+    .icon-write:before {
+        content: "\68";
+    }
+    
+    .icon-attachment:before {
+        content: "\69";
+    }
+    
+    .icon-reply:before {
+        content: "\6a";
+    }
+    
+    .icon-reply-to-all:before {
+        content: "\6b";
+    }
+    
+    .icon-forward:before {
+        content: "\6c";
+    }
+    
+    .icon-user:before {
+        content: "\6d";
+    }
+    
+    .icon-users:before {
+        content: "\6e";
+    }
+    
+    .icon-contact:before {
+        content: "\6f";
+    }
+    
+    .icon-card:before {
+        content: "\70";
+    }
+    
+    .icon-export:before {
+        content: "\71";
+    }
+    
+    .icon-location:before {
+        content: "\72";
+    }
+    
+    .icon-compass:before {
+        content: "\73";
+    }
+    
+    .icon-direction:before {
+        content: "\74";
+    }
+    
+    .icon-center:before {
+        content: "\75";
+    }
+    
+    .icon-map:before {
+        content: "\76";
+    }
+    
+    .icon-printer:before {
+        content: "\77";
+    }
+    
+    .icon-calendar:before {
+        content: "\78";
+    }
+    
+    .icon-reload-CCW:before {
+        content: "\79";
+    }
+    
+    .icon-install:before {
+        content: "\7a";
+    }
+    
+    .icon-arrow-11:before {
+        content: "\7b";
+    }
+    
+    .icon-code:before {
+        content: "\7c";
+    }
+    
+    .icon-feather:before {
+        content: "\7d";
+    }
+    
+    .icon-keyboard:before {
+        content: "\7e";
+    }
+    
+    .icon-battery:before {
+        content: "\e000";
+    }
+    
+    .icon-arrow-12:before {
+        content: "\e001";
+    }
+    
+    .icon-cloud:before {
+        content: "\e002";
+    }
+    
+    .icon-shuffle:before {
+        content: "\e003";
+    }
+    
+    .icon-flash:before {
+        content: "\e004";
+    }
+    
+    .icon-alert:before {
+        content: "\e005";
+    }
+    
+    .icon-link:before {
+        content: "\e006";
+    }
+    
+    .icon-time:before {
+        content: "\e007";
+    }
+    
+    .icon-back:before {
+        content: "\e008";
+    }
+    
+    .icon-upload-2:before {
+        content: "\e009";
+    }
+    
+    .icon-arrow-13:before {
+        content: "\e00a";
+    }
+    
+    .icon-battery-2:before {
+        content: "\e00b";
+    }
+    
+    .icon-home:before {
+        content: "\e00c";
+    }
+    
+    .icon-bookmark:before {
+        content: "\e00d";
+    }
+    
+    .icon-battery-3:before {
+        content: "\e00e";
+    }
+    
+    .icon-arrow-14:before {
+        content: "\e00f";
+    }
+    
+    .icon-play:before {
+        content: "\e010";
+    }
+    
+    .icon-arrow-15:before {
+        content: "\e011";
+    }
+    
+    .icon-rss:before {
+        content: "\e012";
+    }
+    
+    .icon-flag:before {
+        content: "\e013";
+    }
+    
+    .icon-settings:before {
+        content: "\e014";
+    }
+    
+    .icon-locked:before {
+        content: "\e015";
+    }
+    
+    .icon-retweet:before {
+        content: "\e016";
+    }
+    
+    .icon-pause:before {
+        content: "\e017";
+    }
+    
+    .icon-arrow-16:before {
+        content: "\e018";
+    }
+    
+    .icon-battery-4:before {
+        content: "\e019";
+    }
+    
+    .icon-book:before {
+        content: "\e01a";
+    }
+    
+    .icon-popup:before {
+        content: "\e01b";
+    }
+    
+    .icon-battery-5:before {
+        content: "\e01c";
+    }
+    
+    .icon-arrow-17:before {
+        content: "\e01d";
+    }
+    
+    .icon-record:before {
+        content: "\e01e";
+    }
+    
+    .icon-list:before {
+        content: "\e01f";
+    }
+    
+    .icon-unlocked:before {
+        content: "\e020";
+    }
+    
+    .icon-search:before {
+        content: "\e021";
+    }
+    
+    .icon-trophy:before {
+        content: "\e022";
+    }
+    
+    .icon-checkmark:before {
+        content: "\e023";
+    }
+    
+    .icon-stop:before {
+        content: "\e024";
+    }
+    
+    .icon-add:before {
+        content: "\e025";
+    }
+    
+    .icon-arrow-18:before {
+        content: "\e026";
+    }
+    
+    .icon-history:before {
+        content: "\e027";
+    }
+    
+    .icon-search-2:before {
+        content: "\e028";
+    }
+    
+    .icon-dots-three:before {
+        content: "\e029";
+    }
+    
+    .icon-back-2:before {
+        content: "\e02a";
+    }
+    
+    .icon-arrow-19:before {
+        content: "\e02b";
+    }
+    
+    .icon-fast-forward:before {
+        content: "\e02c";
+    }
+    
+    .icon-grid:before {
+        content: "\e02d";
+    }
+    
+    .icon-cancel:before {
+        content: "\e02e";
+    }
+    
+    .icon-price:before {
+        content: "\e02f";
+    }
+    
+    .icon-camera:before {
+        content: "\e030";
+    }
+    
+    .icon-sleep:before {
+        content: "\e031";
+    }
+    
+    .icon-close:before {
+        content: "\e032";
+    }
+    
+    .icon-palette:before {
+        content: "\e033";
+    }
+    
+    .icon-plus-2:before {
+        content: "\e034";
+    }
+    
+    .icon-minus-2:before {
+        content: "\e035";
+    }
+    
+    .icon-document:before {
+        content: "\e036";
+    }
+    
+    .icon-document-2:before {
+        content: "\e037";
+    }
+    
+    .icon-documents:before {
+        content: "\e038";
+    }
+    
+    .icon-last:before {
+        content: "\e039";
+    }
+    
+    .icon-first:before {
+        content: "\e03a";
+    }
+    
+    .icon-fast-backward:before {
+        content: "\e03b";
+    }
+    
+    .icon-arrow-20:before {
+        content: "\e03c";
+    }
+    
+    .icon-arrow-21:before {
+        content: "\e03d";
+    }
+    
+    .icon-arrow-22:before {
+        content: "\e03e";
+    }
+    
+    .icon-sun:before {
+        content: "\e03f";
+    }
+    
+    .icon-sun-2:before {
+        content: "\e040";
+    }
+    
+    .icon-dots-two:before {
+        content: "\e041";
+    }
+    
+    .icon-dot:before {
+        content: "\e042";
+    }
+    
+    .icon-creative-commons:before {
+        content: "\e043";
+    }
+    
+    .icon-light-bulb:before {
+        content: "\e044";
+    }
+    
+    @font-face {
+        font-family: 'entypo';
+        src: url('fonts/entypo.eot');
+        src: url('fonts/entypo.eot?#iefix') format('embedded-opentype'), url('fonts/entypo.svg#entypo') format('svg'), url('fonts/entypo.woff') format('woff'), url('fonts/entypo.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <ul class="control_buttons">
+                <li>
+                    <a href="#" class="icon icon-phone">
+                        <span>
+						<em>icon-phone</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-share">
+                        <span>
+						<em>icon-share</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-leaf">
+                        <span>
+						<em>icon-leaf</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-minus">
+                        <span>
+						<em>icon-minus</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-landscape">
+                        <span>
+						<em>icon-landscape</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-full-screen">
+                        <span>
+						<em>icon-full-screen</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-arrow">
+                        <span>
+						<em>icon-arrow</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-browser">
+                        <span>
+						<em>icon-browser</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-cd">
+                        <span>
+						<em>icon-cd</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-suitcase">
+                        <span>
+						<em>icon-suitcase</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-publish">
+                        <span>
+						<em>icon-publish</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-arrow-2">
+                        <span>
+						<em>icon-arrow-2</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-collapse">
+                        <span>
+						<em>icon-collapse</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-images">
+                        <span>
+						<em>icon-images</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-plus">
+                        <span>
+						<em>icon-plus</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-music">
+                        <span>
+						<em>icon-music</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-heart">
+                        <span>
+						<em>icon-heart</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-mobile">
+                        <span>
+						<em>icon-mobile</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-mouse">
+                        <span>
+						<em>icon-mouse</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-address">
+                        <span>
+						<em>icon-address</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-email">
+                        <span>
+						<em>icon-email</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-star">
+                        <span>
+						<em>icon-star</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-star-2">
+                        <span>
+						<em>icon-star-2</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-heart-2">
+                        <span>
+						<em>icon-heart-2</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-shopping">
+                        <span>
+						<em>icon-shopping</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-flight">
+                        <span>
+						<em>icon-flight</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-support">
+                        <span>
+						<em>icon-support</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-info-circle">
+                        <span>
+						<em>icon-info-circle</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-info">
+                        <span>
+						<em>icon-info</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-blocked">
+                        <span>
+						<em>icon-blocked</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-movie">
+                        <span>
+						<em>icon-movie</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-song">
+                        <span>
+						<em>icon-song</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-folder">
+                        <span>
+						<em>icon-folder</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-mute">
+                        <span>
+						<em>icon-mute</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-sound">
+                        <span>
+						<em>icon-sound</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-volume">
+                        <span>
+						<em>icon-volume</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-arrow-3">
+                        <span>
+						<em>icon-arrow-3</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-arrow-4">
+                        <span>
+						<em>icon-arrow-4</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-arrow-5">
+                        <span>
+						<em>icon-arrow-5</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-broadcast">
+                        <span>
+						<em>icon-broadcast</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-arrow-6">
+                        <span>
+						<em>icon-arrow-6</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-screen">
+                        <span>
+						<em>icon-screen</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-suitcase-2">
+                        <span>
+						<em>icon-suitcase-2</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-globe">
+                        <span>
+						<em>icon-globe</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-square">
+                        <span>
+						<em>icon-square</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-triangle">
+                        <span>
+						<em>icon-triangle</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-triangle-2">
+                        <span>
+						<em>icon-triangle-2</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-triangle-3">
+                        <span>
+						<em>icon-triangle-3</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-inbox">
+                        <span>
+						<em>icon-inbox</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-network">
+                        <span>
+						<em>icon-network</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-triangle-4">
+                        <span>
+						<em>icon-triangle-4</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-arrow-7">
+                        <span>
+						<em>icon-arrow-7</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-arrow-8">
+                        <span>
+						<em>icon-arrow-8</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-arrow-9">
+                        <span>
+						<em>icon-arrow-9</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-arrow-10">
+                        <span>
+						<em>icon-arrow-10</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-archive">
+                        <span>
+						<em>icon-archive</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-trashcan">
+                        <span>
+						<em>icon-trashcan</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-upload">
+                        <span>
+						<em>icon-upload</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-download">
+                        <span>
+						<em>icon-download</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-reload-CW">
+                        <span>
+						<em>icon-reload-CW</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-warning">
+                        <span>
+						<em>icon-warning</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-help">
+                        <span>
+						<em>icon-help</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-help-2">
+                        <span>
+						<em>icon-help-2</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-google-circles">
+                        <span>
+						<em>icon-google-circles</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-eye">
+                        <span>
+						<em>icon-eye</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-clock">
+                        <span>
+						<em>icon-clock</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-microphone">
+                        <span>
+						<em>icon-microphone</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-quote">
+                        <span>
+						<em>icon-quote</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-chat">
+                        <span>
+						<em>icon-chat</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-comment">
+                        <span>
+						<em>icon-comment</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-thumbs-up">
+                        <span>
+						<em>icon-thumbs-up</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-write">
+                        <span>
+						<em>icon-write</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-attachment">
+                        <span>
+						<em>icon-attachment</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-reply">
+                        <span>
+						<em>icon-reply</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-reply-to-all">
+                        <span>
+						<em>icon-reply-to-all</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-forward">
+                        <span>
+						<em>icon-forward</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-user">
+                        <span>
+						<em>icon-user</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-users">
+                        <span>
+						<em>icon-users</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-contact">
+                        <span>
+						<em>icon-contact</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-contact">
+                        <span>
+						<em>icon-contact</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-export">
+                        <span>
+						<em>icon-export</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-location">
+                        <span>
+						<em>icon-location</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-compass">
+                        <span>
+						<em>icon-compass</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-direction">
+                        <span>
+						<em>icon-direction</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-center">
+                        <span>
+						<em>icon-center</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-map">
+                        <span>
+						<em>icon-map</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-printer">
+                        <span>
+						<em>icon-printer</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-calendar">
+                        <span>
+						<em>icon-calendar</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-reload-CCW">
+                        <span>
+						<em>icon-reload-CCW</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-install">
+                        <span>
+						<em>icon-install</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-arrow-11">
+                        <span>
+						<em>icon-arrow-11</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-code">
+                        <span>
+						<em>icon-code</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-feather">
+                        <span>
+						<em>icon-feather</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-keyboard">
+                        <span>
+						<em>icon-keyboard</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-battery">
+                        <span>
+						<em>icon-battery</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-arrow-12">
+                        <span>
+						<em>icon-arrow-12</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-cloud">
+                        <span>
+						<em>icon-cloud</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-shuffle">
+                        <span>
+						<em>icon-shuffle</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-flash">
+                        <span>
+						<em>icon-flash</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-alert">
+                        <span>
+						<em>icon-alert</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-link">
+                        <span>
+						<em>icon-link</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-time">
+                        <span>
+						<em>icon-time</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-back">
+                        <span>
+						<em>icon-back</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-upload-2">
+                        <span>
+						<em>icon-upload-2</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-arrow-13">
+                        <span>
+						<em>icon-arrow-13</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-battery-2">
+                        <span>
+						<em>icon-battery-2</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-home">
+                        <span>
+						<em>icon-home</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-bookmark">
+                        <span>
+						<em>icon-bookmark</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-battery-3">
+                        <span>
+						<em>icon-battery-3</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-arrow-14">
+                        <span>
+						<em>icon-arrow-14</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-play">
+                        <span>
+						<em>icon-play</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-arrow-15">
+                        <span>
+						<em>icon-arrow-15</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-rss">
+                        <span>
+						<em>icon-rss</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-flag">
+                        <span>
+						<em>icon-flag</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-settings">
+                        <span>
+						<em>icon-settings</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-locked">
+                        <span>
+						<em>icon-locked</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-retweet">
+                        <span>
+						<em>icon-retweet</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-pause">
+                        <span>
+						<em>icon-pause</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-arrow-16">
+                        <span>
+						<em>icon-arrow-16</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-battery-4">
+                        <span>
+						<em>icon-battery-4</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-book">
+                        <span>
+						<em>icon-book</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-popup">
+                        <span>
+						<em>icon-popup</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-battery-5">
+                        <span>
+						<em>icon-battery-5</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-arrow-17">
+                        <span>
+						<em>icon-arrow-17</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-record">
+                        <span>
+						<em>icon-record</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-list">
+                        <span>
+						<em>icon-list</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-unlocked">
+                        <span>
+						<em>icon-unlocked</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-search">
+                        <span>
+						<em>icon-search</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-trophy">
+                        <span>
+						<em>icon-trophy</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-checkmark">
+                        <span>
+						<em>icon-checkmark</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-stop">
+                        <span>
+						<em>icon-stop</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-add">
+                        <span>
+						<em>icon-add</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-arrow-18">
+                        <span>
+						<em>icon-arrow-18</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-history">
+                        <span>
+						<em>icon-history</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-search-2">
+                        <span>
+						<em>icon-search-2</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-dots-three">
+                        <span>
+						<em>icon-dots-three</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-back-2">
+                        <span>
+						<em>icon-back-2</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-arrow-19">
+                        <span>
+						<em>icon-arrow-19</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-fast-forward">
+                        <span>
+						<em>icon-fast-forward</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-grid">
+                        <span>
+						<em>icon-grid</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-cancel">
+                        <span>
+						<em>icon-cancel</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-price">
+                        <span>
+						<em>icon-price</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-camera">
+                        <span>
+						<em>icon-camera</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-sleep">
+                        <span>
+						<em>icon-sleep</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-close">
+                        <span>
+						<em>icon-close</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-palette">
+                        <span>
+						<em>icon-palette</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-plus-2">
+                        <span>
+						<em>icon-plus-2</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-minus-2">
+                        <span>
+						<em>icon-minus-2</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-document">
+                        <span>
+						<em>icon-document</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-document-2">
+                        <span>
+						<em>icon-document-2</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-documents">
+                        <span>
+						<em>icon-documents</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-last">
+                        <span>
+						<em>icon-last</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-first">
+                        <span>
+						<em>icon-first</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-fast-backward">
+                        <span>
+						<em>icon-fast-backward</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-arrow-20">
+                        <span>
+						<em>icon-arrow-20</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-arrow-21">
+                        <span>
+						<em>icon-arrow-21</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-arrow-22">
+                        <span>
+						<em>icon-arrow-22</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-sun">
+                        <span>
+						<em>icon-sun</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-sun-2">
+                        <span>
+						<em>icon-sun-2</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-dots-two">
+                        <span>
+						<em>icon-dots-two</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-dot">
+                        <span>
+						<em>icon-dot</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-creative-commons">
+                        <span>
+						<em>icon-creative-commons</em>
+					</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-light-bulb">
+                        <span>
+						<em>icon-light-bulb</em>
+					</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+
+</html>

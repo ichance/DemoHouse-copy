@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3制作立体导航|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    <style type="text/css">
+    body {
+        background: #ebebeb;
+    }
+    
+    .nav {
+        width: 560px;
+        height: 50px;
+        font: bold 0/50px Arial;
+        text-align: center;
+        margin: 40px auto 0;
+        border-radius: 8px;
+    }
+    
+    .nav a {
+        display: inline-block;
+        -webkit-transition: all 0.2s ease-in;
+        -moz-transition: all 0.2s ease-in;
+        -o-transition: all 0.2s ease-in;
+        -ms-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in;
+    }
+    
+    .nav a:hover {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg);
+    }
+    
+    .black {
+        background: #2c2c2c;
+        box-shadow: 0 7px 0 #0b0b0b;
+    }
+    
+    .red {
+        background: #f65f57;
+        box-shadow: 0 7px 0 #ba4a45;
+    }
+    
+    .blue {
+        background: #36b7e5;
+        box-shadow: 0 7px 0 #3595b8;
+    }
+    
+    .green {
+        background: #9cd564;
+        box-shadow: 0 7px 0 #86b65b;
+    }
+    
+    .nav li {
+        position: relative;
+        display: inline-block;
+        padding: 0 16px;
+        font-size: 13px;
+        text-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+        list-style: none outside none;
+    }
+    
+    .nav li::before,
+    .nav li::after {
+        content: "";
+        position: absolute;
+        top: 14px;
+        height: 25px;
+        width: 1px;
+    }
+    
+    .nav li::after {
+        right: 0;
+        background: -moz-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, 0));
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, 0));
+        background: -o-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, 0));
+        background: -ms-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, 0));
+        background: linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, 0));
+    }
+    
+    .black li::before {
+        left: 0;
+        background: -moz-linear-gradient(top, #2c2c2c, #000 50%, #2c2c2c);
+        background: -webkit-linear-gradient(top, #2c2c2c, #000 50%, #2c2c2c);
+        background: -o-linear-gradient(top, #2c2c2c, #000 50%, #2c2c2c);
+        background: -ms-linear-gradient(top, #2c2c2c, #000 50%, #2c2c2c);
+        background: linear-gradient(top, #2c2c2c, #000 50%, #2c2c2c);
+    }
+    
+    .red li::before {
+        left: 0;
+        background: -moz-linear-gradient(top, #ff625a, #9e3e3a 50%, #ff625a);
+        background: -webkit-linear-gradient(top, #ff625a, #9e3e3a 50%, #ff625a);
+        background: -o-linear-gradient(top, #ff625a, #9e3e3a 50%, #ff625a);
+        background: -ms-linear-gradient(top, #ff625a, #9e3e3a 50%, #ff625a);
+        background: linear-gradient(top, #ff625a, #9e3e3a 50%, #ff625a);
+    }
+    
+    .blue li::before {
+        left: 0;
+        background: -moz-linear-gradient(top, #34b0dc, #237a99 50%, #34b0dc);
+        background: -webkit-linear-gradient(top, #34b0dc, #237a99 50%, #34b0dc);
+        background: -o-linear-gradient(top, #34b0dc, #237a99 50%, #34b0dc);
+        background: -ms-linear-gradient(top, #34b0dc, #237a99 50%, #34b0dc);
+        background: linear-gradient(top, #34b0dc, #237a99 50%, #34b0dc);
+    }
+    
+    .green li::before {
+        left: 0;
+        background: -moz-linear-gradient(top, #9cd564, #7aa450 50%, #9cd564);
+        background: -webkit-linear-gradient(top, #9cd564, #7aa450 50%, #9cd564);
+        background: -o-linear-gradient(top, #9cd564, #7aa450 50%, #9cd564);
+        background: -ms-linear-gradient(top, #9cd564, #7aa450 50%, #9cd564);
+        background: linear-gradient(top, #9cd564, #7aa450 50%, #9cd564);
+    }
+    
+    .nav li:first-child::before {
+        background: none;
+    }
+    
+    .nav li:last-child::after {
+        background: none;
+    }
+    
+    .nav a,
+    .nav a:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <ul class="nav black">
+                <li><a href="">Home</a></li>
+                <li><a href="">About Me</a></li>
+                <li><a href="">Portfolio</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Resources</a></li>
+                <li><a href="">Contact Me</a></li>
+            </ul>
+            <ul class="nav red">
+                <li><a href="">Home</a></li>
+                <li><a href="">About Me</a></li>
+                <li><a href="">Portfolio</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Resources</a></li>
+                <li><a href="">Contact Me</a></li>
+            </ul>
+            <ul class="nav blue">
+                <li><a href="">Home</a></li>
+                <li><a href="">About Me</a></li>
+                <li><a href="">Portfolio</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Resources</a></li>
+                <li><a href="">Contact Me</a></li>
+            </ul>
+            <ul class="nav green">
+                <li><a href="">Home</a></li>
+                <li><a href="">About Me</a></li>
+                <li><a href="">Portfolio</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Resources</a></li>
+                <li><a href="">Contact Me</a></li>
+            </ul>
+        </section>
+    </div>
+</body>
+
+</html>

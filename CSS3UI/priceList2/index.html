@@ -1,0 +1,276 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3制作价格表2|w3cplus | css3|css3教程,css3实例,css3动画</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <script type="text/javascript" charset="UTF-8" src="//www.w3cplus.com/demo/css3/prefixfree.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <style>
+    body {
+        font-size: 12px;
+        font-family: Verdana;
+        -webkit-text-size-adjust: none;
+        background: -*-linear-gradient(left, #464f76, #553a65, #6c3c4a, #683a4a);
+    }
+    
+    @font-face {
+        font-family: "fonticon";
+        src: url(font/clock.eot);
+        src: url(font/clock.eot#iefix) format("embedded-opentype"), url(font/clock.woff) format("woff"), url(font/clock.ttf) format("truetype"), url(font/clock.svg) format("svg");
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    .tableWrap {
+        width: 750px;
+        margin: 50px auto;
+    }
+    
+    .table {
+        width: 215px;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        float: left;
+        margin-right: 20px;
+    }
+    
+    .table > h2 {
+        font-size: 26px;
+        text-align: center;
+        text-shadow: 0 0 2px rgba(0, 0, 0, .3);
+        box-shadow: inset 0 1px 0px rgba(255, 255, 255, .5);
+        padding-top: 14px;
+        height: 65px;
+        border-radius: 5px 5px 0 0;
+        background-color: rgba(107, 92, 147, .6);
+        background-size: 4px 4px;
+        background-image: -*-linear-gradient(45deg, #706096 25%, transparent 25%, transparent 75%, #706096 75%, #706096), -*-linear-gradient(-45deg, #706096 25%, transparent 25%, transparent 75%, #706096 75%, #706096);
+    }
+    
+    .table > h2 em {
+        display: block;
+        font-size: 12px;
+        color: #fff;
+        line-height: 22px;
+        font-weight: normal;
+    }
+    
+    .table:nth-child(2) > h2 {
+        background-color: #ecb811;
+        background-size: 4px 4px;
+        background-image: -*-linear-gradient(45deg, #f0bf16 25%, transparent 25%, transparent 75%, #f0bf16 75%, #f0bf16), -*-linear-gradient(-45deg, #f0bf16 25%, transparent 25%, transparent 75%, #f0bf16 75%, #f0bf16);
+    }
+    
+    .table .price {
+        background: #eddff7;
+        padding: 30px 0 0;
+        text-align: center;
+        position: relative;
+    }
+    
+    .table .price:after {
+        display: block;
+        content: "";
+        height: 10px;
+        margin-top: 20px;
+        background-color: #2a1e33;
+        background-size: 10px 20px;
+        background-image: linear-gradient(45deg, #eddff7 25%, transparent 25%, transparent), linear-gradient(-45deg, #eddff7 25%, transparent 25%, transparent), linear-gradient(45deg, transparent 75%, #eddff7 75%), linear-gradient(-45deg, transparent 75%, #eddff7 75%);
+    }
+    
+    .table:nth-child(2) .price {
+        background: #f4eacd;
+    }
+    
+    .table:nth-child(2) .price:after {
+        background-image: linear-gradient(45deg, #f4eacd 25%, transparent 25%, transparent), linear-gradient(-45deg, #f4eacd 25%, transparent 25%, transparent), linear-gradient(45deg, transparent 75%, #f4eacd 75%), linear-gradient(-45deg, transparent 75%, #f4eacd 75%);
+    }
+    
+    .table .price span {
+        display: block;
+        color: #9c6dbd;
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: -15px;
+    }
+    
+    .table:nth-child(2) .price span {
+        color: #eca013;
+    }
+    
+    .table .price span em {
+        font-size: 50px;
+        font-style: normal;
+        vertical-align: -10px;
+    }
+    
+    .table .price span:nth-child(2) {
+        font-size: 14px;
+        margin-top: -10px;
+        font-family: Helvetica;
+    }
+    
+    .table .price button {
+        position: absolute;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        right: -5px;
+        border: none;
+        top: 38px;
+        width: 62px;
+        height: 32px;
+        line-height: 32px;
+        background: -*-linear-gradient(top, #ba8bdb, #8b5bac);
+        box-shadow: 0 0 2px rgba(0, 0, 0, .5);
+    }
+    
+    .table:nth-child(2) .price button {
+        color: #fff;
+        background: -*-linear-gradient(top, #f1c312, #ec9f13);
+    }
+    
+    .table .price button:before {
+        display: inline-block;
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: -5px;
+        border-style: solid;
+        border-color: transparent #EDDFF7 transparent transparent;
+        border-width: 24px 12px;
+        transform: rotate(180deg);
+    }
+    
+    .table:nth-child(2) .price button:before {
+        border-color: transparent #f4eacd transparent transparent;
+    }
+    
+    .table .price button:after {
+        display: inline-block;
+        content: "";
+        position: absolute;
+        top: 31px;
+        right: 0;
+        border-style: solid;
+        border-color: transparent transparent #1A1D1E #1A1D1E;
+        border-width: 3px 2px;
+        transform: rotate(90deg);
+    }
+    
+    .table ul {
+        background: rgba(0, 0, 0, .5);
+        padding: 30px 0;
+    }
+    
+    .table ul li {
+        padding-left: 15px;
+        border-bottom: solid 1px #5c5971;
+        line-height: 30px;
+        cursor: pointer;
+    }
+    
+    .table ul li:nth-child(4),
+    .table ul li:last-child {
+        border-bottom: none;
+    }
+    
+    .table ul li:before {
+        font-family: "fonticon";
+        display: inline-block;
+        content: "\1F554";
+        font-size: 16px;
+        vertical-align: -1px;
+        margin-right: 8px;
+    }
+    
+    .table ul li:nth-child(2):before {
+        content: "\1f4c1";
+        font-size: 12px;
+        vertical-align: 1px;
+    }
+    
+    .table ul li:nth-child(3):before {
+        content: "\2605";
+        vertical-align: -2px;
+    }
+    
+    .table ul li:nth-child(4):before {
+        content: "\2665";
+        vertical-align: -2px;
+    }
+    
+    .table ul li:hover {
+        background: rgba(0, 0, 0, .15);
+        box-shadow: inset 0 0 2px #000;
+    }
+    
+    .table p {
+        border-radius: 0 0 5px 5px;
+        background: rgba(0, 0, 0, .5);
+        padding: 0 15px 30px;
+        text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <div class="tableWrap clearfix">
+                <div class="table light">
+                    <h2>LIGHT<em>great for small business</em></h2>
+                    <div class="price">
+                        <span>$<em>5</em></span>
+                        <span>MONTHLY</span>
+                        <button type="button">JOIN</button>
+                    </div>
+                    <ul>
+                        <li>12/24 Tech Support</li>
+                        <li>Advanced Options</li>
+                        <li>100GB Storage</li>
+                        <li>1GB Bandwidth</li>
+                    </ul>
+                    <p>Known locally as “SoMa”, this neighborhood was home to thd dot.com boom and boasts.</p>
+                </div>
+                <div class="table run">
+                    <h2>RUN<em>great for small business</em></h2>
+                    <div class="price">
+                        <span>$<em>9</em>59</span>
+                        <span>MONTHLY</span>
+                        <button type="button">JOIN</button>
+                    </div>
+                    <ul>
+                        <li>12/24 Tech Support</li>
+                        <li>Advanced Options</li>
+                        <li>100GB Storage</li>
+                        <li>1GB Bandwidth</li>
+                    </ul>
+                    <p>Known locally as “SoMa”, this neighborhood was home to thd dot.com boom and boasts.</p>
+                </div>
+                <div class="table fly">
+                    <h2>FLY<em>great for small business</em></h2>
+                    <div class="price">
+                        <span>$<em>12</em></span>
+                        <span>MONTHLY</span>
+                        <button type="button">JOIN</button>
+                    </div>
+                    <ul>
+                        <li>12/24 Tech Support</li>
+                        <li>Advanced Options</li>
+                        <li>100GB Storage</li>
+                        <li>1GB Bandwidth</li>
+                    </ul>
+                    <p>Known locally as “SoMa”, this neighborhood was home to thd dot.com boom and boasts.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>css3|css3教程,css3实例,css3动画|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <script type="text/javascript" charset="UTF-8" src="//www.w3cplus.com/demo/css3/prefixfree.min.js"></script>
+    <style type="text/css" media="screen">
+    body {
+        background-color: #F6F8F8;
+    }
+    
+    a {
+        color: #fff;
+    }
+    
+    a:hover {
+        color: #3d61a2;
+        text-decoration: none;
+    }
+    
+    .demo {
+        margin-top: 40px;
+    }
+    
+    .page-menu-wrapper {
+        width: 960px;
+        line-height: 45px;
+        margin: 0 auto;
+        background-color: #446cb3;
+    }
+    
+    .page-menu-wrapper > ul > li {
+        position: relative;
+        float: left;
+        border-left: 1px solid #3d61a2;
+        border-right: 1px solid #3d61a2;
+        margin-right: -1px;
+    }
+    
+    .menu-function {
+        float: left;
+    }
+    
+    .menu-share {
+        float: right;
+    }
+    
+    .page-menu-wrapper > .menu-function > li:first-child {
+        border-left: none;
+    }
+    
+    .page-menu-wrapper > .menu-share > li:last-child {
+        border-right: none;
+    }
+    
+    .page-menu-wrapper a {
+        position: relative;
+        display: block;
+        padding: 0 15px;
+        transition: all .3s ease-out;
+    }
+    
+    .page-menu-wrapper > ul > li:hover > a {
+        color: #3d61a2;
+        background-color: #fff;
+    }
+    
+    .page-menu-wrapper > ul > li:hover .dropdown-menu {
+        display: block;
+    }
+    
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        width: 260px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: left;
+        background-color: #fff;
+    }
+    
+    .dropdown-menu.categories a {
+        color: #000;
+    }
+    
+    .dropdown-menu.categories a:hover {
+        color: #5bc4be;
+        margin-left: 10px;
+    }
+    
+    #search:target a[href="#search"] {
+        display: none;
+    }
+    
+    #search:target ~ #search-hidden {
+        display: block;
+    }
+    
+    #search-hidden {
+        display: none;
+        padding: 0 5px;
+        background-color: #fff;
+    }
+    
+    #search-hidden input {
+        border: none;
+        line-height: 24px;
+        width: 180px;
+    }
+    
+    #search-hidden a {
+        float: right;
+        padding: 0;
+        width: 20px;
+        height: 45px;
+    }
+    
+    #search-hidden a:before {
+        content: "\7d";
+        left: 0;
+        color: #446cb3;
+    }
+    
+    .menu-function > li > a,
+    .menu-share > li > a {
+        padding-left: 40px;
+    }
+    
+    .page-menu-wrapper a:before {
+        position: absolute;
+        left: 15px;
+        font-family: 'icomoon';
+        font-style: normal;
+        speak: none;
+        font-weight: normal;
+        font-smoothing: antialiased;
+        font-size: 18px;
+        vertical-align: middle;
+    }
+    
+    .menu-function > li:nth-child(1) > a:before {
+        content: "\e048";
+    }
+    
+    .menu-function > li:nth-child(2) > a:before {
+        content: "\3b";
+    }
+    
+    .menu-function > li:nth-child(3) > a:before {
+        content: "\7d";
+    }
+    
+    .menu-share > li:nth-child(1) > a:before {
+        content: "\e0a2";
+    }
+    
+    .menu-share > li:nth-child(2) > a:before {
+        content: "\e05b";
+    }
+    /*follow*/
+    
+    .dropdown-menu.follow {
+        width: 223px;
+    }
+    
+    .dropdown-menu.follow a {
+        padding-left: 35px;
+        font-size: 14px;
+    }
+    
+    .dropdown-menu.follow a:before {
+        left: 10px;
+    }
+    
+    .dropdown-menu.follow li:nth-child(1) a:before {
+        content: "\e0a5";
+    }
+    
+    .dropdown-menu.follow li:nth-child(2) a:before {
+        content: "\e0a2";
+    }
+    
+    .dropdown-menu.follow li:nth-child(3) a:before {
+        content: "\e04c";
+    }
+    
+    .dropdown-menu.follow li:nth-child(4) a:before {
+        content: "\e022";
+    }
+    
+    .dropdown-menu.follow li:nth-child(5) a:before {
+        content: "\e03d";
+    }
+    
+    .dropdown-menu.follow li:nth-child(1) a {
+        color: #ffaa31;
+    }
+    
+    .dropdown-menu.follow li:nth-child(2) a {
+        color: #07beed;
+    }
+    
+    .dropdown-menu.follow li:nth-child(3) a {
+        color: #314d91;
+    }
+    
+    .dropdown-menu.follow li:nth-child(4) a {
+        color: #2d2d2d;
+    }
+    
+    .dropdown-menu.follow li:nth-child(5) a {
+        color: #e84788;
+    }
+    
+    .dropdown-menu.follow li:nth-child(1):hover {
+        background-color: #ffaa31;
+    }
+    
+    .dropdown-menu.follow li:nth-child(2):hover {
+        background-color: #07beed;
+    }
+    
+    .dropdown-menu.follow li:nth-child(3):hover {
+        background-color: #314d91;
+    }
+    
+    .dropdown-menu.follow li:nth-child(4):hover {
+        background-color: #2d2d2d;
+    }
+    
+    .dropdown-menu.follow li:nth-child(5):hover {
+        background-color: #e84788;
+    }
+    
+    .dropdown-menu.follow li:hover a {
+        color: #fff;
+        margin-left: 10px;
+    }
+    
+    .dropdown-menu.share {
+        width: 120px;
+        right: 0;
+    }
+    
+    .dropdown-menu.share a {
+        margin: 10px;
+        line-height: 26px;
+        font-size: 12px;
+        padding-left: 20px;
+        border: 1px solid #cbcbcb;
+        border-radius: 2px;
+        color: #4c4c4c;
+        background-color: #efefef;
+    }
+    
+    .dropdown-menu.share a:hover {
+        background-color: #fff;
+    }
+    
+    .dropdown-menu.share li a:before {
+        font-size: 12px;
+        left: 5px;
+    }
+    
+    .dropdown-menu.share li:nth-child(1) a:before {
+        content: "\e04c";
+        color: #314d91;
+    }
+    
+    .dropdown-menu.share li:nth-child(2) a:before {
+        content: "\e0a2";
+        color: #07beed;
+    }
+    
+    .dropdown-menu.share li:nth-child(3) a:before {
+        content: "\e022";
+        color: #2d2d2d;
+    }
+    
+    @font-face {
+        font-family: 'icomoon';
+        src: url('fonts/icomoon.eot');
+        src: url('fonts/icomoon.eot?#iefix') format('embedded-opentype'), url('fonts/icomoon.svg#icomoon') format('svg'), url('fonts/icomoon.woff') format('woff'), url('fonts/icomoon.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <div class="page-menu-wrapper clearfix">
+                <ul class="menu-function">
+                    <li>
+                        <a href="" title="">CATEGORIES</a>
+                        <ul class="dropdown-menu categories">
+                            <li><a href="" title="">Design</a></li>
+                            <li><a href="" title="">Freebies</a></li>
+                            <li><a href="" title="">Tutorials</a></li>
+                            <li><a href="" title="">Coding</a></li>
+                            <li><a href="" title="">Inspiration</a></li>
+                            <li><a href="" title="">WordPress</a></li>
+                            <li><a href="" title="">Resources</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" title="">SHOP</a></li>
+                    <li id="search">
+                        <a href="#search" title="">SEARCH</a>
+                    </li>
+                    <li id="search-hidden">
+                        <input type="text" name="" id="">
+                        <a href="#search-hidden" title=""></a>
+                    </li>
+                </ul>
+                <ul class="menu-share">
+                    <li>
+                        <a href="" title="">FOLLOW US</a>
+                        <ul class="dropdown-menu follow">
+                            <li><a href="" title="">RSS</a></li>
+                            <li><a href="" title="">Twitter</a></li>
+                            <li><a href="" title="">Facebook</a></li>
+                            <li><a href="" title="">Google+</a></li>
+                            <li><a href="" title="">Dribbble</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" title="">SHARE</a>
+                        <ul class="dropdown-menu share">
+                            <li><a href="" title="">Facebook</a></li>
+                            <li><a href="" title="">Twitter</a></li>
+                            <li><a href="" title="">Google+</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

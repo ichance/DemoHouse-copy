@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3制作登录表单|css3|css3教程,css3实例,css3动画|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <style>
+    body {
+        background-color: #004c5a;
+    }
+    
+    .demo {
+        width: 410px;
+        margin: 40px auto 0;
+    }
+    
+    .tabs {
+        width: 400px;
+        height: 260px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 0 5px rgba(0, 0, 0, .1);
+    }
+    
+    .tabs h2 {
+        padding: 10px 10px 0;
+        border-radius: 4px 4px 0 0;
+        background-color: #000f12;
+    }
+    
+    .tabs_nav a {
+        display: inline-block;
+        color: #fff;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+        padding: 0 15px;
+        margin-right: 1px;
+        border-radius: 4px 4px 0 0;
+        box-shadow: 0 1px 0 #feb261 inset;
+        background-color: #fc8302;
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        transition: all 1s ease;
+    }
+    
+    .tabs_nav .active,
+    .tabs_nav a:hover {
+        color: #333;
+        text-decoration: none;
+        box-shadow: none;
+        background-color: #fff;
+    }
+    
+    .tabs_content {
+        padding: 20px 85px;
+        line-height: 24px;
+    }
+    
+    .tabs_content input[type="text"],
+    .tabs_content input[type="password"] {
+        width: 100%;
+        height: 30px;
+        padding-left: 5px;
+        border: 1px solid #ddd;
+        border-radius: 2px;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, .08) inset;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all 0.2s ease-in;
+        -moz-transition: all 0.2s ease-in;
+        -ms-transition: all 0.2s ease-in;
+        -o-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in;
+    }
+    
+    .tabs_content label {
+        display: block;
+    }
+    
+    .form_btn {
+        margin-top: 20px;
+    }
+    
+    .form_btn input[type="submit"] {
+        width: 100px;
+        height: 30px;
+        border: 1px solid #b5b5b5;
+        border-radius: 2px;
+        background: -webkit-linear-gradient(top, #fefefe, #e6e6e6);
+        background: -moz-linear-gradient(top, #fefefe, #e6e6e6);
+        background: -o-linear-gradient(top, #fefefe, #e6e6e6);
+        background: -ms-linear-gradient(top, #fefefe, #e6e6e6);
+        background: linear-gradient(top, #fefefe, #e6e6e6);
+    }
+    
+    .form_btn input[type="submit"]:hover {
+        color: #fff;
+        border: 1px solid #fca84d;
+        background: -webkit-linear-gradient(top, #ff9320, #fa8200);
+        background: -moz-linear-gradient(top, #ff9320, #fa8200);
+        background: -o-linear-gradient(top, #ff9320, #fa8200);
+        background: -ms-linear-gradient(top, #ff9320, #fa8200);
+        background: linear-gradient(top, #ff9320, #fa8200);
+        -webkit-transition: all 0.5s ease-in;
+        -moz-transition: all 0.5s ease-in;
+        -ms-transition: all 0.5s ease-in;
+        -o-transition: all 0.5s ease-in;
+        transition: all 0.5s ease-in;
+    }
+    
+    .form_btn span {
+        float: right;
+    }
+    
+    .form_btn span input,
+    .form_btn span label {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    .tabs_content input:focus {
+        outline: 0 none;
+        box-shadow: inset 0 1px 3px rgba(252, 197, 138, 0.1), 0 0 8px rgba(252, 197, 138, 0.6);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <div class="tabs">
+                <h2 class="tabs_nav"><a class="active" href="#">Log In</a><a href="#">Sign Up</a></h2>
+                <div class="tabs_content_wrap">
+                    <div class="tabs_content">
+                        <form class="form">
+                            <p>
+                                <label for="login">Username</label>
+                                <input type="text" name="login">
+                            </p>
+                            <p>
+                                <label for="password">Password</label>
+                                <input type="password" name="password" class="showpassword">
+                            </p>
+                            <p class="form_btn">
+                                <input type="submit" name="submit" value="Log in">
+                                <span>
+								<input type="checkbox" class="showpasswordcheckbox" id="showPassword" checked="checked">
+								<label for="showPassword">Remenber Me</label>
+							</span>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

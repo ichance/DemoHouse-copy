@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pure CSS3 3D Text Effects|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <link href="http://fonts.googleapis.com/css?family=Aclonica:regular" rel="stylesheet" type="text/css">
+    <style type="text/css">
+    body {
+        background-color: #665757;
+    }
+    
+    .text-wrap {
+        width: 600px;
+        min-height: 100px;
+        margin: 20px auto;
+        padding: 30px 0;
+        border: 5px solid #ccc;
+        position: relative;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.80);
+        clear: both;
+        font-family: 'Aclonica', serif;
+        font-size: 50px;
+        text-align: center;
+        color: #f7edf7;
+    }
+    
+    .box1 {
+        text-shadow: 0px 0px 0 rgb(188, 178, 188), 1px 0px 0 rgb(173, 163, 173), 2px 0px 0 rgb(157, 147, 157), 3px 0px 0 rgb(142, 132, 142), 4px 0px 0 rgb(126, 116, 126), 5px 0px 0 rgb(111, 101, 111), 6px 0px 0 rgb(95, 85, 95), 7px 0px 0 rgb(79, 69, 79), 8px 0px 7px rgba(0, 0, 0, 0.35), 8px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 7px rgba(0, 0, 0, .2);
+    }
+    
+    .box2 {
+        text-shadow: 0px 0px 0 rgb(188, 178, 188), 1px -1px 0 rgb(173, 163, 173), 2px -2px 0 rgb(157, 147, 157), 3px -3px 0 rgb(142, 132, 142), 4px -4px 0 rgb(126, 116, 126), 5px -5px 0 rgb(111, 101, 111), 6px -6px 0 rgb(95, 85, 95), 7px -7px 0 rgb(79, 69, 79), 8px -8px 7px rgba(0, 0, 0, 0.35), 8px -8px 1px rgba(0, 0, 0, 0.5), 0px 0px 7px rgba(0, 0, 0, .2);
+    }
+    
+    .box3 {
+        text-shadow: 0px 0px 0 rgb(188, 178, 188), 0px -1px 0 rgb(173, 163, 173), 0px -2px 0 rgb(157, 147, 157), 0px -3px 0 rgb(142, 132, 142), 0px -4px 0 rgb(126, 116, 126), 0px -5px 0 rgb(111, 101, 111), 0px -6px 0 rgb(95, 85, 95), 0px -7px 0 rgb(79, 69, 79), 0px -8px 7px rgba(0, 0, 0, 0.35), 0px -8px 1px rgba(0, 0, 0, 0.5), 0px 0px 7px rgba(0, 0, 0, .2);
+    }
+    
+    .box4 {
+        text-shadow: 0px 0px 0 rgb(188, 178, 188), -1px -1px 0 rgb(173, 163, 173), -2px -2px 0 rgb(157, 147, 157), -3px -3px 0 rgb(142, 132, 142), -4px -4px 0 rgb(126, 116, 126), -5px -5px 0 rgb(111, 101, 111), -6px -6px 0 rgb(95, 85, 95), -7px -7px 0 rgb(79, 69, 79), -8px -8px 7px rgba(0, 0, 0, 0.35), -8px -8px 1px rgba(0, 0, 0, 0.5), 0px 0px 7px rgba(0, 0, 0, .2);
+    }
+    
+    .box5 {
+        text-shadow: 0px 0px 0 rgb(188, 178, 188), -1px 0px 0 rgb(173, 163, 173), -2px 0px 0 rgb(157, 147, 157), -3px 0px 0 rgb(142, 132, 142), -4px 0px 0 rgb(126, 116, 126), -5px 0px 0 rgb(111, 101, 111), -6px 0px 0 rgb(95, 85, 95), -7px 0px 0 rgb(79, 69, 79), -8px 0px 7px rgba(0, 0, 0, 0.35), -8px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 7px rgba(0, 0, 0, .2);
+    }
+    
+    .box6 {
+        text-shadow: 0px 0px 0 rgb(188, 178, 188), -1px 1px 0 rgb(173, 163, 173), -2px 2px 0 rgb(157, 147, 157), -3px 3px 0 rgb(142, 132, 142), -4px 4px 0 rgb(126, 116, 126), -5px 5px 0 rgb(111, 101, 111), -6px 6px 0 rgb(95, 85, 95), -7px 7px 0 rgb(79, 69, 79), -8px 8px 7px rgba(0, 0, 0, 0.35), -8px 8px 1px rgba(0, 0, 0, 0.5), 0px 0px 7px rgba(0, 0, 0, .2);
+    }
+    
+    .box7 {
+        text-shadow: 0px 0px 0 rgb(188, 178, 188), 0px 1px 0 rgb(173, 163, 173), 0px 2px 0 rgb(157, 147, 157), 0px 3px 0 rgb(142, 132, 142), 0px 4px 0 rgb(126, 116, 126), 0px 5px 0 rgb(111, 101, 111), 0px 6px 0 rgb(95, 85, 95), 0px 7px 0 rgb(79, 69, 79), 0px 8px 7px rgba(0, 0, 0, 0.35), 0px 8px 1px rgba(0, 0, 0, 0.5), 0px 0px 7px rgba(0, 0, 0, .2);
+    }
+    
+    .box8 {
+        text-shadow: 0px 0px 0 rgb(188, 178, 188), 1px 1px 0 rgb(173, 163, 173), 2px 2px 0 rgb(157, 147, 157), 3px 3px 0 rgb(142, 132, 142), 4px 4px 0 rgb(126, 116, 126), 5px 5px 0 rgb(111, 101, 111), 6px 6px 0 rgb(95, 85, 95), 7px 7px 0 rgb(79, 69, 79), 8px 8px 7px rgba(0, 0, 0, 0.35), 8px 8px 1px rgba(0, 0, 0, 0.5), 0px 0px 7px rgba(0, 0, 0, .2);
+    }
+    
+    .box9 {
+        text-shadow: 0px 0px 0 rgb(188, 178, 188), 1px 0px 0 rgb(173, 163, 173), 2px 0px 0 rgb(157, 147, 157), 3px 0px 0 rgb(142, 132, 142), 4px 0px 0 rgb(126, 116, 126), 5px 0px 0 rgb(111, 101, 111), 6px 0px 0 rgb(95, 85, 95), 7px 0px 0 rgb(79, 69, 79), 8px 0px 7px rgba(0, 0, 0, 0.35), 8px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 7px rgba(0, 0, 0, .2);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <div class="text-wrap box1">W3cplus (0 deg)</div>
+            <div class="text-wrap box2">W3cplus (45 deg)</div>
+            <div class="text-wrap box3">W3cplus (90 deg)</div>
+            <div class="text-wrap box4">W3cplus (135 deg)</div>
+            <div class="text-wrap box5">W3cplus (180 deg)</div>
+            <div class="text-wrap box6">W3cplus (225 deg)</div>
+            <div class="text-wrap box7">W3cplus (270 deg)</div>
+            <div class="text-wrap box8">W3cplus (315 deg)</div>
+            <div class="text-wrap box9">W3cplus (360 deg)</div>
+        </section>
+    </div>
+</body>
+
+</html>

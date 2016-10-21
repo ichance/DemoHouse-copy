@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3制作Freebie标签|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <style type="text/css">
+    body {
+        background-color: #f2f2f2;
+        background-size: 20px 20px, 20px 20px, 6px 6px, 6px 6px;
+        background-position: -2px -2px, -2px -2px, 0 0, 3px 3px;
+        background-image: -webkit-linear-gradient(white 2px, transparent 2px), -webkit-linear-gradient(0, white 2px, transparent 2px), -webkit-linear-gradient(45deg, #e6e6e6 25%, transparent 25%, transparent 75%, #e6e6e6 75%, #e6e6e6), -webkit-linear-gradient(45deg, #e6e6e6 25%, transparent 25%, transparent 75%, #e6e6e6 75%, #e6e6e6);
+        background-image: -moz-linear-gradient(white 2px, transparent 2px), -moz-linear-gradient(0deg, white 2px, transparent 2px), -moz-linear-gradient(45deg, #e6e6e6 25%, transparent 25%, transparent 75%, #e6e6e6 75%, #e6e6e6), -moz-linear-gradient(45deg, #e6e6e6 25%, transparent 25%, transparent 75%, #e6e6e6 75%, #e6e6e6);
+        background-image: -ms-linear-gradient(white 2px, transparent 2px), -ms-linear-gradient(0, white 2px, transparent 2px), -ms-linear-gradient(45deg, #e6e6e6 25%, transparent 25%, transparent 75%, #e6e6e6 75%, #e6e6e6), -ms-linear-gradient(45deg, #e6e6e6 25%, transparent 25%, transparent 75%, #e6e6e6 75%, #e6e6e6);
+        background-image: -o-linear-gradient(white 2px, transparent 2px), -o-linear-gradient(0, white 2px, transparent 2px), -o-linear-gradient(45deg, #e6e6e6 25%, transparent 25%, transparent 75%, #e6e6e6 75%, #e6e6e6), -o-linear-gradient(45deg, #e6e6e6 25%, transparent 25%, transparent 75%, #e6e6e6 75%, #e6e6e6);
+        background-image: linear-gradient(white 2px, transparent 2px), linear-gradient(0, white 2px, transparent 2px), linear-gradient(45deg, #e6e6e6 25%, transparent 25%, transparent 75%, #e6e6e6 75%, #e6e6e6), linear-gradient(45deg, #e6e6e6 25%, transparent 25%, transparent 75%, #e6e6e6 75%, #e6e6e6);
+    }
+    
+    .box ul {
+        margin-top: 100px;
+        letter-spacing: -4px;
+        word-spacing: -4px;
+        font-size: 0;
+        height: 75px;
+        text-align: center;
+        box-shadow: 0 -2px 3px rgba(0, 0, 0, .05), 0 2px 3px rgba(0, 0, 0, .05);
+        background: #fff;
+    }
+    
+    .box li {
+        letter-spacing: normal;
+        word-spacing: normal;
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+        position: relative;
+        top: -5px;
+        width: 39px;
+        height: 48px;
+        margin-right: 40px;
+        border-top: 1px solid #66991f;
+        border-left: 1px solid #66991f;
+        border-right: 1px solid #66991f;
+        overflow: hidden;
+        background-color: #79b023;
+        background-size: 3px 3px;
+        background-position: 0 0, 1px 1px;
+        background-image: -webkit-linear-gradient(45deg, #91c32e 25%, transparent 25%, transparent 75%, #91c32e 75%, #91c32e), -webkit-linear-gradient(45deg, #91c32e 25%, transparent 25%, transparent 75%, #91c32e 75%, #91c32e);
+        background-image: -moz-linear-gradient(45deg, #91c32e 25%, transparent 25%, transparent 75%, #91c32e 75%, #91c32e), -moz-linear-gradient(45deg, #91c32e 25%, transparent 25%, transparent 75%, #91c32e 75%, #91c32e);
+        background-image: -ms-linear-gradient(45deg, #91c32e 25%, transparent 25%, transparent 75%, #91c32e 75%, #91c32e), -ms-linear-gradient(45deg, #91c32e 25%, transparent 25%, transparent 75%, #91c32e 75%, #91c32e);
+        background-image: -o-linear-gradient(45deg, #91c32e 25%, transparent 25%, transparent 75%, #91c32e 75%, #91c32e), -o-linear-gradient(45deg, #91c32e 25%, transparent 25%, transparent 75%, #91c32e 75%, #91c32e);
+        background-image: linear-gradient(45deg, #91c32e 25%, transparent 25%, transparent 75%, #91c32e 75%, #91c32e), linear-gradient(45deg, #91c32e 25%, transparent 25%, transparent 75%, #91c32e 75%, #91c32e);
+    }
+    
+    .box li:last-child {
+        margin-right: 0;
+    }
+    
+    .box li:after,
+    .box li:before {
+        position: absolute;
+        display: block;
+    }
+    
+    .box li:before {
+        top: 5px;
+        left: 5px;
+        content: "";
+        width: 28px;
+        height: 0;
+        line-height: 30px;
+        color: rgba(69, 124, 12, .5);
+        border-top: 1px dashed #5d8c1c;
+        border-bottom: 1px dashed #b4d969;
+        font-size: 18px;
+        font-family: 'icomoon';
+        font-style: normal;
+        speak: none;
+        font-weight: normal;
+        -webkit-font-smoothing: antialiased;
+    }
+    
+    .box li:after {
+        content: "";
+        left: -1px;
+        top: 38px;
+        width: 38px;
+        height: 35px;
+        box-shadow: 1px 0 3px rgba(0, 0, 0, .3), 0 -1px 3px rgba(0, 0, 0, .3);
+        background: #fff;
+        -webkit-transform: rotate(-45deg) skew(18deg, 20deg);
+        -moz-transform: rotate(-45deg) skew(18deg, 20deg);
+        -o-transform: rotate(-45deg) skew(18deg, 20deg);
+        -ms-transform: rotate(-45deg) skew(18deg, 20deg);
+        transform: rotate(-45deg) skew(18deg, 20deg);
+    }
+    
+    .box li:nth-child(1):before {
+        content: "\21";
+    }
+    
+    .box li:nth-child(2):before {
+        content: "\25";
+    }
+    
+    .box li:nth-child(3):before {
+        content: "\24";
+    }
+    
+    .box li:nth-child(4):before {
+        content: "\22";
+    }
+    
+    .box li:nth-child(5):before {
+        content: "\26";
+    }
+    
+    @font-face {
+        font-family: 'icomoon';
+        src: url('fonts/icomoon.eot');
+        src: url('fonts/icomoon.eot?#iefix') format('embedded-opentype'), url('fonts/icomoon.svg#icomoon') format('svg'), url('fonts/icomoon.woff') format('woff'), url('fonts/icomoon.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <div class="box">
+                <ul class="nostyle">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Codrops CSS3 Lightbox 3|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    <style type="text/css">
+    body {
+        font-family: Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+        background: #FBF8F4 url(images/bg.jpg) repeat top left;
+        font-weight: 400;
+        font-size: 15px;
+        color: #AA3E03;
+        overflow-y: scroll;
+    }
+    
+    @font-face {
+        font-family: 'BebasNeueRegular';
+        src: url('fonts/BebasNeue-webfont.eot');
+        src: url('fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/BebasNeue-webfont.woff') format('woff'), url('fonts/BebasNeue-webfont.ttf') format('truetype'), url('fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    .lb-album {
+        width: 900px;
+        margin: 0 auto;
+        font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    .lb-album li {
+        float: left;
+        margin: 5px;
+        position: relative;
+    }
+    
+    .lb-album li > a,
+    .lb-album li > a img {
+        display: block;
+    }
+    
+    .lb-album li > a {
+        width: 150px;
+        height: 150px;
+        position: relative;
+        padding: 10px;
+        background: #f1d2c2;
+        -webkit-box-shadow: 1px 1px 2px #fff, 1px 1px 2px rgba(158, 111, 86, 0.3) inset;
+        -moz-box-shadow: 1px 1px 2px #fff, 1px 1px 2px rgba(158, 111, 86, 0.3) inset;
+        box-shadow: 1px 1px 2px #fff, 1px 1px 2px rgba(158, 111, 86, 0.3) inset;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px 4px 4px 4px;
+    }
+    
+    .lb-album li > a span {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        top: 10px;
+        left: 10px;
+        text-align: center;
+        line-height: 150px;
+        color: rgba(27, 54, 81, 0.8);
+        text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.6);
+        font-size: 24px;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        /* internet explorer */
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=0)";
+        /*IE8*/
+        background: rgb(241, 210, 194);
+        background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.56) 0%, rgba(241, 210, 194, 1) 100%);
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 0.56)), color-stop(100%, rgba(241, 210, 194, 1)));
+        background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.56) 0%, rgba(241, 210, 194, 1) 100%);
+        background: -o-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.56) 0%, rgba(241, 210, 194, 1) 100%);
+        background: -ms-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.56) 0%, rgba(241, 210, 194, 1) 100%);
+        background: radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.56) 0%, rgba(241, 210, 194, 1) 100%);
+        -webkit-transition: opacity 0.3s linear;
+        -moz-transition: opacity 0.3s linear;
+        -o-transition: opacity 0.3s linear;
+        -ms-transition: opacity 0.3s linear;
+        transition: opacity 0.3s linear;
+    }
+    
+    .lb-album li > a:hover span {
+        opacity: 1;
+        filter: alpha(opacity=99);
+        /* internet explorer */
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=99)";
+        /*IE8*/
+    }
+    
+    .lb-overlay {
+        width: 0px;
+        height: 0px;
+        position: fixed;
+        overflow: hidden;
+        left: 0px;
+        top: 0px;
+        padding: 0px;
+        z-index: 99;
+        text-align: center;
+        background: rgb(241, 210, 194);
+        background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.56) 0%, rgba(241, 210, 194, 1) 100%);
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 0.56)), color-stop(100%, rgba(241, 210, 194, 1)));
+        background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.56) 0%, rgba(241, 210, 194, 1) 100%);
+        background: -o-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.56) 0%, rgba(241, 210, 194, 1) 100%);
+        background: -ms-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.56) 0%, rgba(241, 210, 194, 1) 100%);
+        background: radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.56) 0%, rgba(241, 210, 194, 1) 100%);
+    }
+    
+    .lb-overlay > div {
+        position: relative;
+        color: rgba(27, 54, 81, 0.8);
+        width: 550px;
+        height: 80px;
+        margin: 40px auto 0px auto;
+        text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.6);
+    }
+    
+    .lb-overlay div h3,
+    .lb-overlay div p {
+        padding: 0px 20px;
+        width: 200px;
+        height: 60px;
+    }
+    
+    .lb-overlay div h3 {
+        font-size: 36px;
+        float: left;
+        text-align: right;
+        border-right: 1px solid rgba(27, 54, 81, 0.4);
+    }
+    
+    .lb-overlay div h3 span,
+    .lb-overlay div p {
+        font-size: 16px;
+        font-family: Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+        font-style: italic;
+    }
+    
+    .lb-overlay div h3 span {
+        display: block;
+        line-height: 30px;
+    }
+    
+    .lb-overlay div p {
+        font-size: 14px;
+        text-align: left;
+        float: left;
+        width: 260px;
+    }
+    
+    .lb-overlay a.lb-close {
+        background: rgba(27, 54, 81, 0.8);
+        z-index: 1001;
+        color: #fff;
+        position: absolute;
+        top: 43px;
+        left: 50%;
+        font-size: 15px;
+        line-height: 26px;
+        text-align: center;
+        width: 50px;
+        height: 23px;
+        overflow: hidden;
+        margin-left: -25px;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        /* internet explorer */
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=0)";
+        /*IE8*/
+        -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+    
+    .lb-overlay img {
+        /* height: 100%; For Opera max-height does not seem to work */
+        max-height: 100%;
+        position: relative;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        /* internet explorer */
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=0)";
+        /*IE8*/
+        -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
+        -webkit-transition: opacity 0.5s linear;
+        -moz-transition: opacity 0.5s linear;
+        -o-transition: opacity 0.5s linear;
+        -ms-transition: opacity 0.5s linear;
+        transition: opacity 0.5s linear;
+    }
+    
+    .lb-prev,
+    .lb-next {
+        text-indent: -9000px;
+        position: absolute;
+        top: -32px;
+        width: 24px;
+        height: 25px;
+        left: 50%;
+        opacity: 0.8;
+        filter: alpha(opacity=80);
+        /* internet explorer */
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=80)";
+        /*IE8*/
+    }
+    
+    .lb-prev:hover,
+    .lb-next:hover {
+        opacity: 1;
+        filter: alpha(opacity=99);
+        /* internet explorer */
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=99)";
+        /*IE8*/
+    }
+    
+    .lb-prev {
+        margin-left: -30px;
+        background: transparent url(images/arrows.png) no-repeat top left;
+    }
+    
+    .lb-next {
+        margin-left: 6px;
+        background: transparent url(images/arrows.png) no-repeat top right;
+    }
+    
+    .lb-overlay:target {
+        width: auto;
+        height: auto;
+        bottom: 0px;
+        right: 0px;
+        padding: 80px 100px 120px 100px;
+    }
+    
+    .lb-overlay:target img,
+    .lb-overlay:target a.lb-close {
+        opacity: 1;
+        filter: alpha(opacity=99);
+        /* internet explorer */
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=99)";
+        /*IE8*/
+    }
+    /* 
+	100% Height for Opera as the max-height seems to be ignored, not optimal for large screens 
+	http://bricss.net/post/11230266445/css-hack-to-target-opera 
+*/
+    
+    x:-o-prefocus,
+    .lb-overlay img {
+        height: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <ul class="lb-album clearfix">
+                <li>
+                    <a href="#image-1">
+                        <img src="images/thumbs/1.jpg" alt="image01">
+                        <span>Pointe</span>
+                    </a>
+                    <div class="lb-overlay" id="image-1">
+                        <img src="images/full/1.jpg" alt="image01" />
+                        <div>
+                            <h3>pointe <span>/point/</span></h3>
+                            <p>Dance performed on the tips of the toes</p>
+                            <a href="#image-10" class="lb-prev">Prev</a>
+                            <a href="#image-2" class="lb-next">Next</a>
+                        </div>
+                        <a href="#page" class="lb-close">x Close</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#image-2">
+                        <img src="images/thumbs/2.jpg" alt="image02">
+                        <span>Port de bras</span>
+                    </a>
+                    <div class="lb-overlay" id="image-2">
+                        <img src="images/full/2.jpg" alt="image02" />
+                        <div>
+                            <h3>port de bras <span>/ˌpôr də ˈbrä/</span></h3>
+                            <p>An exercise designed to develop graceful movement and disposition of the arms</p>
+                            <a href="#image-1" class="lb-prev">Prev</a>
+                            <a href="#image-3" class="lb-next">Next</a>
+                        </div>
+                        <a href="#page" class="lb-close">x Close</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#image-3">
+                        <img src="images/thumbs/3.jpg" alt="image03">
+                        <span>Plié</span>
+                    </a>
+                    <div class="lb-overlay" id="image-3">
+                        <img src="images/full/3.jpg" alt="image03" />
+                        <div>
+                            <h3>pli·é <span>/plēˈā/</span></h3>
+                            <p>A movement in which a dancer bends the knees and straightens them again</p>
+                            <a href="#image-2" class="lb-prev">Prev</a>
+                            <a href="#image-4" class="lb-next">Next</a>
+                        </div>
+                        <a href="#page" class="lb-close">x Close</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#image-4">
+                        <img src="images/thumbs/4.jpg" alt="image04">
+                        <span>Adagio</span>
+                    </a>
+                    <div class="lb-overlay" id="image-4">
+                        <img src="images/full/4.jpg" alt="image04" />
+                        <div>
+                            <h3>a·da·gio <span>/əˈdäjō/</span></h3>
+                            <p>A movement or composition marked to be played adagio</p>
+                            <a href="#image-3" class="lb-prev">Prev</a>
+                            <a href="#image-5" class="lb-next">Next</a>
+                        </div>
+                        <a href="#page" class="lb-close">x Close</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#image-5">
+                        <img src="images/thumbs/5.jpg" alt="image05">
+                        <span>Frappé</span>
+                    </a>
+                    <div class="lb-overlay" id="image-5">
+                        <img src="images/full/5.jpg" alt="image05" />
+                        <div>
+                            <h3>frap·pé<span>/fraˈpā/</span></h3>
+                            <p>Involving a beating action of the toe of one foot against the ankle of the supporting leg</p>
+                            <a href="#image-4" class="lb-prev">Prev</a>
+                            <a href="#image-6" class="lb-next">Next</a>
+                        </div>
+                        <a href="#page" class="lb-close">x Close</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#image-6">
+                        <img src="images/thumbs/6.jpg" alt="image06">
+                        <span>Glissade</span>
+                    </a>
+                    <div class="lb-overlay" id="image-6">
+                        <img src="images/full/6.jpg" alt="image06" />
+                        <div>
+                            <h3>glis·sade <span>/gliˈsäd/</span></h3>
+                            <p>One leg is brushed outward from the body, which then takes the weight while the second leg is brushed in to meet it</p>
+                            <a href="#image-5" class="lb-prev">Prev</a>
+                            <a href="#image-7" class="lb-next">Next</a>
+                        </div>
+                        <a href="#page" class="lb-close">x Close</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#image-7">
+                        <img src="images/thumbs/7.jpg" alt="image07">
+                        <span>Jeté</span>
+                    </a>
+                    <div class="lb-overlay" id="image-7">
+                        <img src="images/full/7.jpg" alt="image07" />
+                        <div>
+                            <h3>je·té <span>/zhə-ˈtā/</span></h3>
+                            <p>A springing jump made from one foot to the other in any direction</p>
+                            <a href="#image-6" class="lb-prev">Prev</a>
+                            <a href="#image-8" class="lb-next">Next</a>
+                        </div>
+                        <a href="#page" class="lb-close">x Close</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#image-8">
+                        <img src="images/thumbs/8.jpg" alt="image08">
+                        <span>Piqué</span>
+                    </a>
+                    <div class="lb-overlay" id="image-8">
+                        <img src="images/full/8.jpg" alt="image08" />
+                        <div>
+                            <h3>pi·qué <span>/pēˈkā/</span></h3>
+                            <p>Strongly pointed toe of the lifted and extended leg sharply lowers to hit the floor then immediately rebounds upward</p>
+                            <a href="#image-7" class="lb-prev">Prev</a>
+                            <a href="#image-9" class="lb-next">Next</a>
+                        </div>
+                        <a href="#page" class="lb-close">x Close</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#image-9">
+                        <img src="images/thumbs/9.jpg" alt="image09">
+                        <span>Arabesque</span>
+                    </a>
+                    <div class="lb-overlay" id="image-9">
+                        <img src="images/full/9.jpg" alt="image09" />
+                        <div>
+                            <h3>ar·a·besque <span>/ˌarəˈbesk/</span></h3>
+                            <p>Position of the body supported on one leg, with the other leg extended behind the body with the knee straight</p>
+                            <a href="#image-8" class="lb-prev">Prev</a>
+                            <a href="#image-10" class="lb-next">Next</a>
+                        </div>
+                        <a href="#page" class="lb-close">x Close</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#image-10">
+                        <img src="images/thumbs/10.jpg" alt="image10">
+                        <span>Ballerina</span>
+                    </a>
+                    <div class="lb-overlay" id="image-10">
+                        <img src="images/full/10.jpg" alt="image10" />
+                        <div>
+                            <h3>bal·le·ri·na <span>/ˌbaləˈrēnə/</span></h3>
+                            <p>A female ballet dancer</p>
+                            <a href="#image-9" class="lb-prev">Prev</a>
+                            <a href="#image-1" class="lb-next">Next</a>
+                        </div>
+                        <a href="#page" class="lb-close">x Close</a>
+                    </div>
+                </li>
+            </ul>
+            <p style="text-align:center">特别声明：此案例代码来自于<a href="http://tympanus.net/codrops/2011/12/26/css3-lightbox/" target="_blank">http://tympanus.net/codrops/2011/12/26/css3-lightbox/</a></p>
+        </section>
+    </div>
+</body>
+
+</html>

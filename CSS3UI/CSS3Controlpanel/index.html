@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3制作W3cplus的关注面板|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" href="http://www.w3cplus.com/demo/css3/base.css">
+    <style type="text/css">
+    body {
+        background-color: rgb(35, 35, 35);
+        text-align: center;
+        padding: 30px;
+    }
+    
+    .region {
+        width: 255px;
+        padding: 0 10px;
+        margin: 50px auto;
+        color: rgba(255, 255, 255, 0.65);
+    }
+    
+    .block {
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 5px;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25), inset 0 0 0 150px rgba(150, 155, 150, 0.06);
+        padding: 10px;
+        position: relative;
+        z-index: 0;
+        margin: 0;
+        text-align: left;
+    }
+    
+    .block::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        border: 1px dashed rgba(255, 255, 255, 0.15);
+        top: 3px;
+        bottom: 3px;
+        left: 3px;
+        right: 3px;
+        box-shadow: 0 0 1px rgba(255, 255, 255, 0.25);
+        border-radius: 3px;
+    }
+    
+    .block h2 {
+        width: 237px;
+        height: 35px;
+        line-height: 35px;
+        margin: 0 auto 10px -6px;
+        position: relative;
+        overflow: hidden;
+        background: rgba(150, 155, 150, 0.3);
+        background: -moz-linear-gradient(left, rgba(150, 155, 150, 0.3) 55%, rgba(155, 180, 150, 0.08) 85%);
+        background: -webkit-gradient(linear, left center, right center, color-stop(55%, rgba(150, 155, 150, 0.3)), color-stop(85%, rgba(155, 180, 150, 0.08)));
+        background: -webkit-linear-gradient(left, rgba(150, 155, 150, 0.3) 55%, rgba(155, 180, 150, 0.08) 85%);
+        background: -o-linear-gradient(left, rgba(150, 155, 150, 0.3) 55%, rgba(155, 180, 150, 0.08) 85%);
+        background: -ms-linear-gradient(left, rgba(150, 155, 150, 0.3) 55%, rgba(155, 180, 150, 0.08) 85%);
+        background: linear-gradient(left, rgba(150, 155, 150, 0.3) 55%, rgba(155, 180, 150, 0.08) 85%);
+        z-index: 0;
+        box-shadow: inset 5px 0px 10px 0px rgba(0, 0, 0, 0.3), inset 0 0 20px 0 rgba(0, 0, 0, 0.13), 0 5px 3px -3px rgba(0, 0, 0, 0.35);
+        padding-left: 10px;
+    }
+    
+    .block h2::before {
+        content: "";
+        display: block;
+        border-top: 1px dashed rgba(255, 255, 255, 0.25);
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.25);
+        position: absolute;
+        top: 2px;
+        bottom: 2px;
+        left: 0;
+        right: 0;
+        box-shadow: inset 5px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    }
+    
+    .block h2::after {
+        content: "";
+        display: block;
+        border: 17px solid #292929;
+        border-color: transparent #292929 transparent transparent;
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    /*follow us*/
+    
+    #nav-ms li {
+        cursor: pointer;
+        height: 38px;
+        position: relative;
+        margin-bottom: 19px !important;
+        list-style: none outside none;
+        margin-left: 0;
+    }
+    
+    #nav-ms a {
+        background: #d91e76 url('http://www.w3cplus.com/sites/all/themes/marvin/images/ms-icon.png') 3px 0 no-repeat;
+        background-color: rgba(217, 30, 118, .42);
+        border-radius: 19px;
+        display: block;
+        color: #fcfcfc;
+        color: rgba(255, 255, 255, 0.8);
+        width: 38px;
+        font-size: 16px;
+        font-family: "SimHei";
+        float: none;
+        height: 38px;
+        line-height: 38px;
+        margin: 10px 0 0;
+        text-align: left;
+        text-indent: 50px;
+        text-shadow: #333 0 1px 0;
+        text-decoration: none;
+        white-space: nowrap;
+        z-index: 5;
+        -webkit-transition: all .25s ease-in-out;
+        -moz-transition: all .25s ease-in-out;
+        -ms-transition: all .25s ease-in-out;
+        -o-transition: all .25s ease-in-out;
+        transition: all .25s ease-in-out;
+        box-shadow: rgba(0, 0, 0, .28) 0 2px 3px;
+    }
+    
+    #nav-ms .icon {
+        color: #fafafa;
+        overflow: hidden;
+    }
+    
+    #nav-ms .ms-sina {
+        background-color: rgba(249, 13, 20, .42);
+        background-position: 0px 4px;
+    }
+    
+    #nav-ms .ms-tq {
+        background-color: rgba(11, 142, 185, .42);
+        background-position: 2px -38px;
+    }
+    
+    #nav-ms .ms-facebook {
+        background-color: rgba(56, 93, 148, .42);
+        background-position: -3px -171px;
+    }
+    
+    #nav-ms .ms-twitter {
+        background-color: rgba(74, 183, 225, .42);
+        background-position: 2px -83px;
+    }
+    
+    #nav-ms .ms-rss {
+        background-color: rgba(255, 109, 0, .42);
+        background-position: 3px -215px;
+    }
+    
+    #nav-ms .ms-google {
+        background-color: rgba(10, 164, 53, .42);
+        background-position: 3px -260px;
+    }
+    
+    #nav-ms .ms-github {
+        background-color: rgba(253, 190, 156, .42);
+        background-position: 1px -126px;
+    }
+    
+    #nav-ms li:hover a {
+        text-decoration: none;
+        color: #fff;
+        width: 230px;
+        background-color: #d91e76;
+    }
+    
+    #nav-ms li:hover .ms-sina {
+        background-color: rgba(249, 13, 20, 1);
+    }
+    
+    #nav-ms li:hover .ms-tq {
+        background-color: rgba(11, 142, 185, 1);
+    }
+    
+    #nav-ms li:hover .ms-facebook {
+        background-color: rgba(56, 93, 148, 1);
+    }
+    
+    #nav-ms li:hover .ms-twitter {
+        background-color: rgba(74, 183, 225, 1);
+    }
+    
+    #nav-ms li:hover .ms-rss {
+        background-color: rgba(255, 109, 0, 1);
+    }
+    
+    #nav-ms li:hover .ms-google {
+        background-color: rgba(10, 164, 53, 1);
+    }
+    
+    #nav-ms li:hover .ms-github {
+        background-color: rgba(253, 190, 156, 1);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="region">
+            <div class="block">
+                <h2>关注我们</h2>
+                <div class="content">
+                    <ul class="nav-ms" id="nav-ms">
+                        <li data-alt="新浪微博"><a class="ms-sina" href="http://weibo.com/w3cplus" target="_blank" title="新浪微博">新浪微博</a></li>
+                        <li data-alt="腾讯微博"><a class="ms-tq" href="http://t.qq.com/airenliao" target="_blank" title="腾讯微博">腾讯微博</a></li>
+                        <li data-alt="Facebook"><a class="ms-facebook" href="//www.facebook.com/w3cplus" target="_blank" titlte="Facebook">Facebook</a></li>
+                        <li data-alt="Twitter"><a class="ms-twitter" href="//twitter.com/w3cplus" target="_blank" title="Twitter">Twitter</a></li>
+                        <li data-alt="订阅RSS"><a class="ms-rss" href="http://www.w3cplus.com/rss.xml" target="_blank" title="订阅RSS">订阅RSS</a></li>
+                        <li data-alt="Google+"><a class="ms-google" href="//plus.google.com/106423935018507337793" target="_blank" title="Google+">Google+</a></li>
+                        <li data-alt="Github"><a class="ms-github" href="//github.com/airen" target="_blank" title="GitHub">Github</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

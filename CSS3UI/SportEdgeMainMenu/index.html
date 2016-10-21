@@ -1,0 +1,451 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>|w3cplus | css3|css3教程,css3实例,css3动画</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <script type="text/javascript" charset="UTF-8" src="//www.w3cplus.com/demo/css3/prefixfree.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+</head>
+<style type="text/css">
+a {
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+#header .white {
+    color: #fff;
+}
+
+body {
+    background: url(bg.jpg);
+    overflow: hidden;
+}
+
+.main-menu {
+    margin: 50px auto;
+    padding: 50px 0 0 0;
+    position: relative;
+    left: 50%;
+    /*实现浮动元素水平居中*/
+    float: left;
+}
+
+
+/*顶部商标部分*/
+
+.brand {
+    position: absolute;
+    top: 0;
+    left: -50%;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid rgb(25, 25, 25);
+    border-radius: 4px 4px 0 0;
+    background: -webkit-linear-gradient(top, rgb(49, 50, 52), rgb(12, 13, 14));
+    background: -moz-linear-gradient(top, rgb(49, 50, 52), rgb(12, 13, 14));
+    background: -ms-linear-gradient(top, rgb(49, 50, 52), rgb(12, 13, 14));
+    background: linear-gradient(top, rgb(49, 50, 52), rgb(12, 13, 14));
+    box-shadow: inset 0 1px 0 rgb(62, 63, 65), inset 1px 0 0 rgba(75, 75, 80, 0.4);
+}
+
+.brand .btn-group {
+    position: absolute;
+    top: 0;
+    left: 8px;
+}
+
+.brand .search-field {
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+
+
+/*brand区域登陆和注册按钮制作*/
+
+.brand button {
+    height: 27px;
+    padding: 0 15px;
+    line-height: 25px;
+    border: 1px solid rgb(15, 15, 15);
+    background: -webkit-linear-gradient(top, rgb(67, 68, 68), rgb(41, 42, 43) 50%, rgb(15, 16, 17));
+    background: -moz-linear-gradient(top, rgb(67, 68, 68), rgb(41, 42, 43) 50%, rgb(15, 16, 17));
+    background: -ms-linear-gradient(top, rgb(67, 68, 68), rgb(41, 42, 43) 50%, rgb(15, 16, 17));
+    background: linear-gradient(top, rgb(67, 68, 68), rgb(41, 42, 43) 50%, rgb(15, 16, 17));
+    color: rgb(200, 200, 200);
+    box-shadow: inset 0 1px 0 rgb(77, 77, 78), 0 1px 0 rgb(42, 43, 44);
+    font-weight: 500;
+    text-shadow: 1px 1px 0 rgb(15, 15, 16);
+    -webkit-transition: color 300ms ease;
+    -moz-transition: color 300ms ease;
+    transition: color 300ms ease;
+}
+
+.brand .sign-in {
+    border-radius: 14px 0 0 14px;
+    border-right: 0 none;
+}
+
+.brand .register {
+    border-radius: 0 14px 14px 0;
+    margin-left: -3px;
+}
+
+
+/*brand区域logo*/
+
+.brand .logo {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: bolder;
+    text-shadow: 0 -1px 0 rgb(111, 111, 111), 0 -2px 0 rgb(32, 33, 34);
+}
+
+
+/*brand区域搜索栏制作*/
+
+.brand input {
+    width: 140px;
+    height: 26px;
+    border: none;
+    padding: 0 0 0 30px;
+    border-radius: 13px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 1px 0 rgb(43, 44, 45);
+}
+
+.brand .search-icon {
+    position: absolute;
+    display: block;
+    left: 10px;
+    top: 0;
+    font-family: icon-search;
+    font-size: 13px;
+    color: rgb(100, 100, 100);
+    cursor: pointer;
+    -webkit-transition: color 300ms ease;
+    -moz-transition: color 300ms ease;
+    transition: color 300ms ease;
+}
+
+
+/*按钮的悬浮和激活效果*/
+
+.brand button:hover {
+    color: rgb(255, 255, 255);
+}
+
+.brand button:active {
+    background: -*-linear-gradient(top, rgb(15, 16, 17), rgb(41, 42, 43) 50%, rgb(67, 68, 68));
+}
+
+.brand .search-icon:hover {
+    color: rgb(255, 255, 255);
+}
+
+
+/*导航条部分*/
+
+.nav {
+    background-color: rgb(175, 175, 175);
+    border-radius: 0 0 4px 4px;
+    position: relative;
+    left: -50%;
+}
+
+.nav > li {
+    float: left;
+}
+
+
+/*导航条按钮制作*/
+
+.nav > li > a {
+    display: block;
+    color: rgb(50, 50, 50);
+    height: 38px;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 38px;
+    padding: 0 20px;
+    border: 1px solid;
+    margin-right: 1px;
+    border-color: rgb(254, 254, 254) rgb(227, 227, 227) rgb(210, 210, 210);
+    background: -webkit-linear-gradient(top, rgb(248, 248, 248), rgb(184, 184, 184));
+    background: -moz-linear-gradient(top, rgb(248, 248, 248), rgb(184, 184, 184));
+    background: -ms-linear-gradient(top, rgb(248, 248, 248), rgb(184, 184, 184));
+    background: linear-gradient(top, rgb(248, 248, 248), rgb(184, 184, 184));
+    text-shadow: 0 1px 0 rgb(229, 229, 229);
+}
+
+.nav > li:first-child a {
+    border-radius: 0 0 0 4px;
+}
+
+.nav > li:last-child {
+    position: relative;
+}
+
+.nav > li:last-child > a {
+    border-radius: 0 0 4px 0;
+    padding: 0 32px 0 22px;
+    margin: 0;
+}
+
+
+/*下拉按钮的三角标制作*/
+
+.nav > li:last-child > a:before {
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 18px;
+    border: 5px solid transparent;
+    border-color: rgb(50, 50, 50) transparent transparent transparent;
+}
+
+
+/*导航条按钮悬浮和激活效果*/
+
+.nav > li:hover > a {
+    border-color: rgb(255, 255, 255) rgb(240, 240, 240) rgb(221, 221, 221);
+    background: -*-linear-gradient(top, rgb(255, 255, 255), rgb(203, 203, 203));
+}
+
+.nav > li:not(:last-child) > a:active {
+    background: -*-linear-gradient(top, rgb(203, 203, 203), rgb(255, 255, 255));
+}
+
+.nav > li:hover ul {
+    display: block;
+}
+
+
+/*下拉菜单制作*/
+
+.more-sport {
+    position: absolute;
+    width: 478px;
+    top: 100%;
+    right: 0;
+    margin-top: 13px;
+    padding: 46px 0 61px 0;
+    border: 1px solid;
+    border-color: rgb(250, 250, 250) rgb(226, 226, 226) rgb(234, 234, 234);
+    border-radius: 4px;
+    background: -webkit-linear-gradient(top, rgb(227, 227, 227), rgb(193, 193, 193));
+    background: -moz-linear-gradient(top, rgb(227, 227, 227), rgb(193, 193, 193));
+    background: -ms-linear-gradient(top, rgb(227, 227, 227), rgb(193, 193, 193));
+    background: linear-gradient(top, rgb(227, 227, 227), rgb(193, 193, 193));
+    color: rgb(0, 0, 0);
+    display: none;
+}
+
+
+/*填补dropdown和nav之间的留白，避免鼠标进入该留白区域时失去悬浮状态导致dropdown的消失*/
+
+.more-sport:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 14px;
+    bottom: 100%;
+    left: 0;
+}
+
+
+/*制作dropdown三角标*/
+
+.more-sport:after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    right: 40px;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-color: transparent transparent rgb(227, 227, 227) transparent;
+}
+
+
+/*利用display:inline-block实现多栏布局*/
+
+.more-sport li {
+    display: inline-block;
+    width: 153px;
+    vertical-align: top;
+}
+
+
+/*每一列中的元素标签样式*/
+
+.more-sport li a {
+    display: block;
+    margin-left: 13px;
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    font-weight: bold;
+    padding: 2px 5px;
+    text-shadow: 0 1px 0 rgb(240, 240, 240);
+    border-radius: 7px;
+}
+
+
+/*页首*/
+
+.more-sport .header {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 18px;
+    line-height: 48px;
+    color: rgb(33, 33, 33);
+    text-shadow: 0 1px 0 rgb(246, 246, 246);
+}
+
+
+/*页脚*/
+
+.more-sport .footer {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: rgb(145, 145, 145);
+    text-shadow: 0 1px 0 rgb(242, 242, 242);
+    line-height: 49px;
+    background-color: rgb(228, 228, 228);
+    border-radius: 0 0 3px 3px;
+    text-indent: 20px;
+}
+
+
+/*页脚按钮*/
+
+.more-sport .footer a {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -15px;
+    color: rgb(50, 50, 50);
+    text-shadow: 0 1px 0 rgb(247, 247, 247);
+    height: 28px;
+    line-height: 28px;
+    padding: 0 12px;
+    text-indent: 0;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 4px;
+    background: -webkit-linear-gradient(top, rgb(252, 252, 252), rgb(234, 234, 234));
+    background: -moz-linear-gradient(top, rgb(252, 252, 252), rgb(234, 234, 234));
+    background: -ms-linear-gradient(top, rgb(252, 252, 252), rgb(234, 234, 234));
+    background: linear-gradient(top, rgb(252, 252, 252), rgb(234, 234, 234));
+    box-shadow: inset 0 1px 0 rgb(255, 255, 255), 0 1px 3px rgb(210, 210, 210);
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+
+/*元素悬浮效果*/
+
+.more-sport li a:hover {
+    color: rgb(0, 31, 99);
+    background: rgb(150, 150, 150);
+}
+
+
+/*按钮悬浮和激活效果*/
+
+.more-sport .footer a:hover {
+    color: rgb(0, 31, 99);
+}
+
+.more-sport .footer a:active {
+    background: -*-linear-gradient(top, rgb(234, 234, 234), rgb(252, 252, 252));
+}
+
+
+/*图标*/
+
+@font-face {
+    font-family: 'icon-search';
+    src: url("font/icon-search.eot");
+    src: url("font/icon-search.eot?#iefix") format('embedded-opentype'), url("font/icon-search.woff") format('woff'), url("font/icon-search.ttf") format('truetype'), url("font/icon-search.svg#icon-search") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+</style>
+
+<body>
+    <div class="page">
+        <section class="demo clearfix">
+            <div class="main-menu">
+                <div class="brand">
+                    <div class="btn-group">
+                        <button type="button" class="sign-in">Sign in</button>
+                        <button type="button" class="register">Register</button>
+                    </div>
+                    <a href="#" class="logo">YOUR LOGO</a>
+                    <div class="search-field">
+                        <input type="search" placeholder="Search" />
+                        <a class="search-icon">s</a>
+                    </div>
+                </div>
+                <ul class="nav clearfix">
+                    <li><a href="#">NFL</a></li>
+                    <li><a href="#">MBL</a></li>
+                    <li><a href="#">NBA</a></li>
+                    <li><a href="#">NHL</a></li>
+                    <li><a href="#">NCAAF</a></li>
+                    <li><a href="#">NCAAB</a></li>
+                    <li><a href="#">NASCAR</a></li>
+                    <li><a href="#">GOLF</a></li>
+                    <li><a href="#">SOCCER</a></li>
+                    <li><a href="#">TENNIS</a></li>
+                    <li>
+                        <a href="#">MORE</a>
+                        <ul class="more-sport">
+                            <span class="header">Sports</span>
+                            <li>
+                                <a href="#">Aussie Football</a>
+                                <a href="#">MSL</a>
+                                <a href="#">CFL</a>
+                                <a href="#">NCAA Baseball</a>
+                                <a href="#">Cricket</a>
+                                <a href="#">Olympics</a>
+                            </li>
+                            <li>
+                                <a href="#">Cycling</a>
+                                <a href="#">Rugby</a>
+                                <a href="#">Formula One</a>
+                                <a href="#">Rugby World Cup</a>
+                                <a href="#">Horse Racing</a>
+                                <a href="#">Tennis</a>
+                            </li>
+                            <li>
+                                <a href="#">Indycar</a>
+                                <a href="#">Winter Sports</a>
+                                <a href="#">Investigations</a>
+                                <a href="#">WNBA</a>
+                                <a href="#">Junior Hockey</a>
+                            </li>
+                            <span class="footer"> Last update: Today,28 September,12 minutes ago <a href="#">ALL SPORTS</a> </span>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

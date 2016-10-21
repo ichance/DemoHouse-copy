@@ -1,0 +1,190 @@
+@import '../../shared/mixins',
+        '../../shared/reset',
+        '../../shared/about-light';
+
+/*
+ * Copyright (c) 2012-2013 Thibaut Courouble
+ * http://www.cssflow.com
+ *
+ * Licensed under the MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+
+html, body { min-height: 100%; }
+
+body {
+  font: 12px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+  color: #404040;
+  background: #47496d;
+  @include radial-gradient(bottom, circle cover, #6b6e8c, #212649);
+}
+
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+$sprite: url('../img/sprite.png');
+
+[class*="icon-"] {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: $sprite;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  @include hide-text;
+}
+
+.icon-psd-40 { background-position: 0 0; }
+.icon-ai-24 { background-position: -40px 0; }
+.icon-close { background-position: -40px -24px; }
+
+.widget {
+  margin: 80px auto;
+  width: 280px;
+  overflow: hidden;
+  background: #fafafa;
+  border-radius: 4px;
+  @include box-shadow(0 0 4px rgba(black, .4));
+}
+
+.widget-heading {
+  position: relative;
+  z-index: 2;
+  padding: 8px;
+  height: 24px;
+  background: #eee;
+  border-radius: 4px 4px 0 0;
+  @include linear-gradient(top, #eee, #d8d8d8);
+  @include box-shadow(inset 0 21px rgba(white, .22));
+}
+
+.widget-title {
+  float: left;
+  line-height: 24px;
+  padding: 0 6px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #666;
+  text-transform: uppercase;
+  text-shadow: 0 1px rgba(white, .3);
+}
+
+.widget-close {
+  float: right;
+  margin: 0 1px 0 10px;
+  padding: 3px 3px 3px 4px;
+  border: 1px solid rgba(black, .12);
+  border-radius: 2px;
+  @include box-shadow(inset 0 1px rgba(white, .3));
+
+  &:hover {
+    border-color: rgba(black, .18);
+    @include box-shadow(0 0 1px rgba(black, .15));
+  }
+
+  &:active {
+    background-color: rgba(black, .02);
+    @include box-shadow(inset 0 0 2px rgba(black, .2));
+  }
+}
+
+.widget-toolbar {
+  position: relative;
+  height: 18px;
+  line-height: 18px;
+  padding: 6px 0;
+  background: #5c5c5c;
+  @include linear-gradient(top, #878787, #5c5c5c);
+  @include box-shadow(inset 0 1px rgba(black, .25),
+                      inset 0 2px rgba(white, .2),
+                      0 0 2px rgba(black, .5));
+
+  > li {
+    float: left;
+
+    > a {
+      display: block;
+      padding: 0 12px;
+      font-size: 11px;
+      color: white;
+      text-shadow: 0 1px rgba(black, .5);
+    }
+
+    + li {
+      border-left: 1px solid rgba(black, .15);
+      @include box-shadow(inset 1px 0 rgba(white, .1));
+    }
+  }
+}
+
+.download {
+  line-height: 21px;
+  padding: 3px 15px;
+  color: #999;
+  text-shadow: 0 1px white;
+  background: white;
+  @include linear-gradient(top, white, #fafafa);
+
+  + .download { border-top: 1px solid #ececec; }
+  &:last-child { border-radius: 0 0 4px 4px; }
+}
+
+.download-name {
+  margin: 2px 0;
+  font-weight: normal;
+}
+
+.download-icon {
+  float: left;
+  width: 24px;
+  height: 24px;
+  margin: 0 12px 0 0;
+}
+
+.download-info {
+  line-height: 16px;
+  font-size: 11px;
+}
+
+.download-active {
+  padding: 8px 12px;
+
+  .download-name {
+    margin: 0;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .download-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.download-progress {
+  clear: left;
+  margin: 12px 10px 4px;
+  height: 8px;
+  padding: 3px;
+  background: #ebebeb;
+  border-radius: 7px;
+  @include box-shadow(inset 0 2px 3px rgba(black, .2),
+                      0 1px white);
+}
+
+.download-progress-bar {
+  height: 100%;
+  background: #73c822;
+  border: 1px solid;
+  border-color: #6eb626 #62a21f #5a9122;
+  border-radius: 4px;
+  @include box-sizing(border-box);
+  @include linear-gradient(top, #73c822, #67aa24);
+  @include box-shadow(inset 0 1px rgba(white, .15));
+}
+
+.lt-ie9 {
+  .widget-close { border: 1px solid #c4c4c4; }
+  .widget-close:hover { background: #d8d8d8; }
+  .widget-toolbar { border-top-color: #484848; }
+}

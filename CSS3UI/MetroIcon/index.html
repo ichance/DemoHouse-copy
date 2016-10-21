@@ -1,0 +1,293 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Metro Icon | css3|css3教程,css3实例,css3动画|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    <script type="text/javascript" charset="UTF-8" src="//www.w3cplus.com/demo/css3/prefixfree.min.js"></script>
+    <style type="text/css" media="screen">
+    body {
+        background-color: #dbdbdb;
+        -webkit-text-size-adjust: none;
+    }
+    
+    .demo {
+        margin: 40px auto 0;
+        width: 360px;
+        color: #fff;
+    }
+    
+    .icon-items-1 li {
+        float: left;
+        width: 37px;
+        height: 37px;
+        margin: 10px 10px 50px 0;
+        background-color: #00aec7;
+        animation: moveF_Right 500ms ease;
+        transition: all 200ms linear;
+    }
+    
+    .icon-items-1 i[class^="icon-"] {
+        position: relative;
+        top: 14px;
+        left: 19px;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+    }
+    
+    .icon-items-1 i[class^="icon-"]:before,
+    .icon-items-1 i[class^="icon-"]:after {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 0;
+    }
+    
+    .icon-items-1 i.icon-checked:after {
+        top: 2px;
+        left: -5px;
+        width: 0;
+        height: 6px;
+        box-shadow: 0 0 0 2px #fff;
+        transform: rotate(-45deg);
+    }
+    
+    .icon-items-1 i.icon-checked:before {
+        top: -4px;
+        left: 3px;
+        width: 0;
+        height: 14px;
+        box-shadow: 0 0 0 2px #fff;
+        transform: rotate(45deg);
+    }
+    
+    .icon-items-1 i.icon-close:before {
+        top: 4px;
+        left: -8px;
+        width: 14px;
+        box-shadow: 0 0 0 2px #fff;
+        transform: rotate(-45deg);
+    }
+    
+    .icon-items-1 i.icon-close:after {
+        top: 4px;
+        left: -8px;
+        width: 14px;
+        box-shadow: 0 0 0 2px #fff;
+        transform: rotate(45deg);
+    }
+    
+    .icon-items-1 i.icon-square:after {
+        top: 0;
+        left: -3px;
+        width: 5px;
+        height: 5px;
+        box-shadow: 0 0 0 3px #fff;
+    }
+    
+    .icon-items-1 i.icon-plus:before {
+        top: 4px;
+        left: -8px;
+        width: 14px;
+        box-shadow: 0 0 0 2px #fff;
+        transform: rotate(90deg);
+    }
+    
+    .icon-items-1 i.icon-plus:after,
+    .icon-items-1 i.icon-minus:after {
+        top: 4px;
+        left: -8px;
+        width: 14px;
+        box-shadow: 0 0 0 2px #fff;
+    }
+    
+    .icon-items-1 i.icon-round:after {
+        top: 4px;
+        left: 0;
+        box-shadow: 0 0 0 6px #000, 0 0 0 8px #fff;
+        border-radius: 50%;
+    }
+    
+    .icon-items-1 i.icon-disc:after {
+        top: 4px;
+        left: 0;
+        box-shadow: 0 0 0 3px #fff, 0 0 0 6px #00aec7, 0 0 0 8px #fff;
+        border-radius: 50%;
+    }
+    
+    .icon-items-1 li:hover {
+        transform: scale(2, 2);
+        background-color: #005d6a;
+        z-index: 5;
+    }
+    
+    .icon-items-2 li {
+        position: relative;
+        float: left;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        margin: 10px 10px 0 0;
+        background-color: #00aec7;
+        animation: moveF_Right 500ms ease;
+        overflow: hidden;
+    }
+    
+    .icon-items-2 li:before,
+    .icon-items-2 li:after {
+        position: absolute;
+    }
+    
+    .icon-items-2 li:hover:before {
+        top: 0;
+        left: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, .2);
+        z-index: 1;
+    }
+    
+    .icon-items-2 li:hover:after {
+        top: 20px;
+        left: 0;
+        font-weight: bold;
+        content: attr(data);
+        width: 100%;
+        line-height: 30px;
+        z-index: 2;
+        background-color: #005d6a;
+        animation: moveF_Right 500ms ease;
+    }
+    
+    .icon-items-2 i[class^="icon-"]:before {
+        font-family: 'icomoon';
+        speak: none;
+        font-weight: normal;
+        -webkit-font-smoothing: antialiased;
+        font-size: 36px;
+        line-height: 100px;
+        font-style: normal;
+    }
+    
+    .icon-chrome:before {
+        content: "\e0c6";
+    }
+    
+    .icon-firefox:before {
+        content: "\e0c9";
+    }
+    
+    .icon-IE:before {
+        content: "\e0ca";
+    }
+    
+    .icon-apple:before {
+        content: "\e0cc";
+    }
+    
+    .icon-opera:before {
+        content: "\e0cf";
+    }
+    
+    .icon-android:before {
+        content: "\e0d1";
+    }
+    
+    .icon-twitter:before {
+        content: "\e0a2";
+    }
+    
+    .icon-dribbble:before {
+        content: "\e03d";
+    }
+    
+    .icon-facebook:before {
+        content: "\e049";
+    }
+    
+    @keyframes moveF_Right {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(0%);
+        }
+    }
+    
+    @font-face {
+        font-family: 'icomoon';
+        src: url('fonts/icomoon.eot');
+        src: url('fonts/icomoon.eot?#iefix') format('embedded-opentype'), url('fonts/icomoon.svg#icomoon') format('svg'), url('fonts/icomoon.woff') format('woff'), url('fonts/icomoon.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <ul class="icon-items-1 clearfix">
+                <li>
+                    <i class="icon-checked"></i>
+                </li>
+                <li>
+                    <i class="icon-close"></i>
+                </li>
+                <li>
+                    <i class="icon-square"></i>
+                </li>
+                <li>
+                    <i class="icon-plus"></i>
+                </li>
+                <li>
+                    <i class="icon-minus"></i>
+                </li>
+                <li>
+                    <i class="icon-round"></i>
+                </li>
+                <li>
+                    <i class="icon-disc"></i>
+                </li>
+            </ul>
+            <ul class="icon-items-2 clearfix">
+                <li data="chrome">
+                    <i class="icon-chrome"></i>
+                </li>
+                <li data="firefox">
+                    <i class="icon-firefox"></i>
+                </li>
+                <li data="IE">
+                    <i class="icon-IE"></i>
+                </li>
+                <li data="opera">
+                    <i class="icon-opera"></i>
+                </li>
+                <li data="apple">
+                    <i class="icon-apple"></i>
+                </li>
+                <li data="android">
+                    <i class="icon-android"></i>
+                </li>
+                <li data="twitter">
+                    <i class="icon-twitter"></i>
+                </li>
+                <li data="dribbble">
+                    <i class="icon-dribbble"></i>
+                </li>
+                <li data="facebook">
+                    <i class="icon-facebook"></i>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+
+</html>

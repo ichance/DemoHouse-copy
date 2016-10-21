@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3制作Twitter信息框|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <style type="text/css">
+    body {
+        background: #273648;
+    }
+    
+    .box {
+        width: 655px;
+        margin: 100px auto 0;
+    }
+    
+    .menu {
+        list-style-type: none;
+        font-size: 0;
+    }
+    
+    .menu li {
+        position: relative;
+        display: inline-block;
+        line-height: 30px;
+        padding: 0 20px;
+        font-size: 14px;
+    }
+    
+    .menu i {
+        color: #405b7a;
+    }
+    
+    .menu li:not(:first-child) {
+        background: -webkit-linear-gradient(top, #508ed5, #356ba8);
+        background: -moz-linear-gradient(top, #508ed5, #356ba8);
+        background: -o-linear-gradient(top, #508ed5, #356ba8);
+        background: -ms-linear-gradient(top, #508ed5, #356ba8);
+        background: linear-gradient(top, #508ed5, #356ba8);
+        color: #fff;
+    }
+    
+    .menu li:last-child {
+        border-radius: 0 10px 0 0;
+    }
+    
+    .menu li:last-child:after,
+    .menu li:last-child:before {
+        position: absolute;
+        top: 0;
+        display: block;
+        content: "";
+        height: 30px;
+        width: 1px;
+    }
+    
+    .menu li:last-child:after {
+        background: -webkit-linear-gradient(top, #356ca9 0%, #356ca9 50%, rgba(56, 109, 107, 0) 90%);
+        background: -moz-linear-gradient(top, #356ca9 0%, #356ca9 50%, rgba(56, 109, 107, 0) 90%);
+        background: -o-linear-gradient(top, #356ca9 0%, #356ca9 50%, rgba(56, 109, 107, 0) 90%);
+        background: -ms-linear-gradient(top, #356ca9 0%, #356ca9 50%, rgba(56, 109, 107, 0) 90%);
+        background: linear-gradient(top, #356ca9 0%, #356ca9 50%, rgba(56, 109, 107, 0) 90%);
+        left: 0;
+    }
+    
+    .menu li:last-child:before {
+        background: -webkit-linear-gradient(top, #9bc1ec 0%, #9bc1ec 50%, rgba(56, 109, 107, 0) 90%);
+        background: -moz-linear-gradient(top, #9bc1ec 0%, #9bc1ec 50%, rgba(56, 109, 107, 0) 90%);
+        background: -o-linear-gradient(top, #9bc1ec 0%, #9bc1ec 50%, rgba(56, 109, 107, 0) 90%);
+        background: -ms-linear-gradient(top, #9bc1ec 0%, #9bc1ec 50%, rgba(56, 109, 107, 0) 90%);
+        background: linear-gradient(top, #9bc1ec 0%, #9bc1ec 50%, rgba(56, 109, 107, 0) 90%);
+        left: 1px;
+    }
+    
+    .menu li:nth-of-type(3) {
+        margin-left: -10px;
+        padding-left: 30px;
+    }
+    
+    .menu li:nth-of-type(2) {
+        z-index: 99;
+        top: 1px;
+        border-radius: 10px 10px 0 0;
+        background: -webkit-linear-gradient(top, #90d0ff, #7ab4f3);
+        background: -moz-linear-gradient(top, #90d0ff, #7ab4f3);
+        background: -o-linear-gradient(top, #90d0ff, #7ab4f3);
+        background: -ms-linear-gradient(top, #90d0ff, #7ab4f3);
+        background: linear-gradient(top, #90d0ff, #7ab4f3);
+        text-shadow: 0 1px 0 #999;
+        padding-top: 1px;
+        box-shadow: inset 0 1px 0 #b2deff, 1px -1px 1px rgba(23, 34, 47, .4), -1px -1px 1px rgba(23, 34, 47, 1);
+    }
+    
+    .menu li:nth-of-type(2):after,
+    .menu li:nth-of-type(2):before {
+        position: absolute;
+        display: block;
+        content: "";
+        z-index: 99;
+    }
+    
+    .menu li:nth-of-type(2):after {
+        bottom: 1px;
+        left: -9px;
+        width: 20px;
+        height: 20px;
+        background: -webkit-radial-gradient(0 100%, circle, rgba(23, 34, 47, 0) 60%, rgba(23, 34, 47, .4) 65%, #9fc8f7 75%, #7ab4f3 80%);
+        background: -moz-radial-gradient(0 100%, circle, rgba(23, 34, 47, 0) 60%, rgba(23, 34, 47, .4) 65%, #9fc8f7 75%, #7ab4f3 80%);
+        background: -o-radial-gradient(0 100%, circle, rgba(23, 34, 47, 0) 60%, rgba(23, 34, 47, .4) 65%, #9fc8f7 75%, #7ab4f3 80%);
+        background: -ms-radial-gradient(0 100%, circle, rgba(23, 34, 47, 0) 60%, rgba(23, 34, 47, .4) 65%, #9fc8f7 75%, #7ab4f3 80%);
+        background: radial-gradient(0 100%, circle, rgba(23, 34, 47, 0) 60%, rgba(23, 34, 47, .4) 65%, #9fc8f7 75%, #7ab4f3 80%);
+        background-position: bottom right;
+        background-size: 50% 50%;
+        background-repeat: no-repeat;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+    
+    .menu li:nth-of-type(2):before {
+        bottom: 1px;
+        right: -10px;
+        width: 20px;
+        height: 20px;
+        background: -webkit-radial-gradient(0 100%, circle, rgba(23, 34, 47, 0) 60%, rgba(23, 34, 47, .4) 65%, #9fc8f7 75%, #7ab4f3 80%);
+        background: -moz-radial-gradient(0 100%, circle, rgba(23, 34, 47, 0) 60%, rgba(23, 34, 47, .4) 65%, #9fc8f7 75%, #7ab4f3 80%);
+        background: -o-radial-gradient(0 100%, circle, rgba(23, 34, 47, 0) 60%, rgba(23, 34, 47, .4) 65%, #9fc8f7 75%, #7ab4f3 80%);
+        background: -ms-radial-gradient(0 100%, circle, rgba(23, 34, 47, 0) 60%, rgba(23, 34, 47, .4) 65%, #9fc8f7 75%, #7ab4f3 80%);
+        background: radial-gradient(0 100%, circle, rgba(23, 34, 47, 0) 60%, rgba(23, 34, 47, .4) 65%, #9fc8f7 75%, #7ab4f3 80%);
+        background-position: top left;
+        background-size: 50% 50%;
+        background-repeat: no-repeat;
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    
+    .list {
+        position: relative;
+        width: 625px;
+        height: 60px;
+        margin: 0;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 -1px 0 #305783, 0 0 3px rgba(23, 34, 47, 1);
+        background: -webkit-linear-gradient(top, #7ab4f3, #4f80b5 34px, #4f80b5 54px, #305783);
+        background: -moz-linear-gradient(top, #7ab4f3, #4f80b5 34px, #4f80b5 54px, #305783);
+        background: -o-linear-gradient(top, #7ab4f3, #4f80b5 34px, #4f80b5 54px, #305783);
+        background: -ms-linear-gradient(top, #7ab4f3, #4f80b5 34px, #4f80b5 54px, #305783);
+        background: linear-gradient(top, #7ab4f3, #4f80b5 34px, #4f80b5 54px, #305783);
+    }
+    
+    .list dt {
+        position: absolute;
+        height: 60px;
+        width: 60px;
+        box-shadow: 0 0 0 1px #697c90, 0 0 0 2px #2c435b, 0 3px 0 #719ed0;
+        background: -webkit-linear-gradient(top, #85b9f5, #4c749c);
+        background: -moz-linear-gradient(top, #85b9f5, #4c749c);
+        background: -o-linear-gradient(top, #85b9f5, #4c749c);
+        background: -ms-linear-gradient(top, #85b9f5, #4c749c);
+        background: linear-gradient(top, #85b9f5, #4c749c);
+    }
+    
+    .list dt img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .list dd {
+        position: relative;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        margin-left: 75px;
+        padding-left: 30px;
+        line-height: 60px;
+        text-shadow: 0 0 0 1px #999;
+        border-radius: 10px;
+        box-shadow: inset 0 0 8px #10161d, 0 1px #719ed0;
+        background: -webkit-linear-gradient(top, #243546, #111920);
+        background: -moz-linear-gradient(top, #243546, #111920);
+        background: -o-linear-gradient(top, #243546, #111920);
+        background: -ms-linear-gradient(top, #243546, #111920);
+        background: linear-gradient(top, #243546, #111920);
+    }
+    
+    .list dd:before,
+    .list dd:after {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 0;
+        height: 0;
+    }
+    
+    .list dd:before {
+        top: 50%;
+        left: 0;
+        margin-top: -14px;
+        border: 10px solid #fff;
+        border-color: transparent transparent transparent #9fc8f7;
+    }
+    
+    .list dd:after {
+        top: 50%;
+        left: 0;
+        margin-top: -13px;
+        border: 10px solid #fff;
+        border-color: transparent transparent transparent #4f80b5;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <div class="box">
+                <ul class="menu">
+                    <li><i>Share it!</i></li>
+                    <li>WHAT ARE YOU DOING?</li>
+                    <li>@SPICYEPPER</li>
+                    <li>DIRECT MESSAGES</li>
+                </ul>
+                <dl class="list">
+                    <dt><img alt="" src="data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAAeAAD/7gAOQWRvYmUAZMAAAAAB/9sAhAAQCwsLDAsQDAwQFw8NDxcbFBAQFBsfFxcXFxcfHhcaGhoaFx4eIyUnJSMeLy8zMy8vQEBAQEBAQEBAQEBAQEBAAREPDxETERUSEhUUERQRFBoUFhYUGiYaGhwaGiYwIx4eHh4jMCsuJycnLis1NTAwNTVAQD9AQEBAQEBAQEBAQED/wAARCAA8ADwDASIAAhEBAxEB/8QBPwAAAQUBAQEBAQEAAAAAAAAAAwABAgQFBgcICQoLAQABBQEBAQEBAQAAAAAAAAABAAIDBAUGBwgJCgsQAAEEAQMCBAIFBwYIBQMMMwEAAhEDBCESMQVBUWETInGBMgYUkaGxQiMkFVLBYjM0coLRQwclklPw4fFjczUWorKDJkSTVGRFwqN0NhfSVeJl8rOEw9N14/NGJ5SkhbSVxNTk9KW1xdXl9VZmdoaWprbG1ub2N0dXZ3eHl6e3x9fn9xEAAgIBAgQEAwQFBgcHBgU1AQACEQMhMRIEQVFhcSITBTKBkRShsUIjwVLR8DMkYuFygpJDUxVjczTxJQYWorKDByY1wtJEk1SjF2RFVTZ0ZeLys4TD03Xj80aUpIW0lcTU5PSltcXV5fVWZnaGlqa2xtbm9ic3R1dnd4eXp7fH/9oADAMBAAIRAxEAPwDuAG7RoOFn9Z6xg9GxDlZWs6VVNjfY7wb/ABKtX5NOLjvyL3iumpm+x57ABeR/WDrd3Wuovyny2lvsx6v3Kx/E8lJSfqf1v631G1zhecWk/RpoOwAebh7iqVPW+sUPFlebeHDubHOH3OJCpQkkp7bov+MO1j209ZrbZUdPtNTYe3zcwaH5LvcbIxsuhmRjPbbTYJZY3UELwtdt/i1zrxmZXTy4mh1frNb2a9pAJHxBSU+hbW+AUtrdvATBS/NSU8N/jEzra8HEwGGG5BNlvm2uNo+8yvP13H+Mqtwf06yPZtsZPnIMfcuHRUpMU6SCmK7b/FnROXnZBj2VtrA7+50n/qVxS9L+pnS6qfq4zJuBrttc/IbawxYxsbRB+DeDokp60KX5vzVTp9l9uM2y/VziSwkBrjXPsc5o0BIVv81JTi/WPo/7Z6TZjCBeIsxye1je39oaLyKxj6nursaWvYS17ToQRoQV7m0S0fBct9Z/qfX1S/7bjDZkOgXBsS4D84AwC75hJT5nKaQupp+ouRkZRxqcxm9jd1gsrcxzB4Fuuq1sb/FlTocrPc49xVWG/i8n8iSnkeg9Hu6z1GvDrBFc7r7BwysfSP8AAL1rKquo6c6jp1Y3MYK6mcbWgbdPOELp/Sul9Awntx2elS0b7rXe5747uPfyCO2zqFzQ5ldeO12rRbufZB4ljNoHw3IFINEHeu7DohcelYhcSXemJkyVofmqviY32WkVbi9xc573kAbnvcXuMDQanhWPzfmlWlKvW/G2Dfoj4Jymb9EfBJFCM41P2kZW39MGenu/kkyipJJKafUh6gxsbkX3sDh4tZNrv+oVxU7v+U8Xf9H07vT/AOM9k/8AQn8VcSUpS/NUdVL81JT/AP/Z" /></dt>
+                    <dd>I’m about to jump off a building.</dd>
+                </dl>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

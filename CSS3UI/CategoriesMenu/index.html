@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3制作手风琴菜单|css3|css3教程,css3实例,css3动画|w3cplus</title>
+	<meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+	<meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+	<link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+	<style type="text/css">
+body {
+	background-color: #666;
+}	
+.demo {
+	width: 200px;
+	height: 400px;
+	margin: 40px auto 0;
+}
+.menu > li {
+	line-height: 50px;
+	border-bottom: 1px solid #3d3d3d;
+	box-shadow: 0 1px 0 #888;
+}	
+.menu > li:first-child {
+	border-top: 1px solid #3d3d3d;
+	box-shadow: 0 1px 0 #888,0 1px 0 #888 inset;
+}
+.menu a {
+	position: relative;
+	outline: 0;
+	display: block;
+	text-align: left;
+	color: #e5e5e5;
+	font-size: 18px;
+	text-shadow: 0 1px 1px #171717;
+	padding: 0 40px;
+}
+.menu a:hover {
+	text-decoration: none;
+}
+.menu > li > a:before,
+	.menu > li > a:after {
+	font-family: 'LigatureSymbols';
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-ms-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	-webkit-font-feature-settings: "liga" 1, "dlig" 1;
+	-moz-font-feature-settings: "liga=1, dlig=1";
+	-ms-font-feature-settings: "liga" 1, "dlig" 1;
+	font-feature-settings: "liga" 1, "dlig" 1;
+	font-size: 26px;
+}
+.menu > li > a:before {
+	position: absolute;
+	left: 10px;
+	color: #e5e5e5;
+	text-shadow: inherit -1px 0 #fff,0 -2px 0 #1a1a1a,0 1px 2px #1a1a1a;
+}
+.menu > li > a:after {
+	position: absolute;
+	right: 10px;
+	color: #292929;
+	text-shadow: -1px 0 0 #050505,1px 0 0 #868686;
+}
+.menu > li:nth-child(1) > a:before{
+	content:"friend";
+}
+.menu > li:nth-child(2) > a:before{
+	content:"video";
+}
+.menu > li:nth-child(3) > a:before{
+	content:"paint";
+}
+.menu > li:nth-child(4) > a:before{
+	content:"android";
+}
+.menu > li > a:after{
+	content:"plus";
+}
+.menu ul {
+	line-height: 30px;
+	max-height: 0;
+	overflow: hidden;
+	-webkit-transition: max-height .5s linear;
+	   -moz-transition: max-height .5s linear;
+			transition: max-height .5s linear;
+}
+.menu ul a {
+	color: #000;
+	text-shadow: 0 1px 1px #848484;
+	font-size: 12px;
+}
+.menu ul a:hover {
+	color: #ccc;
+	text-shadow: 0 1px 0 #252525;
+}
+.menu li:target > a:after {
+	content: "minus";
+}
+.menu li:target ul {
+	max-height: 200px;
+	border-top: 1px solid #3d3d3d;
+	box-shadow: 0 1px 0 #888 inset;
+}
+@font-face {
+    font-family: 'LigatureSymbols';
+    src: url('font/LigatureSymbols-2.05.eot');
+    src: url('font/LigatureSymbols-2.05.eot?#iefix') format('embedded-opentype'),
+         url('font/LigatureSymbols-2.05.woff') format('woff'),
+         url('font/LigatureSymbols-2.05.ttf') format('truetype'),
+         url('font/LigatureSymbols-2.05.svg#LigatureSymbols') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}	
+	</style>
+
+</head>
+
+<div class="page">
+	
+	<section class="demo">
+		<ul class="menu">
+			<li class="item1" id="one"><a href="#one">Friends </a>
+				<ul>
+					<li class="subitem1"><a href="#">Cute Kittens </a></li>
+					<li class="subitem2"><a href="#">Strange “Stuff” </a></li>
+					<li class="subitem3"><a href="#">Automatic Fails </a></li>
+				</ul>
+			</li>
+			<li class="item2" id="two"><a href="#two">Videos </a>
+				<ul>
+					<li class="subitem1"><a href="#">Cute Kittens </a></li>
+					<li class="subitem2"><a href="#">Strange “Stuff” </a></li>
+					<li class="subitem3"><a href="#">Automatic Fails </a></li>
+					<li class="subitem2"><a href="#">Strange “Stuff” </a></li>
+					<li class="subitem1"><a href="#">Cute Kittens </a></li>
+					<li class="subitem2"><a href="#">Strange “Stuff” </a></li>
+				</ul>
+			</li>
+			<li class="item3" id="three"><a href="#three">Galleries</a>
+				<ul>
+					<li class="subitem3"><a href="#">Automatic Fails</a></li>
+				</ul>
+			</li>
+			<li class="item5" id="five"><a href="#five">Robots</a>
+				<ul>
+					<li class="subitem1"><a href="#">Cute Kittens</a></li>
+					<li class="subitem2"><a href="#">Strange “Stuff”</a></li>
+					<li class="subitem3"><a href="#">Automatic Fails </a></li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+	
+</div>
+</body>
+</html>

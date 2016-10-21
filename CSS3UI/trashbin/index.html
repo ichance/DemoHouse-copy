@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>css3动画——垃圾桶|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <title>css3动画——垃圾桶</title>
+    <style type="text/css">
+    body {
+        padding: 50px;
+    }
+    
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+    
+    .trashbin {
+        width: 128px;
+        height: 128px;
+        margin: 100px auto;
+        -webkit-transition: background-position 0.3s ease-in;
+        background: url(http://res.wanz.im/images/smile.gif) center no-repeat;
+    }
+    
+    .trashbin .lid {
+        background: url(http://res.wanz.im/images/trash.png) 0 0 no-repeat;
+        height: 38px;
+        -webkit-transition: -webkit-transform 0.3s ease-in;
+        -webkit-transform: rotateZ(0) translate(0px, 0px);
+    }
+    
+    .trashbin:hover {
+        -webkit-transition: background-position 0.3s ease-in;
+        background-position: center top;
+    }
+    
+    .trashbin:hover .lid {
+        -webkit-transition: -webkit-transform 0.3s ease-in;
+        -webkit-transform: rotateZ(-45deg) translate(0px, -40px);
+    }
+    
+    .trashbin .can {
+        background: url(http://res.wanz.im/images/trash.png) 0 -38px no-repeat;
+        height: 90px;
+    }
+    </style>
+
+    <body>
+        <div class="trashbin">
+            <div class="lid"></div>
+            <div class="can"></div>
+        </div>
+    </body>
+
+</html>

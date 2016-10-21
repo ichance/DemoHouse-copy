@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 Tucked Corners|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    <style>
+    body {
+        background: #eac996 url(wood.png);
+    }
+    
+    .tucked-corners-top {
+        position: relative;
+        width: 500px;
+        min-height: 200px;
+        margin: 100px auto;
+        padding: 20px;
+        background-color: #fff;
+        /* Fallback */
+        background: -webkit-linear-gradient(45deg, transparent 10px, #fff 10px), -webkit-linear-gradient(135deg, transparent 10px, #fff 10px), -webkit-linear-gradient(225deg, transparent 10px, #fff 10px), -webkit-linear-gradient(315deg, transparent 10px, #fff 10px);
+        background: -moz-linear-gradient(45deg, transparent 10px, #fff 10px), -moz-linear-gradient(135deg, transparent 10px, #fff 10px), -moz-linear-gradient(225deg, transparent 10px, #fff 10px), -moz-linear-gradient(315deg, transparent 10px, #fff 10px);
+        background: -o-linear-gradient(45deg, transparent 10px, #fff 10px), -o-linear-gradient(135deg, transparent 10px, #fff 10px), -o-linear-gradient(225deg, transparent 10px, #fff 10px), -o-linear-gradient(315deg, transparent 10px, #fff 10px);
+        background-position: bottom left, bottom right, top right, top left;
+        background-size: 50% 50%;
+        background-repeat: no-repeat;
+        box-shadow: 0 20px 10px -20px rgba(0, 0, 0, .5);
+    }
+    
+    [class*='tucked-corners-']::before,
+    [class*='tucked-corners-']::after {
+        content: '';
+        position: absolute;
+        height: 20px;
+        width: 80px;
+        box-shadow: 0 8px 15px -7px rgba(0, 0, 0, .5);
+        box-shadow: none\9;
+        /* Do not show on IE9 #needed */
+    }
+    
+    .tucked-corners-top::before,
+    .tucked-corners-top::after {
+        top: -10px;
+    }
+    
+    .tucked-corners-bottom::before,
+    .tucked-corners-bottom::after {
+        bottom: -10px;
+    }
+    
+    .tucked-corners-top::before,
+    .tucked-corners-bottom::before {
+        left: -42px;
+    }
+    
+    .tucked-corners-top::after,
+    .tucked-corners-bottom::after {
+        right: -42px;
+    }
+    
+    .tucked-corners-top::before {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    
+    .tucked-corners-top::after {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    
+    .tucked-corners-bottom::before {
+        -webkit-transform: rotate(-135deg);
+        -moz-transform: rotate(-135deg);
+        -ms-transform: rotate(-135deg);
+        -o-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+    }
+    
+    .tucked-corners-bottom::after {
+        -webkit-transform: rotate(135deg);
+        -moz-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+        -o-transform: rotate(135deg);
+        transform: rotate(135deg);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <div class="tucked-corners-top">
+                <div class="tucked-corners-bottom">
+                    CSS3 Tucked Corners
+                </div>
+            </div>
+            <p style="text-align: center;"><strong>特别声明：</strong>此案例代码来自于：<a href="http://www.red-team-design.com/wp-content/uploads/2012/10/css3-tucked-corners-demo.html" target="_blank">red team design</a></p>
+        </section>
+    </div>
+</body>
+
+</html>

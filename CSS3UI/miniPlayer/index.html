@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3制作迷你播放器面板|w3cplus | css3|css3教程,css3实例,css3动画</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <script type="text/javascript" charset="UTF-8" src="//www.w3cplus.com/demo/css3/prefixfree.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <style>
+    body {
+        padding: 0;
+        margin: 0;
+        background: #cbd4da;
+        font-size: 12px;
+    }
+    /*播放器面板容器*/
+    
+    .box {
+        width: 320px;
+        margin: 100px auto;
+        background: #fff;
+        border: solid 1px #979797;
+        border-radius: 6px;
+        /*制作圆角*/
+        box-shadow: 0 0 5px 6px rgba(0, 0, 0, 0.05);
+        /*面板阴影*/
+    }
+    /*播放器面板头部*/
+    
+    .boxt {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 16px;
+    }
+    
+    .boxt .minitxt {
+        font-size: bold 14px Arial;
+        color: #7e97ab;
+    }
+    /*播放器面板左边按钮（仿mac窗口按钮效果）*/
+    
+    .boxt .circle em {
+        display: inline-block;
+        background: #e4e4e4;
+        border: solid 1px #c7c9cb;
+        border-radius: 8px;
+        width: 12px;
+        height: 12px;
+        margin-right: 8px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    /*关闭面板按钮*/
+    
+    .boxt .circle .close {
+        box-shadow: inset 0px 1px 1px rgba(83, 11, 8, .5);
+        background: -*-radial-gradient(top center, circle, #fff, #af2b24, #ec8e89);
+    }
+    /*面板最大化按钮*/
+    
+    .boxt .circle .max {
+        box-shadow: inset 0px 1px 1px rgba(117, 38, 27, .5);
+        background: -*-radial-gradient(top center, circle, #fff, #ce712d, #fcdf7d);
+    }
+    /*面板最小化按钮*/
+    
+    .boxt .circle .min {
+        box-shadow: inset 0px 1px 1px rgba(34, 75, 15, .5);
+        background: -*-radial-gradient(top center, circle, #fff, #74a94e, #bbdd83);
+    }
+    /*面板中间内容*/
+    
+    .boxm {
+        border: solid 1px #dedede;
+        border-width: 1px 0;
+        padding: 20px 16px;
+        overflow: hidden;
+    }
+    /*面板播放按钮*/
+    
+    .boxm .boxml {
+        float: left;
+        padding-top: 5px;
+    }
+    /*面板控制按钮基本样式*/
+    
+    .boxm .boxml .btn {
+        display: inline-block;
+        width: 45px;
+        height: 40px;
+        padding-top: 5px;
+        border: none;
+        border-radius: 25px;
+        text-align: center;
+        font-size: 0;
+        cursor: pointer;
+        box-shadow: inset 0 1px 1px rgba(100, 100, 100, .3);
+        background: -*-linear-gradient(top, #e6e6e6, #f2f1f1);
+    }
+    /*font face 制作icon*/
+    
+    @font-face {
+        font-family: "playericon";
+        src: url(font/fontello.eot);
+        src: url(font/fontello.eot#iefix) format("embedded-opentype"), url(font/fontello.woff) format("woff"), url(font/fontello.ttf) format("truetype"), url(font/fontello.svg) format("svg");
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    .btn:after {
+        font-family: "playericon";
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        border: none;
+        border-radius: 20px;
+        font-size: 18px;
+        line-height: 35px;
+        text-align: center;
+        box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .4);
+        background: -*-linear-gradient(top, #fff, #e9e9e9);
+    }
+    /*播放icon*/
+    
+    .on:after {
+        content: "\25B6";
+        color: #475057;
+    }
+    /*停止icon*/
+    
+    .stop:after {
+        content: "\25A0";
+        color: #cf6767;
+    }
+    /*中止icon*/
+    
+    .pause:after {
+        content: "\2389";
+        color: #475057;
+    }
+    
+    .btn:hover:after {
+        color: #19a6e4;
+        box-shadow: 0 -1px 0px 1px #ccc;
+    }
+    /*面板时间部分*/
+    
+    .boxm .boxmr {
+        font-family: Arial;
+        color: #666;
+        text-align: right;
+        overflow: hidden;
+    }
+    
+    .boxm .taketime {
+        font-size: 30px;
+    }
+    
+    .boxm span {
+        display: inline-block;
+        padding: 0 10px;
+        font-size: 9px;
+        -webkit-text-size-adjust: none;
+    }
+    /*面板底部样式*/
+    
+    .boxb {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 16px;
+        border-top: solid 1px #fff;
+        background: #eee;
+        font-size: 14px;
+        font-family: Arial;
+        color: #999;
+        border-radius: 6px;
+    }
+    
+    .fr {
+        float: right;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <div class="box">
+                <div class="boxt"><span class="fr minitxt">Mini Player</span><span class="circle"><em class="close"></em><em class="max"></em><em class="min"></em></span></div>
+                <div class="boxm">
+                    <div class="boxml">
+                        <a class="btn pause" id="controlBtn">on</a>
+                        <a class="btn stop" id="stopBtn">stop</a>
+                    </div>
+                    <div class="boxmr">
+                        <div class="taketime" id="takeTime">00:00:00</div>
+                        <span>HOUR</span><span>MIN</span><span>SEC</span>
+                    </div>
+                </div>
+                <div class="boxb"><span class="fr" id="totalTime">01:22:30</span><span>Totel time</span></div>
+            </div>
+            <script type="text/javascript" src="jquery-1.7.min.js"></script>
+            <script type="text/javascript">
+            $(document).ready(function() {
+                //默认播放状态
+                getTime();
+
+                //点击暂停，再点击播放
+                $("#controlBtn").click(function() {
+                    if ($(this).hasClass("pause")) {
+                        clearTimeout(t);
+                        $(this).addClass("on").removeClass("pause");
+                    } else if ($(this).hasClass("on")) {
+                        $(this).addClass("pause").removeClass("on");
+                        t = setTimeout(getTime, 1000);
+                    }
+                });
+
+                //点击停止按钮，时间清零
+                $("#stopBtn").click(function() {
+                    stopPlayer();
+                });
+            })
+
+            //停止播放
+            function stopPlayer() {
+                $("#takeTime").text("00:00:00");
+                clearTimeout(t);
+                $("#controlBtn").addClass("on").removeClass("pause");
+                timer = 0;
+            }
+
+            var timer = 0;
+            var t;
+            //计算播放时间
+            function getTime() {
+                clearTimeout(t);
+                timer += 1;
+                var count = timer;
+                hours = Math.floor(count / 3600);
+                count -= hours * 3600;
+                minutes = Math.floor(count / 60)
+                count -= minutes * 60;
+                seconds = Math.floor(count);
+
+                // 时分秒为单数时、前面加零站位
+                if (hours < 10)
+                    hours = "0" + hours;
+                if (minutes < 10)
+                    minutes = "0" + minutes;
+                if (seconds < 10)
+                    seconds = "0" + seconds;
+
+                var result = hours + ":" + minutes + ":" + seconds;
+                $("#takeTime").text(result);
+
+                t = setTimeout("getTime()", 1000);
+
+                //播放完成
+                var totaltime = $("#totalTime").text();
+                if (result == totaltime) {
+                    stopPlayer();
+                }
+            }
+            </script>
+        </section>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>CSS3 Loading Bar|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <title>CSS3 Loading Bar</title>
+    <link href='//fonts.googleapis.com/css?family=Racing+Sans+One' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+    }
+    
+    body {
+        color: #fff;
+        font-family: 'Racing Sans One', cursive;
+        background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAZABkAAD/7AARRHVja3kAAQAEAAAAUQAA/+4ADkFkb2JlAGTAAAAAAf/bAIQAAgICAgICAgICAgMCAgIDBAMCAgMEBAQEBAQEBAYEBQUFBQQGBgcHBwcHBgkJCgoJCQwMDAwMDAwMDAwMDAwMDAECAwMFBAUJBgYJDQoICg0PDg4ODg8PDAwMDAwPDwwMDAwMDA8MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwM/8AAEQgAFAAWAwERAAIRAQMRAf/EAGQAAAMBAAAAAAAAAAAAAAAAAAABAgkBAQAAAAAAAAAAAAAAAAAAAAAQAAIBAgQEBAcAAAAAAAAAAAERAiEDADESE0EiMiNhUjMUUYGRQoJjBBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AzYoAVSI6TdDZidQN9r8UcAjGB2ySKExJvAmjffjRZ8mAKuo/qZ5hG1Ib9ItXq+LiXgHKWsmQg5Tce6iVEB76+sBlgIiJEblyIAIqb3x/eaDMcuAvWufvmJOpW490VTujNH7fDAINya1rn3l1cN/i10PATJq9qWur33m6+4fHyfLAE/bb1r1dtn09W5p1H1eL8uA//9k=);
+    }
+    
+    .container {
+        width: 960px;
+        margin: 20px auto;
+    }
+    
+    h1,
+    p {
+        clear: both;
+        margin: 30px;
+    }
+    /*loading Bar*/
+    
+    .loading {
+        width: 415px;
+        margin: 20px auto;
+        border: 1px solid #000;
+        border-radius: 5px;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.22);
+        background-color: rgb(45, 42, 42);
+        /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJkMmEyYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzZTNmNDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background-image: -moz-linear-gradient(top, rgba(45, 42, 42, 1) 0%, rgba(62, 63, 64, 1) 100%);
+        /* FF3.6+ */
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(45, 42, 42, 1)), color-stop(100%, rgba(62, 63, 64, 1)));
+        /* Chrome,Safari4+ */
+        background-image: -webkit-linear-gradient(top, rgba(45, 42, 42, 1) 0%, rgba(62, 63, 64, 1) 100%);
+        /* Chrome10+,Safari5.1+ */
+        background-image: -o-linear-gradient(top, rgba(45, 42, 42, 1) 0%, rgba(62, 63, 64, 1) 100%);
+        /* Opera 11.10+ */
+        background-image: -ms-linear-gradient(top, rgba(45, 42, 42, 1) 0%, rgba(62, 63, 64, 1) 100%);
+        /* IE10+ */
+        background-image: linear-gradient(to bottom, rgba(45, 42, 42, 1) 0%, rgba(62, 63, 64, 1) 100%);
+        /* W3C */
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#2d2a2a', endColorstr='#3e3f40', GradientType=0);
+        /* IE6-8 */
+    }
+    
+    .loading h2 {
+        padding: 5px 10px;
+        font-size: 20px;
+        text-shadow: -2px -3px 0 rgba(0, 0, 0, 0.3);
+        border-bottom: 1px solid black;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.13), inset 0 1px 0 rgba(255, 255, 255, 0.13);
+        background-color: rgb(50, 50, 50);
+        /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzMyMzIzMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyMzIzMjMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background-image: -moz-linear-gradient(top, rgba(50, 50, 50, 1) 0%, rgba(35, 35, 35, 1) 100%);
+        /* FF3.6+ */
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(50, 50, 50, 1)), color-stop(100%, rgba(35, 35, 35, 1)));
+        /* Chrome,Safari4+ */
+        background-image: -webkit-linear-gradient(top, rgba(50, 50, 50, 1) 0%, rgba(35, 35, 35, 1) 100%);
+        /* Chrome10+,Safari5.1+ */
+        background-image: -o-linear-gradient(top, rgba(50, 50, 50, 1) 0%, rgba(35, 35, 35, 1) 100%);
+        /* Opera 11.10+ */
+        background-image: -ms-linear-gradient(top, rgba(50, 50, 50, 1) 0%, rgba(35, 35, 35, 1) 100%);
+        /* IE10+ */
+        background-image: linear-gradient(to bottom, rgba(50, 50, 50, 1) 0%, rgba(35, 35, 35, 1) 100%);
+        /* W3C */
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#323232', endColorstr='#232323', GradientType=0);
+        /* IE6-8 */
+        border-radius: 5px 5px 0 0;
+    }
+    
+    .loading-bar {
+        padding: 15px;
+    }
+    
+    .metro {
+        border: 1px solid #000;
+        border-radius: 5px;
+        height: 20px;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.13);
+        margin-bottom: 10px;
+        background: #292929;
+    }
+    
+    .metro span {
+        display: block;
+        height: 20px;
+        width: 35%;
+        border-radius: 5px;
+        background-color: rgb(75, 117, 204);
+        /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzRiNzVjYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzRiNzVjYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iIzMwNjFjNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMDYxYzQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background-image: -moz-linear-gradient(top, rgba(75, 117, 204, 1) 0%, rgba(75, 117, 204, 1) 50%, rgba(48, 97, 196, 1) 51%, rgba(48, 97, 196, 1) 100%);
+        /* FF3.6+ */
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(75, 117, 204, 1)), color-stop(50%, rgba(75, 117, 204, 1)), color-stop(51%, rgba(48, 97, 196, 1)), color-stop(100%, rgba(48, 97, 196, 1)));
+        /* Chrome,Safari4+ */
+        background-image: -webkit-linear-gradient(top, rgba(75, 117, 204, 1) 0%, rgba(75, 117, 204, 1) 50%, rgba(48, 97, 196, 1) 51%, rgba(48, 97, 196, 1) 100%);
+        /* Chrome10+,Safari5.1+ */
+        background-image: -o-linear-gradient(top, rgba(75, 117, 204, 1) 0%, rgba(75, 117, 204, 1) 50%, rgba(48, 97, 196, 1) 51%, rgba(48, 97, 196, 1) 100%);
+        /* Opera 11.10+ */
+        background-image: -ms-linear-gradient(top, rgba(75, 117, 204, 1) 0%, rgba(75, 117, 204, 1) 50%, rgba(48, 97, 196, 1) 51%, rgba(48, 97, 196, 1) 100%);
+        /* IE10+ */
+        background-image: linear-gradient(to bottom, rgba(75, 117, 204, 1) 0%, rgba(75, 117, 204, 1) 50%, rgba(48, 97, 196, 1) 51%, rgba(48, 97, 196, 1) 100%);
+        /* W3C */
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#4b75cc', endColorstr='#3061c4', GradientType=0);
+        /* IE6-8 */
+    }
+    
+    .metro-des {
+        color: #a49f9f;
+        text-shadow: -1px -2px 0 rgba(0, 0, 0, 0.3);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="loading">
+            <h2>Copying</h2>
+            <div class="loading-bar">
+                <div class="metro"><span></span></div>
+                <div class="metro-des">1 MB of 35 MB</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

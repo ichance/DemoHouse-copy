@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pure CSS3 Create Luminous Button|w3cplus | css3|css3教程,css3实例,css3动画</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <script type="text/javascript" charset="UTF-8" src="//www.w3cplus.com/demo/css3/prefixfree.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <style type="text/css">
+    body {
+        background: #347db0;
+        text-align: center;
+    }
+    
+    .btn-wrap {
+        text-align: center;
+        margin: 50px;
+    }
+    
+    .btn {
+        position: relative;
+        display: inline-block;
+        line-height: 25px;
+        padding: 5px 15px;
+        margin: 10px;
+        transition: all .3s ease-out;
+        text-transform: uppercase;
+        border-radius: 5px;
+        border: 1px solid #1e639a;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, .4);
+        box-shadow: inset 1px 0 0 #559ad5, inset -1px 0 0 #559ad5, inset 0 1px 0 #559ad5, inset 0 -1px 0 #559ad5, 0 0 1px rgba(0, 0, 0, 0.5);
+        background: #4086c2;
+        /* Old browsers */
+        background: -*-linear-gradient(to bottom, #4086c2 0%, #2989d8 100%, #3378b1 100%);
+    }
+    
+    .btn:hover {
+        background: #3378b1;
+        /* Old browsers */
+        background: -*-linear-gradient(to bottom, #3378b1 0%, #2989d8 0%, #4086c2 100%);
+    }
+    
+    .btn:active:after {
+        content: "";
+        display: block;
+        width: 2px;
+        height: 2px;
+        position: absolute;
+        border-radius: 2px;
+        top: 50%;
+        left: 50%;
+        margin: -1px 0 0 -1px;
+        z-index: 2;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5), 0 0 20px 10px rgba(255, 255, 255, 0.5), 0 0 30px 15px rgba(255, 255, 255, 0.4), 0 0 40px 20px rgba(255, 255, 255, 0.3), 0 0 50px 25px rgba(255, 255, 255, 0.3), 0 0 60px 30px rgba(255, 255, 255, 0.3), 0 0 70px 35px rgba(255, 255, 255, 0.3);
+    }
+    
+    ​
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <div class="btn-wrap">
+                <button class="btn" type="submit">Submit</button>
+                <button class="btn" type="reset">Reset</button>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

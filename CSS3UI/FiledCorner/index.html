@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3制作卷角菜单|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    <style>
+    ul,
+    li {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .form {
+        width: 405px;
+        height: 200px;
+        background: #2f2f2f;
+        position: relative;
+        overflow: hidden;
+        margin: 30px auto;
+    }
+    
+    .corner {
+        background: -webkit-linear-gradient(45deg, #2e2e2e 24%, #5F5F5F 40%, #6f6f6f 43%, #5F5F5F 46%, #2F2F2F 50%, #fff 50%, #fff);
+        background: -moz-linear-gradient(45deg, #2e2e2e 24%, #5F5F5F 40%, #6f6f6f 43%, #5F5F5F 46%, #2F2F2F 50%, #fff 50%, #fff);
+        height: 90px;
+        background: -o-linear-gradient(45deg, #2e2e2e 24%, #5F5F5F 40%, #6f6f6f 43%, #5F5F5F 46%, #2F2F2F 50%, #fff 50%, #fff);
+        height: 90px;
+        background: -ms-linear-gradient(45deg, #2e2e2e 24%, #5F5F5F 40%, #6f6f6f 43%, #5F5F5F 46%, #2F2F2F 50%, #fff 50%, #fff);
+        height: 90px;
+        background: linear-gradient(45deg, #2e2e2e 24%, #5F5F5F 40%, #6f6f6f 43%, #5F5F5F 46%, #2F2F2F 50%, #fff 50%, #fff);
+        height: 90px;
+        width: 90px;
+        height: 90px;
+        border-radius: 0 0 0px 90px / 0 0 0 30px;
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        position: absolute;
+        left: -4px;
+        top: -4px;
+        box-shadow: 5px 2px 8px black;
+        overflow: hidden;
+        -webkit-transition: all 0.3s linear 0s;
+        -moz-transition: all 0.3s linear 0s;
+        -o-transition: all 0.3s linear 0s;
+        -ms-transition: all 0.3s linear 0s;
+        transition: all 0.3s linear 0s;
+    }
+    
+    .corner:after {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        content: "";
+        top: -15px;
+        left: -82px;
+        border-radius: 90px 90px 0px 0 / 40px 40px 0 0;
+        z-index: 1;
+        background: #2F2F2F;
+        -webkit-transform: rotate(77deg);
+        -moz-transform: rotate(77deg);
+        -o-transform: rotate(77deg);
+        -ms-transform: rotate(77deg);
+        transform: rotate(77deg);
+        box-shadow: 0px 0px 8px black inset;
+    }
+    
+    .button {
+        float: left;
+        height: 40px;
+        margin: 20px 20px;
+        border-radius: 30px;
+        border: 1px solid #151515;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.6);
+        overflow: hidden;
+    }
+    
+    .button li {
+        float: left;
+    }
+    
+    .button li a {
+        float: left;
+        display: block;
+        text-decoration: none;
+        padding: 0 20px;
+        height: 40px;
+        line-height: 36px;
+        font-size: 14px;
+        color: #eee;
+        text-align: center;
+        border-right: 1px solid #151515;
+        box-shadow: -1px 0px 0px rgba(255, 255, 255, 0.1) inset, inset 0px -1px 1px rgba(200, 200, 200, 0.1), inset 0px 1px 2px rgba(255, 255, 255, 0.1);
+        text-shadow: 0px -1px 0px #000;
+        background: -webkit-linear-gradient(top, rgba(200, 200, 200, 0.1) 0%, rgba(200, 200, 200, 0.1) 50%, #222 50%, #222);
+        background: -moz-linear-gradient(top, rgba(200, 200, 200, 0.1) 0%, rgba(200, 200, 200, 0.1) 50%, #222 50%, #222);
+        background: -o-linear-gradient(top, rgba(200, 200, 200, 0.1) 0%, rgba(200, 200, 200, 0.1) 50%, #222 50%, #222);
+        background: -ms-linear-gradient(top, rgba(200, 200, 200, 0.1) 0%, rgba(200, 200, 200, 0.1) 50%, #222 50%, #222);
+        background: linear-gradient(top, rgba(200, 200, 200, 0.1) 0%, rgba(200, 200, 200, 0.1) 50%, #222 50%, #222);
+    }
+    
+    .button li:first-child a {
+        border-radius: 30px 0 0 30px;
+    }
+    
+    .button li:last-child a {
+        border-radius: 0px 30px 30px 0;
+        border-right: none;
+    }
+    
+    .button li a:hover {
+        cursor: pointer;
+        background: -webkit-linear-gradient(top, rgba(50, 50, 50, 0.4) 20%, rgba(100, 100, 100, 0.3));
+        background: -moz-linear-gradient(top, rgba(50, 50, 50, 0.4) 20%, rgba(100, 100, 100, 0.3));
+        background: -o-linear-gradient(top, rgba(50, 50, 50, 0.4) 20%, rgba(100, 100, 100, 0.3));
+        background: -ms-linear-gradient(top, rgba(50, 50, 50, 0.4) 20%, rgba(100, 100, 100, 0.3));
+        background: linear-gradient(top, rgba(50, 50, 50, 0.4) 20%, rgba(100, 100, 100, 0.3));
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8) inset;
+        color: #b7def5;
+        text-shadow: 0px 0px 8px rgba(0, 162, 255, 0.8);
+    }
+    
+    .notice {
+        position: relative;
+        padding: 10px 0 0 25px;
+        margin: 20px auto;
+        width: 120px;
+    }
+    
+    .arrow {
+        width: 13px;
+        height: 20px;
+        background: #FC9;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        -webkit-animation: notices linear 0.8s infinite;
+        -moz-animation: notices linear 0.8s infinite;
+        -o-animation: notices linear 0.8s infinite;
+        -ms-animation: notices linear 0.8s infinite;
+        animation: notices linear 0.8s infinite;
+    }
+    
+    .arrow:after {
+        width: 0;
+        height: 0;
+        border-width: 12px;
+        border-style: solid dashed dashed dashed;
+        border-color: #FC9 transparent transparent transparent;
+        position: absolute;
+        bottom: -22px;
+        left: -5px;
+        display: block;
+        content: "";
+    }
+    
+    @-webkit-keyframes notices {
+        0% {
+            top: 0px;
+        }
+        50% {
+            top: 10px;
+        }
+        100% {
+            top: 0px;
+        }
+    }
+    
+    @-moz-keyframes notices {
+        0% {
+            top: 0px;
+        }
+        50% {
+            top: 10px;
+        }
+        100% {
+            top: 0px;
+        }
+    }
+    
+    @-o-keyframes notices {
+        0% {
+            top: 0px;
+        }
+        50% {
+            top: 10px;
+        }
+        100% {
+            top: 0px;
+        }
+    }
+    
+    @-ms-keyframes notices {
+        0% {
+            top: 0px;
+        }
+        50% {
+            top: 10px;
+        }
+        100% {
+            top: 0px;
+        }
+    }
+    
+    @keyframes notices {
+        0% {
+            top: 0px;
+        }
+        50% {
+            top: 10px;
+        }
+        100% {
+            top: 0px;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <div class="notice">
+                <div class="arrow"></div>拖动书角看看 *^_^*</div>
+            <div class="form" id="form">
+                <div class="corner" id="corner"></div>
+                <ul class="button">
+                    <li><a href="">W3cplus</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li class="navcurrent"><a href="">About Us</a></li>
+                    <li class="borderno"><a href="">Contact</a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <script>
+    (function() {
+        var form = document.getElementById("form");
+        var corner = document.getElementById("corner")
+        var ftop = form.offsetTop;
+        var fleft = form.offsetLeft;
+        var switchopen = 0;
+        corner.onmousedown = function(e) {
+            e.preventDefault();
+            form.style.cursor = "move";
+            switchopen = 1;
+        }
+        form.onmousemove = function(e) {
+            if (switchopen == 1) {
+                if (e.pageX - fleft > 90 || e.pageY - ftop > 90) {
+                    corner.style.width = corner.style.height = 90 + "px";
+                    corner.style.left = corner.style.top = -4 + "px"
+                } else {
+                    corner.style.width = corner.style.height = e.pageY - ftop + "px";
+
+                }
+            }
+        }
+        form.onmouseup = function() {
+            switchopen = 0;
+            this.style.cursor = "default";
+        }
+    })()
+    </script>
+</body>
+
+</html>

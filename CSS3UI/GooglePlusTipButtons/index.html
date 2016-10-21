@@ -1,0 +1,557 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Google Plus Tip Buttons|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    <style>
+    body {
+        background: #c0c0c0;
+    }
+    
+    .demo {
+        width: 500px;
+        margin: 50px auto;
+    }
+    
+    .control_buttons li {
+        display: inline-block;
+        margin: 0 10px 10px 0;
+    }
+    
+    .icon {
+        position: relative;
+        display: inline-block;
+        color: #545454;
+        text-shadow: 0 -1px 0 #282828, 0 1px 1px #e1e1e1;
+        padding: 8px 10px 4px;
+        box-shadow: 0 1px 0 #f4f4f4 inset;
+        border: 1px solid #7d7d7d;
+        border-radius: 3px;
+        background: -webkit-linear-gradient(top, #ececec, #bfbfbf);
+        background: -moz-linear-gradient(top, #ececec, #bfbfbf);
+        background: linear-gradient(top, #ececec, #bfbfbf);
+    }
+    
+    .icon:hover {
+        color: #545454;
+        text-decoration: none;
+        background: -webkit-linear-gradient(top, #f7f5f5, #c9c7c7);
+        background: -moz-linear-gradient(top, #f7f5f5, #c9c7c7);
+        background: linear-gradient(top, #f7f5f5, #c9c7c7);
+    }
+    
+    .icon:hover span {
+        max-height: 36px;
+    }
+    
+    .icon span {
+        position: absolute;
+        left: -32px;
+        top: 30px;
+        display: block;
+        overflow: hidden;
+        max-height: 0;
+        text-align: center;
+        z-index: 2;
+        -webkit-transition: max-height .3s linear;
+        -moz-transition: max-height .3s linear;
+        transition: max-height .3s linear;
+    }
+    
+    .icon span em {
+        display: block;
+        width: 100px;
+        line-height: 26px;
+        font-style: normal;
+        color: #fff;
+        text-shadow: 0 0 0 #fff;
+        margin-top: 10px;
+        background-color: #000;
+    }
+    
+    .icon span em:after {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        content: '';
+        width: 1px;
+        height: 1px;
+        border: 5px solid transparent;
+        border-bottom-color: #000;
+        margin-left: -5px;
+    }
+    
+    .icon:before,
+    .icon:after,
+    .search:after {
+        font-family: 'icomoon';
+        speak: none;
+        font-weight: normal;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-size: 15px;
+    }
+    
+    .icon1:before {
+        content: "\23";
+    }
+    
+    .icon2:before {
+        content: "\21";
+    }
+    
+    .icon3:before {
+        content: "\22";
+    }
+    
+    .icon4:before {
+        content: "\24";
+    }
+    
+    .icon5:before {
+        content: "\25";
+    }
+    
+    .icon6:before {
+        content: "\26";
+    }
+    
+    .icon7:before {
+        content: "\27";
+    }
+    
+    .icon8:before {
+        content: "\28";
+    }
+    
+    .icon9:before {
+        content: "\29";
+    }
+    
+    .icon10:before {
+        content: "\2f";
+    }
+    
+    .icon11:before {
+        content: "\2a";
+    }
+    
+    .icon12:before {
+        content: "\2b";
+    }
+    
+    .icon13:before {
+        content: "\2c";
+    }
+    
+    .icon14:before {
+        content: "\2d";
+    }
+    
+    .icon15:before {
+        content: "\30";
+    }
+    
+    .icon16:before {
+        content: "\31";
+    }
+    
+    .icon17:before {
+        content: "\32";
+    }
+    
+    .icon18:before {
+        content: "\33";
+    }
+    
+    .icon19:before {
+        content: "\3a";
+    }
+    
+    .icon20:before {
+        content: "\36";
+    }
+    
+    .icon21:before {
+        content: "\37";
+    }
+    
+    .icon22:before {
+        content: "\38";
+    }
+    
+    .icon23:before {
+        content: "\39";
+    }
+    
+    .icon24:before {
+        content: "\4e";
+    }
+    
+    .icon25:before {
+        content: "\4f";
+    }
+    
+    .icon26:before {
+        content: "\50";
+    }
+    
+    .icon27:before {
+        content: "\51";
+    }
+    
+    .icon28:before {
+        content: "\54";
+    }
+    
+    .icon29:before {
+        content: "\44";
+    }
+    
+    .icon30:before {
+        content: "\52";
+    }
+    
+    .icon31:before {
+        content: "\4b";
+    }
+    
+    .icon32:before {
+        content: "\4a";
+    }
+    
+    .icon33:before {
+        content: "\33";
+    }
+    
+    .icon34:before {
+        content: "\34";
+    }
+    
+    .icon35:before {
+        content: "\35";
+    }
+    
+    .icon36:before {
+        content: "\27";
+    }
+    
+    .icon37:before {
+        content: "\2f";
+    }
+    
+    .icon38:before {
+        content: "\4c";
+    }
+    
+    .icon39:before {
+        content: "\41";
+    }
+    
+    .icon40:before {
+        content: "\42";
+    }
+    
+    .icon41:before {
+        content: "\3f";
+    }
+    
+    .icon42:before {
+        content: "\46";
+    }
+    
+    .icon43:before {
+        content: "\47";
+    }
+    
+    .icon44:before {
+        content: "\48";
+    }
+    
+    .icon45:before {
+        content: "\3d";
+    }
+    
+    .icon46:before {
+        content: "\3c";
+    }
+    
+    .icon47:before {
+        content: "\40";
+    }
+    
+    .icon48:before {
+        content: "\3e";
+    }
+    
+    .arrow:after {
+        content: "\53";
+        margin-right: -3px;
+    }
+    
+    @font-face {
+        font-family: 'icomoon';
+        src: url('fonts/icomoon.eot');
+        src: url('fonts/icomoon.eot?#iefix') format('embedded-opentype'), url('fonts/icomoon.svg#icomoon') format('svg'), url('fonts/icomoon.woff') format('woff'), url('fonts/icomoon.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <ul class="control_buttons">
+                <li>
+                    <a href="#" class="icon icon1">
+                        <span><em>icon-Home</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon2">
+                        <span><em>icon-Music</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon3">
+                        <span><em>icon-Image</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon4">
+                        <span><em>icon-Text</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon5">
+                        <span><em>icon-File</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon6">
+                        <span><em>icon-Bell</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon7">
+                        <span><em>icon-Calendar</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon8">
+                        <span><em>icon-Upload</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon9">
+                        <span><em>icon-Download</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon10">
+                        <span><em>icon-Set Up</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon11">
+                        <span><em>icon-News</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon12">
+                        <span><em>icon-Load</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon13">
+                        <span><em>icon-Avatar</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon14">
+                        <span><em>icon-Search</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon15">
+                        <span><em>icon-Cake</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon16">
+                        <span><em>icon-Rise</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon17">
+                        <span><em>icon-Delete</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon18">
+                        <span><em>icon-App</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon19">
+                        <span><em>icon-Good</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon20">
+                        <span><em>icon-Upload</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon21">
+                        <span><em>icon-Download</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon22">
+                        <span><em>icon-Link</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon23">
+                        <span><em>icon-Like</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon24">
+                        <span><em>icon-Phone</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon25">
+                        <span><em>icon-Pad</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon26">
+                        <span><em>icon-Computer</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon27">
+                        <span><em>icon-Mouse</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon28">
+                        <span><em>icon-Wifi</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon29">
+                        <span><em>icon-Tencent</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon30">
+                        <span><em>icon-Transform</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon31 arrow">
+                        <span><em>select-Set Up</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon32 arrow">
+                        <span><em>select-Set Up</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon33 arrow">
+                        <span><em>select-Set Up</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon34 arrow">
+                        <span><em>select-Set Up</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon35 arrow">
+                        <span><em>select-Set Up</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon36 arrow">
+                        <span><em>select-Set Up</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon37 arrow">
+                        <span><em>select-Set Up</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon38">
+                        <span><em>select-Set Up</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon39">
+                        <span><em>Browser-Apple</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon40">
+                        <span><em>browser-Window</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon41">
+                        <span><em>Browser-Chrome</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon42">
+                        <span><em>browser-IE</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon43">
+                        <span><em>browser-Opera</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon44">
+                        <span><em>browser-Net..</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon45">
+                        <span><em>chat-...f</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon46">
+                        <span><em>chat-f...</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon47">
+                        <span><em>chat-git...</em></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon48">
+                        <span><em>chat-f...</em></span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+
+</html>

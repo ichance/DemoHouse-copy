@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>css3制作日历风格登陆表单|w3cplus | css3|css3教程,css3实例,css3动画</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <script type="text/javascript" charset="UTF-8" src="//www.w3cplus.com/demo/css3/prefixfree.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <style type="text/css">
+    body {
+        background-image: url(bg.jpg);
+    }
+    
+    .content {
+        width: 680px;
+        height: 320px;
+        margin: 50px auto;
+    }
+    
+    .form-wrapper {
+        margin: 32px auto;
+        width: 264px;
+        height: 253px;
+        position: relative;
+        border: 1px solid rgb(197, 200, 204);
+        background-color: rgb(248, 249, 250);
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 0 1px 0 rgb(255, 255, 255), 0 2px 0 rgb(197, 200, 204), 0 3px 0 rgb(255, 255, 255), 0 4px 0 rgb(197, 200, 204);
+    }
+    
+    .form-wrapper:before {
+        content: "";
+        display: block;
+        height: 37px;
+        border-bottom: 1px solid rgb(197, 200, 204);
+        border-radius: 5px 5px 0 0;
+        box-shadow: inset 2px 2px 0 rgb(255, 255, 255);
+    }
+    
+    .form-wrapper .login-form {
+        padding-top: 40px;
+        box-shadow: inset 2px 0 0 rgb(255, 255, 255);
+    }
+    
+    .form-wrapper input[name="username"] {
+        height: 40px;
+        width: 200px;
+        margin: 0 auto;
+        padding-left: 15px;
+        display: block;
+        border: 1px solid rgb(197, 200, 204);
+        border-bottom: none;
+        border-radius: 5px 5px 0 0;
+        box-shadow: inset 0 1px 0 rgb(212, 214, 217);
+        background-color: rgb(228, 230, 233);
+    }
+    
+    .form-wrapper input[name="password"] {
+        height: 40px;
+        width: 200px;
+        margin: 0 auto;
+        padding-left: 15px;
+        display: block;
+        border: 1px solid rgb(197, 200, 204);
+        border-radius: 0 0 5px 5px;
+        background-color: rgb(228, 230, 233);
+    }
+    
+    .form-wrapper button[type="submit"] {
+        margin-top: 25px;
+        width: 215px;
+        height: 44px;
+        color: #fff;
+        font-size: 20px;
+        border: none;
+        border-top: 1px solid rgb(190, 143, 48);
+        position: relative;
+        /*利用双背景制作垂直渐变色边框*/
+        background: -*-linear-gradient(top, rgb(228, 182, 88), rgb(218, 149, 78)) 1px 1px no-repeat, -*-linear-gradient(top, rgb(190, 143, 48), rgb(160, 106, 32)) left top no-repeat;
+        background-size: 213px 41px, 215px 43px;
+        border-radius: 5px;
+        box-shadow: inset 0 1px 0 rgb(242, 220, 175);
+        text-shadow: 1px 1px 0 rgb(138, 100, 50);
+        transition: color 300ms linear;
+    }
+    
+    .form-wrapper button[type="submit"]:hover {
+        color: rgb(195, 188, 81);
+        background: -*-linear-gradient(top, rgb(195, 99, 81), rgb(196, 84, 64)) 1px 1px no-repeat, -*-linear-gradient(top, rgb(190, 143, 48), rgb(160, 106, 32)) left top no-repeat;
+    }
+    /*日历链条和环的制作*/
+    
+    .form-wrapper .linker {
+        position: absolute;
+        width: 240px;
+        height: 40px;
+        top: 18px;
+        left: 10px;
+    }
+    /*上环*/
+    
+    .linker .ring {
+        position: relative;
+        display: inline-block;
+        border: 1px solid rgb(163, 164, 167);
+        background-color: rgb(220, 222, 225);
+        height: 12px;
+        width: 12px;
+        border-radius: 6px;
+        margin-right: 33px;
+    }
+    
+    .linker .ring:last-child {
+        margin-right: 0;
+    }
+    /*下环*/
+    
+    .linker .ring:before {
+        content: "";
+        position: absolute;
+        bottom: -25px;
+        left: -1px;
+        border: 1px solid rgb(163, 164, 167);
+        background-color: rgb(220, 222, 225);
+        height: 12px;
+        width: 12px;
+        border-radius: 6px;
+    }
+    /*中间链条*/
+    
+    .linker .ring:after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 6px;
+        height: 30px;
+        border: 1px solid rgb(202, 202, 202);
+        background-color: rgb(255, 255, 255);
+        border-radius: 3px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <div class="content">
+                <div class="form-wrapper">
+                    <div class="linker">
+                        <span class="ring"></span>
+                        <span class="ring"></span>
+                        <span class="ring"></span>
+                        <span class="ring"></span>
+                        <span class="ring"></span>
+                    </div>
+                    <form class="login-form" action="#" method="post">
+                        <input type="text" name="username" placeholder="username" />
+                        <input type="password" name="password" placeholder="password" />
+                        <button type="submit">Log in</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

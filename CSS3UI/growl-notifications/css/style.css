@@ -1,0 +1,231 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.about {
+  margin: 70px auto 40px;
+  padding: 8px;
+  width: 260px;
+  font: 10px/18px 'Lucida Grande', Arial, sans-serif;
+  color: #bbb;
+  text-align: center;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+  background: #383838;
+  background: rgba(34, 34, 34, 0.8);
+  border-radius: 4px;
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0 0 6px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0 0 6px rgba(0, 0, 0, 0.4);
+}
+.about a {
+  color: #eee;
+  text-decoration: none;
+  border-radius: 2px;
+  -webkit-transition: background 0.1s;
+  -moz-transition: background 0.1s;
+  -o-transition: background 0.1s;
+  transition: background 0.1s;
+}
+.about a:hover {
+  text-decoration: none;
+  background: #555;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.about-links {
+  height: 30px;
+}
+.about-links > a {
+  float: left;
+  width: 50%;
+  line-height: 30px;
+  font-size: 12px;
+}
+
+.about-author {
+  margin-top: 5px;
+}
+.about-author > a {
+  padding: 1px 3px;
+  margin: 0 -1px;
+}
+
+/*
+ * Copyright (c) 2012-2013 Thibaut Courouble
+ * http://www.cssflow.com
+ *
+ * Licensed under the MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+html, body {
+  min-height: 100%;
+}
+
+body {
+  font: 12px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+  color: #404040;
+  background: #744575;
+  background-image: -webkit-radial-gradient(center, circle cover, #9b729a, #5e2c61);
+  background-image: -moz-radial-gradient(center, circle cover, #9b729a, #5e2c61);
+  background-image: -o-radial-gradient(center, circle cover, #9b729a, #5e2c61);
+  background-image: radial-gradient(center, circle cover, #9b729a, #5e2c61);
+}
+
+.notif {
+  position: relative;
+  margin: 60px auto;
+  width: 288px;
+  height: 62px;
+  padding: 6px;
+  line-height: 18px;
+  font-size: 11px;
+  color: rgba(204, 204, 204, 0.9);
+  text-shadow: 0 -1px black;
+  background: rgba(17, 17, 17, 0.48);
+  /* Don't let the background bleed underneath our semi-transparent (rgba) border. */
+  background-clip: padding-box;
+  border: 1px solid;
+  border-color: rgba(17, 17, 17, 0.6) rgba(17, 17, 17, 0.7) rgba(17, 17, 17, 0.9);
+  border-radius: 5px;
+  /* This is the original gradient on a transparent background:
+   * rgba(#808080, .5), rgba(#111, .48) 50%, rgba(#111, .58) 50%, rgba(#111, .68) 100%
+   * I had to adapt it for a different background color in order
+   * to support browsers that don't support linear-gradient. */
+  background-image: -webkit-linear-gradient(top, rgba(242, 242, 242, 0.3), rgba(221, 221, 221, 0.01) 50%, rgba(0, 0, 0, 0.12) 50%, rgba(0, 0, 0, 0.3));
+  background-image: -moz-linear-gradient(top, rgba(242, 242, 242, 0.3), rgba(221, 221, 221, 0.01) 50%, rgba(0, 0, 0, 0.12) 50%, rgba(0, 0, 0, 0.3));
+  background-image: -o-linear-gradient(top, rgba(242, 242, 242, 0.3), rgba(221, 221, 221, 0.01) 50%, rgba(0, 0, 0, 0.12) 50%, rgba(0, 0, 0, 0.3));
+  background-image: linear-gradient(to bottom, rgba(242, 242, 242, 0.3), rgba(221, 221, 221, 0.01) 50%, rgba(0, 0, 0, 0.12) 50%, rgba(0, 0, 0, 0.3));
+  -webkit-box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.notif p {
+  margin: 0;
+}
+.notif a {
+  font-weight: bold;
+  color: rgba(221, 221, 221, 0.9);
+  text-decoration: none;
+}
+.notif:before {
+  content: '';
+  float: left;
+  margin: -6px 14px -6px -6px;
+  width: 74px;
+  height: 74px;
+  background: rgba(0, 0, 0, 0.1) url("../img/dribbble.png") center no-repeat;
+  border-right: 1px solid rgba(17, 17, 17, 0.4);
+  border-radius: 5px 0 0 5px;
+  -webkit-box-shadow: 1px 0 rgba(255, 255, 255, 0.05);
+  box-shadow: 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.notif-title {
+  margin: 0;
+  line-height: 22px;
+  font-size: 13px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.notif-close {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin: -10px -10px 0 0;
+  padding: 4px;
+  width: 10px;
+  height: 10px;
+  background: #222;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  font: 0/0 serif;
+  text-shadow: none;
+  color: transparent;
+  background-image: -webkit-linear-gradient(top, #383838, #111111);
+  background-image: -moz-linear-gradient(top, #383838, #111111);
+  background-image: -o-linear-gradient(top, #383838, #111111);
+  background-image: linear-gradient(to bottom, #383838, #111111);
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.15);
+}
+.notif-close:before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: url("../img/close.png");
+}
+
+.notif-white {
+  color: rgba(51, 51, 51, 0.9);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(68, 68, 68, 0.6) rgba(68, 68, 68, 0.7) rgba(68, 68, 68, 0.8);
+  /* rgba(white, .4), rgba(white, .33) 50%, rgba(#eaeaea, .3) 50%, rgba(#eaeaea, .35) 100% */
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05) 50%, rgba(102, 102, 102, 0.1) 50%, rgba(119, 119, 119, 0.05));
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05) 50%, rgba(102, 102, 102, 0.1) 50%, rgba(119, 119, 119, 0.05));
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05) 50%, rgba(102, 102, 102, 0.1) 50%, rgba(119, 119, 119, 0.05));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05) 50%, rgba(102, 102, 102, 0.1) 50%, rgba(119, 119, 119, 0.05));
+  -webkit-box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.7), 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.7), 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.notif-white:before {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-right-color: rgba(51, 51, 51, 0.3);
+  -webkit-box-shadow: 1px 0 rgba(255, 255, 255, 0.15);
+  box-shadow: 1px 0 rgba(255, 255, 255, 0.15);
+}
+.notif-white .notif-title {
+  color: rgba(0, 0, 0, 0.8);
+}
+.notif-white a {
+  color: rgba(40, 40, 40, 0.9);
+}

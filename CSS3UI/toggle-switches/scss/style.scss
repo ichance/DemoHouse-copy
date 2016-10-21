@@ -1,0 +1,103 @@
+@import '../../shared/mixins',
+        '../../shared/reset',
+        '../../shared/about-light';
+
+/*
+ * Copyright (c) 2012-2013 Thibaut Courouble
+ * http://www.cssflow.com
+ *
+ * Licensed under the MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+
+$labelWidth: 58px;
+
+body {
+  font: 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+  color: #404040;
+  background: #3b3f46 url('../img/bg.png') 0 0 repeat;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 90px 0;
+  width: 400px;
+  @include radial-gradient(center, farthest-side, rgba(white, .1), rgba(white, 0));
+}
+
+.switch {
+  position: relative;
+  margin: 20px auto;
+  height: 26px;
+  width: $labelWidth * 2 + 4px;
+  background: rgba(black, .25);
+  border-radius: 3px;
+  @include box-shadow(inset 0 1px 3px rgba(black, .3),
+                      0 1px rgba(white, .1));
+}
+
+.switch-label {
+  position: relative;
+  z-index: 2;
+  float: left;
+  width: $labelWidth;
+  line-height: 26px;
+  font-size: 11px;
+  color: rgba(white, .35);
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(black, .45);
+  cursor: pointer;
+
+  &:active { font-weight: bold; }
+}
+
+.switch-label-off { padding-left: 2px; }
+.switch-label-on { padding-right: 2px; }
+
+/*
+ * Note: using adjacent or general sibling selectors combined with
+ *       pseudo classes doesn't work in Safari 5.0 and Chrome 12.
+ *       See this article for more info and a potential fix:
+ *       http://css-tricks.com/webkit-sibling-bug/
+ */
+
+.switch-input {
+  display: none;
+
+  &:checked + .switch-label {
+    font-weight: bold;
+    color: rgba(black, .65);
+    text-shadow: 0 1px rgba(white, .25);
+    @include transition(.15s ease-out);
+  }
+
+  &:checked + .switch-label-on ~ .switch-selection {
+    left: $labelWidth + 2px; /* Note: left: 50% doesn't transition in WebKit */
+  }
+}
+
+.switch-selection {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 2px;
+  left: 2px;
+  width: $labelWidth;
+  height: 22px;
+  background: #65bd63;
+  border-radius: 3px;
+  @include linear-gradient(top, #9dd993, #65bd63);
+  @include box-shadow(inset 0 1px rgba(white, .5),
+                      0 0 2px rgba(black, .2));
+  @include transition(left .15s ease-out);
+
+  .switch-blue & {
+    background: #3aa2d0;
+    @include linear-gradient(top, #4fc9ee, #3aa2d0);
+  }
+
+  .switch-yellow & {
+    background: #c4bb61;
+    @include linear-gradient(top, #e0dd94, #c4bb61);
+  }
+}

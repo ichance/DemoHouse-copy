@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3重构百度图片首页中图片展示效果|w3cplus</title>
+    <meta name="keywords" content="css3学习,css3属性详解,css3 transition,如何学好css3">
+    <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+    <link rel="shortcut icon" href="http://www.w3cplus.com/sites/all/themes/marvin/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cplus.com/demo/css3/base.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    <style type="text/css">
+    body {
+        background: none repeat scroll 0 0 #fff;
+        font: 12px arial;
+        text-align: center;
+        position: relative
+    }
+    
+    body,
+    p,
+    form,
+    ul {
+        margin: 0;
+        padding: 0
+    }
+    
+    img {
+        border: 0
+    }
+    
+    td,
+    p,
+    div {
+        font-size: 12px
+    }
+    
+    p {
+        width: 600px;
+        margin: 0;
+        padding: 0;
+    }
+    
+    a {
+        color: #00c
+    }
+    
+    a:active {
+        color: #f60
+    }
+    /*图片效果*/
+    
+    #index_tags {
+        width: 625px;
+        position: relative;
+        left: 5px;
+        margin: 30px auto 15px auto;
+        font-size: 0;
+    }
+    
+    #index_tags a {
+        display: inline-block;
+        width: 115px;
+        height: 115px;
+        margin: 0 10px 10px 0;
+        position: relative;
+        text-decoration: none;
+        text-align: center;
+    }
+    
+    #index_tags a img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #fff;
+        width: 115px;
+        height: 115px
+    }
+    
+    #index_tags a p {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        border-top: 1px solid #222;
+        height: 22px;
+        line-height: 22px;
+        color: #fff;
+        filter: progid: DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#99333333', endColorstr='#99333333');
+        background: rgba(51, 51, 51, 0.6);
+        cursor: pointer
+    }
+    
+    #index_tags a:before,
+    #index_tags a:after {
+        content: "";
+        display: block;
+        width: 116px;
+        height: 116px;
+        left: -5px;
+        top: -5px;
+        border: 4px solid #fff;
+        background: #666;
+        visibility: hidden;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding-box;
+        -o-background-clip: padding-box;
+        -ms-background-clip: padding-box;
+        background-clip: padding-box;
+        box-shadow: 0 0 1px #aaa, 0 0 2px #aaa;
+        -webkit-transition: -webkit-transform 0s ease-in;
+        -moz-transition: -moz-transform 0s ease-in;
+        -o-transition: -o-transform 0s ease-in;
+        transition: transform 0s ease-in;
+        position: absolute;
+    }
+    
+    #index_tags a:link,
+    #index_tags a:visited {
+        text-decoration: none
+    }
+    
+    #index_tags a:hover {
+        zoom: 1;
+        z-index: 20;
+        text-decoration: underline position: relative;
+    }
+    
+    #index_tags a:hover:before,
+    #index_tags a:hover:after {
+        visibility: visible;
+    }
+    
+    #index_tags a:hover:before {
+        -webkit-transform: rotate(8deg) translate(6px, -1px);
+        -moz-transform: rotate(8deg) translate(6px, -1px);
+        -o-transform: rotate(8deg) translate(6px, -1px);
+        -ms-transform: rotate(8deg) translate(6px, -1px);
+        transform: rotate(8deg) translate(6px, -1px);
+        z-index: 2;
+    }
+    
+    #index_tags a:hover:after {
+        -webkit-transform: rotate(-8deg) translate(-5px, 1px);
+        -moz-transform: rotate(-8deg) translate(-5px, 1px);
+        -o-transform: rotate(-8deg) translate(-5px, 1px);
+        -ms-transform: rotate(-8deg) translate(-5px, 1px);
+        transform: rotate(-8deg) translate(-5px, 1px);
+        z-index: 1;
+    }
+    
+    #index_tags a:hover img {
+        left: -5px;
+        top: -5px;
+        padding: 4px;
+        border: 1px solid #aaa;
+        -moz-box-shadow: 1px 1px 3px #888;
+        -webkit-box-shadow: 1px 1px 3px #888;
+        box-shadow: 1px 1px 3px #888;
+        z-index: 3;
+    }
+    
+    #index_tags a:hover p {
+        text-decoration: underline;
+        z-index: 4;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <section class="demo">
+            <div id="index_tags">
+                <a href="#">
+                    <img width="115" height="115" src="//list.image.baidu.com/t/image/w_meinv.jpg">
+                    <p>美女</p>
+                </a>
+                <a href="#">
+                    <img width="115" height="115" src="//list.image.baidu.com/t/image/w_quweigaoxiao.jpg">
+                    <p>趣味搞笑</p>
+                </a>
+                <a href="#">
+                    <img width="115" height="115" src="//list.image.baidu.com/t/image/w_mengchong.jpg">
+                    <p>萌宠</p>
+                </a>
+                <a href="#">
+                    <img width="115" height="115" src="//list.image.baidu.com/t/image/w_sheying.jpg">
+                    <p>摄影</p>
+                </a>
+                <a href="#">
+                    <img width="115" height="115" src="//list.image.baidu.com/t/image/w_lvyoufengjing.jpg">
+                    <p>旅游风景</p>
+                </a>
+                <a href="#">
+                    <img width="115" height="115" src="//list.image.baidu.com/t/image/w_meishi.jpg">
+                    <p>美食</p>
+                </a>
+                <a href="#">
+                    <img width="115" height="115" src="//list.image.baidu.com/t/image/w_fushidapei.jpg">
+                    <p>服饰搭配</p>
+                </a>
+                <a href="#">
+                    <img width="115" height="115" src="//list.image.baidu.com/t/image/w_jiajuzhuangshi.jpg">
+                    <p>家居装饰</p>
+                </a>
+                <a href="#">
+                    <img width="115" height="115" src="//list.image.baidu.com/t/image/w_chuangyisheji.jpg">
+                    <p>创意设计</p>
+                </a>
+                <a href="#">
+                    <img width="115" height="115" src="//list.image.baidu.com/t/image/w_dongmanyouxi.jpg">
+                    <p>动漫游戏</p>
+                </a>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

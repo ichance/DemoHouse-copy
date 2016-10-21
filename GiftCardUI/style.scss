@@ -1,0 +1,461 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    position: relative;
+}
+
+$button-width: 100px;
+$button-height: 50px;
+$wrap-width: 32%;
+$wrap-height: 18%;
+$wrap-duration: 0.6s;
+$bow-top: 47%;
+$bow-left: 40%;
+$easing: cubic-bezier(0.77, 0, 0.175, 1);
+$ribbon-delay: $wrap-duration / 3;
+$wrap-delay: $wrap-duration * 1.2;
+$ribbon-color-foreground: #fed531;
+$ribbon-color-background: #db8b22;
+$card-width: 500px;
+$card-height: 300px;
+$color-primary: #cc199d;
+$color-gray: #939393;
+$footer-height: 5rem;
+html {
+    height: 100%;
+    width: 100%;
+    background: #ececec;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.route {
+    display: none;
+}
+
+.giftcard {
+    height: $card-height;
+    width: $card-width;
+    font-family: PT Sans, sans-serif;
+    overflow: hidden;
+    border-radius: 1.5rem/2rem;
+    box-shadow: 8px 10px 16px rgba(0, 0, 0, 0.1);
+    transform: translateZ(0);
+}
+
+.giftcard-content,
+.giftcard-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100% - #{$footer-height});
+    width: 100%;
+}
+
+.giftcard-cover {
+    background: $color-primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    > .fa-apple {
+        color: white;
+        font-size: 6rem;
+    }
+}
+
+.giftcard-content {
+    padding: 1rem 2rem;
+    color: $color-gray;
+    z-index: 1;
+    background: white;
+    > * {
+        transform: translateX(3rem);
+        opacity: 0;
+    }
+    h2 {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+    h3 {
+        font-size: 1rem;
+        margin: 0;
+        font-weight: normal;
+    }
+    h2,
+    h3 {
+        color: #232323;
+    }
+    div {
+        font-size: 1rem;
+    }
+    address {
+        font-style: normal;
+        margin-bottom: 1rem;
+    }
+    a,
+    .subtext {
+        color: $color-gray;
+    }
+    a {
+        display: block;
+        text-decoration: none;
+    }
+}
+
+.giftcard-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: $footer-height;
+    width: 100%;
+    background: white;
+    z-index: 3;
+    transform: translateZ(0);
+    > * {
+        float: left;
+    }
+}
+
+.giftcard-text,
+.giftcard-info {
+    width: calc(100% - #{$button-width + $button-height});
+    padding: 1rem;
+}
+
+.giftcard-text {
+    height: 100%;
+    padding: 1rem;
+    > h1,
+    > h2 {
+        margin: 0;
+        font-weight: normal;
+        line-height: 1.1;
+    }
+    h1 {
+        font-size: 1.5rem;
+        color: $color-primary;
+    }
+    h2 {
+        font-size: 1.2rem;
+        color: $color-gray;
+    }
+}
+
+.giftcard-info {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    text-align: right;
+    transform: translateX(100%);
+    display: table;
+    padding-left: 0;
+    background: white;
+    > * {
+        display: table-cell;
+        &:first-child {
+            padding-right: 1rem;
+        }
+    }
+    input[type="text"] {
+        height: $button-height;
+        width: 100%;
+        padding: 0 1rem;
+        -webkit-appearance: none;
+        background: transparent;
+        border: 1px solid #dedede;
+    }
+}
+
+@mixin giftwrap($dx, $dy, $outer: true) {
+    $coords: ( 50% - $dx $dx, 50% + $dx $dx, 100% - $dy 50% - $dy, 100% - $dy 50% + $dy, 50% + $dx 100% - $dx, 50% - $dx 100% - $dx, $dy 50% + $dy, $dy 50% - $dy);
+    $bgcoords: ( nth($coords, 1), 50% 2 * $dx, nth($coords, 2), nth($coords, 3), 100% - 2 * $dy 50%, nth($coords, 4), nth($coords, 5), 50% 100% - 2 * $dx, nth($coords, 6), nth($coords, 7), 2 * $dy 50%, nth($coords, 8), nth($coords, 7), nth($coords, 6), nth($coords, 5), nth($coords, 4), nth($coords, 3), nth($coords, 2), nth($coords, 1));
+    @if not $outer {
+        -webkit-clip-path: polygon(#{join($coords, (), comma)});
+    }
+    @else {
+        -webkit-clip-path: polygon(#{join($bgcoords, (), comma)});
+    }
+}
+
+$width: 100px;
+$height: 50px;
+.button,
+input[type="text"] {
+    border-radius: 3px;
+}
+
+.button {
+    display: inline-block;
+    width: auto;
+    height: $height;
+    line-height: 50px;
+    text-align: center;
+    background: orange;
+    color: white;
+    font-size: 1.3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-decoration: none;
+    &.secondary {
+        background: #009cee;
+    }
+}
+
+.giftwrap {
+    width: $width + $height;
+    height: $width + $height;
+    .button {
+        width: $width;
+        top: calc(50% - #{$height / 2});
+        left: calc(50% - #{$width / 2});
+    }
+    &:before,
+    &:after {
+        display: none;
+        content: '';
+        position: absolute;
+        height: ($width + $height);
+        width: ($width + $height);
+        top: 0;
+        left: 0;
+    }
+    &:before {
+        @include giftwrap(0%, 0%);
+        background: #fc1f33;
+        z-index: 2;
+    }
+    &:after {
+        @include giftwrap(0%, 0%, false);
+        background: #bc0a13;
+        z-index: -1;
+    }
+}
+
+.bow {
+    $bow-size: 1.25rem;
+    display: none;
+    opacity: 0;
+    position: absolute;
+    top: calc(#{$bow-top} - #{$bow-size / 2});
+    left: calc(#{$bow-left} - #{$bow-size / 2});
+    height: $bow-size;
+    width: $bow-size;
+    /* background: $ribbon-color-foreground; */
+    background: #000;
+    border-radius: 50%;
+    z-index: 3;
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        background: lighten($ribbon-color-foreground, 10%);
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        z-index: 2;
+    }
+    > .fa-bookmark {
+        position: absolute;
+        top: $bow-size / 2;
+        left: $bow-size / 4;
+        font-size: 1rem;
+        color: $ribbon-color-foreground;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        &:first-child {
+            transform: translateX(-$bow-size / 2) scaleY(1.5) rotate(55deg);
+        }
+        &:last-child {
+            transform: translateX($bow-size / 2) scaleY(1.5) rotate(-55deg);
+        }
+    }
+}
+
+@mixin ribbon($dx, $dy, $outer: true) {
+    $width: 10%;
+    $hw: $width / 2;
+    $left: $bow-left;
+    $top: $bow-top;
+    $bgcoords: ( $left - $hw $dy, $left + $hw $dy, $left + $hw $top - $hw, 100% - $dx $top - $hw, 100% - $dx $top + $hw, $left + $hw $top + $hw, $left + $hw 100% - $dy, $left - $hw 100% - $dy, $left - $hw $top + $hw, $dx $top + $hw, $dx $top - $hw, $left - $hw $top - $hw);
+    $dy-top-inner: ($dy / $top) * ($dy + 5%);
+    $dy-bottom-inner: 100% - $dy - ($dy / $top) * (100% - $top - $dy + 5%);
+    $dx-left-inner: ($dx / $left) * (100% - $dx + 5%);
+    $dx-right-inner: (1 - $dx / $left) * (100% - $dx);
+    $coords: ( $left - $hw $dy + $dy-top-inner, nth($bgcoords, 1), nth($bgcoords, 2), $left + $hw $dy + $dy-top-inner, $dx-right-inner $top - $hw, nth($bgcoords, 4), nth($bgcoords, 5), $dx-right-inner $top + $hw, $left + $hw $dy-bottom-inner, nth($bgcoords, 7), nth($bgcoords, 8), $left - $hw $dy-bottom-inner, $dx-left-inner $top + $hw, nth($bgcoords, 10), nth($bgcoords, 11), $dx-left-inner $top - $hw, $left - $hw $dy + $dy-top-inner, $dx-left-inner $top - $hw, $dx-left-inner $top + $hw, $left - $hw $dy-bottom-inner, $left + $hw $dy-bottom-inner, $dx-right-inner $top + $hw, $dx-right-inner $top - $hw, $left + $hw $dy + $dy-top-inner);
+    @if not $outer {
+        -webkit-clip-path: polygon(#{join($bgcoords, (), comma)});
+    }
+    @else {
+        -webkit-clip-path: polygon(#{join($coords, (), comma)});
+    }
+}
+
+.ribbon {
+    width: $button-width + $button-height;
+    height: $button-width + $button-height;
+    top: calc(50% - #{($button-width + $button-height) / 2});
+    &:before,
+    &:after {
+        display: none;
+        content: '';
+        position: absolute;
+        width: $width + $height;
+        height: $width + $height;
+        top: 0;
+        left: 0;
+    }
+    &:before {
+        @include ribbon(25%, 35%, false);
+        background: $ribbon-color-background;
+        z-index: -1;
+    }
+    &:after {
+        @include ribbon(0%, 0%, true);
+        background: $ribbon-color-foreground;
+        z-index: 2;
+    }
+}
+
+#buy:target ~ .giftcard {
+    .giftwrap > .button {
+        animation: button 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.65) forwards;
+    }
+    .giftwrap {
+        &:before,
+        &:after {
+            display: block;
+        }
+        &:before {
+            animation: wrap-before-2 $wrap-duration $easing both;
+        }
+        &:after {
+            animation: wrap-after-2 $wrap-duration $easing both;
+        }
+    }
+    .bow {
+        display: block;
+        animation: bow 0.3s $wrap-duration * 1.2 cubic-bezier(0.175, 0.885, 0.32, 1.65) forwards;
+    }
+    .ribbon {
+        &:before,
+        &:after {
+            display: block;
+        }
+        &:before {
+            animation: ribbon-before $wrap-duration $ribbon-delay $easing both;
+        }
+        &:after {
+            animation: ribbon-after $wrap-duration $ribbon-delay $easing both;
+        }
+    }
+    .giftcard-footer {
+        animation: footer $wrap-duration $wrap-delay $easing both;
+    }
+    .giftcard-cover {
+        animation: cover $wrap-duration $wrap-delay $easing both;
+    }
+    .giftcard-content {
+        > * {
+            animation: content $wrap-duration $wrap-delay $easing both;
+        }
+        @for $i from 1 through 3 {
+            > *:nth-child(#{$i}) {
+                animation-delay: $wrap-delay + ($i - 1) * 0.05s;
+            }
+        }
+    }
+}
+
+@keyframes button {
+    to {
+        transform: scale(0.9);
+    }
+}
+
+@keyframes content {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes cover {
+    to {
+        transform: translateY(calc(100% - 1px)) scaleX(0.95);
+    }
+}
+
+@keyframes footer {
+    to {
+        transform: translateX(calc(-100% + #{$button-width + $button-height}));
+    }
+}
+
+@keyframes wrap-before-2 {
+    50% {
+        @include giftwrap(0%, 0%);
+    }
+    100% {
+        @include giftwrap($wrap-width, $wrap-height);
+    }
+}
+
+@keyframes wrap-after-2 {
+    0% {
+        -webkit-clip-path: polygon(50% 40%, 60% 50%, 50% 60%, 40% 50%);
+    }
+    49.999% {
+        -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+    50% {
+        @include giftwrap(0%, 0%, false);
+    }
+    100% {
+        @include giftwrap($wrap-width, $wrap-height, false);
+    }
+}
+
+@keyframes ribbon-before {
+    0% {
+        @include ribbon($wrap-height + 5%, $wrap-width + 5%, false);
+    }
+    50% {
+        @include ribbon(0%, 0%, false);
+    }
+    100% {
+        @include ribbon($wrap-height, $wrap-width, false);
+    }
+}
+
+@keyframes ribbon-after {
+    0%,
+    50% {
+        @include ribbon(0%, 0%, true);
+    }
+    100% {
+        @include ribbon($wrap-height, $wrap-width, true);
+    }
+}
+
+@keyframes bow {
+    from {
+        transform: scale(0.8);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
